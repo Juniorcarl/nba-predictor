@@ -82,3 +82,18 @@ def test_grading(tmp_path, monkeypatch):
     df = pd.read_csv(picks.PICKS)
     assert list(df["result"]) == ["win", "loss", "push", "win", "loss", "win", "loss", "void"]
     assert abs(df["profit"].iloc[0] - 100 / 110) < 1e-9 and df["profit"].iloc[5] == 1.0
+
+
+def test_betway_line_extracted():
+    ev = {"home_team": "Los Angeles Lakers", "away_team": "Boston Celtics", "bookmakers": [
+        {"key": "pinnacle", "title": "Pinnacle", "markets": [
+            {"key": "totals", "outcomes": [{"name": "Over", "price": -105, "point": 225.5},
+                                           {"name": "Under", "price": -105, "point": 225.5}]}]},
+        {"key": "betway", "title": "Betway", "markets": [
+            {"key": "totals", "outcomes": [{"name": "Over", "price": -110, "point": 226.5},
+                                           {"name": "Under", "price": -110, "point": 226.5}]}]},
+        {"key": "fanduel", "title": "FanDuel", "markets": [
+            {"key": "totals", "outcomes": [{"name": "Over", "price": -112, "point": 225.5},
+                                           {"name": "Under", "price": -108, "point": 225.5}]}]}]}
+    t = odds.game_lines(ev)["total"]
+    assert t["point"] == 225.5 and t["betway"] == {"point": 226.5, "over": -110, "under": -110}

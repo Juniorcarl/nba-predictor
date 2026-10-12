@@ -16,7 +16,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from nbapred import espn, models, odds, picks, site, store  # noqa: E402
-from nbapred.config import EDGE_THRESHOLD, HISTORY_SEASONS, LOG_DIR, SEASON_TYPES  # noqa: E402
+from nbapred.config import EDGE_THRESHOLD, HISTORY_SEASONS, LOG_DIR, MAX_EDGE, SEASON_TYPES  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger("run")
@@ -41,13 +41,34 @@ def backfill(max_games=None):
 
 
 def next_slate(games: pd.DataFrame, today):
-    """Earliest date from today on with games that haven't started."""
-    fut = games[(games["date"] >= today) & (games["state"].fillna("pre") == "pre") & (~games["completed"].astype(bool))
+    """Earliest date from today on with unfinished games.
+
+    Returns (date, games not yet started, ids of games on that date already under way).
+    """
+    fut = games[(games["date"] >= today) & (~games["completed"].astype(bool))
                 & games["season_type"].isin(list(SEASON_TYPES))]  # no preseason / All-Star
     if fut.empty:
-        return None, fut
+        return None, fut, set()
     d = fut["date"].min()
-    return d, fut[fut["date"] == d]
+    day = fut[fut["date"] == d]
+    pre = day[day["state"].fillna("pre") == "pre"]
+    return d, pre, set(day["game_id"]) - set(pre["game_id"])
+
+
+def keep_started(slate: dict, started: set) -> dict:
+    """Games that tipped off since the last run keep their pre-game predictions on the site."""
+    prev_path = site.SITE_DATA / "slate.json"
+    if not started or not prev_path.exists():
+        return slate
+    try:
+        prev = json.loads(prev_path.read_text())
+    except ValueError:
+        return slate
+    if prev.get("date") != slate["date"]:
+        return slate
+    kept = [{**g, "started": True} for g in prev.get("games", []) if g["id"] in started]
+    slate["games"] = sorted(slate["games"] + kept, key=lambda g: g.get("start") or "")
+    return slate
 
 
 ODDS_CACHE = LOG_DIR / "odds_cache.json"
@@ -85,7 +106,7 @@ def daily(use_odds=True, offline=False, demo_odds=False):
     n = picks.grade(games, box)
     log.info("graded %d picks", n)
 
-    slate_date, upcoming = next_slate(games, today)
+    slate_date, upcoming, started = next_slate(games, today)
     injuries = []
     if not offline:
         try:
@@ -116,13 +137,14 @@ def daily(use_odds=True, offline=False, demo_odds=False):
         plines = {gid: odds.prop_lines(p) for gid, p in props.items()}
 
     slate, rows = site.build_slate(slate_date, gp, pp, glines, plines, ginfo, pinfo)
+    slate = keep_started(slate, started)
     if slate_date is not None:
         picks.log_picks(slate_date, rows)
         picks.log_projections(slate_date, pp)
     track = picks.track_record(box)
     players = site.players_index(box, games, pp)
     site.write_all(slate, pinfo, ginfo, track, players, {
-        "slate_date": str(slate_date) if slate_date else None, "edge_threshold": EDGE_THRESHOLD, "odds_credits_remaining": odds.credits["remaining"],
+        "slate_date": str(slate_date) if slate_date else None, "edge_threshold": EDGE_THRESHOLD, "max_edge": MAX_EDGE, "odds_credits_remaining": odds.credits["remaining"],
         "injuries_count": len(injuries), "has_odds": bool(glines), "has_props": bool(plines),
         "games_in_db": int(len(hist_games)), "player_games_in_db": int((box["min"] > 0).sum()),
     })

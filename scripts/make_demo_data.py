@@ -118,7 +118,7 @@ def fake_odds(gp, pp, prop_games=3):
     for i, g in enumerate(gp.sort_values("start_utc").itertuples()):
         books = []
         hname = g.home_name.replace("LA ", "Los Angeles ")  # Odds API uses full city names
-        for bk in ("bookA", "bookB", "bookC"):
+        for bk in ("bookA", "betway", "bookC"):
             ph = min(max(g.p_home_win + r.normal(0, 0.07), 0.05), 0.95)
             spread = round((-(g.p_margin) + r.normal(0, 2.5)) * 2) / 2
             total = round((g.p_total + r.normal(0, 4)) * 2) / 2
@@ -142,7 +142,7 @@ def fake_odds(gp, pp, prop_games=3):
                     outs += [{"name": "Over", "description": pl.player, "price": int(r.choice([-125, -115, -110, 100])), "point": line},
                              {"name": "Under", "description": pl.player, "price": int(r.choice([-115, -110, -105])), "point": line}]
                 mk.append({"key": key, "outcomes": outs})
-            props[g.game_id] = {"bookmakers": [{"key": "bookA", "markets": mk}]}
+            props[g.game_id] = {"bookmakers": [{"key": "bookA", "markets": mk}, {"key": "betway", "title": "Betway", "markets": mk}]}
     return games, props
 
 

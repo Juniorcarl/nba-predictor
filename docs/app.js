@@ -12,7 +12,21 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const f1 = (x) => (x == null ? "–" : Number(x).toFixed(1));
 const pct = (x) => (x == null ? "–" : Math.round(x * 100) + "%");
 const sign = (x, d = 1) => (x == null ? "–" : (x > 0 ? "+" : "") + Number(x).toFixed(d));
-const price = (p) => (p == null ? "–" : p > 0 ? "+" + p : String(p));
+const store = { get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage unavailable */ } } };
+S.fmt = store.get("oddsFmt", "decimal");
+const toDecimal = (am) => (am > 0 ? 1 + am / 100 : 1 + 100 / -am);
+const price = (p) => (p == null || !Number.isFinite(+p) ? "–" : S.fmt === "decimal" ? toDecimal(+p).toFixed(2) : p > 0 ? "+" + p : String(p));
+/* Accepts what people type from a bookmaker: decimal (1.85) or American (-110, +120). Returns American. */
+function parseOdds(v) {
+  const x = parseFloat(String(v).replace(",", "."));
+  if (!Number.isFinite(x)) return null;
+  if (Math.abs(x) >= 100) return x;
+  if (x > 1 && x < 100) return x >= 2 ? Math.round((x - 1) * 100) : Math.round(-100 / (x - 1));
+  return null;
+}
+const normCdf = (z) => { const t = 1 / (1 + 0.2316419 * Math.abs(z)); const d = 0.3989423 * Math.exp(-z * z / 2);
+  const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return z > 0 ? 1 - p : p; };
 const time = (iso) => { try { return new Date(iso).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }); } catch { return ""; } };
 const day = (iso) => { try { return new Date(iso).toLocaleDateString([], { weekday: "short", day: "numeric", month: "short" }); } catch { return iso; } };
 const payout = (p) => (p > 0 ? p / 100 : 100 / -p);
@@ -59,6 +73,7 @@ function numberLine(mu, sd, line, side) {
 function allOptions() {
   const out = [];
   for (const g of S.slate?.games || []) {
+    if (g.started) continue;  // already tipped off: can't bet pre-game
     const matchup = `${g.away.abbr} @ ${g.home.abbr}`;
     for (const o of g.options || []) out.push({ ...o, g, matchup, kind: "game" });
     for (const p of g.players || []) for (const o of p.props || []) out.push({ ...o, g, p, matchup, kind: "prop" });
@@ -66,12 +81,17 @@ function allOptions() {
   return out;
 }
 
-function betText(o) {
+function betText(o, line = o.line) {
   const g = o.g;
   if (o.market === "moneyline") return `${(o.side === "home" ? g.home : g.away).abbr} to win`;
-  if (o.market === "spread") return `${(o.side === "home" ? g.home : g.away).abbr} ${sign(o.line)}`;
-  if (o.market === "total") return `${o.side === "over" ? "Over" : "Under"} ${o.line}`;
-  return `${o.side === "over" ? "Over" : "Under"} ${o.line} ${MARKET[o.market].toLowerCase()}`;
+  if (o.market === "spread") return `${(o.side === "home" ? g.home : g.away).abbr} ${sign(line)}`;
+  if (o.market === "total") return `${o.side === "over" ? "Over" : "Under"} ${line}`;
+  return `${o.side === "over" ? "Over" : "Under"} ${line} ${MARKET[o.market].toLowerCase()}`;
+}
+function betwayLine(o) {
+  if (o.bw_price == null) return "";
+  return `<p class="bw small">Betway: ${esc(betText(o, o.bw_line ?? o.line))} at <b>${price(o.bw_price)}</b>,
+    value <b class="${o.bw_ev > 0 ? "pos" : "neg"}">${sign(o.bw_ev, 2)}u</b></p>`;
 }
 
 function optionLine(o) {
@@ -103,7 +123,7 @@ function edgeCard(o) {
     : `<h3>${esc(o.g.away.name)} at ${esc(o.g.home.name)}</h3><p class="muted small">${time(o.g.start)}</p>`;
   return `<article class="panel edge ${o.flagged ? "hot" : ""}">
     <div class="edge-top"><div class="edge-who">${who}</div>
-      <div class="edge-bet">${esc(betText(o))}<small>${price(o.price)} at ${esc(o.book || "best book")}</small></div></div>
+      <div class="edge-bet">${esc(betText(o))}<small>Best price ${price(o.price)} at ${esc(o.book || "a book")}</small></div></div>
     <div class="edge-stats">
       <span>Model <b>${pct(o.model_prob)}</b></span>
       <span>Book <b>${pct(o.fair_prob)}</b></span>
@@ -111,6 +131,7 @@ function edgeCard(o) {
       <span>Value <b class="${o.ev > 0 ? "pos" : "neg"}">${sign(o.ev, 2)}u</b></span>
     </div>
     ${optionLine(o)}
+    ${betwayLine(o)}
   </article>`;
 }
 
@@ -165,7 +186,7 @@ function gameCard(g) {
   return `<article class="panel game">
     <button class="game-head" aria-expanded="false" data-game="${esc(g.id)}">
       <span class="team"><span class="abbr">${esc(g.away.abbr)}</span><span class="nm">${esc(g.away.name)} ${miss(g.missing.away)}</span></span>
-      <span class="score">${Math.round(g.pred.away_score)}–${Math.round(g.pred.home_score)}<small>${time(g.start)}</small></span>
+      <span class="score">${Math.round(g.pred.away_score)}–${Math.round(g.pred.home_score)}<small>${g.started ? "Under way" : time(g.start)}</small></span>
       <span class="team home"><span class="abbr">${esc(g.home.abbr)}</span><span class="nm">${miss(g.missing.home)} ${esc(g.home.name)}</span></span>
     </button>
     <div class="winbar" title="Win probability"><i style="width:${(1 - hp) * 100}%;background:var(--book)"></i><i style="width:${hp * 100}%;background:var(--model)"></i></div>
@@ -227,7 +248,7 @@ function renderPlayer(id) {
     <div class="checker"><h3>Check a line</h3>
       <div class="checker-row"><select id="ck-stat" aria-label="Stat">${opts}</select>
         <input id="ck-line" type="number" step="0.5" inputmode="decimal" placeholder="Line" aria-label="Line">
-        <input id="ck-price" type="number" step="1" inputmode="numeric" placeholder="Odds, e.g. -110" aria-label="American odds" style="width:140px"></div>
+        <input id="ck-price" type="text" inputmode="decimal" placeholder="Odds, e.g. 1.85" aria-label="Odds" style="width:140px"></div>
       <div id="ck-out" class="result muted small">Enter the sportsbook line to see the chance of the over and under.</div>
       <div id="ck-line-viz"></div></div>
     <div><h3 id="bars-title">Last ${logs.length} games</h3><div class="bars" id="bars"></div></div>
@@ -238,7 +259,7 @@ function renderPlayer(id) {
   const statSel = document.getElementById("ck-stat"), lineIn = document.getElementById("ck-line"), priceIn = document.getElementById("ck-price");
   const recentMean = (s) => { const vals = logs.slice(0, 10).map((l) => (s === "pra" ? l.pts + l.reb + l.ast : l[s])); return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0; };
   const update = () => {
-    const s = statSel.value, line = parseFloat(lineIn.value), pr = parseFloat(priceIn.value);
+    const s = statSel.value, line = parseFloat(lineIn.value), pr = parseOdds(priceIn.value);
     const mu = sp ? sp.proj[s] : recentMean(s), v = sp ? sp.var[s] : variance(s, mu);
     const vals = logs.slice().reverse().map((l) => (s === "pra" ? l.pts + l.reb + l.ast : l[s]));
     const ref = Number.isFinite(line) ? line : mu, max = Math.max(...vals, ref, 1) * 1.1;
@@ -249,7 +270,7 @@ function renderPlayer(id) {
     if (!Number.isFinite(line)) { out.innerHTML = `${sp ? "Projection" : "Recent average"}: <b class="num">${f1(mu)}</b>. Enter the sportsbook line to see the chance of the over and under.`; viz.innerHTML = ""; return; }
     const pr2 = countProbs(mu, v, line);
     let ev = "";
-    if (Number.isFinite(pr) && Math.abs(pr) >= 100) {
+    if (pr != null) {
       const eo = pr2.over * payout(pr) - (1 - pr2.over - pr2.push), eu = pr2.under * payout(pr) - (1 - pr2.under - pr2.push);
       ev = `<span>Value at ${price(pr)}: over <b class="${eo > 0 ? "pos" : "neg"}">${sign(eo, 2)}u</b>, under <b class="${eu > 0 ? "pos" : "neg"}">${sign(eu, 2)}u</b></span>`;
     }
@@ -308,6 +329,157 @@ function renderRecord() {
       ${pm.calibration.map((c) => `<tr><td>${pct(c.pred)}</td><td>${pct(c.actual)}</td><td>${c.n.toLocaleString()}</td></tr>`).join("")}</tbody></table></div></div>` : ""}`;
 }
 
+
+/* ---------------------------------------------------------------- my bets (lines typed from the user's bookmaker) */
+function slatePlayers() {
+  const out = [];
+  for (const g of S.slate?.games || []) for (const p of g.players || []) if (!g.started) out.push({ ...p, game: g });
+  return out.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function evaluateBet(b) {
+  // Returns {label, sub, sides:[{name, prob, odds, ev, fairBook}], mu, sd, line} or {error}
+  const thr = S.meta?.edge_threshold || 0.05;
+  let sides = [], label = "", sub = "", mu = null, sd = null, line = +b.line;
+  if (b.kind === "prop") {
+    const sp = S.slateById.get(b.player);
+    const pl = S.byId.get(b.player);
+    if (!sp && !pl) return { error: "Player not found in today's data." };
+    const name = sp?.name || pl.name;
+    const recent = () => { const v = (pl?.logs || []).slice(0, 10).map((l) => (b.stat === "pra" ? l.pts + l.reb + l.ast : l[b.stat])); return v.length ? v.reduce((x, y) => x + y, 0) / v.length : 0; };
+    mu = sp ? sp.proj[b.stat] : recent();
+    const v = sp ? sp.var[b.stat] : variance(b.stat, mu);
+    sd = Math.sqrt(v);
+    const pr = countProbs(mu, v, line);
+    label = name; sub = `${MARKET[b.stat]} ${line}${sp ? "" : " (not on today's slate, using recent average)"}`;
+    sides = [{ name: `Over ${line}`, key: "over", prob: pr.over, push: pr.push, odds: b.o1 }, { name: `Under ${line}`, key: "under", prob: pr.under, push: pr.push, odds: b.o2 }];
+  } else {
+    const g = (S.slate?.games || []).find((x) => x.id === b.game);
+    if (!g) return { error: "Game is no longer on the slate." };
+    const gm = S.meta?.game_model || {}, sdm = gm.margin?.sd || 13, sdt = gm.total?.sd || 18;
+    label = `${g.away.abbr} @ ${g.home.abbr}`;
+    if (b.market === "moneyline") {
+      const ph = normCdf(g.pred.margin / sdm);
+      sub = "Moneyline"; mu = g.pred.margin; sd = sdm; line = 0;
+      sides = [{ name: `${g.home.abbr} to win`, key: "home", prob: ph, odds: b.o1 }, { name: `${g.away.abbr} to win`, key: "away", prob: 1 - ph, odds: b.o2 }];
+    } else if (b.market === "spread") {
+      const ph = normCdf((g.pred.margin + line) / sdm);
+      sub = `Spread, ${g.home.abbr} ${sign(line)}`; mu = g.pred.margin; sd = sdm;
+      sides = [{ name: `${g.home.abbr} ${sign(line)}`, key: "home", prob: ph, odds: b.o1 }, { name: `${g.away.abbr} ${sign(-line)}`, key: "away", prob: 1 - ph, odds: b.o2 }];
+      line = -line;
+    } else {
+      const po = normCdf((g.pred.total - line) / sdt);
+      sub = `Total points ${line}`; mu = g.pred.total; sd = sdt;
+      sides = [{ name: `Over ${line}`, key: "over", prob: po, odds: b.o1 }, { name: `Under ${line}`, key: "under", prob: 1 - po, odds: b.o2 }];
+    }
+  }
+  const am = sides.map((x) => parseOdds(x.odds));
+  const imp = am.map((a) => (a == null ? null : implied(a)));
+  const fair = imp[0] != null && imp[1] != null ? [imp[0] / (imp[0] + imp[1]), imp[1] / (imp[0] + imp[1])] : imp;
+  sides.forEach((x, i) => {
+    x.am = am[i]; x.fair = fair[i];
+    x.ev = am[i] == null ? null : x.prob * payout(am[i]) - (1 - x.prob - (x.push || 0));
+    x.edge = fair[i] == null ? null : x.prob - fair[i];
+    x.check = x.edge != null && x.edge > (S.meta?.max_edge || 0.2);
+    x.good = x.ev != null && x.ev > 0 && (x.edge == null || x.edge >= thr) && !x.check;
+  });
+  return { label, sub, sides, mu, sd, line };
+}
+
+function myBetCard(b, i) {
+  const r = evaluateBet(b);
+  if (r.error) return `<article class="panel edge"><div class="edge-top"><p class="muted">${esc(r.error)}</p><button class="chip" data-del="${i}">Remove</button></div></article>`;
+  const best = r.sides.filter((x) => x.good).sort((a, c) => c.ev - a.ev)[0];
+  const sideRows = r.sides.map((x) => `<div class="side ${best === x ? "best" : ""}">
+      <span class="side-name">${esc(x.name)}</span>
+      <span>Model <b>${pct(x.prob)}</b></span>
+      <span>Odds <b>${x.am == null ? "–" : price(x.am)}</b></span>
+      <span>Book <b>${x.fair == null ? "–" : pct(x.fair)}</b></span>
+      <span>Value <b class="${x.ev == null ? "" : x.ev > 0 ? "pos" : "neg"}">${x.ev == null ? "–" : sign(x.ev, 2) + "u"}</b></span>
+    </div>`).join("");
+  const gap = r.sides.find((x) => x.check);
+  const keyFor = best ? best.key : (r.sides[0].prob >= r.sides[1].prob ? r.sides[0].key : r.sides[1].key);
+  const viz = b.kind === "prop" || b.market === "total" ? numberLine(r.mu, r.sd, r.line, keyFor === "under" ? "under" : "over") : "";
+  return `<article class="panel edge ${best ? "hot" : ""}">
+    <div class="edge-top"><div class="edge-who"><h3>${esc(r.label)}</h3><p class="muted small">${esc(r.sub)}</p></div>
+      <div class="edge-bet">${best ? esc(best.name) : gap ? "Check the news" : "No value"}<small>${best ? `value ${sign(best.ev, 2)}u per unit`
+        : gap ? "model and Betway disagree by a lot, usually an injury or role change" : "at these odds"}</small></div></div>
+    <div class="sides">${sideRows}</div>
+    ${viz}
+    <div><button class="chip" data-del="${i}">Remove</button></div>
+  </article>`;
+}
+
+function renderMyBets() {
+  const key = "mybets", all = store.get(key, {}), date = S.slate?.date || "none";
+  const bets = all[date] || [];
+  const save = (list) => { store.set(key, { [date]: list }); renderMyBets(); };
+  const players = slatePlayers();
+  const games = (S.slate?.games || []).filter((g) => !g.started);
+  if (!games.length) { view.innerHTML = `<div class="empty"><h2>No games to bet on yet</h2><p>Once the next slate is loaded you can type in lines from your bookmaker here.</p></div>`; return; }
+  const kind = S.mbKind || "prop";
+  const statOpts = STATS.map((x) => `<option value="${x}">${MARKET[x]}</option>`).join("");
+  const gameOpts = games.map((g) => `<option value="${esc(g.id)}">${esc(g.away.abbr)} @ ${esc(g.home.abbr)}, ${time(g.start)}</option>`).join("");
+  const sorted = bets.map((b, i) => ({ b, i, r: evaluateBet(b) }))
+    .sort((x, y) => Math.max(...(y.r.sides || []).map((s) => s.ev ?? -9)) - Math.max(...(x.r.sides || []).map((s) => s.ev ?? -9)));
+  view.innerHTML = `
+    <div class="section-head"><div><h2>My bets</h2>
+      <p class="muted small">Type in lines from your Betway app (or any bookmaker) to see if they're worth it. Decimal odds like 1.85 or American like -110 both work. Saved on this device for today's slate.</p></div></div>
+    <form class="panel checker mb-form" id="mb-form" autocomplete="off">
+      <div class="chips" role="group" aria-label="Bet type">
+        <button type="button" class="chip" data-kind="prop" aria-pressed="${kind === "prop"}">Player prop</button>
+        <button type="button" class="chip" data-kind="game" aria-pressed="${kind === "game"}">Game line</button></div>
+      ${kind === "prop" ? `
+        <div class="checker-row">
+          <input id="mb-player" list="mb-players" placeholder="Player" aria-label="Player" style="flex:1 1 220px;width:auto">
+          <datalist id="mb-players">${players.map((p) => `<option value="${esc(p.name)} (${esc(p.side === "home" ? p.game.home.abbr : p.game.away.abbr)})"></option>`).join("")}</datalist>
+          <select id="mb-stat" aria-label="Stat">${statOpts}</select>
+          <input id="mb-line" type="text" inputmode="decimal" placeholder="Line, e.g. 24.5" aria-label="Line"></div>
+        <div class="checker-row">
+          <input id="mb-o1" type="text" inputmode="decimal" placeholder="Over odds" aria-label="Over odds">
+          <input id="mb-o2" type="text" inputmode="decimal" placeholder="Under odds" aria-label="Under odds"></div>`
+      : `
+        <div class="checker-row">
+          <select id="mb-game" aria-label="Game">${gameOpts}</select>
+          <select id="mb-market" aria-label="Market"><option value="total">Total points</option><option value="spread">Spread (home team)</option><option value="moneyline">Moneyline</option></select>
+          <input id="mb-line" type="text" inputmode="decimal" placeholder="Line" aria-label="Line"></div>
+        <div class="checker-row">
+          <input id="mb-o1" type="text" inputmode="decimal" placeholder="Over / home odds" aria-label="Over or home odds" style="width:150px">
+          <input id="mb-o2" type="text" inputmode="decimal" placeholder="Under / away odds" aria-label="Under or away odds" style="width:150px"></div>`}
+      <div class="checker-row"><button class="add" type="submit">Check bet</button><span id="mb-err" class="small neg" role="alert"></span></div>
+    </form>
+    <div class="edges block">${sorted.map(({ b, i }) => myBetCard(b, i)).join("") || `<div class="empty"><p>Bets you check appear here, best value first. Enter both over and under odds when you can: that lets the app strip out Betway's margin and show the true book probability.</p></div>`}</div>
+    ${bets.length ? `<p style="margin-top:12px"><button class="chip" id="mb-clear">Clear all</button></p>` : ""}`;
+
+  view.querySelectorAll("[data-kind]").forEach((btn) => (btn.onclick = () => { S.mbKind = btn.dataset.kind; renderMyBets(); }));
+  view.querySelectorAll("[data-del]").forEach((btn) => (btn.onclick = () => { const l = bets.slice(); l.splice(+btn.dataset.del, 1); save(l); }));
+  const clear = document.getElementById("mb-clear"); if (clear) clear.onclick = () => save([]);
+  const mk = document.getElementById("mb-market");
+  if (mk) { const lineIn = document.getElementById("mb-line"); const sync = () => { lineIn.disabled = mk.value === "moneyline"; lineIn.placeholder = mk.value === "spread" ? "Home spread, e.g. -4.5" : mk.value === "total" ? "Total, e.g. 226.5" : "No line"; }; mk.onchange = sync; sync(); }
+  document.getElementById("mb-form").onsubmit = (e) => {
+    e.preventDefault();
+    const err = document.getElementById("mb-err"); err.textContent = "";
+    const val = (id) => (document.getElementById(id)?.value || "").trim();
+    const line = parseFloat(val("mb-line").replace(",", "."));
+    const o1 = val("mb-o1"), o2 = val("mb-o2");
+    if (parseOdds(o1) == null && parseOdds(o2) == null) { err.textContent = "Enter at least one price, like 1.85."; return; }
+    let bet;
+    if (kind === "prop") {
+      const q = val("mb-player").replace(/\s*\([^)]*\)\s*$/, "").toLowerCase();
+      const p = players.find((x) => x.name.toLowerCase() === q) || players.find((x) => x.name.toLowerCase().includes(q))
+        || (q ? S.players.find((x) => x.name.toLowerCase().includes(q)) : null);
+      if (!p) { err.textContent = "Pick a player from the list."; return; }
+      if (!Number.isFinite(line)) { err.textContent = "Enter the line, like 24.5."; return; }
+      bet = { kind, player: p.id, stat: val("mb-stat"), line, o1, o2 };
+    } else {
+      const market = val("mb-market");
+      if (market !== "moneyline" && !Number.isFinite(line)) { err.textContent = "Enter the line."; return; }
+      bet = { kind, game: val("mb-game"), market, line: market === "moneyline" ? 0 : line, o1, o2 };
+    }
+    save([...bets, bet]);
+  };
+}
+
 /* ---------------------------------------------------------------- routing */
 function route() {
   const h = location.hash.replace("#", "") || "picks";
@@ -317,11 +489,19 @@ function route() {
   else if (h === "games") renderGames();
   else if (h === "players") renderPlayers();
   else if (h === "record") renderRecord();
+  else if (h === "mybets") renderMyBets();
   else renderEdges();
   window.scrollTo(0, 0);
 }
 document.querySelectorAll(".tabs button").forEach((b) => (b.onclick = () => (location.hash = b.dataset.tab)));
 window.addEventListener("hashchange", route);
+
+function renderFmtToggle() {
+  const el = document.getElementById("fmt");
+  el.innerHTML = `Odds shown as <button class="chip" data-fmt="decimal" aria-pressed="${S.fmt === "decimal"}">Decimal 1.91</button>
+    <button class="chip" data-fmt="american" aria-pressed="${S.fmt === "american"}">American -110</button>`;
+  el.querySelectorAll("[data-fmt]").forEach((b) => (b.onclick = () => { S.fmt = b.dataset.fmt; store.set("oddsFmt", S.fmt); renderFmtToggle(); route(); }));
+}
 
 (async function init() {
   try {
@@ -335,6 +515,7 @@ window.addEventListener("hashchange", route);
     document.getElementById("slate-label").textContent = S.slate.date
       ? `${n} game${n === 1 ? "" : "s"} on ${new Date(S.slate.date + "T12:00:00").toLocaleDateString([], { weekday: "long", day: "numeric", month: "short" })} (US date)`
       : "No upcoming games";
+    renderFmtToggle();
     document.getElementById("updated").textContent = !S.meta.generated_at ? "Waiting for the first daily update." : `Updated ${new Date(S.meta.generated_at).toLocaleString([], { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. ${S.meta.has_odds ? "" : "No sportsbook lines in this update."}`;
   } catch (e) {
     console.error(e);

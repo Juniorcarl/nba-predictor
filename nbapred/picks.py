@@ -26,6 +26,15 @@ def _option(market, side, line, s, model_p, **extra):
             "edge": round(float(model_p - s["fair"]), 4), "ev": None if ev is None else round(float(ev), 4), **extra}
 
 
+def _add_betway(o: dict, line, price, prob) -> dict:
+    """Attach Betway's own line/price and the model's value at that line."""
+    if price is None:
+        return o
+    o.update(bw_line=line, bw_price=price, bw_prob=round(float(prob), 4),
+             bw_ev=round(float(prob * payout(price) - (1 - prob)), 4))
+    return o
+
+
 def game_options(g, lines: dict, sd_margin: float, sd_total: float) -> list[dict]:
     out = []
     if not lines:
@@ -33,18 +42,31 @@ def game_options(g, lines: dict, sd_margin: float, sd_total: float) -> list[dict
     mu, tot = g.p_margin, g.p_total
     if lines.get("ml"):
         ph = float(sps.norm.cdf(mu / sd_margin))
+        bw = lines["ml"].get("betway") or {}
         for side, p in (("home", ph), ("away", 1 - ph)):
-            out.append(_option("moneyline", side, None, lines["ml"]["sides"][side], p))
+            o = _option("moneyline", side, None, lines["ml"]["sides"][side], p)
+            out.append(_add_betway(o, None, bw.get(side), p))
     if lines.get("spread"):
         hp = lines["spread"]["point"]
         ph = float(sps.norm.cdf((mu + hp) / sd_margin))
+        bw = lines["spread"].get("betway") or {}
+        bph = float(sps.norm.cdf((mu + bw["point"]) / sd_margin)) if bw else None
         for side, p in (("home", ph), ("away", 1 - ph)):
-            out.append(_option("spread", side, hp if side == "home" else -hp, lines["spread"]["sides"][side], p))
+            o = _option("spread", side, hp if side == "home" else -hp, lines["spread"]["sides"][side], p)
+            if bw:
+                _add_betway(o, bw["point"] if side == "home" else -bw["point"], bw.get(side),
+                            bph if side == "home" else 1 - bph)
+            out.append(o)
     if lines.get("total"):
         pt = lines["total"]["point"]
         po = float(sps.norm.cdf((tot - pt) / sd_total))
+        bw = lines["total"].get("betway") or {}
+        bpo = float(sps.norm.cdf((tot - bw["point"]) / sd_total)) if bw else None
         for side, p in (("over", po), ("under", 1 - po)):
-            out.append(_option("total", side, pt, lines["total"]["sides"][side], p))
+            o = _option("total", side, pt, lines["total"]["sides"][side], p)
+            if bw:
+                _add_betway(o, bw["point"], bw.get(side), bpo if side == "over" else 1 - bpo)
+            out.append(o)
     return out
 
 
@@ -56,11 +78,17 @@ def prop_options(pl, plines: dict, var_params: dict) -> list[dict]:
         if not c:
             continue
         mu = getattr(pl, f"p_{stat}")
-        pr = models.count_probs(mu, getattr(pl, f"v_{stat}"), c["point"])
+        v = getattr(pl, f"v_{stat}")
+        pr = models.count_probs(mu, v, c["point"])
+        bw = c.get("betway")
+        bpr = models.count_probs(mu, v, bw["point"]) if bw else None
         for side in ("over", "under"):
             if side in c["sides"]:
-                out.append(_option(stat, side, c["point"], c["sides"][side], pr[side],
-                                   player_id=pl.player_id, player=pl.player, projection=round(float(mu), 2)))
+                o = _option(stat, side, c["point"], c["sides"][side], pr[side],
+                            player_id=pl.player_id, player=pl.player, projection=round(float(mu), 2))
+                if bw:
+                    _add_betway(o, bw["point"], bw.get(side), bpr[side])
+                out.append(o)
     return out
 
 

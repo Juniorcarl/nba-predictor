@@ -2,8 +2,9 @@ name: Daily update
 
 on:
   schedule:
-    - cron: "0 15 * * *"    # 11:00 US Eastern (17:00 Botswana): results, retrain, odds, picks
-    - cron: "30 22 * * *"   # 18:30 US Eastern (00:30 Botswana): late injury refresh, reuses cached odds
+    - cron: "0 15 * * *"             # 11:00 US Eastern (17:00 Botswana): results, retrain, odds, picks
+    - cron: "30 21,22,23,0,1 * * *"  # 17:30-21:30 US Eastern (23:30-03:30 Botswana): hourly injury/lineup
+                                     # refresh before tip-offs, reuses the morning's lines (no odds credits)
   workflow_dispatch:
     inputs:
       odds:
@@ -47,7 +48,7 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p data/logs
-          if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || [ "${{ inputs.odds }}" = "false" ]; then
+          if [ "${{ github.event.schedule }}" = "30 21,22,23,0,1 * * *" ] || [ "${{ inputs.odds }}" = "false" ]; then
             python scripts/run.py daily --no-odds 2>&1 | tee data/logs/last_run.log
           else
             python scripts/run.py daily 2>&1 | tee data/logs/last_run.log

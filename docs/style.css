@@ -180,3 +180,16 @@ td small.pick { display: block; font-size: .72rem; font-weight: 500; color: var(
   .hide-sm { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ---------- Betway + my bets */
+.bw { margin: 0; color: var(--muted); }
+.bw b { color: var(--ink); }
+.sides { display: grid; gap: 6px; }
+.side { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; padding: 8px 10px; border-radius: 6px; background: var(--floor); font-size: .9rem; }
+.side.best { background: var(--ball-soft); }
+.side-name { font: 700 1.1rem "Barlow Condensed", sans-serif; min-width: 120px; }
+.side b { font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; }
+.mb-form { background: var(--panel); }
+.mb-form input:disabled { opacity: .5; }
+.add { background: var(--ink); color: var(--panel); border: 0; border-radius: 6px; padding: 9px 18px; font-weight: 600; cursor: pointer; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .add { background: var(--model); color: #0F1726; } }

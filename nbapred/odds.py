@@ -1,6 +1,7 @@
 """Sportsbook lines from The Odds API (https://the-odds-api.com).
 
-Free tier: 500 credits / month. Cost = markets x regions per call.
+Free tier: 500 credits / month. Cost = markets x regions per call, where every
+10 named bookmakers count as one region.
   - game lines (h2h, spreads, totals): 3 credits per call, all games at once
   - player props: 1 credit per market per game
 """
@@ -13,7 +14,7 @@ from collections import Counter, defaultdict
 
 import requests
 
-from .config import MAX_PROP_EVENTS, ODDS_API_KEY, ODDS_REGIONS
+from .config import BOOKMAKERS, MAX_PROP_EVENTS, ODDS_API_KEY, ODDS_REGIONS
 
 log = logging.getLogger(__name__)
 BASE = "https://api.the-odds-api.com/v4/sports/basketball_nba"
@@ -33,15 +34,20 @@ def _get(url, params):
     return r.json()
 
 
+def _book_params():
+    # Up to 10 named bookmakers cost the same as one region.
+    return {"bookmakers": BOOKMAKERS} if BOOKMAKERS else {"regions": ODDS_REGIONS}
+
+
 def fetch_game_odds() -> list[dict]:
     if not ODDS_API_KEY:
         return []
-    return _get(f"{BASE}/odds", {"regions": ODDS_REGIONS, "markets": "h2h,spreads,totals", "oddsFormat": "american"})
+    return _get(f"{BASE}/odds", {**_book_params(), "markets": "h2h,spreads,totals", "oddsFormat": "american"})
 
 
 def fetch_prop_odds(event_id: str) -> dict:
     return _get(f"{BASE}/events/{event_id}/odds",
-                {"regions": ODDS_REGIONS, "markets": ",".join(PROP_MARKETS), "oddsFormat": "american"})
+                {**_book_params(), "markets": ",".join(PROP_MARKETS), "oddsFormat": "american"})
 
 
 # ---------------------------------------------------------------- math
@@ -111,9 +117,28 @@ def _consensus_two_way(entries):
     if not fair_a:
         return None
     fa = sum(fair_a) / len(fair_a)
-    return {"point": point, "sides": {a: {"fair": fa, "price": best[a], "book": best_book[a]},
-                                      b: {"fair": 1 - fa, "price": best[b], "book": best_book[b]}},
-            "books": len(fair_a)}
+    out = {"point": point, "sides": {a: {"fair": fa, "price": best[a], "book": best_book[a]},
+                                     b: {"fair": 1 - fa, "price": best[b], "book": best_book[b]}},
+           "books": len(fair_a)}
+    bw = _betway(entries, (a, b))
+    if bw:
+        out["betway"] = bw
+    return out
+
+
+def _betway(entries, sides):
+    """Betway's own line: {'point': x, a: price, b: price} at its main (most common) point."""
+    mine = [e for e in entries if "betway" in str(e[3]).lower()]
+    if not mine:
+        return None
+    by_pt = defaultdict(dict)
+    for p, side, price, _ in mine:
+        by_pt[p][side] = price
+    full = [p for p, d in by_pt.items() if all(s in d for s in sides)]
+    if not full:
+        return None
+    pt = Counter(e[0] for e in mine if e[0] in full).most_common(1)[0][0]
+    return {"point": pt, **by_pt[pt]}
 
 
 def game_lines(ev: dict) -> dict:

@@ -26,6 +26,10 @@ ALL_TARGETS = PROP_STATS + ["min"]
 # Odds API (https://the-odds-api.com). Free tier = 500 credits / month.
 ODDS_API_KEY = os.environ.get("ODDS_API_KEY", "").strip()
 ODDS_REGIONS = os.environ.get("ODDS_REGIONS", "us")
+# Named bookmakers (max 10 = cost of one region). Pinnacle is the sharpest book, so it anchors fair prices;
+# Betway (UK) is included so its prices show next to each pick.
+BOOKMAKERS = os.environ.get("BOOKMAKERS", "pinnacle,betway,draftkings,fanduel,betmgm,williamhill_us,"
+                                          "betrivers,bovada,betonlineag,lowvig")
 # Player props cost ~1 credit per market per event. Keep this small on the free tier.
 MAX_PROP_EVENTS = int(os.environ.get("MAX_PROP_EVENTS", "2"))
 FETCH_PROPS = os.environ.get("FETCH_PROPS", "0") == "1"
