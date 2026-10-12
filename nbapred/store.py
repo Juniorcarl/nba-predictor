@@ -61,12 +61,17 @@ def update_schedule(start: date, end: date, sleep: float = 0.2) -> int:
     """Fetch scoreboards for each ET day in [start, end] and upsert games."""
     by_season: dict[int, list[dict]] = {}
     d = start
+    fails = 0
     while d <= end:
         try:
             rows = espn.parse_scoreboard(espn.fetch_scoreboard(d))
+            fails = 0
         except RuntimeError as e:
             log.error("%s", e)
             rows = []
+            fails += 1
+            if fails >= 8:  # ESPN unreachable: stop instead of retrying for hours
+                raise RuntimeError("ESPN scoreboard failed 8 days in a row - giving up this run") from e
         for r in rows:
             r["date"] = d.isoformat()
             if r["season"] is None:

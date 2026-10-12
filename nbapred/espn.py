@@ -22,7 +22,7 @@ _session = requests.Session()
 _session.headers.update(HEADERS)
 
 
-def _get(url: str, params: dict | None = None, tries: int = 4) -> dict:
+def _get(url: str, params: dict | None = None, tries: int = 3) -> dict:
     for attempt in range(tries):
         try:
             r = _session.get(url, params=params, timeout=20)
