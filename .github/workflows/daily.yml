@@ -45,10 +45,12 @@ jobs:
           MAX_PROP_EVENTS: ${{ vars.MAX_PROP_EVENTS || '2' }}
           EDGE_THRESHOLD: ${{ vars.EDGE_THRESHOLD || '0.05' }}
         run: |
+          set -o pipefail
+          mkdir -p data/logs
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || [ "${{ inputs.odds }}" = "false" ]; then
-            python scripts/run.py daily --no-odds
+            python scripts/run.py daily --no-odds 2>&1 | tee data/logs/last_run.log
           else
-            python scripts/run.py daily
+            python scripts/run.py daily 2>&1 | tee data/logs/last_run.log
           fi
 
       - name: Commit data
