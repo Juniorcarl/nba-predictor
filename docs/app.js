@@ -335,7 +335,7 @@ window.addEventListener("hashchange", route);
     document.getElementById("slate-label").textContent = S.slate.date
       ? `${n} game${n === 1 ? "" : "s"} on ${new Date(S.slate.date + "T12:00:00").toLocaleDateString([], { weekday: "long", day: "numeric", month: "short" })} (US date)`
       : "No upcoming games";
-    document.getElementById("updated").textContent = `Updated ${new Date(S.meta.generated_at).toLocaleString([], { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. ${S.meta.has_odds ? "" : "No sportsbook lines in this update."}`;
+    document.getElementById("updated").textContent = !S.meta.generated_at ? "Waiting for the first daily update." : `Updated ${new Date(S.meta.generated_at).toLocaleString([], { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. ${S.meta.has_odds ? "" : "No sportsbook lines in this update."}`;
   } catch (e) {
     console.error(e);
     view.innerHTML = document.getElementById("tpl-error").innerHTML;
