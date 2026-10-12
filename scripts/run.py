@@ -1,0 +1,144 @@
+"""Daily pipeline entry point.
+
+  python scripts/run.py backfill          # first time: pull ~3 past seasons (30-60 min)
+  python scripts/run.py daily             # update data, retrain, predict, fetch odds, build site data
+  python scripts/run.py daily --no-odds   # same, without spending Odds API credits (injury refresh)
+  python scripts/run.py daily --offline   # skip all network calls (demo / local testing)
+"""
+import argparse
+import json
+import logging
+import sys
+from datetime import timedelta
+from pathlib import Path
+
+import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from nbapred import espn, models, odds, picks, site, store  # noqa: E402
+from nbapred.config import EDGE_THRESHOLD, HISTORY_SEASONS, LOG_DIR, SEASON_TYPES  # noqa: E402
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
+log = logging.getLogger("run")
+
+
+def backfill(max_games=None):
+    today = store.today_et()
+    seasons = sorted(set(HISTORY_SEASONS + [store.season_for(today)]))
+    for s in seasons:
+        start, end = store.season_window(s)
+        have = store.games_path(s).exists()
+        end = min(end, today + timedelta(days=7))
+        if start > end:
+            continue
+        if have and s != store.season_for(today):
+            log.info("season %s schedule already stored", s)
+            continue
+        log.info("schedule %s: %s -> %s", s, start, end)
+        store.update_schedule(start, end)
+    n = store.update_boxscores(max_games=max_games)
+    log.info("fetched %d box scores", n)
+
+
+def next_slate(games: pd.DataFrame, today):
+    """Earliest date from today on with games that haven't started."""
+    fut = games[(games["date"] >= today) & (games["state"].fillna("pre") == "pre") & (~games["completed"].astype(bool))
+                & games["season_type"].isin(list(SEASON_TYPES))]  # no preseason / All-Star
+    if fut.empty:
+        return None, fut
+    d = fut["date"].min()
+    return d, fut[fut["date"] == d]
+
+
+ODDS_CACHE = LOG_DIR / "odds_cache.json"
+
+
+def save_odds(slate_date, glines, plines):
+    ODDS_CACHE.write_text(json.dumps({"date": str(slate_date), "glines": glines,
+                                      "plines": {g: {f"{k[0]}|{k[1]}": v for k, v in d.items()} for g, d in plines.items()}}))
+
+
+def load_odds(slate_date):
+    if not ODDS_CACHE.exists():
+        return {}, {}
+    c = json.loads(ODDS_CACHE.read_text())
+    if c.get("date") != str(slate_date):
+        return {}, {}
+    plines = {g: {tuple(k.split("|", 1)): v for k, v in d.items()} for g, d in c["plines"].items()}
+    log.info("reusing cached lines for %d games", len(c["glines"]))
+    return c["glines"], plines
+
+
+def daily(use_odds=True, offline=False, demo_odds=False):
+    today = store.today_et()
+    if not offline:
+        if store.load_box().empty:
+            log.info("No history stored yet - running the one-time backfill first")
+            backfill()
+        store.update_schedule(today - timedelta(days=3), today + timedelta(days=7))
+        store.update_boxscores()
+    games, box = store.load_games(), store.load_box()
+    if box.empty:
+        log.error("No box scores stored yet - run `backfill` first.")
+        sys.exit(1)
+
+    n = picks.grade(games, box)
+    log.info("graded %d picks", n)
+
+    slate_date, upcoming = next_slate(games, today)
+    injuries = []
+    if not offline:
+        try:
+            injuries = espn.parse_injuries(espn.fetch_injuries())
+            log.info("injury report: %d entries", len(injuries))
+        except RuntimeError as e:
+            log.error("injuries failed: %s", e)
+
+    hist_games = games[games["completed"].astype(bool)]
+    PF, G = models.assemble(box, hist_games, upcoming, injuries)
+    pm, pinfo = models.train_player_models(PF)
+    gm, ginfo = models.train_game_models(G)
+    pp = models.predict_players(pm, pinfo, PF)
+    gp = models.predict_games(gm, ginfo, G)
+
+    glines, plines = ({}, {})
+    if use_odds and not offline and len(gp):
+        glines, plines = odds.fetch_all(gp)
+        if glines:
+            save_odds(slate_date, glines, plines)
+    elif not offline and len(gp):
+        glines, plines = load_odds(slate_date)  # reuse this morning's lines (no credits spent)
+    elif demo_odds and len(gp):  # synthetic lines for local UI testing only
+        from make_demo_data import fake_odds
+        evs, props = fake_odds(gp, pp)
+        matched = odds.match_events(evs, gp)
+        glines = {gid: odds.game_lines(ev) for gid, ev in matched.items()}
+        plines = {gid: odds.prop_lines(p) for gid, p in props.items()}
+
+    slate, rows = site.build_slate(slate_date, gp, pp, glines, plines, ginfo, pinfo)
+    if slate_date is not None:
+        picks.log_picks(slate_date, rows)
+        picks.log_projections(slate_date, pp)
+    track = picks.track_record(box)
+    players = site.players_index(box, games, pp)
+    site.write_all(slate, pinfo, ginfo, track, players, {
+        "slate_date": str(slate_date) if slate_date else None, "edge_threshold": EDGE_THRESHOLD, "odds_credits_remaining": odds.credits["remaining"],
+        "injuries_count": len(injuries), "has_odds": bool(glines), "has_props": bool(plines),
+        "games_in_db": int(len(hist_games)), "player_games_in_db": int((box["min"] > 0).sum()),
+    })
+    log.info("slate %s: %d games, %d player projections, %d flagged picks",
+             slate_date, len(gp), len(pp), sum(1 for r in rows if r.get("flagged")))
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("mode", choices=["backfill", "daily"])
+    ap.add_argument("--no-odds", action="store_true")
+    ap.add_argument("--offline", action="store_true")
+    ap.add_argument("--max-games", type=int, default=None)
+    ap.add_argument("--demo-odds", action="store_true", help=argparse.SUPPRESS)
+    a = ap.parse_args()
+    if a.mode == "backfill":
+        backfill(a.max_games)
+    else:
+        daily(use_odds=not a.no_odds, offline=a.offline, demo_odds=a.demo_odds)

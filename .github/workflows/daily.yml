@@ -1,0 +1,76 @@
+name: Daily update
+
+on:
+  schedule:
+    - cron: "0 15 * * *"    # 11:00 US Eastern (17:00 Botswana): results, retrain, odds, picks
+    - cron: "30 22 * * *"   # 18:30 US Eastern (00:30 Botswana): late injury refresh, reuses cached odds
+  workflow_dispatch:
+    inputs:
+      odds:
+        description: "Fetch sportsbook lines (uses Odds API credits)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Tests
+        run: python -m pytest -q tests
+
+      - name: Run pipeline
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          FETCH_PROPS: ${{ vars.FETCH_PROPS || '1' }}
+          MAX_PROP_EVENTS: ${{ vars.MAX_PROP_EVENTS || '2' }}
+          EDGE_THRESHOLD: ${{ vars.EDGE_THRESHOLD || '0.05' }}
+        run: |
+          if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || [ "${{ inputs.odds }}" = "false" ]; then
+            python scripts/run.py daily --no-odds
+          else
+            python scripts/run.py daily
+          fi
+
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "nba-predictor bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data docs/data
+          git diff --cached --quiet || git commit -m "Daily update $(date -u +%F' '%H:%M) UTC"
+          git pull --rebase --autostash || true
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

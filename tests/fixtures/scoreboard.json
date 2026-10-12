@@ -1,0 +1,16 @@
+{"leagues":[{"id":"46","abbreviation":"NBA"}],"season":{"type":2,"year":2026},"day":{"date":"2026-01-15"},
+ "events":[
+  {"id":"401810001","uid":"s:40~l:46~e:401810001","date":"2026-01-16T00:30Z","name":"Boston Celtics at Los Angeles Lakers",
+   "season":{"year":2026,"type":2,"slug":"regular-season"},
+   "competitions":[{"id":"401810001","date":"2026-01-16T00:30Z","neutralSite":false,
+     "competitors":[
+       {"id":"13","homeAway":"home","winner":true,"team":{"id":"13","abbreviation":"LAL","displayName":"Los Angeles Lakers","shortDisplayName":"Lakers"},"score":"112"},
+       {"id":"2","homeAway":"away","winner":false,"team":{"id":"2","abbreviation":"BOS","displayName":"Boston Celtics","shortDisplayName":"Celtics"},"score":"108"}],
+     "status":{"clock":0.0,"period":4,"type":{"id":"3","name":"STATUS_FINAL","state":"post","completed":true}}}],
+   "status":{"type":{"id":"3","name":"STATUS_FINAL","state":"post","completed":true}}},
+  {"id":"401810002","date":"2026-01-16T03:00Z","season":{"year":2026,"type":2},
+   "competitions":[{"competitors":[
+       {"homeAway":"home","team":{"id":"12","abbreviation":"LAC","displayName":"LA Clippers"},"score":"0"},
+       {"homeAway":"away","team":{"id":"9","abbreviation":"GS","displayName":"Golden State Warriors"},"score":"0"}],
+     "status":{"type":{"name":"STATUS_SCHEDULED","state":"pre","completed":false}}}]}
+ ]}

@@ -1,0 +1,18 @@
+{"boxscore":{"teams":[],"players":[
+ {"team":{"id":"2","abbreviation":"BOS","displayName":"Boston Celtics"},
+  "statistics":[{"names":["MIN","FG","3PT","FT","OREB","DREB","REB","AST","STL","BLK","TO","PF","+/-","PTS"],
+    "keys":["minutes","fieldGoalsMade-fieldGoalsAttempted","threePointFieldGoalsMade-threePointFieldGoalsAttempted","freeThrowsMade-freeThrowsAttempted","offensiveRebounds","defensiveRebounds","rebounds","assists","steals","blocks","turnovers","fouls","plusMinus","points"],
+    "labels":["MIN","FG","3PT","FT","OREB","DREB","REB","AST","STL","BLK","TO","PF","+/-","PTS"],
+    "athletes":[
+      {"active":true,"athlete":{"id":"4065648","displayName":"Jayson Tatum","position":{"abbreviation":"SF"}},"starter":true,"didNotPlay":false,"ejected":false,
+       "stats":["38","11-22","4-9","5-6","1","8","9","6","1","0","3","2","-4","31"]},
+      {"active":true,"athlete":{"id":"3917376","displayName":"Jaylen Brown","position":{"abbreviation":"SG"}},"starter":true,"didNotPlay":false,
+       "stats":["36:30","8-17","2-6","2-2","0","5","5","3","2","1","2","3","-2","20"]},
+      {"active":false,"athlete":{"id":"4397002","displayName":"Bench Guy","position":{"abbreviation":"G"}},"starter":false,"didNotPlay":true,"reason":"COACH'S DECISION","stats":[]}
+    ]}]},
+ {"team":{"id":"13","abbreviation":"LAL"},
+  "statistics":[{"labels":["MIN","FG","3PT","FT","OREB","DREB","REB","AST","STL","BLK","TO","PF","+/-","PTS"],
+    "athletes":[{"athlete":{"id":"1966","displayName":"LeBron James","position":{"abbreviation":"F"}},"starter":true,
+       "stats":["35","10-19","2-5","5-7","1","7","8","9","1","1","4","1","+6","27"]}]}]}
+]},
+"header":{"id":"401810001"}}

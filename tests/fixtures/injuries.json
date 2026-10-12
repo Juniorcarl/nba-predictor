@@ -1,0 +1,5 @@
+{"injuries":[
+ {"id":"2","displayName":"Boston Celtics","injuries":[
+   {"id":"1","status":"Out","shortComment":"Brown (knee) is out Thursday.","athlete":{"displayName":"Jaylen Brown","links":[{"href":"https://www.espn.com/nba/player/_/id/3917376/jaylen-brown"}],"team":{"id":"2"}}},
+   {"id":"2","status":"Day-To-Day","shortComment":"Questionable.","athlete":{"id":"4065648","displayName":"Jayson Tatum"}}]}
+]}
