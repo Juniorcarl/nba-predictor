@@ -1,0 +1,1402 @@
+game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_abbr,home_name,home_score,away_id,away_abbr,away_name,away_score
+401812480,2025-10-02,2025-10-02T16:00Z,2026,1,True,post,True,18,NY,New York Knicks,99.0,20,PHI,Philadelphia 76ers,84.0
+401812481,2025-10-02,2025-10-03T09:30Z,2026,1,True,post,True,3,NO,New Orleans Pelicans,107.0,111124,MEL,Melbourne United,97.0
+401812482,2025-10-03,2025-10-04T02:00Z,2026,1,True,post,True,13,LAL,Los Angeles Lakers,81.0,21,PHX,Phoenix Suns,103.0
+401812483,2025-10-04,2025-10-04T15:00Z,2026,1,True,post,True,20,PHI,Philadelphia 76ers,104.0,18,NY,New York Knicks,113.0
+401812484,2025-10-04,2025-10-05T00:00Z,2026,1,True,post,False,17,BKN,Brooklyn Nets,123.0,131570,HAPOEL,Hapoel Jerusalem,88.0
+401812485,2025-10-04,2025-10-05T00:00Z,2026,1,True,post,True,14,MIA,Miami Heat,118.0,19,ORL,Orlando Magic,126.0
+401812486,2025-10-04,2025-10-05T01:00Z,2026,1,True,post,True,7,DEN,Denver Nuggets,116.0,16,MIN,Minnesota Timberwolves,126.0
+401812487,2025-10-04,2025-10-05T03:00Z,2026,1,True,post,True,3,NO,New Orleans Pelicans,127.0,126120,,Melbourne Pnx,92.0
+401812676,2025-10-05,2025-10-05T21:00Z,2026,1,True,post,True,30,CHA,Charlotte Hornets,114.0,25,OKC,Oklahoma City Thunder,135.0
+401812677,2025-10-05,2025-10-06T00:30Z,2026,1,True,post,False,9,GS,Golden State Warriors,111.0,13,LAL,Los Angeles Lakers,103.0
+401812678,2025-10-06,2025-10-06T23:30Z,2026,1,True,post,False,14,MIA,Miami Heat,93.0,15,MIL,Milwaukee Bucks,103.0
+401812679,2025-10-06,2025-10-07T00:00Z,2026,1,True,post,False,10,HOU,Houston Rockets,122.0,1,ATL,Atlanta Hawks,113.0
+401812680,2025-10-06,2025-10-07T00:00Z,2026,1,True,post,False,29,MEM,Memphis Grizzlies,112.0,8,DET,Detroit Pistons,128.0
+401812681,2025-10-06,2025-10-07T00:00Z,2026,1,True,post,False,24,SA,San Antonio Spurs,119.0,111136,GUA,Guangzhou Loong-Lions,88.0
+401812682,2025-10-06,2025-10-07T00:30Z,2026,1,True,post,True,6,DAL,Dallas Mavericks,106.0,25,OKC,Oklahoma City Thunder,89.0
+401812683,2025-10-06,2025-10-07T02:00Z,2026,1,True,post,True,28,TOR,Toronto Raptors,108.0,7,DEN,Denver Nuggets,112.0
+401812684,2025-10-07,2025-10-07T23:00Z,2026,1,True,post,False,5,CLE,Cleveland Cavaliers,117.0,4,CHI,Chicago Bulls,118.0
+401812685,2025-10-07,2025-10-08T00:00Z,2026,1,True,post,False,16,MIN,Minnesota Timberwolves,134.0,11,IND,Indiana Pacers,135.0
+401812686,2025-10-08,2025-10-08T23:30Z,2026,1,True,post,False,14,MIA,Miami Heat,107.0,24,SA,San Antonio Spurs,112.0
+401812687,2025-10-08,2025-10-09T00:00Z,2026,1,True,post,False,10,HOU,Houston Rockets,140.0,26,UTAH,Utah Jazz,127.0
+401812688,2025-10-08,2025-10-09T00:00Z,2026,1,True,post,False,29,MEM,Memphis Grizzlies,103.0,2,BOS,Boston Celtics,121.0
+401812689,2025-10-08,2025-10-09T02:00Z,2026,1,True,post,False,9,GS,Golden State Warriors,129.0,22,POR,Portland Trail Blazers,123.0
+401812690,2025-10-08,2025-10-09T02:00Z,2026,1,True,post,False,23,SAC,Sacramento Kings,122.0,28,TOR,Toronto Raptors,130.0
+401812691,2025-10-09,2025-10-09T23:30Z,2026,1,True,post,False,18,NY,New York Knicks,100.0,16,MIN,Minnesota Timberwolves,95.0
+401812692,2025-10-09,2025-10-10T00:00Z,2026,1,True,post,False,4,CHI,Chicago Bulls,119.0,5,CLE,Cleveland Cavaliers,112.0
+401812693,2025-10-09,2025-10-10T00:00Z,2026,1,True,post,False,15,MIL,Milwaukee Bucks,117.0,8,DET,Detroit Pistons,111.0
+401812694,2025-10-09,2025-10-10T00:00Z,2026,1,True,post,False,25,OKC,Oklahoma City Thunder,122.0,30,CHA,Charlotte Hornets,116.0
+401812695,2025-10-09,2025-10-10T02:30Z,2026,1,True,post,True,12,LAC,LA Clippers,142.0,111136,GUA,Guangzhou Loong-Lions,95.0
+401812696,2025-10-10,2025-10-10T12:00Z,2026,1,True,post,True,17,BKN,Brooklyn Nets,127.0,21,PHX,Phoenix Suns,132.0
+401812697,2025-10-10,2025-10-10T23:00Z,2026,1,True,post,False,28,TOR,Toronto Raptors,107.0,2,BOS,Boston Celtics,105.0
+401812698,2025-10-10,2025-10-10T23:00Z,2026,1,True,post,False,20,PHI,Philadelphia 76ers,98.0,19,ORL,Orlando Magic,128.0
+401812699,2025-10-10,2025-10-11T00:00Z,2026,1,True,post,False,24,SA,San Antonio Spurs,134.0,26,UTAH,Utah Jazz,130.0
+401812700,2025-10-10,2025-10-11T02:00Z,2026,1,True,post,False,22,POR,Portland Trail Blazers,124.0,23,SAC,Sacramento Kings,123.0
+401812701,2025-10-11,2025-10-11T23:00Z,2026,1,True,post,False,11,IND,Indiana Pacers,116.0,25,OKC,Oklahoma City Thunder,101.0
+401812702,2025-10-11,2025-10-12T00:00Z,2026,1,True,post,False,29,MEM,Memphis Grizzlies,116.0,1,ATL,Atlanta Hawks,122.0
+401812703,2025-10-11,2025-10-12T00:30Z,2026,1,True,post,False,6,DAL,Dallas Mavericks,116.0,30,CHA,Charlotte Hornets,120.0
+401812704,2025-10-12,2025-10-12T11:00Z,2026,1,True,post,True,21,PHX,Phoenix Suns,109.0,17,BKN,Brooklyn Nets,111.0
+401812705,2025-10-12,2025-10-12T19:00Z,2026,1,True,post,False,27,WSH,Washington Wizards,112.0,28,TOR,Toronto Raptors,113.0
+401812706,2025-10-12,2025-10-12T22:00Z,2026,1,True,post,False,19,ORL,Orlando Magic,120.0,14,MIA,Miami Heat,104.0
+401812707,2025-10-12,2025-10-12T23:00Z,2026,1,True,post,False,2,BOS,Boston Celtics,138.0,5,CLE,Cleveland Cavaliers,107.0
+401812708,2025-10-12,2025-10-12T23:00Z,2026,1,True,post,False,4,CHI,Chicago Bulls,121.0,15,MIL,Milwaukee Bucks,127.0
+401812709,2025-10-12,2025-10-13T01:30Z,2026,1,True,post,False,12,LAC,LA Clippers,94.0,7,DEN,Denver Nuggets,102.0
+401812710,2025-10-12,2025-10-13T01:30Z,2026,1,True,post,False,13,LAL,Los Angeles Lakers,126.0,9,GS,Golden State Warriors,116.0
+401812711,2025-10-13,2025-10-13T22:00Z,2026,1,True,post,False,1,ATL,Atlanta Hawks,119.0,14,MIA,Miami Heat,118.0
+401812712,2025-10-13,2025-10-13T23:00Z,2026,1,True,post,False,11,IND,Indiana Pacers,108.0,24,SA,San Antonio Spurs,124.0
+401812713,2025-10-13,2025-10-13T23:30Z,2026,1,True,post,False,18,NY,New York Knicks,103.0,27,WSH,Washington Wizards,120.0
+401812714,2025-10-13,2025-10-14T00:00Z,2026,1,True,post,False,16,MIN,Minnesota Timberwolves,134.0,111136,GUA,Guangzhou Loong-Lions,74.0
+401812715,2025-10-13,2025-10-14T01:00Z,2026,1,True,post,False,26,UTAH,Utah Jazz,101.0,6,DAL,Dallas Mavericks,114.0
+401812716,2025-10-14,2025-10-14T23:00Z,2026,1,True,post,False,5,CLE,Cleveland Cavaliers,118.0,8,DET,Detroit Pistons,100.0
+401812717,2025-10-14,2025-10-15T00:00Z,2026,1,True,post,True,3,NO,New Orleans Pelicans,128.0,10,HOU,Houston Rockets,130.0
+401812718,2025-10-14,2025-10-15T00:00Z,2026,1,True,post,False,15,MIL,Milwaukee Bucks,112.0,25,OKC,Oklahoma City Thunder,116.0
+401812719,2025-10-14,2025-10-15T01:00Z,2026,1,True,post,False,7,DEN,Denver Nuggets,124.0,4,CHI,Chicago Bulls,117.0
+401812720,2025-10-14,2025-10-15T02:00Z,2026,1,True,post,False,22,POR,Portland Trail Blazers,111.0,9,GS,Golden State Warriors,118.0
+401812721,2025-10-14,2025-10-15T02:00Z,2026,1,True,post,False,21,PHX,Phoenix Suns,113.0,13,LAL,Los Angeles Lakers,104.0
+401812722,2025-10-15,2025-10-15T23:00Z,2026,1,True,post,True,30,CHA,Charlotte Hornets,145.0,29,MEM,Memphis Grizzlies,116.0
+401812723,2025-10-15,2025-10-15T23:30Z,2026,1,True,post,False,2,BOS,Boston Celtics,110.0,28,TOR,Toronto Raptors,108.0
+401812724,2025-10-15,2025-10-16T02:30Z,2026,1,True,post,True,13,LAL,Los Angeles Lakers,94.0,6,DAL,Dallas Mavericks,121.0
+401812725,2025-10-15,2025-10-16T02:00Z,2026,1,True,post,False,23,SAC,Sacramento Kings,91.0,12,LAC,LA Clippers,109.0
+401812726,2025-10-16,2025-10-16T23:00Z,2026,1,True,post,False,19,ORL,Orlando Magic,132.0,3,NO,New Orleans Pelicans,125.0
+401812727,2025-10-16,2025-10-16T23:00Z,2026,1,True,post,False,8,DET,Detroit Pistons,119.0,27,WSH,Washington Wizards,98.0
+401812728,2025-10-16,2025-10-16T23:30Z,2026,1,True,post,False,1,ATL,Atlanta Hawks,115.0,10,HOU,Houston Rockets,133.0
+401812729,2025-10-16,2025-10-17T00:00Z,2026,1,True,post,False,4,CHI,Chicago Bulls,126.0,16,MIN,Minnesota Timberwolves,120.0
+401812730,2025-10-16,2025-10-17T01:00Z,2026,1,True,post,False,26,UTAH,Utah Jazz,132.0,22,POR,Portland Trail Blazers,129.0
+401812731,2025-10-17,2025-10-17T23:00Z,2026,1,True,post,False,28,TOR,Toronto Raptors,119.0,17,BKN,Brooklyn Nets,114.0
+401812732,2025-10-17,2025-10-17T23:00Z,2026,1,True,post,False,20,PHI,Philadelphia 76ers,126.0,16,MIN,Minnesota Timberwolves,110.0
+401812733,2025-10-17,2025-10-17T23:30Z,2026,1,True,post,False,18,NY,New York Knicks,113.0,30,CHA,Charlotte Hornets,108.0
+401812734,2025-10-17,2025-10-18T00:00Z,2026,1,True,post,False,14,MIA,Miami Heat,125.0,29,MEM,Memphis Grizzlies,141.0
+401812735,2025-10-17,2025-10-18T00:00Z,2026,1,True,post,False,25,OKC,Oklahoma City Thunder,94.0,7,DEN,Denver Nuggets,91.0
+401812736,2025-10-17,2025-10-18T00:00Z,2026,1,True,post,False,24,SA,San Antonio Spurs,133.0,11,IND,Indiana Pacers,104.0
+401812737,2025-10-17,2025-10-18T02:00Z,2026,1,True,post,False,9,GS,Golden State Warriors,103.0,12,LAC,LA Clippers,106.0
+401812738,2025-10-17,2025-10-18T02:30Z,2026,1,True,post,False,13,LAL,Los Angeles Lakers,116.0,23,SAC,Sacramento Kings,117.0
+401809243,2025-10-21,2025-10-21T23:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,125.0,10,HOU,Houston Rockets,124.0
+401809244,2025-10-21,2025-10-22T02:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,109.0,9,GS,Golden State Warriors,119.0
+401809234,2025-10-22,2025-10-22T23:00Z,2026,2,True,post,False,18,NY,New York Knicks,119.0,5,CLE,Cleveland Cavaliers,111.0
+401809235,2025-10-22,2025-10-23T01:47Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,92.0,24,SA,San Antonio Spurs,125.0
+401809933,2025-10-22,2025-10-22T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,136.0,17,BKN,Brooklyn Nets,117.0
+401809934,2025-10-22,2025-10-22T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,125.0,14,MIA,Miami Heat,121.0
+401809935,2025-10-22,2025-10-22T23:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,118.0,28,TOR,Toronto Raptors,138.0
+401809936,2025-10-22,2025-10-22T23:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,116.0,20,PHI,Philadelphia 76ers,117.0
+401809937,2025-10-22,2025-10-23T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,115.0,8,DET,Detroit Pistons,111.0
+401809938,2025-10-22,2025-10-23T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,128.0,3,NO,New Orleans Pelicans,122.0
+401809939,2025-10-22,2025-10-23T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,133.0,27,WSH,Washington Wizards,120.0
+401809940,2025-10-22,2025-10-23T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,129.0,12,LAC,LA Clippers,108.0
+401809941,2025-10-22,2025-10-23T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,120.0,23,SAC,Sacramento Kings,116.0
+401809942,2025-10-22,2025-10-23T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,114.0,16,MIN,Minnesota Timberwolves,118.0
+401809236,2025-10-23,2025-10-23T23:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,135.0,25,OKC,Oklahoma City Thunder,141.0
+401809237,2025-10-23,2025-10-24T02:17Z,2026,2,True,post,False,9,GS,Golden State Warriors,137.0,7,DEN,Denver Nuggets,131.0
+401809943,2025-10-24,2025-10-24T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,107.0,1,ATL,Atlanta Hawks,111.0
+401809944,2025-10-24,2025-10-24T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,124.0,5,CLE,Cleveland Cavaliers,131.0
+401809945,2025-10-24,2025-10-24T23:30Z,2026,2,True,post,False,18,NY,New York Knicks,105.0,2,BOS,Boston Celtics,95.0
+401809946,2025-10-24,2025-10-24T22:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,116.0,15,MIL,Milwaukee Bucks,122.0
+401809947,2025-10-24,2025-10-25T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,111.0,8,DET,Detroit Pistons,115.0
+401809948,2025-10-24,2025-10-25T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,114.0,14,MIA,Miami Heat,146.0
+401809949,2025-10-24,2025-10-25T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,116.0,24,SA,San Antonio Spurs,120.0
+401809950,2025-10-24,2025-10-25T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,107.0,27,WSH,Washington Wizards,117.0
+401809951,2025-10-24,2025-10-25T02:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,128.0,16,MIN,Minnesota Timberwolves,110.0
+401809952,2025-10-24,2025-10-25T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,139.0,9,GS,Golden State Warriors,119.0
+401809953,2025-10-24,2025-10-25T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,105.0,26,UTAH,Utah Jazz,104.0
+401809954,2025-10-24,2025-10-25T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,129.0,21,PHX,Phoenix Suns,102.0
+401809955,2025-10-25,2025-10-25T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,98.0,4,CHI,Chicago Bulls,110.0
+401809956,2025-10-25,2025-10-25T23:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,100.0,25,OKC,Oklahoma City Thunder,117.0
+401809957,2025-10-25,2025-10-25T23:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,125.0,30,CHA,Charlotte Hornets,121.0
+401809958,2025-10-25,2025-10-26T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,128.0,11,IND,Indiana Pacers,103.0
+401809959,2025-10-25,2025-10-26T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,133.0,21,PHX,Phoenix Suns,111.0
+401809960,2025-10-26,2025-10-26T18:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,118.0,17,BKN,Brooklyn Nets,107.0
+401809961,2025-10-26,2025-10-26T19:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,119.0,2,BOS,Boston Celtics,113.0
+401809962,2025-10-26,2025-10-26T22:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,118.0,15,MIL,Milwaukee Bucks,113.0
+401809963,2025-10-26,2025-10-26T22:00Z,2026,2,True,post,False,14,MIA,Miami Heat,115.0,18,NY,New York Knicks,107.0
+401809964,2025-10-26,2025-10-26T22:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,113.0,30,CHA,Charlotte Hornets,139.0
+401809965,2025-10-26,2025-10-26T23:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,114.0,11,IND,Indiana Pacers,110.0
+401809966,2025-10-26,2025-10-26T23:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,139.0,28,TOR,Toronto Raptors,129.0
+401809967,2025-10-26,2025-10-27T01:00Z,2026,2,True,post,False,12,LAC,LA Clippers,114.0,22,POR,Portland Trail Blazers,107.0
+401809968,2025-10-26,2025-10-27T01:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,120.0,13,LAL,Los Angeles Lakers,127.0
+401809245,2025-10-27,2025-10-27T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,95.0,5,CLE,Cleveland Cavaliers,116.0
+401809246,2025-10-27,2025-10-28T01:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,114.0,7,DEN,Denver Nuggets,127.0
+401809969,2025-10-27,2025-10-27T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,136.0,19,ORL,Orlando Magic,124.0
+401809970,2025-10-27,2025-10-28T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,128.0,1,ATL,Atlanta Hawks,123.0
+401809971,2025-10-27,2025-10-28T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,137.0,17,BKN,Brooklyn Nets,109.0
+401809972,2025-10-27,2025-10-28T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,90.0,2,BOS,Boston Celtics,122.0
+401809973,2025-10-27,2025-10-28T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,121.0,28,TOR,Toronto Raptors,103.0
+401809974,2025-10-27,2025-10-28T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,94.0,25,OKC,Oklahoma City Thunder,101.0
+401809975,2025-10-27,2025-10-28T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,138.0,21,PHX,Phoenix Suns,134.0
+401809976,2025-10-27,2025-10-28T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,131.0,29,MEM,Memphis Grizzlies,118.0
+401809977,2025-10-27,2025-10-28T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,108.0,22,POR,Portland Trail Blazers,122.0
+401809978,2025-10-28,2025-10-28T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,134.0,20,PHI,Philadelphia 76ers,139.0
+401809979,2025-10-28,2025-10-28T23:30Z,2026,2,True,post,False,14,MIA,Miami Heat,144.0,30,CHA,Charlotte Hornets,117.0
+401809980,2025-10-28,2025-10-29T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,121.0,18,NY,New York Knicks,111.0
+401809981,2025-10-28,2025-10-29T00:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,107.0,23,SAC,Sacramento Kings,101.0
+401809982,2025-10-28,2025-10-29T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,98.0,12,LAC,LA Clippers,79.0
+401809983,2025-10-29,2025-10-29T23:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,125.0,5,CLE,Cleveland Cavaliers,105.0
+401809984,2025-10-29,2025-10-29T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,135.0,19,ORL,Orlando Magic,116.0
+401809985,2025-10-29,2025-10-29T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,112.0,1,ATL,Atlanta Hawks,117.0
+401809986,2025-10-29,2025-10-29T22:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,121.0,10,HOU,Houston Rockets,139.0
+401809987,2025-10-29,2025-10-30T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,126.0,23,SAC,Sacramento Kings,113.0
+401809988,2025-10-29,2025-10-30T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,107.0,11,IND,Indiana Pacers,105.0
+401809989,2025-10-29,2025-10-30T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,122.0,3,NO,New Orleans Pelicans,88.0
+401809990,2025-10-29,2025-10-30T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,134.0,22,POR,Portland Trail Blazers,136.0
+401809991,2025-10-29,2025-10-30T01:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,115.0,13,LAL,Los Angeles Lakers,116.0
+401809992,2025-10-29,2025-10-30T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,113.0,29,MEM,Memphis Grizzlies,114.0
+401809993,2025-10-30,2025-10-30T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,107.0,19,ORL,Orlando Magic,123.0
+401809994,2025-10-30,2025-10-31T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,120.0,9,GS,Golden State Warriors,110.0
+401809995,2025-10-30,2025-10-31T00:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,127.0,27,WSH,Washington Wizards,108.0
+401809996,2025-10-30,2025-10-31T00:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,107.0,14,MIA,Miami Heat,101.0
+401809502,2025-10-31,2025-10-31T23:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,108.0,1,ATL,Atlanta Hawks,128.0
+401809503,2025-10-31,2025-10-31T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,108.0,2,BOS,Boston Celtics,109.0
+401809504,2025-10-31,2025-10-31T23:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,101.0,28,TOR,Toronto Raptors,112.0
+401809505,2025-10-31,2025-11-01T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,135.0,18,NY,New York Knicks,125.0
+401809506,2025-10-31,2025-11-01T01:30Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,112.0,13,LAL,Los Angeles Lakers,117.0
+401809507,2025-10-31,2025-11-01T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,118.0,26,UTAH,Utah Jazz,96.0
+401809508,2025-10-31,2025-11-01T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,109.0,7,DEN,Denver Nuggets,107.0
+401809509,2025-10-31,2025-11-01T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,126.0,3,NO,New Orleans Pelicans,124.0
+401809997,2025-11-01,2025-11-01T21:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,133.0,23,SAC,Sacramento Kings,135.0
+401809998,2025-11-01,2025-11-01T22:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,105.0,16,MIN,Minnesota Timberwolves,122.0
+401809999,2025-11-01,2025-11-01T23:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,114.0,9,GS,Golden State Warriors,109.0
+401810000,2025-11-01,2025-11-01T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,94.0,19,ORL,Orlando Magic,125.0
+401810001,2025-11-01,2025-11-02T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,101.0,10,HOU,Houston Rockets,128.0
+401810002,2025-11-01,2025-11-02T02:00Z,2026,2,True,post,True,8,DET,Detroit Pistons,122.0,6,DAL,Dallas Mavericks,110.0
+401810003,2025-11-02,2025-11-02T20:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,137.0,3,NO,New Orleans Pelicans,106.0
+401810004,2025-11-02,2025-11-02T23:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,105.0,20,PHI,Philadelphia 76ers,129.0
+401810005,2025-11-02,2025-11-02T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,126.0,26,UTAH,Utah Jazz,103.0
+401810006,2025-11-02,2025-11-02T23:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,117.0,1,ATL,Atlanta Hawks,109.0
+401810007,2025-11-02,2025-11-02T23:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,117.0,29,MEM,Memphis Grizzlies,104.0
+401810008,2025-11-02,2025-11-03T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,128.0,4,CHI,Chicago Bulls,116.0
+401810009,2025-11-02,2025-11-03T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,130.0,24,SA,San Antonio Spurs,118.0
+401810010,2025-11-02,2025-11-03T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,130.0,14,MIA,Miami Heat,120.0
+401810011,2025-11-03,2025-11-04T00:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,109.0,16,MIN,Minnesota Timberwolves,125.0
+401810012,2025-11-03,2025-11-04T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,115.0,15,MIL,Milwaukee Bucks,117.0
+401810013,2025-11-03,2025-11-04T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,103.0,26,UTAH,Utah Jazz,105.0
+401810014,2025-11-03,2025-11-04T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,119.0,27,WSH,Washington Wizards,102.0
+401810015,2025-11-03,2025-11-04T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,110.0,6,DAL,Dallas Mavericks,102.0
+401810016,2025-11-03,2025-11-04T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,106.0,8,DET,Detroit Pistons,114.0
+401810017,2025-11-03,2025-11-04T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,130.0,23,SAC,Sacramento Kings,124.0
+401810018,2025-11-03,2025-11-04T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,115.0,13,LAL,Los Angeles Lakers,123.0
+401810019,2025-11-03,2025-11-04T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,119.0,14,MIA,Miami Heat,120.0
+401810020,2025-11-04,2025-11-05T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,128.0,15,MIL,Milwaukee Bucks,100.0
+401810021,2025-11-04,2025-11-05T01:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,127.0,19,ORL,Orlando Magic,112.0
+401810022,2025-11-04,2025-11-05T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,113.0,20,PHI,Philadelphia 76ers,111.0
+401810023,2025-11-04,2025-11-05T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,116.0,30,CHA,Charlotte Hornets,112.0
+401810024,2025-11-04,2025-11-05T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,118.0,21,PHX,Phoenix Suns,107.0
+401810025,2025-11-04,2025-11-05T04:00Z,2026,2,True,post,False,12,LAC,LA Clippers,107.0,25,OKC,Oklahoma City Thunder,126.0
+401810026,2025-11-05,2025-11-06T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,132.0,20,PHI,Philadelphia 76ers,121.0
+401810027,2025-11-05,2025-11-06T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,114.0,26,UTAH,Utah Jazz,103.0
+401810028,2025-11-05,2025-11-06T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,103.0,17,BKN,Brooklyn Nets,112.0
+401810029,2025-11-05,2025-11-06T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,136.0,27,WSH,Washington Wizards,107.0
+401810030,2025-11-05,2025-11-06T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,137.0,16,MIN,Minnesota Timberwolves,114.0
+401810031,2025-11-05,2025-11-06T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,109.0,10,HOU,Houston Rockets,124.0
+401810032,2025-11-05,2025-11-06T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,99.0,3,NO,New Orleans Pelicans,101.0
+401810033,2025-11-05,2025-11-06T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,122.0,14,MIA,Miami Heat,112.0
+401810034,2025-11-05,2025-11-06T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,118.0,24,SA,San Antonio Spurs,116.0
+401810035,2025-11-05,2025-11-06T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,121.0,25,OKC,Oklahoma City Thunder,119.0
+401810036,2025-11-05,2025-11-06T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,121.0,9,GS,Golden State Warriors,116.0
+401810037,2025-11-06,2025-11-07T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,115.0,12,LAC,LA Clippers,102.0
+401809510,2025-11-07,2025-11-08T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,123.0,2,BOS,Boston Celtics,110.0
+401809511,2025-11-07,2025-11-08T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,115.0,5,CLE,Cleveland Cavaliers,148.0
+401809512,2025-11-07,2025-11-08T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,97.0,28,TOR,Toronto Raptors,109.0
+401809773,2025-11-07,2025-11-08T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,107.0,8,DET,Detroit Pistons,125.0
+401809774,2025-11-07,2025-11-08T00:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,121.0,10,HOU,Houston Rockets,110.0
+401809775,2025-11-07,2025-11-08T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,126.0,30,CHA,Charlotte Hornets,108.0
+401809776,2025-11-07,2025-11-08T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,118.0,6,DAL,Dallas Mavericks,104.0
+401809777,2025-11-07,2025-11-08T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,126.0,4,CHI,Chicago Bulls,110.0
+401809778,2025-11-07,2025-11-08T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,137.0,26,UTAH,Utah Jazz,97.0
+401809779,2025-11-07,2025-11-08T03:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,129.0,9,GS,Golden State Warriors,104.0
+401809780,2025-11-07,2025-11-08T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,101.0,25,OKC,Oklahoma City Thunder,132.0
+401810038,2025-11-08,2025-11-09T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,105.0,6,DAL,Dallas Mavericks,111.0
+401810039,2025-11-08,2025-11-09T00:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,130.0,28,TOR,Toronto Raptors,120.0
+401810040,2025-11-08,2025-11-09T01:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,122.0,13,LAL,Los Angeles Lakers,102.0
+401810041,2025-11-08,2025-11-09T01:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,128.0,4,CHI,Chicago Bulls,122.0
+401810042,2025-11-08,2025-11-09T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,136.0,22,POR,Portland Trail Blazers,131.0
+401810043,2025-11-08,2025-11-09T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,126.0,3,NO,New Orleans Pelicans,119.0
+401810044,2025-11-08,2025-11-09T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,117.0,11,IND,Indiana Pacers,100.0
+401810045,2025-11-08,2025-11-09T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,103.0,21,PHX,Phoenix Suns,114.0
+401810046,2025-11-09,2025-11-09T20:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,115.0,10,HOU,Houston Rockets,122.0
+401810047,2025-11-09,2025-11-09T23:00Z,2026,2,True,post,False,18,NY,New York Knicks,134.0,17,BKN,Brooklyn Nets,98.0
+401810048,2025-11-09,2025-11-09T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,107.0,2,BOS,Boston Celtics,111.0
+401810049,2025-11-09,2025-11-09T23:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,100.0,25,OKC,Oklahoma City Thunder,114.0
+401810050,2025-11-09,2025-11-10T00:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,108.0,8,DET,Detroit Pistons,111.0
+401810051,2025-11-09,2025-11-10T01:30Z,2026,2,True,post,False,9,GS,Golden State Warriors,114.0,11,IND,Indiana Pacers,83.0
+401810052,2025-11-09,2025-11-10T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,117.0,16,MIN,Minnesota Timberwolves,144.0
+401810053,2025-11-10,2025-11-11T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,111.0,13,LAL,Los Angeles Lakers,121.0
+401810054,2025-11-10,2025-11-11T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,137.0,27,WSH,Washington Wizards,135.0
+401810055,2025-11-10,2025-11-11T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,115.0,22,POR,Portland Trail Blazers,112.0
+401810056,2025-11-10,2025-11-11T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,140.0,5,CLE,Cleveland Cavaliers,138.0
+401810057,2025-11-10,2025-11-11T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,117.0,24,SA,San Antonio Spurs,121.0
+401810058,2025-11-10,2025-11-11T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,114.0,15,MIL,Milwaukee Bucks,116.0
+401810059,2025-11-10,2025-11-11T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,121.0,3,NO,New Orleans Pelicans,98.0
+401810060,2025-11-10,2025-11-11T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,113.0,16,MIN,Minnesota Timberwolves,120.0
+401810061,2025-11-10,2025-11-11T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,102.0,1,ATL,Atlanta Hawks,105.0
+401810062,2025-11-11,2025-11-12T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,109.0,28,TOR,Toronto Raptors,119.0
+401810063,2025-11-11,2025-11-12T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,133.0,29,MEM,Memphis Grizzlies,120.0
+401810064,2025-11-11,2025-11-12T01:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,102.0,2,BOS,Boston Celtics,100.0
+401810065,2025-11-11,2025-11-12T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,126.0,9,GS,Golden State Warriors,102.0
+401810066,2025-11-11,2025-11-12T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,152.0,11,IND,Indiana Pacers,128.0
+401810067,2025-11-11,2025-11-12T04:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,108.0,7,DEN,Denver Nuggets,122.0
+401810068,2025-11-12,2025-11-13T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,111.0,15,MIL,Milwaukee Bucks,100.0
+401810069,2025-11-12,2025-11-13T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,124.0,4,CHI,Chicago Bulls,113.0
+401810070,2025-11-12,2025-11-13T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,107.0,19,ORL,Orlando Magic,124.0
+401810071,2025-11-12,2025-11-13T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,131.0,29,MEM,Memphis Grizzlies,95.0
+401810072,2025-11-12,2025-11-13T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,116.0,5,CLE,Cleveland Cavaliers,130.0
+401810073,2025-11-12,2025-11-13T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,135.0,27,WSH,Washington Wizards,112.0
+401810074,2025-11-12,2025-11-13T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,117.0,22,POR,Portland Trail Blazers,125.0
+401810075,2025-11-12,2025-11-13T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,120.0,9,GS,Golden State Warriors,125.0
+401810076,2025-11-12,2025-11-13T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,114.0,21,PHX,Phoenix Suns,123.0
+401810077,2025-11-12,2025-11-13T02:47Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,121.0,13,LAL,Los Angeles Lakers,92.0
+401810078,2025-11-12,2025-11-13T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,100.0,1,ATL,Atlanta Hawks,133.0
+401810079,2025-11-12,2025-11-13T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,116.0,7,DEN,Denver Nuggets,130.0
+401810080,2025-11-13,2025-11-14T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,113.0,28,TOR,Toronto Raptors,126.0
+401810081,2025-11-13,2025-11-14T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,133.0,11,IND,Indiana Pacers,98.0
+401810082,2025-11-13,2025-11-14T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,122.0,1,ATL,Atlanta Hawks,132.0
+401809781,2025-11-14,2025-11-15T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,140.0,14,MIA,Miami Heat,132.0
+401809782,2025-11-14,2025-11-15T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,105.0,17,BKN,Brooklyn Nets,98.0
+401809783,2025-11-14,2025-11-15T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,114.0,20,PHI,Philadelphia 76ers,105.0
+401809784,2025-11-14,2025-11-15T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,140.0,22,POR,Portland Trail Blazers,116.0
+401809785,2025-11-14,2025-11-15T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,147.0,30,CHA,Charlotte Hornets,134.0
+401809786,2025-11-14,2025-11-15T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,124.0,23,SAC,Sacramento Kings,110.0
+401809787,2025-11-14,2025-11-15T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,104.0,13,LAL,Los Angeles Lakers,118.0
+401809788,2025-11-14,2025-11-15T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,127.0,12,LAC,LA Clippers,133.0
+401809789,2025-11-14,2025-11-15T02:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,108.0,9,GS,Golden State Warriors,109.0
+401810083,2025-11-15,2025-11-15T22:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,108.0,29,MEM,Memphis Grizzlies,100.0
+401810084,2025-11-15,2025-11-16T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,96.0,25,OKC,Oklahoma City Thunder,109.0
+401810085,2025-11-15,2025-11-16T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,111.0,28,TOR,Toronto Raptors,129.0
+401810086,2025-11-15,2025-11-16T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,95.0,13,LAL,Los Angeles Lakers,119.0
+401810087,2025-11-15,2025-11-16T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,112.0,7,DEN,Denver Nuggets,123.0
+401810088,2025-11-16,2025-11-16T20:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,121.0,12,LAC,LA Clippers,118.0
+401810089,2025-11-16,2025-11-16T21:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,123.0,23,SAC,Sacramento Kings,110.0
+401810090,2025-11-16,2025-11-16T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,106.0,17,BKN,Brooklyn Nets,129.0
+401810091,2025-11-16,2025-11-17T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,117.0,19,ORL,Orlando Magic,113.0
+401810092,2025-11-16,2025-11-17T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,106.0,9,GS,Golden State Warriors,124.0
+401810093,2025-11-16,2025-11-17T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,138.0,22,POR,Portland Trail Blazers,133.0
+401810094,2025-11-16,2025-11-17T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,122.0,1,ATL,Atlanta Hawks,124.0
+401810095,2025-11-16,2025-11-17T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,150.0,4,CHI,Chicago Bulls,147.0
+401810096,2025-11-17,2025-11-18T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,118.0,15,MIL,Milwaukee Bucks,106.0
+401810097,2025-11-17,2025-11-18T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,127.0,11,IND,Indiana Pacers,112.0
+401810098,2025-11-17,2025-11-18T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,110.0,12,LAC,LA Clippers,108.0
+401810099,2025-11-17,2025-11-18T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,115.0,18,NY,New York Knicks,113.0
+401810100,2025-11-17,2025-11-18T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,110.0,30,CHA,Charlotte Hornets,108.0
+401810101,2025-11-17,2025-11-18T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,120.0,6,DAL,Dallas Mavericks,96.0
+401810102,2025-11-17,2025-11-18T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,109.0,25,OKC,Oklahoma City Thunder,126.0
+401810103,2025-11-17,2025-11-18T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,127.0,4,CHI,Chicago Bulls,130.0
+401810104,2025-11-18,2025-11-19T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,121.0,9,GS,Golden State Warriors,113.0
+401810105,2025-11-18,2025-11-19T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,99.0,2,BOS,Boston Celtics,113.0
+401810106,2025-11-18,2025-11-19T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,112.0,8,DET,Detroit Pistons,120.0
+401810107,2025-11-18,2025-11-19T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,111.0,29,MEM,Memphis Grizzlies,101.0
+401810108,2025-11-18,2025-11-19T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,140.0,26,UTAH,Utah Jazz,126.0
+401810109,2025-11-18,2025-11-19T04:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,110.0,21,PHX,Phoenix Suns,127.0
+401810110,2025-11-19,2025-11-20T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,104.0,10,HOU,Houston Rockets,114.0
+401810111,2025-11-19,2025-11-20T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,127.0,30,CHA,Charlotte Hornets,118.0
+401810112,2025-11-19,2025-11-20T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,110.0,9,GS,Golden State Warriors,96.0
+401810113,2025-11-19,2025-11-20T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,112.0,28,TOR,Toronto Raptors,121.0
+401810114,2025-11-19,2025-11-20T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,120.0,27,WSH,Washington Wizards,109.0
+401810115,2025-11-19,2025-11-20T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,118.0,7,DEN,Denver Nuggets,125.0
+401810116,2025-11-19,2025-11-20T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,113.0,23,SAC,Sacramento Kings,99.0
+401810117,2025-11-19,2025-11-20T02:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,111.0,18,NY,New York Knicks,113.0
+401810118,2025-11-19,2025-11-20T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,121.0,4,CHI,Chicago Bulls,122.0
+401810119,2025-11-20,2025-11-21T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,129.0,12,LAC,LA Clippers,101.0
+401810120,2025-11-20,2025-11-21T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,137.0,23,SAC,Sacramento Kings,96.0
+401810121,2025-11-20,2025-11-21T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,114.0,20,PHI,Philadelphia 76ers,123.0
+401810122,2025-11-20,2025-11-21T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,135.0,1,ATL,Atlanta Hawks,126.0
+401809790,2025-11-21,2025-11-22T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,120.0,11,IND,Indiana Pacers,109.0
+401809791,2025-11-21,2025-11-22T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,105.0,17,BKN,Brooklyn Nets,113.0
+401809792,2025-11-21,2025-11-22T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,140.0,27,WSH,Washington Wizards,110.0
+401809793,2025-11-21,2025-11-22T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,107.0,14,MIA,Miami Heat,143.0
+401809794,2025-11-21,2025-11-22T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,118.0,3,NO,New Orleans Pelicans,115.0
+401809795,2025-11-21,2025-11-22T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,114.0,16,MIN,Minnesota Timberwolves,113.0
+401809796,2025-11-21,2025-11-22T02:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,109.0,7,DEN,Denver Nuggets,112.0
+401809797,2025-11-21,2025-11-22T03:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,112.0,25,OKC,Oklahoma City Thunder,144.0
+401809798,2025-11-21,2025-11-22T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,123.0,22,POR,Portland Trail Blazers,127.0
+401810123,2025-11-22,2025-11-22T18:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,116.0,12,LAC,LA Clippers,131.0
+401810124,2025-11-22,2025-11-22T22:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,133.0,18,NY,New York Knicks,121.0
+401810125,2025-11-22,2025-11-23T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,98.0,1,ATL,Atlanta Hawks,115.0
+401810126,2025-11-22,2025-11-23T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,121.0,27,WSH,Washington Wizards,120.0
+401810127,2025-11-22,2025-11-23T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,116.0,8,DET,Detroit Pistons,129.0
+401810128,2025-11-22,2025-11-23T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,96.0,29,MEM,Memphis Grizzlies,102.0
+401810129,2025-11-22,2025-11-23T03:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,123.0,23,SAC,Sacramento Kings,128.0
+401810130,2025-11-23,2025-11-23T18:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,117.0,14,MIA,Miami Heat,127.0
+401810131,2025-11-23,2025-11-23T23:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,113.0,30,CHA,Charlotte Hornets,110.0
+401810132,2025-11-23,2025-11-23T23:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,138.0,19,ORL,Orlando Magic,129.0
+401810133,2025-11-23,2025-11-23T23:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,120.0,12,LAC,LA Clippers,105.0
+401810134,2025-11-23,2025-11-23T23:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,119.0,17,BKN,Brooklyn Nets,109.0
+401810135,2025-11-23,2025-11-24T00:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,122.0,22,POR,Portland Trail Blazers,95.0
+401810136,2025-11-23,2025-11-24T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,111.0,24,SA,San Antonio Spurs,102.0
+401810137,2025-11-23,2025-11-24T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,106.0,13,LAL,Los Angeles Lakers,108.0
+401810138,2025-11-24,2025-11-25T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,117.0,8,DET,Detroit Pistons,122.0
+401810139,2025-11-24,2025-11-25T00:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,110.0,5,CLE,Cleveland Cavaliers,99.0
+401810140,2025-11-24,2025-11-25T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,100.0,18,NY,New York Knicks,113.0
+401810141,2025-11-24,2025-11-25T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,106.0,6,DAL,Dallas Mavericks,102.0
+401810142,2025-11-24,2025-11-25T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,115.0,7,DEN,Denver Nuggets,125.0
+401810143,2025-11-24,2025-11-25T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,103.0,22,POR,Portland Trail Blazers,115.0
+401810144,2025-11-24,2025-11-25T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,143.0,4,CHI,Chicago Bulls,130.0
+401810145,2025-11-24,2025-11-25T02:30Z,2026,2,True,post,False,21,PHX,Phoenix Suns,92.0,10,HOU,Houston Rockets,114.0
+401810146,2025-11-24,2025-11-25T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,134.0,26,UTAH,Utah Jazz,117.0
+401810147,2025-11-24,2025-11-25T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,117.0,16,MIN,Minnesota Timberwolves,112.0
+401809799,2025-11-25,2025-11-26T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,132.0,1,ATL,Atlanta Hawks,113.0
+401809800,2025-11-25,2025-11-26T01:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,103.0,19,ORL,Orlando Magic,144.0
+401809801,2025-11-25,2025-11-26T04:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,135.0,12,LAC,LA Clippers,118.0
+401809802,2025-11-26,2025-11-26T22:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,117.0,8,DET,Detroit Pistons,114.0
+401809803,2025-11-26,2025-11-27T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,101.0,18,NY,New York Knicks,129.0
+401809804,2025-11-26,2025-11-27T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,106.0,15,MIL,Milwaukee Bucks,103.0
+401809805,2025-11-26,2025-11-27T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,97.0,11,IND,Indiana Pacers,95.0
+401809806,2025-11-26,2025-11-27T00:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,113.0,16,MIN,Minnesota Timberwolves,105.0
+401809807,2025-11-26,2025-11-27T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,128.0,29,MEM,Memphis Grizzlies,133.0
+401809808,2025-11-26,2025-11-27T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,100.0,10,HOU,Houston Rockets,104.0
+401809809,2025-11-26,2025-11-27T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,102.0,24,SA,San Antonio Spurs,115.0
+401809810,2025-11-26,2025-11-27T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,100.0,21,PHX,Phoenix Suns,112.0
+401809811,2025-11-28,2025-11-29T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,130.0,5,CLE,Cleveland Cavaliers,123.0
+401809812,2025-11-28,2025-11-29T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,103.0,20,PHI,Philadelphia 76ers,115.0
+401809813,2025-11-28,2025-11-29T00:30Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,123.0,4,CHI,Chicago Bulls,116.0
+401809814,2025-11-28,2025-11-29T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,109.0,19,ORL,Orlando Magic,112.0
+401809815,2025-11-28,2025-11-29T00:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,119.0,27,WSH,Washington Wizards,86.0
+401809816,2025-11-28,2025-11-29T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,118.0,15,MIL,Milwaukee Bucks,109.0
+401809817,2025-11-28,2025-11-29T02:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,123.0,21,PHX,Phoenix Suns,119.0
+401809818,2025-11-28,2025-11-29T02:30Z,2026,2,True,post,False,7,DEN,Denver Nuggets,136.0,24,SA,San Antonio Spurs,139.0
+401809819,2025-11-28,2025-11-29T02:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,128.0,23,SAC,Sacramento Kings,119.0
+401809820,2025-11-28,2025-11-29T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,129.0,6,DAL,Dallas Mavericks,119.0
+401809821,2025-11-28,2025-11-29T03:00Z,2026,2,True,post,False,12,LAC,LA Clippers,107.0,29,MEM,Memphis Grizzlies,112.0
+401810148,2025-11-29,2025-11-29T22:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,119.0,2,BOS,Boston Celtics,115.0
+401810149,2025-11-29,2025-11-29T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,118.0,28,TOR,Toronto Raptors,111.0
+401810150,2025-11-29,2025-11-30T00:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,103.0,4,CHI,Chicago Bulls,101.0
+401810151,2025-11-29,2025-11-30T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,135.0,8,DET,Detroit Pistons,138.0
+401810152,2025-11-29,2025-11-30T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,116.0,17,BKN,Brooklyn Nets,99.0
+401810153,2025-11-29,2025-11-30T01:30Z,2026,2,True,post,False,9,GS,Golden State Warriors,104.0,3,NO,New Orleans Pelicans,96.0
+401810154,2025-11-29,2025-11-30T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,112.0,7,DEN,Denver Nuggets,130.0
+401810155,2025-11-29,2025-11-30T03:00Z,2026,2,True,post,False,12,LAC,LA Clippers,110.0,6,DAL,Dallas Mavericks,114.0
+401810156,2025-11-30,2025-11-30T20:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,101.0,10,HOU,Houston Rockets,129.0
+401810157,2025-11-30,2025-11-30T23:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,115.0,2,BOS,Boston Celtics,117.0
+401810158,2025-11-30,2025-11-30T23:00Z,2026,2,True,post,False,18,NY,New York Knicks,116.0,28,TOR,Toronto Raptors,94.0
+401810159,2025-11-30,2025-11-30T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,134.0,1,ATL,Atlanta Hawks,142.0
+401810160,2025-11-30,2025-11-30T23:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,115.0,25,OKC,Oklahoma City Thunder,123.0
+401810161,2025-11-30,2025-12-01T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,125.0,24,SA,San Antonio Spurs,112.0
+401810162,2025-11-30,2025-12-01T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,107.0,29,MEM,Memphis Grizzlies,115.0
+401810163,2025-11-30,2025-12-01T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,133.0,3,NO,New Orleans Pelicans,121.0
+401810164,2025-12-01,2025-12-02T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,99.0,1,ATL,Atlanta Hawks,98.0
+401810165,2025-12-01,2025-12-02T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,119.0,5,CLE,Cleveland Cavaliers,135.0
+401810166,2025-12-01,2025-12-02T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,129.0,15,MIL,Milwaukee Bucks,126.0
+401810167,2025-12-01,2025-12-02T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,116.0,30,CHA,Charlotte Hornets,103.0
+401810168,2025-12-01,2025-12-02T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,140.0,12,LAC,LA Clippers,123.0
+401810169,2025-12-01,2025-12-02T00:30Z,2026,2,True,post,False,19,ORL,Orlando Magic,125.0,4,CHI,Chicago Bulls,120.0
+401810170,2025-12-01,2025-12-02T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,121.0,6,DAL,Dallas Mavericks,131.0
+401810171,2025-12-01,2025-12-02T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,133.0,10,HOU,Houston Rockets,125.0
+401810172,2025-12-01,2025-12-02T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,108.0,21,PHX,Phoenix Suns,125.0
+401810173,2025-12-02,2025-12-03T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,121.0,27,WSH,Washington Wizards,102.0
+401810174,2025-12-02,2025-12-03T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,121.0,22,POR,Portland Trail Blazers,118.0
+401810175,2025-12-02,2025-12-03T01:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,123.0,18,NY,New York Knicks,117.0
+401810176,2025-12-02,2025-12-03T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,142.0,16,MIN,Minnesota Timberwolves,149.0
+401810177,2025-12-02,2025-12-03T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,126.0,29,MEM,Memphis Grizzlies,119.0
+401810178,2025-12-02,2025-12-03T04:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,112.0,25,OKC,Oklahoma City Thunder,124.0
+401810179,2025-12-03,2025-12-04T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,110.0,22,POR,Portland Trail Blazers,122.0
+401810180,2025-12-03,2025-12-04T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,120.0,7,DEN,Denver Nuggets,135.0
+401810181,2025-12-03,2025-12-04T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,112.0,24,SA,San Antonio Spurs,114.0
+401810182,2025-12-03,2025-12-04T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,92.0,12,LAC,LA Clippers,115.0
+401810183,2025-12-03,2025-12-04T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,119.0,30,CHA,Charlotte Hornets,104.0
+401810184,2025-12-03,2025-12-04T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,103.0,17,BKN,Brooklyn Nets,113.0
+401810185,2025-12-03,2025-12-04T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,121.0,23,SAC,Sacramento Kings,95.0
+401810186,2025-12-03,2025-12-04T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,113.0,8,DET,Detroit Pistons,109.0
+401810187,2025-12-03,2025-12-04T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,118.0,14,MIA,Miami Heat,108.0
+401810188,2025-12-04,2025-12-05T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,99.0,9,GS,Golden State Warriors,98.0
+401810189,2025-12-04,2025-12-05T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,101.0,2,BOS,Boston Celtics,146.0
+401810190,2025-12-04,2025-12-05T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,110.0,26,UTAH,Utah Jazz,123.0
+401810191,2025-12-04,2025-12-05T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,120.0,13,LAL,Los Angeles Lakers,123.0
+401810192,2025-12-04,2025-12-05T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,116.0,16,MIN,Minnesota Timberwolves,125.0
+401810193,2025-12-05,2025-12-06T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,126.0,13,LAL,Los Angeles Lakers,105.0
+401810194,2025-12-05,2025-12-06T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,106.0,14,MIA,Miami Heat,105.0
+401810195,2025-12-05,2025-12-06T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,133.0,7,DEN,Denver Nuggets,134.0
+401810196,2025-12-05,2025-12-06T00:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,130.0,24,SA,San Antonio Spurs,117.0
+401810197,2025-12-05,2025-12-06T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,122.0,22,POR,Portland Trail Blazers,116.0
+401810198,2025-12-05,2025-12-06T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,146.0,26,UTAH,Utah Jazz,112.0
+401810199,2025-12-05,2025-12-06T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,86.0,30,CHA,Charlotte Hornets,111.0
+401810200,2025-12-05,2025-12-06T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,105.0,11,IND,Indiana Pacers,120.0
+401810201,2025-12-05,2025-12-06T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,117.0,21,PHX,Phoenix Suns,98.0
+401810202,2025-12-05,2025-12-06T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,107.0,12,LAC,LA Clippers,98.0
+401810203,2025-12-05,2025-12-06T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,101.0,20,PHI,Philadelphia 76ers,116.0
+401810204,2025-12-05,2025-12-06T02:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,132.0,6,DAL,Dallas Mavericks,111.0
+401810205,2025-12-06,2025-12-06T22:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,119.0,3,NO,New Orleans Pelicans,101.0
+401810206,2025-12-06,2025-12-07T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,116.0,1,ATL,Atlanta Hawks,131.0
+401810207,2025-12-06,2025-12-07T00:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,94.0,9,GS,Golden State Warriors,99.0
+401810208,2025-12-06,2025-12-07T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,124.0,15,MIL,Milwaukee Bucks,112.0
+401810209,2025-12-06,2025-12-07T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,111.0,23,SAC,Sacramento Kings,127.0
+401810210,2025-12-06,2025-12-07T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,109.0,12,LAC,LA Clippers,106.0
+401810211,2025-12-06,2025-12-07T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,122.0,10,HOU,Houston Rockets,109.0
+401810212,2025-12-07,2025-12-07T17:00Z,2026,2,True,post,False,18,NY,New York Knicks,106.0,19,ORL,Orlando Magic,100.0
+401810213,2025-12-07,2025-12-07T20:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,113.0,2,BOS,Boston Celtics,121.0
+401810214,2025-12-07,2025-12-07T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,106.0,7,DEN,Denver Nuggets,115.0
+401810215,2025-12-07,2025-12-07T23:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,119.0,22,POR,Portland Trail Blazers,96.0
+401810216,2025-12-07,2025-12-08T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,91.0,9,GS,Golden State Warriors,123.0
+401810217,2025-12-07,2025-12-08T00:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,108.0,13,LAL,Los Angeles Lakers,112.0
+401810218,2025-12-07,2025-12-08T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,101.0,25,OKC,Oklahoma City Thunder,131.0
+401810219,2025-12-08,2025-12-09T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,116.0,23,SAC,Sacramento Kings,105.0
+401810220,2025-12-08,2025-12-09T00:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,105.0,21,PHX,Phoenix Suns,108.0
+401810221,2025-12-08,2025-12-09T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,132.0,24,SA,San Antonio Spurs,135.0
+401809833,2025-12-09,2025-12-09T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,117.0,14,MIA,Miami Heat,108.0
+401809834,2025-12-09,2025-12-10T01:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,101.0,18,NY,New York Knicks,117.0
+401809835,2025-12-10,2025-12-11T00:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,138.0,21,PHX,Phoenix Suns,89.0
+401809836,2025-12-10,2025-12-11T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,119.0,24,SA,San Antonio Spurs,132.0
+401836746,2025-12-11,2025-12-12T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,115.0,12,LAC,LA Clippers,113.0
+401836747,2025-12-11,2025-12-12T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,116.0,2,BOS,Boston Celtics,101.0
+401836748,2025-12-11,2025-12-12T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,143.0,22,POR,Portland Trail Blazers,120.0
+401836749,2025-12-11,2025-12-12T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,105.0,7,DEN,Denver Nuggets,136.0
+401836750,2025-12-12,2025-12-13T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,126.0,4,CHI,Chicago Bulls,129.0
+401836751,2025-12-12,2025-12-13T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,142.0,1,ATL,Atlanta Hawks,115.0
+401836752,2025-12-12,2025-12-13T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,115.0,11,IND,Indiana Pacers,105.0
+401836753,2025-12-12,2025-12-13T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,126.0,5,CLE,Cleveland Cavaliers,130.0
+401836754,2025-12-12,2025-12-13T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,126.0,26,UTAH,Utah Jazz,130.0
+401836795,2025-12-12,2025-12-13T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,119.0,17,BKN,Brooklyn Nets,111.0
+401836796,2025-12-12,2025-12-13T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,120.0,16,MIN,Minnesota Timberwolves,127.0
+401809837,2025-12-13,2025-12-13T22:30Z,2026,2,True,post,True,19,ORL,Orlando Magic,120.0,18,NY,New York Knicks,132.0
+401809838,2025-12-13,2025-12-14T02:00Z,2026,2,True,post,True,25,OKC,Oklahoma City Thunder,109.0,24,SA,San Antonio Spurs,111.0
+401836797,2025-12-14,2025-12-14T20:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,89.0,27,WSH,Washington Wizards,108.0
+401836798,2025-12-14,2025-12-14T23:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,120.0,20,PHI,Philadelphia 76ers,117.0
+401836799,2025-12-14,2025-12-14T20:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,111.0,30,CHA,Charlotte Hornets,119.0
+401836800,2025-12-14,2025-12-14T23:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,127.0,15,MIL,Milwaukee Bucks,82.0
+401836801,2025-12-14,2025-12-15T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,117.0,23,SAC,Sacramento Kings,103.0
+401836802,2025-12-14,2025-12-15T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,136.0,9,GS,Golden State Warriors,131.0
+401836804,2025-12-14,2025-12-15T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,104.0,3,NO,New Orleans Pelicans,114.0
+401839699,2025-12-14,2025-12-15T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,114.0,13,LAL,Los Angeles Lakers,116.0
+401836803,2025-12-15,2025-12-16T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,105.0,8,DET,Detroit Pistons,112.0
+401836805,2025-12-15,2025-12-16T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,140.0,6,DAL,Dallas Mavericks,133.0
+401836806,2025-12-15,2025-12-16T02:30Z,2026,2,True,post,False,7,DEN,Denver Nuggets,128.0,10,HOU,Houston Rockets,125.0
+401836807,2025-12-15,2025-12-16T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,103.0,29,MEM,Memphis Grizzlies,121.0
+401839023,2025-12-15,2025-12-16T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,96.0,28,TOR,Toronto Raptors,106.0
+401809839,2025-12-16,2025-12-17T01:30Z,2026,2,True,post,True,18,NY,New York Knicks,124.0,24,SA,San Antonio Spurs,113.0
+401810222,2025-12-17,2025-12-18T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,127.0,5,CLE,Cleveland Cavaliers,111.0
+401810223,2025-12-17,2025-12-18T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,110.0,29,MEM,Memphis Grizzlies,116.0
+401810224,2025-12-18,2025-12-19T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,122.0,12,LAC,LA Clippers,101.0
+401810225,2025-12-18,2025-12-19T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,119.0,27,WSH,Washington Wizards,94.0
+401810226,2025-12-18,2025-12-19T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,133.0,1,ATL,Atlanta Hawks,126.0
+401810227,2025-12-18,2025-12-19T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,113.0,18,NY,New York Knicks,114.0
+401810228,2025-12-18,2025-12-19T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,95.0,14,MIA,Miami Heat,106.0
+401810229,2025-12-18,2025-12-19T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,105.0,28,TOR,Toronto Raptors,111.0
+401810230,2025-12-18,2025-12-19T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,133.0,10,HOU,Houston Rockets,128.0
+401810231,2025-12-18,2025-12-19T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,116.0,8,DET,Detroit Pistons,114.0
+401810232,2025-12-18,2025-12-19T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,126.0,19,ORL,Orlando Magic,115.0
+401810233,2025-12-18,2025-12-19T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,99.0,9,GS,Golden State Warriors,98.0
+401810234,2025-12-18,2025-12-19T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,135.0,13,LAL,Los Angeles Lakers,143.0
+401810235,2025-12-18,2025-12-19T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,134.0,23,SAC,Sacramento Kings,133.0
+401810236,2025-12-19,2025-12-20T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,129.0,14,MIA,Miami Heat,116.0
+401810237,2025-12-19,2025-12-20T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,107.0,20,PHI,Philadelphia 76ers,116.0
+401810238,2025-12-19,2025-12-20T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,98.0,24,SA,San Antonio Spurs,126.0
+401810239,2025-12-19,2025-12-20T00:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,125.0,4,CHI,Chicago Bulls,136.0
+401810240,2025-12-19,2025-12-20T02:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,112.0,25,OKC,Oklahoma City Thunder,107.0
+401810241,2025-12-20,2025-12-20T22:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,101.0,10,HOU,Houston Rockets,115.0
+401810242,2025-12-20,2025-12-21T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,121.0,6,DAL,Dallas Mavericks,114.0
+401810243,2025-12-20,2025-12-21T00:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,96.0,2,BOS,Boston Celtics,112.0
+401810244,2025-12-20,2025-12-21T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,128.0,11,IND,Indiana Pacers,109.0
+401810245,2025-12-20,2025-12-21T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,112.0,30,CHA,Charlotte Hornets,86.0
+401810246,2025-12-20,2025-12-21T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,122.0,27,WSH,Washington Wizards,130.0
+401810247,2025-12-20,2025-12-21T01:30Z,2026,2,True,post,False,9,GS,Golden State Warriors,119.0,21,PHX,Phoenix Suns,116.0
+401810248,2025-12-20,2025-12-21T02:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,127.0,19,ORL,Orlando Magic,128.0
+401810249,2025-12-20,2025-12-21T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,93.0,22,POR,Portland Trail Blazers,98.0
+401810250,2025-12-20,2025-12-21T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,103.0,13,LAL,Los Angeles Lakers,88.0
+401810251,2025-12-21,2025-12-21T20:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,150.0,4,CHI,Chicago Bulls,152.0
+401810252,2025-12-21,2025-12-21T23:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,96.0,28,TOR,Toronto Raptors,81.0
+401810253,2025-12-21,2025-12-21T23:00Z,2026,2,True,post,False,18,NY,New York Knicks,132.0,14,MIA,Miami Heat,125.0
+401810254,2025-12-21,2025-12-22T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,113.0,24,SA,San Antonio Spurs,124.0
+401810255,2025-12-21,2025-12-22T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,103.0,15,MIL,Milwaukee Bucks,100.0
+401810256,2025-12-21,2025-12-22T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,125.0,10,HOU,Houston Rockets,124.0
+401810257,2025-12-22,2025-12-23T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,139.0,30,CHA,Charlotte Hornets,132.0
+401810258,2025-12-22,2025-12-23T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,103.0,11,IND,Indiana Pacers,95.0
+401810259,2025-12-22,2025-12-23T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,119.0,6,DAL,Dallas Mavericks,113.0
+401810260,2025-12-22,2025-12-23T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,135.0,26,UTAH,Utah Jazz,112.0
+401810261,2025-12-22,2025-12-23T02:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,119.0,29,MEM,Memphis Grizzlies,103.0
+401810262,2025-12-22,2025-12-23T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,120.0,19,ORL,Orlando Magic,97.0
+401810263,2025-12-22,2025-12-23T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,102.0,8,DET,Detroit Pistons,110.0
+401810264,2025-12-23,2025-12-24T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,126.0,27,WSH,Washington Wizards,109.0
+401810265,2025-12-23,2025-12-24T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,106.0,17,BKN,Brooklyn Nets,114.0
+401810266,2025-12-23,2025-12-24T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,123.0,4,CHI,Chicago Bulls,126.0
+401810267,2025-12-23,2025-12-24T00:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,141.0,3,NO,New Orleans Pelicans,118.0
+401810268,2025-12-23,2025-12-24T00:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,94.0,15,MIL,Milwaukee Bucks,111.0
+401810269,2025-12-23,2025-12-24T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,91.0,28,TOR,Toronto Raptors,112.0
+401810270,2025-12-23,2025-12-24T01:00Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,131.0,7,DEN,Denver Nuggets,130.0
+401810271,2025-12-23,2025-12-24T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,115.0,18,NY,New York Knicks,104.0
+401810272,2025-12-23,2025-12-24T01:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,130.0,25,OKC,Oklahoma City Thunder,110.0
+401810273,2025-12-23,2025-12-24T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,132.0,13,LAL,Los Angeles Lakers,108.0
+401810274,2025-12-23,2025-12-24T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,128.0,29,MEM,Memphis Grizzlies,137.0
+401810275,2025-12-23,2025-12-24T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,106.0,19,ORL,Orlando Magic,110.0
+401810276,2025-12-23,2025-12-24T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,127.0,8,DET,Detroit Pistons,136.0
+401810277,2025-12-23,2025-12-24T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,128.0,10,HOU,Houston Rockets,108.0
+401809238,2025-12-25,2025-12-25T17:00Z,2026,2,True,post,False,18,NY,New York Knicks,126.0,5,CLE,Cleveland Cavaliers,124.0
+401809239,2025-12-25,2025-12-25T19:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,102.0,24,SA,San Antonio Spurs,117.0
+401809240,2025-12-25,2025-12-25T22:17Z,2026,2,True,post,False,9,GS,Golden State Warriors,126.0,6,DAL,Dallas Mavericks,116.0
+401809241,2025-12-25,2025-12-26T01:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,96.0,10,HOU,Houston Rockets,119.0
+401809242,2025-12-25,2025-12-26T03:30Z,2026,2,True,post,False,7,DEN,Denver Nuggets,142.0,16,MIN,Minnesota Timberwolves,138.0
+401810278,2025-12-26,2025-12-27T00:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,111.0,14,MIA,Miami Heat,126.0
+401810279,2025-12-26,2025-12-27T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,105.0,30,CHA,Charlotte Hornets,120.0
+401810280,2025-12-26,2025-12-27T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,138.0,28,TOR,Toronto Raptors,117.0
+401810281,2025-12-26,2025-12-27T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,122.0,2,BOS,Boston Celtics,140.0
+401810282,2025-12-26,2025-12-27T00:30Z,2026,2,True,post,False,4,CHI,Chicago Bulls,109.0,20,PHI,Philadelphia 76ers,102.0
+401810283,2025-12-26,2025-12-27T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,125.0,15,MIL,Milwaukee Bucks,104.0
+401810284,2025-12-26,2025-12-27T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,108.0,21,PHX,Phoenix Suns,115.0
+401810285,2025-12-26,2025-12-27T02:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,131.0,8,DET,Detroit Pistons,129.0
+401810286,2025-12-26,2025-12-27T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,103.0,12,LAC,LA Clippers,119.0
+401810287,2025-12-27,2025-12-27T22:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,113.0,6,DAL,Dallas Mavericks,107.0
+401810288,2025-12-27,2025-12-28T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,127.0,7,DEN,Denver Nuggets,126.0
+401810289,2025-12-27,2025-12-28T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,114.0,21,PHX,Phoenix Suns,123.0
+401810290,2025-12-27,2025-12-28T01:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,125.0,18,NY,New York Knicks,128.0
+401810291,2025-12-27,2025-12-28T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,142.0,11,IND,Indiana Pacers,116.0
+401810292,2025-12-27,2025-12-28T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,103.0,15,MIL,Milwaukee Bucks,112.0
+401810293,2025-12-27,2025-12-28T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,117.0,5,CLE,Cleveland Cavaliers,100.0
+401810294,2025-12-27,2025-12-28T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,107.0,17,BKN,Brooklyn Nets,123.0
+401810295,2025-12-27,2025-12-28T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,114.0,26,UTAH,Utah Jazz,127.0
+401810296,2025-12-28,2025-12-28T20:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,141.0,9,GS,Golden State Warriors,127.0
+401810297,2025-12-28,2025-12-28T20:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,129.0,20,PHI,Philadelphia 76ers,104.0
+401810298,2025-12-28,2025-12-28T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,116.0,29,MEM,Memphis Grizzlies,112.0
+401810299,2025-12-28,2025-12-28T23:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,114.0,2,BOS,Boston Celtics,108.0
+401810300,2025-12-28,2025-12-29T02:00Z,2026,2,True,post,False,12,LAC,LA Clippers,112.0,8,DET,Detroit Pistons,99.0
+401810301,2025-12-28,2025-12-29T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,125.0,23,SAC,Sacramento Kings,101.0
+401810302,2025-12-29,2025-12-30T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,113.0,15,MIL,Milwaukee Bucks,123.0
+401810303,2025-12-29,2025-12-30T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,101.0,21,PHX,Phoenix Suns,115.0
+401810304,2025-12-29,2025-12-30T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,107.0,9,GS,Golden State Warriors,120.0
+401810305,2025-12-29,2025-12-30T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,147.0,7,DEN,Denver Nuggets,123.0
+401810306,2025-12-29,2025-12-30T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,107.0,19,ORL,Orlando Magic,106.0
+401810307,2025-12-29,2025-12-30T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,101.0,16,MIN,Minnesota Timberwolves,136.0
+401810308,2025-12-29,2025-12-30T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,126.0,11,IND,Indiana Pacers,119.0
+401810309,2025-12-29,2025-12-30T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,125.0,18,NY,New York Knicks,130.0
+401810310,2025-12-29,2025-12-30T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,140.0,1,ATL,Atlanta Hawks,129.0
+401810311,2025-12-29,2025-12-30T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,101.0,5,CLE,Cleveland Cavaliers,113.0
+401810312,2025-12-29,2025-12-30T03:30Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,125.0,6,DAL,Dallas Mavericks,122.0
+401810313,2025-12-30,2025-12-31T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,136.0,20,PHI,Philadelphia 76ers,139.0
+401810314,2025-12-30,2025-12-31T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,119.0,2,BOS,Boston Celtics,129.0
+401810315,2025-12-30,2025-12-31T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,106.0,8,DET,Detroit Pistons,128.0
+401810316,2025-12-30,2025-12-31T04:00Z,2026,2,True,post,False,12,LAC,LA Clippers,131.0,23,SAC,Sacramento Kings,90.0
+401810317,2025-12-31,2025-12-31T18:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,125.0,9,GS,Golden State Warriors,132.0
+401810318,2025-12-31,2025-12-31T20:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,126.0,16,MIN,Minnesota Timberwolves,102.0
+401810319,2025-12-31,2025-12-31T20:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,110.0,19,ORL,Orlando Magic,112.0
+401810320,2025-12-31,2025-12-31T20:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,129.0,21,PHX,Phoenix Suns,113.0
+401810321,2025-12-31,2026-01-01T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,134.0,3,NO,New Orleans Pelicans,118.0
+401810322,2025-12-31,2026-01-01T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,134.0,18,NY,New York Knicks,132.0
+401810323,2025-12-31,2026-01-01T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,103.0,7,DEN,Denver Nuggets,106.0
+401810324,2025-12-31,2026-01-01T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,113.0,27,WSH,Washington Wizards,114.0
+401810325,2025-12-31,2026-01-01T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,124.0,22,POR,Portland Trail Blazers,95.0
+401810326,2026-01-01,2026-01-01T23:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,96.0,10,HOU,Houston Rockets,120.0
+401810327,2026-01-01,2026-01-02T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,112.0,14,MIA,Miami Heat,118.0
+401810328,2026-01-01,2026-01-02T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,108.0,20,PHI,Philadelphia 76ers,123.0
+401810329,2026-01-01,2026-01-02T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,106.0,2,BOS,Boston Celtics,120.0
+401810330,2026-01-01,2026-01-02T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,118.0,26,UTAH,Utah Jazz,101.0
+401810331,2026-01-02,2026-01-03T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,113.0,24,SA,San Antonio Spurs,123.0
+401810332,2026-01-02,2026-01-03T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,119.0,17,BKN,Brooklyn Nets,99.0
+401810333,2026-01-02,2026-01-03T00:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,113.0,7,DEN,Denver Nuggets,108.0
+401810334,2026-01-02,2026-01-03T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,99.0,1,ATL,Atlanta Hawks,111.0
+401810335,2026-01-02,2026-01-03T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,121.0,19,ORL,Orlando Magic,114.0
+401810336,2026-01-02,2026-01-03T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,122.0,30,CHA,Charlotte Hornets,121.0
+401810337,2026-01-02,2026-01-03T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,109.0,22,POR,Portland Trail Blazers,122.0
+401810338,2026-01-02,2026-01-03T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,129.0,23,SAC,Sacramento Kings,102.0
+401810339,2026-01-02,2026-01-03T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,94.0,25,OKC,Oklahoma City Thunder,131.0
+401810340,2026-01-02,2026-01-03T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,128.0,29,MEM,Memphis Grizzlies,121.0
+401810341,2026-01-03,2026-01-03T22:00Z,2026,2,True,post,False,14,MIA,Miami Heat,115.0,16,MIN,Minnesota Timberwolves,125.0
+401810342,2026-01-03,2026-01-04T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,119.0,20,PHI,Philadelphia 76ers,130.0
+401810343,2026-01-03,2026-01-04T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,134.0,1,ATL,Atlanta Hawks,117.0
+401810344,2026-01-03,2026-01-04T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,99.0,30,CHA,Charlotte Hornets,112.0
+401810345,2026-01-03,2026-01-04T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,110.0,22,POR,Portland Trail Blazers,115.0
+401810346,2026-01-03,2026-01-04T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,110.0,10,HOU,Houston Rockets,104.0
+401810347,2026-01-03,2026-01-04T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,123.0,26,UTAH,Utah Jazz,114.0
+401810348,2026-01-03,2026-01-04T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,115.0,2,BOS,Boston Celtics,146.0
+401810349,2026-01-04,2026-01-04T19:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,110.0,8,DET,Detroit Pistons,114.0
+401810350,2026-01-04,2026-01-04T20:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,135.0,11,IND,Indiana Pacers,127.0
+401810351,2026-01-04,2026-01-04T20:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,127.0,7,DEN,Denver Nuggets,115.0
+401810352,2026-01-04,2026-01-04T23:00Z,2026,2,True,post,False,14,MIA,Miami Heat,125.0,3,NO,New Orleans Pelicans,106.0
+401810353,2026-01-04,2026-01-04T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,115.0,16,MIN,Minnesota Timberwolves,141.0
+401810354,2026-01-04,2026-01-05T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,108.0,25,OKC,Oklahoma City Thunder,105.0
+401810355,2026-01-04,2026-01-05T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,98.0,15,MIL,Milwaukee Bucks,115.0
+401810356,2026-01-04,2026-01-05T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,120.0,29,MEM,Memphis Grizzlies,114.0
+401810357,2026-01-05,2026-01-06T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,121.0,18,NY,New York Knicks,90.0
+401810358,2026-01-05,2026-01-06T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,115.0,4,CHI,Chicago Bulls,101.0
+401810359,2026-01-05,2026-01-06T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,118.0,1,ATL,Atlanta Hawks,100.0
+401810360,2026-01-05,2026-01-06T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,100.0,21,PHX,Phoenix Suns,97.0
+401810361,2026-01-05,2026-01-06T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,97.0,30,CHA,Charlotte Hornets,124.0
+401810362,2026-01-05,2026-01-06T01:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,124.0,7,DEN,Denver Nuggets,125.0
+401810363,2026-01-05,2026-01-06T03:00Z,2026,2,True,post,False,12,LAC,LA Clippers,103.0,9,GS,Golden State Warriors,102.0
+401810364,2026-01-05,2026-01-06T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,137.0,26,UTAH,Utah Jazz,117.0
+401810365,2026-01-06,2026-01-07T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,116.0,5,CLE,Cleveland Cavaliers,120.0
+401810366,2026-01-06,2026-01-07T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,120.0,19,ORL,Orlando Magic,112.0
+401810367,2026-01-06,2026-01-07T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,106.0,24,SA,San Antonio Spurs,105.0
+401810368,2026-01-06,2026-01-07T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,122.0,14,MIA,Miami Heat,94.0
+401810369,2026-01-06,2026-01-07T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,103.0,13,LAL,Los Angeles Lakers,111.0
+401810370,2026-01-06,2026-01-07T04:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,98.0,6,DAL,Dallas Mavericks,100.0
+401810371,2026-01-07,2026-01-08T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,96.0,28,TOR,Toronto Raptors,97.0
+401810372,2026-01-07,2026-01-08T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,108.0,4,CHI,Chicago Bulls,93.0
+401810373,2026-01-07,2026-01-08T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,131.0,27,WSH,Washington Wizards,110.0
+401810374,2026-01-07,2026-01-08T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,117.0,3,NO,New Orleans Pelicans,100.0
+401810375,2026-01-07,2026-01-08T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,110.0,7,DEN,Denver Nuggets,114.0
+401810376,2026-01-07,2026-01-08T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,103.0,19,ORL,Orlando Magic,104.0
+401810377,2026-01-07,2026-01-08T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,123.0,12,LAC,LA Clippers,111.0
+401810378,2026-01-07,2026-01-08T02:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,107.0,13,LAL,Los Angeles Lakers,91.0
+401810379,2026-01-07,2026-01-08T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,98.0,21,PHX,Phoenix Suns,117.0
+401810380,2026-01-07,2026-01-08T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,129.0,26,UTAH,Utah Jazz,125.0
+401810381,2026-01-07,2026-01-08T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,120.0,15,MIL,Milwaukee Bucks,113.0
+401810382,2026-01-07,2026-01-08T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,103.0,10,HOU,Houston Rockets,102.0
+401810383,2026-01-08,2026-01-09T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,112.0,11,IND,Indiana Pacers,114.0
+401810384,2026-01-08,2026-01-09T01:00Z,2026,2,False,post,False,4,CHI,Chicago Bulls,,14,MIA,Miami Heat,
+401810385,2026-01-08,2026-01-09T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,131.0,5,CLE,Cleveland Cavaliers,122.0
+401810386,2026-01-08,2026-01-09T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,116.0,6,DAL,Dallas Mavericks,114.0
+401810387,2026-01-09,2026-01-10T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,125.0,28,TOR,Toronto Raptors,117.0
+401810388,2026-01-09,2026-01-10T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,91.0,20,PHI,Philadelphia 76ers,103.0
+401810389,2026-01-09,2026-01-10T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,107.0,3,NO,New Orleans Pelicans,128.0
+401810390,2026-01-09,2026-01-10T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,105.0,12,LAC,LA Clippers,121.0
+401810391,2026-01-09,2026-01-10T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,116.0,25,OKC,Oklahoma City Thunder,117.0
+401810392,2026-01-09,2026-01-10T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,87.0,1,ATL,Atlanta Hawks,110.0
+401810393,2026-01-09,2026-01-10T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,112.0,18,NY,New York Knicks,107.0
+401810394,2026-01-09,2026-01-10T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,137.0,23,SAC,Sacramento Kings,103.0
+401810395,2026-01-09,2026-01-10T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,111.0,10,HOU,Houston Rockets,105.0
+401810396,2026-01-09,2026-01-10T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,101.0,15,MIL,Milwaukee Bucks,105.0
+401810397,2026-01-10,2026-01-10T18:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,146.0,16,MIN,Minnesota Timberwolves,134.0
+401810398,2026-01-10,2026-01-11T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,123.0,14,MIA,Miami Heat,99.0
+401810399,2026-01-10,2026-01-11T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,92.0,12,LAC,LA Clippers,98.0
+401810400,2026-01-10,2026-01-11T01:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,95.0,24,SA,San Antonio Spurs,100.0
+401810401,2026-01-10,2026-01-11T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,125.0,6,DAL,Dallas Mavericks,107.0
+401810402,2026-01-10,2026-01-11T02:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,95.0,30,CHA,Charlotte Hornets,150.0
+401810403,2026-01-11,2026-01-11T20:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,128.0,3,NO,New Orleans Pelicans,118.0
+401810404,2026-01-11,2026-01-11T20:30Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,103.0,17,BKN,Brooklyn Nets,98.0
+401810405,2026-01-11,2026-01-11T23:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,116.0,20,PHI,Philadelphia 76ers,115.0
+401810406,2026-01-11,2026-01-11T23:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,114.0,18,NY,New York Knicks,123.0
+401810407,2026-01-11,2026-01-12T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,104.0,24,SA,San Antonio Spurs,103.0
+401810408,2026-01-11,2026-01-12T00:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,124.0,14,MIA,Miami Heat,112.0
+401810409,2026-01-11,2026-01-12T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,108.0,15,MIL,Milwaukee Bucks,104.0
+401810410,2026-01-11,2026-01-12T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,112.0,27,WSH,Washington Wizards,93.0
+401810411,2026-01-11,2026-01-12T01:30Z,2026,2,True,post,False,9,GS,Golden State Warriors,111.0,1,ATL,Atlanta Hawks,124.0
+401810412,2026-01-11,2026-01-12T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,111.0,10,HOU,Houston Rockets,98.0
+401810413,2026-01-12,2026-01-13T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,112.0,26,UTAH,Utah Jazz,123.0
+401810414,2026-01-12,2026-01-13T00:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,98.0,2,BOS,Boston Celtics,96.0
+401810415,2026-01-12,2026-01-13T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,102.0,20,PHI,Philadelphia 76ers,115.0
+401810416,2026-01-12,2026-01-13T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,113.0,17,BKN,Brooklyn Nets,105.0
+401810417,2026-01-12,2026-01-13T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,124.0,13,LAL,Los Angeles Lakers,112.0
+401810418,2026-01-12,2026-01-13T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,117.0,30,CHA,Charlotte Hornets,109.0
+401810419,2026-01-13,2026-01-14T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,127.0,21,PHX,Phoenix Suns,121.0
+401810420,2026-01-13,2026-01-14T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,119.0,4,CHI,Chicago Bulls,113.0
+401810421,2026-01-13,2026-01-14T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,106.0,16,MIN,Minnesota Timberwolves,139.0
+401810422,2026-01-13,2026-01-14T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,116.0,7,DEN,Denver Nuggets,122.0
+401810423,2026-01-13,2026-01-14T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,119.0,24,SA,San Antonio Spurs,98.0
+401810424,2026-01-13,2026-01-14T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,141.0,1,ATL,Atlanta Hawks,116.0
+401810425,2026-01-13,2026-01-14T04:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,119.0,22,POR,Portland Trail Blazers,97.0
+401810426,2026-01-14,2026-01-15T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,101.0,28,TOR,Toronto Raptors,115.0
+401810427,2026-01-14,2026-01-15T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,107.0,5,CLE,Cleveland Cavaliers,133.0
+401810428,2026-01-14,2026-01-15T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,128.0,26,UTAH,Utah Jazz,126.0
+401810429,2026-01-14,2026-01-15T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,116.0,17,BKN,Brooklyn Nets,113.0
+401810430,2026-01-14,2026-01-15T02:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,109.0,7,DEN,Denver Nuggets,118.0
+401810431,2026-01-14,2026-01-15T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,112.0,18,NY,New York Knicks,101.0
+401810432,2026-01-14,2026-01-15T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,119.0,27,WSH,Washington Wizards,105.0
+401810433,2026-01-15,2026-01-15T19:00Z,2026,2,True,post,True,19,ORL,Orlando Magic,118.0,29,MEM,Memphis Grizzlies,111.0
+401810434,2026-01-15,2026-01-16T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,108.0,21,PHX,Phoenix Suns,105.0
+401810435,2026-01-15,2026-01-16T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,114.0,2,BOS,Boston Celtics,119.0
+401810436,2026-01-15,2026-01-16T00:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,91.0,25,OKC,Oklahoma City Thunder,111.0
+401810437,2026-01-15,2026-01-16T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,119.0,15,MIL,Milwaukee Bucks,101.0
+401810438,2026-01-15,2026-01-16T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,144.0,26,UTAH,Utah Jazz,122.0
+401810439,2026-01-15,2026-01-16T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,126.0,18,NY,New York Knicks,113.0
+401810440,2026-01-15,2026-01-16T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,117.0,1,ATL,Atlanta Hawks,101.0
+401810441,2026-01-15,2026-01-16T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,117.0,30,CHA,Charlotte Hornets,135.0
+401810442,2026-01-16,2026-01-17T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,112.0,4,CHI,Chicago Bulls,109.0
+401810443,2026-01-16,2026-01-17T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,127.0,3,NO,New Orleans Pelicans,119.0
+401810444,2026-01-16,2026-01-17T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,115.0,5,CLE,Cleveland Cavaliers,117.0
+401810445,2026-01-16,2026-01-17T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,117.0,12,LAC,LA Clippers,121.0
+401810446,2026-01-16,2026-01-17T02:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,110.0,16,MIN,Minnesota Timberwolves,105.0
+401810447,2026-01-16,2026-01-17T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,128.0,27,WSH,Washington Wizards,115.0
+401810448,2026-01-17,2026-01-17T22:00Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,138.0,26,UTAH,Utah Jazz,120.0
+401810449,2026-01-17,2026-01-18T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,106.0,2,BOS,Boston Celtics,132.0
+401810450,2026-01-17,2026-01-18T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,121.0,11,IND,Indiana Pacers,78.0
+401810451,2026-01-17,2026-01-18T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,99.0,21,PHX,Phoenix Suns,106.0
+401810452,2026-01-17,2026-01-18T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,122.0,25,OKC,Oklahoma City Thunder,120.0
+401810453,2026-01-17,2026-01-18T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,126.0,16,MIN,Minnesota Timberwolves,123.0
+401810454,2026-01-17,2026-01-18T01:30Z,2026,2,True,post,False,9,GS,Golden State Warriors,136.0,30,CHA,Charlotte Hornets,116.0
+401810455,2026-01-17,2026-01-18T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,121.0,27,WSH,Washington Wizards,115.0
+401810456,2026-01-17,2026-01-18T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,132.0,13,LAL,Los Angeles Lakers,116.0
+401810457,2026-01-18,2026-01-18T17:00Z,2026,2,True,post,True,29,MEM,Memphis Grizzlies,126.0,19,ORL,Orlando Magic,109.0
+401810458,2026-01-18,2026-01-19T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,124.0,17,BKN,Brooklyn Nets,102.0
+401810459,2026-01-18,2026-01-19T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,119.0,3,NO,New Orleans Pelicans,110.0
+401810460,2026-01-18,2026-01-19T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,87.0,30,CHA,Charlotte Hornets,110.0
+401810461,2026-01-18,2026-01-19T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,110.0,22,POR,Portland Trail Blazers,117.0
+401810462,2026-01-18,2026-01-19T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,110.0,28,TOR,Toronto Raptors,93.0
+401809247,2026-01-19,2026-01-19T18:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,110.0,15,MIL,Milwaukee Bucks,112.0
+401809248,2026-01-19,2026-01-19T19:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,104.0,25,OKC,Oklahoma City Thunder,136.0
+401809249,2026-01-19,2026-01-19T22:00Z,2026,2,True,post,False,18,NY,New York Knicks,97.0,6,DAL,Dallas Mavericks,114.0
+401809250,2026-01-19,2026-01-20T01:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,104.0,2,BOS,Boston Celtics,103.0
+401810463,2026-01-19,2026-01-19T20:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,106.0,12,LAC,LA Clippers,110.0
+401810464,2026-01-19,2026-01-20T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,113.0,11,IND,Indiana Pacers,104.0
+401810465,2026-01-19,2026-01-20T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,117.0,21,PHX,Phoenix Suns,126.0
+401810466,2026-01-19,2026-01-19T22:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,123.0,26,UTAH,Utah Jazz,110.0
+401810467,2026-01-19,2026-01-20T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,135.0,14,MIA,Miami Heat,112.0
+401810468,2026-01-20,2026-01-21T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,110.0,21,PHX,Phoenix Suns,116.0
+401810469,2026-01-20,2026-01-21T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,138.0,12,LAC,LA Clippers,110.0
+401810470,2026-01-20,2026-01-21T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,111.0,24,SA,San Antonio Spurs,106.0
+401810471,2026-01-20,2026-01-21T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,127.0,16,MIN,Minnesota Timberwolves,122.0
+401810472,2026-01-20,2026-01-21T03:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,107.0,13,LAL,Los Angeles Lakers,115.0
+401810473,2026-01-20,2026-01-21T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,127.0,28,TOR,Toronto Raptors,145.0
+401810474,2026-01-20,2026-01-21T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,117.0,14,MIA,Miami Heat,130.0
+401810475,2026-01-21,2026-01-22T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,87.0,5,CLE,Cleveland Cavaliers,94.0
+401810476,2026-01-21,2026-01-22T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,119.0,11,IND,Indiana Pacers,104.0
+401810477,2026-01-21,2026-01-22T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,120.0,17,BKN,Brooklyn Nets,66.0
+401810478,2026-01-21,2026-01-22T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,122.0,1,ATL,Atlanta Hawks,124.0
+401810479,2026-01-21,2026-01-22T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,104.0,8,DET,Detroit Pistons,112.0
+401810480,2026-01-21,2026-01-22T02:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,102.0,25,OKC,Oklahoma City Thunder,122.0
+401810481,2026-01-21,2026-01-22T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,109.0,28,TOR,Toronto Raptors,122.0
+401810482,2026-01-22,2026-01-23T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,97.0,30,CHA,Charlotte Hornets,124.0
+401810483,2026-01-22,2026-01-23T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,128.0,10,HOU,Houston Rockets,122.0
+401810484,2026-01-22,2026-01-23T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,97.0,7,DEN,Denver Nuggets,107.0
+401810485,2026-01-22,2026-01-23T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,123.0,9,GS,Golden State Warriors,115.0
+401810486,2026-01-22,2026-01-23T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,115.0,4,CHI,Chicago Bulls,120.0
+401810487,2026-01-22,2026-01-23T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,109.0,24,SA,San Antonio Spurs,126.0
+401810488,2026-01-22,2026-01-23T03:00Z,2026,2,True,post,False,12,LAC,LA Clippers,112.0,13,LAL,Los Angeles Lakers,104.0
+401810489,2026-01-22,2026-01-23T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,127.0,14,MIA,Miami Heat,110.0
+401810490,2026-01-23,2026-01-24T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,104.0,10,HOU,Houston Rockets,111.0
+401810491,2026-01-23,2026-01-24T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,110.0,21,PHX,Phoenix Suns,103.0
+401810492,2026-01-23,2026-01-24T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,126.0,2,BOS,Boston Celtics,130.0
+401810493,2026-01-23,2026-01-24T00:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,123.0,23,SAC,Sacramento Kings,118.0
+401810494,2026-01-23,2026-01-24T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,127.0,3,NO,New Orleans Pelicans,133.0
+401810495,2026-01-23,2026-01-24T02:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,100.0,7,DEN,Denver Nuggets,102.0
+401810496,2026-01-23,2026-01-24T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,114.0,11,IND,Indiana Pacers,117.0
+401810497,2026-01-23,2026-01-24T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,98.0,28,TOR,Toronto Raptors,110.0
+401810498,2026-01-24,2026-01-24T20:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,109.0,18,NY,New York Knicks,112.0
+401810499,2026-01-24,2026-01-24T22:30Z,2026,2,False,post,False,16,MIN,Minnesota Timberwolves,,9,GS,Golden State Warriors,
+401810500,2026-01-24,2026-01-24T17:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,119.0,27,WSH,Washington Wizards,115.0
+401810501,2026-01-24,2026-01-25T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,105.0,5,CLE,Cleveland Cavaliers,119.0
+401810502,2026-01-24,2026-01-25T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,114.0,2,BOS,Boston Celtics,111.0
+401810503,2026-01-24,2026-01-25T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,110.0,13,LAL,Los Angeles Lakers,116.0
+401810504,2026-01-24,2026-01-25T02:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,116.0,14,MIA,Miami Heat,147.0
+401810505,2026-01-25,2026-01-25T20:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,139.0,23,SAC,Sacramento Kings,116.0
+401810506,2026-01-25,2026-01-25T20:30Z,2026,2,False,post,False,29,MEM,Memphis Grizzlies,,7,DEN,Denver Nuggets,
+401810507,2026-01-25,2026-01-26T00:00Z,2026,2,False,post,False,15,MIL,Milwaukee Bucks,,6,DAL,Dallas Mavericks,
+401810508,2026-01-25,2026-01-26T00:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,101.0,28,TOR,Toronto Raptors,103.0
+401810509,2026-01-25,2026-01-26T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,95.0,3,NO,New Orleans Pelicans,104.0
+401810510,2026-01-25,2026-01-26T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,102.0,14,MIA,Miami Heat,111.0
+401810511,2026-01-25,2026-01-26T02:00Z,2026,2,True,post,False,12,LAC,LA Clippers,126.0,17,BKN,Brooklyn Nets,89.0
+401857824,2026-01-25,2026-01-25T22:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,85.0,9,GS,Golden State Warriors,111.0
+401810512,2026-01-26,2026-01-26T20:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,130.0,20,PHI,Philadelphia 76ers,93.0
+401810513,2026-01-26,2026-01-27T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,114.0,19,ORL,Orlando Magic,98.0
+401810514,2026-01-26,2026-01-26T18:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,132.0,11,IND,Indiana Pacers,116.0
+401810515,2026-01-26,2026-01-27T01:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,102.0,22,POR,Portland Trail Blazers,94.0
+401810516,2026-01-26,2026-01-27T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,118.0,13,LAL,Los Angeles Lakers,129.0
+401810517,2026-01-26,2026-01-27T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,108.0,29,MEM,Memphis Grizzlies,99.0
+401810518,2026-01-26,2026-01-27T02:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,108.0,9,GS,Golden State Warriors,83.0
+401810519,2026-01-27,2026-01-28T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,115.0,22,POR,Portland Trail Blazers,111.0
+401810520,2026-01-27,2026-01-28T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,103.0,23,SAC,Sacramento Kings,87.0
+401810521,2026-01-27,2026-01-28T01:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,139.0,15,MIL,Milwaukee Bucks,122.0
+401810522,2026-01-27,2026-01-28T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,104.0,3,NO,New Orleans Pelicans,95.0
+401810523,2026-01-27,2026-01-28T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,107.0,8,DET,Detroit Pistons,109.0
+401810524,2026-01-27,2026-01-28T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,106.0,17,BKN,Brooklyn Nets,102.0
+401810525,2026-01-27,2026-01-28T03:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,103.0,12,LAC,LA Clippers,115.0
+401810526,2026-01-28,2026-01-29T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,129.0,13,LAL,Los Angeles Lakers,99.0
+401810527,2026-01-28,2026-01-29T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,113.0,4,CHI,Chicago Bulls,110.0
+401810528,2026-01-28,2026-01-29T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,106.0,1,ATL,Atlanta Hawks,117.0
+401810529,2026-01-28,2026-01-29T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,124.0,19,ORL,Orlando Magic,133.0
+401810530,2026-01-28,2026-01-29T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,92.0,18,NY,New York Knicks,119.0
+401810531,2026-01-28,2026-01-29T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,97.0,30,CHA,Charlotte Hornets,112.0
+401810532,2026-01-28,2026-01-29T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,105.0,16,MIN,Minnesota Timberwolves,118.0
+401810533,2026-01-28,2026-01-29T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,124.0,9,GS,Golden State Warriors,140.0
+401810534,2026-01-28,2026-01-29T02:42Z,2026,2,True,post,False,10,HOU,Houston Rockets,99.0,24,SA,San Antonio Spurs,111.0
+401810535,2026-01-29,2026-01-30T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,113.0,23,SAC,Sacramento Kings,111.0
+401810536,2026-01-29,2026-01-30T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,109.0,15,MIL,Milwaukee Bucks,99.0
+401810537,2026-01-29,2026-01-30T01:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,86.0,10,HOU,Houston Rockets,104.0
+401810538,2026-01-29,2026-01-30T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,121.0,30,CHA,Charlotte Hornets,123.0
+401810539,2026-01-29,2026-01-30T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,107.0,17,BKN,Brooklyn Nets,103.0
+401810540,2026-01-29,2026-01-30T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,114.0,8,DET,Detroit Pistons,96.0
+401810541,2026-01-29,2026-01-30T02:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,123.0,25,OKC,Oklahoma City Thunder,111.0
+401850920,2026-01-29,2026-01-30T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,113.0,14,MIA,Miami Heat,116.0
+401810542,2026-01-30,2026-01-31T00:30Z,2026,2,True,post,False,19,ORL,Orlando Magic,130.0,28,TOR,Toronto Raptors,120.0
+401810543,2026-01-30,2026-01-31T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,111.0,13,LAL,Los Angeles Lakers,142.0
+401810544,2026-01-30,2026-01-31T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,112.0,23,SAC,Sacramento Kings,93.0
+401810545,2026-01-30,2026-01-31T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,127.0,22,POR,Portland Trail Blazers,97.0
+401810546,2026-01-30,2026-01-31T00:30Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,114.0,29,MEM,Memphis Grizzlies,106.0
+401810548,2026-01-30,2026-01-31T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,126.0,5,CLE,Cleveland Cavaliers,113.0
+401810549,2026-01-30,2026-01-31T02:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,99.0,17,BKN,Brooklyn Nets,109.0
+401810550,2026-01-30,2026-01-31T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,122.0,12,LAC,LA Clippers,109.0
+401810551,2026-01-30,2026-01-31T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,124.0,8,DET,Detroit Pistons,131.0
+401810547,2026-01-31,2026-02-01T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,118.0,4,CHI,Chicago Bulls,125.0
+401810552,2026-01-31,2026-01-31T17:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,111.0,24,SA,San Antonio Spurs,106.0
+401810553,2026-01-31,2026-02-01T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,129.0,1,ATL,Atlanta Hawks,124.0
+401810554,2026-01-31,2026-02-01T00:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,124.0,3,NO,New Orleans Pelicans,114.0
+401810555,2026-01-31,2026-02-01T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,114.0,16,MIN,Minnesota Timberwolves,131.0
+401810556,2026-01-31,2026-02-01T01:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,111.0,6,DAL,Dallas Mavericks,107.0
+401810557,2026-02-01,2026-02-01T20:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,107.0,15,MIL,Milwaukee Bucks,79.0
+401810558,2026-02-01,2026-02-02T02:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,112.0,19,ORL,Orlando Magic,103.0
+401810559,2026-02-01,2026-02-01T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,130.0,17,BKN,Brooklyn Nets,77.0
+401810560,2026-02-01,2026-02-01T23:00Z,2026,2,True,post,False,14,MIA,Miami Heat,134.0,4,CHI,Chicago Bulls,91.0
+401810561,2026-02-01,2026-02-01T23:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,107.0,26,UTAH,Utah Jazz,100.0
+401810562,2026-02-01,2026-02-01T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,116.0,23,SAC,Sacramento Kings,112.0
+401810563,2026-02-01,2026-02-02T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,112.0,13,LAL,Los Angeles Lakers,100.0
+401810564,2026-02-01,2026-02-02T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,93.0,12,LAC,LA Clippers,117.0
+401810565,2026-02-01,2026-02-02T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,111.0,5,CLE,Cleveland Cavaliers,130.0
+401810566,2026-02-01,2026-02-02T02:30Z,2026,2,True,post,False,7,DEN,Denver Nuggets,111.0,25,OKC,Oklahoma City Thunder,121.0
+401810567,2026-02-02,2026-02-02T20:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,102.0,3,NO,New Orleans Pelicans,95.0
+401810568,2026-02-02,2026-02-03T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,114.0,10,HOU,Houston Rockets,118.0
+401810569,2026-02-02,2026-02-03T00:30Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,137.0,16,MIN,Minnesota Timberwolves,128.0
+401810570,2026-02-02,2026-02-03T03:00Z,2026,2,True,post,False,12,LAC,LA Clippers,113.0,20,PHI,Philadelphia 76ers,128.0
+401810571,2026-02-03,2026-02-04T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,124.0,7,DEN,Denver Nuggets,121.0
+401810572,2026-02-03,2026-02-04T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,122.0,26,UTAH,Utah Jazz,131.0
+401810573,2026-02-03,2026-02-04T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,101.0,18,NY,New York Knicks,132.0
+401810574,2026-02-03,2026-02-04T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,109.0,13,LAL,Los Angeles Lakers,125.0
+401810575,2026-02-03,2026-02-04T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,115.0,1,ATL,Atlanta Hawks,127.0
+401810576,2026-02-03,2026-02-04T01:00Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,100.0,2,BOS,Boston Celtics,110.0
+401810577,2026-02-03,2026-02-04T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,131.0,4,CHI,Chicago Bulls,115.0
+401810578,2026-02-03,2026-02-04T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,128.0,19,ORL,Orlando Magic,92.0
+401810579,2026-02-03,2026-02-04T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,94.0,20,PHI,Philadelphia 76ers,113.0
+401810580,2026-02-03,2026-02-04T04:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,125.0,21,PHX,Phoenix Suns,130.0
+401810581,2026-02-04,2026-02-05T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,134.0,7,DEN,Denver Nuggets,127.0
+401810582,2026-02-04,2026-02-05T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,126.0,16,MIN,Minnesota Timberwolves,128.0
+401810583,2026-02-04,2026-02-05T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,93.0,2,BOS,Boston Celtics,114.0
+401810584,2026-02-04,2026-02-05T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,141.0,3,NO,New Orleans Pelicans,137.0
+401810585,2026-02-04,2026-02-05T02:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,116.0,25,OKC,Oklahoma City Thunder,106.0
+401810586,2026-02-04,2026-02-05T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,125.0,29,MEM,Memphis Grizzlies,129.0
+401810587,2026-02-04,2026-02-05T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,91.0,5,CLE,Cleveland Cavaliers,124.0
+401810588,2026-02-05,2026-02-06T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,117.0,27,WSH,Washington Wizards,126.0
+401810589,2026-02-05,2026-02-06T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,118.0,17,BKN,Brooklyn Nets,98.0
+401810590,2026-02-05,2026-02-06T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,121.0,26,UTAH,Utah Jazz,119.0
+401810591,2026-02-05,2026-02-06T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,123.0,4,CHI,Chicago Bulls,107.0
+401810592,2026-02-05,2026-02-06T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,99.0,30,CHA,Charlotte Hornets,109.0
+401810593,2026-02-05,2026-02-06T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,123.0,24,SA,San Antonio Spurs,135.0
+401810594,2026-02-05,2026-02-06T03:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,97.0,9,GS,Golden State Warriors,101.0
+401810595,2026-02-05,2026-02-06T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,119.0,20,PHI,Philadelphia 76ers,115.0
+401810596,2026-02-06,2026-02-07T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,98.0,14,MIA,Miami Heat,96.0
+401810597,2026-02-06,2026-02-07T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,118.0,18,NY,New York Knicks,80.0
+401810598,2026-02-06,2026-02-07T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,105.0,11,IND,Indiana Pacers,99.0
+401810599,2026-02-06,2026-02-07T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,115.0,3,NO,New Orleans Pelicans,119.0
+401810600,2026-02-06,2026-02-07T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,135.0,29,MEM,Memphis Grizzlies,115.0
+401810601,2026-02-06,2026-02-07T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,111.0,12,LAC,LA Clippers,114.0
+401810602,2026-02-07,2026-02-07T20:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,127.0,27,WSH,Washington Wizards,113.0
+401810603,2026-02-07,2026-02-07T20:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,106.0,10,HOU,Houston Rockets,112.0
+401810604,2026-02-07,2026-02-07T23:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,138.0,6,DAL,Dallas Mavericks,125.0
+401810605,2026-02-07,2026-02-08T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,120.0,26,UTAH,Utah Jazz,117.0
+401810606,2026-02-07,2026-02-08T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,119.0,30,CHA,Charlotte Hornets,126.0
+401810607,2026-02-07,2026-02-08T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,120.0,7,DEN,Denver Nuggets,136.0
+401810608,2026-02-07,2026-02-08T01:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,105.0,9,GS,Golden State Warriors,99.0
+401810609,2026-02-07,2026-02-08T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,103.0,20,PHI,Philadelphia 76ers,109.0
+401810610,2026-02-07,2026-02-08T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,122.0,29,MEM,Memphis Grizzlies,115.0
+401810611,2026-02-07,2026-02-08T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,126.0,5,CLE,Cleveland Cavaliers,132.0
+401810612,2026-02-08,2026-02-08T17:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,89.0,18,NY,New York Knicks,111.0
+401810613,2026-02-08,2026-02-08T19:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,101.0,14,MIA,Miami Heat,132.0
+401810614,2026-02-08,2026-02-08T20:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,122.0,11,IND,Indiana Pacers,104.0
+401810615,2026-02-08,2026-02-08T20:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,96.0,12,LAC,LA Clippers,115.0
+401810616,2026-02-09,2026-02-10T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,104.0,8,DET,Detroit Pistons,110.0
+401810617,2026-02-09,2026-02-10T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,123.0,4,CHI,Chicago Bulls,115.0
+401810618,2026-02-09,2026-02-10T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,111.0,26,UTAH,Utah Jazz,115.0
+401810619,2026-02-09,2026-02-10T00:30Z,2026,2,True,post,False,19,ORL,Orlando Magic,118.0,15,MIL,Milwaukee Bucks,99.0
+401810620,2026-02-09,2026-02-10T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,138.0,1,ATL,Atlanta Hawks,116.0
+401810621,2026-02-09,2026-02-10T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,120.0,23,SAC,Sacramento Kings,94.0
+401810622,2026-02-09,2026-02-10T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,117.0,5,CLE,Cleveland Cavaliers,119.0
+401810623,2026-02-09,2026-02-10T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,114.0,29,MEM,Memphis Grizzlies,113.0
+401810624,2026-02-09,2026-02-10T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,110.0,25,OKC,Oklahoma City Thunder,119.0
+401810625,2026-02-09,2026-02-10T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,135.0,20,PHI,Philadelphia 76ers,118.0
+401810626,2026-02-10,2026-02-11T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,134.0,11,IND,Indiana Pacers,137.0
+401810627,2026-02-10,2026-02-11T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,102.0,12,LAC,LA Clippers,95.0
+401810628,2026-02-10,2026-02-11T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,120.0,6,DAL,Dallas Mavericks,111.0
+401810629,2026-02-10,2026-02-11T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,108.0,24,SA,San Antonio Spurs,136.0
+401810630,2026-02-11,2026-02-12T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,110.0,1,ATL,Atlanta Hawks,107.0
+401810631,2026-02-11,2026-02-12T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,138.0,27,WSH,Washington Wizards,113.0
+401810632,2026-02-11,2026-02-12T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,108.0,15,MIL,Milwaukee Bucks,116.0
+401810633,2026-02-11,2026-02-12T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,124.0,4,CHI,Chicago Bulls,105.0
+401810634,2026-02-11,2026-02-12T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,110.0,11,IND,Indiana Pacers,115.0
+401810635,2026-02-11,2026-02-12T00:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,89.0,18,NY,New York Knicks,138.0
+401810636,2026-02-11,2026-02-12T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,95.0,8,DET,Detroit Pistons,113.0
+401810637,2026-02-11,2026-02-12T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,102.0,12,LAC,LA Clippers,105.0
+401810638,2026-02-11,2026-02-12T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,133.0,22,POR,Portland Trail Blazers,109.0
+401810639,2026-02-11,2026-02-12T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,111.0,14,MIA,Miami Heat,123.0
+401810640,2026-02-11,2026-02-12T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,109.0,25,OKC,Oklahoma City Thunder,136.0
+401810641,2026-02-11,2026-02-12T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,121.0,23,SAC,Sacramento Kings,93.0
+401810642,2026-02-11,2026-02-12T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,122.0,29,MEM,Memphis Grizzlies,116.0
+401810643,2026-02-11,2026-02-12T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,113.0,24,SA,San Antonio Spurs,126.0
+401810644,2026-02-12,2026-02-13T00:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,93.0,15,MIL,Milwaukee Bucks,110.0
+401810645,2026-02-12,2026-02-13T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,119.0,22,POR,Portland Trail Blazers,135.0
+401810646,2026-02-12,2026-02-13T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,124.0,6,DAL,Dallas Mavericks,104.0
+401838140,2026-02-15,2026-02-15T22:00Z,2026,2,True,post,False,132374,STARS,Team Stars,37.0,111386,WORLD,World,35.0
+401838141,2026-02-15,2026-02-15T22:55Z,2026,2,True,post,False,132375,STRIPES,Team Stripes,42.0,132374,STARS,Team Stars,40.0
+401838142,2026-02-15,2026-02-15T23:25Z,2026,2,True,post,False,132375,STRIPES,Team Stripes,48.0,111386,WORLD,World,45.0
+401838143,2026-02-15,2026-02-16T00:10Z,2026,2,True,post,False,132375,STRIPES,Team Stripes,21.0,132374,STARS,Team Stars,47.0
+401810647,2026-02-19,2026-02-20T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,101.0,10,HOU,Houston Rockets,105.0
+401810648,2026-02-19,2026-02-20T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,112.0,17,BKN,Brooklyn Nets,84.0
+401810649,2026-02-19,2026-02-20T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,107.0,1,ATL,Atlanta Hawks,117.0
+401810650,2026-02-19,2026-02-20T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,112.0,11,IND,Indiana Pacers,105.0
+401810651,2026-02-19,2026-02-20T00:30Z,2026,2,True,post,False,18,NY,New York Knicks,111.0,8,DET,Detroit Pistons,126.0
+401810652,2026-02-19,2026-02-20T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,101.0,28,TOR,Toronto Raptors,110.0
+401810653,2026-02-19,2026-02-20T01:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,121.0,21,PHX,Phoenix Suns,94.0
+401810654,2026-02-19,2026-02-20T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,110.0,2,BOS,Boston Celtics,121.0
+401810655,2026-02-19,2026-02-20T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,94.0,19,ORL,Orlando Magic,131.0
+401810656,2026-02-19,2026-02-20T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,115.0,7,DEN,Denver Nuggets,114.0
+401810657,2026-02-20,2026-02-21T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,113.0,5,CLE,Cleveland Cavaliers,118.0
+401810658,2026-02-20,2026-02-21T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,131.0,11,IND,Indiana Pacers,118.0
+401810659,2026-02-20,2026-02-21T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,123.0,26,UTAH,Utah Jazz,114.0
+401810660,2026-02-20,2026-02-21T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,97.0,14,MIA,Miami Heat,128.0
+401810661,2026-02-20,2026-02-21T00:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,122.0,6,DAL,Dallas Mavericks,111.0
+401810662,2026-02-20,2026-02-21T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,118.0,15,MIL,Milwaukee Bucks,139.0
+401810663,2026-02-20,2026-02-21T01:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,105.0,17,BKN,Brooklyn Nets,86.0
+401810664,2026-02-20,2026-02-21T03:15Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,125.0,12,LAC,LA Clippers,122.0
+401810665,2026-02-20,2026-02-21T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,103.0,7,DEN,Denver Nuggets,157.0
+401810666,2026-02-21,2026-02-21T22:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,113.0,19,ORL,Orlando Magic,110.0
+401810667,2026-02-21,2026-02-22T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,126.0,20,PHI,Philadelphia 76ers,111.0
+401810668,2026-02-21,2026-02-22T01:00Z,2026,2,True,post,False,14,MIA,Miami Heat,136.0,29,MEM,Memphis Grizzlies,120.0
+401810669,2026-02-21,2026-02-22T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,110.0,8,DET,Detroit Pistons,126.0
+401810670,2026-02-21,2026-02-22T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,139.0,23,SAC,Sacramento Kings,122.0
+401810671,2026-02-21,2026-02-22T01:30Z,2026,2,True,post,False,18,NY,New York Knicks,108.0,10,HOU,Houston Rockets,106.0
+401810672,2026-02-22,2026-02-22T18:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,121.0,5,CLE,Cleveland Cavaliers,113.0
+401810673,2026-02-22,2026-02-22T20:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,115.0,17,BKN,Brooklyn Nets,104.0
+401810674,2026-02-22,2026-02-22T20:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,94.0,28,TOR,Toronto Raptors,122.0
+401810675,2026-02-22,2026-02-22T20:30Z,2026,2,True,post,False,9,GS,Golden State Warriors,128.0,7,DEN,Denver Nuggets,117.0
+401810676,2026-02-22,2026-02-22T22:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,130.0,6,DAL,Dallas Mavericks,134.0
+401810677,2026-02-22,2026-02-22T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,112.0,30,CHA,Charlotte Hornets,129.0
+401810678,2026-02-22,2026-02-22T23:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,89.0,2,BOS,Boston Celtics,111.0
+401810679,2026-02-22,2026-02-23T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,108.0,20,PHI,Philadelphia 76ers,135.0
+401810680,2026-02-22,2026-02-23T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,99.0,18,NY,New York Knicks,105.0
+401810681,2026-02-22,2026-02-23T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,77.0,22,POR,Portland Trail Blazers,92.0
+401810682,2026-02-22,2026-02-23T02:00Z,2026,2,True,post,False,12,LAC,LA Clippers,109.0,19,ORL,Orlando Magic,111.0
+401810683,2026-02-23,2026-02-24T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,103.0,24,SA,San Antonio Spurs,114.0
+401810684,2026-02-23,2026-02-24T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,114.0,23,SAC,Sacramento Kings,123.0
+401810685,2026-02-23,2026-02-24T02:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,125.0,26,UTAH,Utah Jazz,105.0
+401810686,2026-02-24,2026-02-25T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,114.0,20,PHI,Philadelphia 76ers,135.0
+401810687,2026-02-24,2026-02-25T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,119.0,27,WSH,Washington Wizards,98.0
+401810688,2026-02-24,2026-02-25T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,114.0,6,DAL,Dallas Mavericks,123.0
+401810689,2026-02-24,2026-02-25T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,107.0,25,OKC,Oklahoma City Thunder,116.0
+401810690,2026-02-24,2026-02-25T00:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,109.0,18,NY,New York Knicks,94.0
+401810691,2026-02-24,2026-02-25T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,99.0,30,CHA,Charlotte Hornets,131.0
+401810692,2026-02-24,2026-02-25T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,128.0,14,MIA,Miami Heat,117.0
+401810693,2026-02-24,2026-02-25T01:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,113.0,9,GS,Golden State Warriors,109.0
+401810694,2026-02-24,2026-02-25T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,81.0,2,BOS,Boston Celtics,97.0
+401810695,2026-02-24,2026-02-25T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,109.0,19,ORL,Orlando Magic,110.0
+401810696,2026-02-24,2026-02-25T03:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,121.0,16,MIN,Minnesota Timberwolves,124.0
+401810697,2026-02-25,2026-02-26T00:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,124.0,25,OKC,Oklahoma City Thunder,116.0
+401810698,2026-02-25,2026-02-26T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,107.0,24,SA,San Antonio Spurs,110.0
+401810699,2026-02-25,2026-02-26T00:30Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,112.0,9,GS,Golden State Warriors,133.0
+401810700,2026-02-25,2026-02-26T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,128.0,23,SAC,Sacramento Kings,97.0
+401810701,2026-02-25,2026-02-26T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,118.0,5,CLE,Cleveland Cavaliers,116.0
+401810702,2026-02-25,2026-02-26T03:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,103.0,2,BOS,Boston Celtics,84.0
+401810703,2026-02-26,2026-02-27T00:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,109.0,30,CHA,Charlotte Hornets,133.0
+401810704,2026-02-26,2026-02-27T00:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,124.0,14,MIA,Miami Heat,117.0
+401810705,2026-02-26,2026-02-27T00:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,126.0,27,WSH,Washington Wizards,96.0
+401810706,2026-02-26,2026-02-27T00:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,110.0,24,SA,San Antonio Spurs,126.0
+401810707,2026-02-26,2026-02-27T00:30Z,2026,2,True,post,False,19,ORL,Orlando Magic,108.0,10,HOU,Houston Rockets,113.0
+401810708,2026-02-26,2026-02-27T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,112.0,22,POR,Portland Trail Blazers,121.0
+401810709,2026-02-26,2026-02-27T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,121.0,23,SAC,Sacramento Kings,130.0
+401810710,2026-02-26,2026-02-27T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,113.0,13,LAL,Los Angeles Lakers,110.0
+401810711,2026-02-26,2026-02-27T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,118.0,3,NO,New Orleans Pelicans,129.0
+401810712,2026-02-26,2026-02-27T03:00Z,2026,2,True,post,False,12,LAC,LA Clippers,88.0,16,MIN,Minnesota Timberwolves,94.0
+401810713,2026-02-27,2026-02-28T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,122.0,5,CLE,Cleveland Cavaliers,119.0
+401810714,2026-02-27,2026-02-28T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,148.0,17,BKN,Brooklyn Nets,111.0
+401810715,2026-02-27,2026-02-28T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,98.0,18,NY,New York Knicks,127.0
+401810716,2026-02-27,2026-02-28T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,105.0,29,MEM,Memphis Grizzlies,124.0
+401810717,2026-02-27,2026-02-28T02:47Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,127.0,7,DEN,Denver Nuggets,121.0
+401810718,2026-02-28,2026-02-28T18:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,109.0,22,POR,Portland Trail Blazers,93.0
+401810719,2026-02-28,2026-02-28T20:30Z,2026,2,True,post,False,14,MIA,Miami Heat,115.0,10,HOU,Houston Rockets,105.0
+401810720,2026-02-28,2026-03-01T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,125.0,28,TOR,Toronto Raptors,134.0
+401810721,2026-02-28,2026-03-01T01:30Z,2026,2,True,post,False,9,GS,Golden State Warriors,101.0,13,LAL,Los Angeles Lakers,129.0
+401810722,2026-02-28,2026-03-01T02:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,105.0,3,NO,New Orleans Pelicans,115.0
+401810723,2026-03-01,2026-03-01T18:00Z,2026,2,True,post,False,18,NY,New York Knicks,114.0,24,SA,San Antonio Spurs,89.0
+401810724,2026-03-01,2026-03-01T20:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,102.0,5,CLE,Cleveland Cavaliers,106.0
+401810725,2026-03-01,2026-03-01T20:30Z,2026,2,True,post,False,4,CHI,Chicago Bulls,120.0,15,MIL,Milwaukee Bucks,97.0
+401810726,2026-03-01,2026-03-01T20:30Z,2026,2,True,post,False,7,DEN,Denver Nuggets,108.0,16,MIN,Minnesota Timberwolves,117.0
+401810727,2026-03-01,2026-03-01T22:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,106.0,29,MEM,Memphis Grizzlies,125.0
+401810728,2026-03-01,2026-03-01T23:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,135.0,22,POR,Portland Trail Blazers,101.0
+401810729,2026-03-01,2026-03-02T01:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,114.0,20,PHI,Philadelphia 76ers,98.0
+401810730,2026-03-01,2026-03-01T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,92.0,8,DET,Detroit Pistons,106.0
+401810731,2026-03-01,2026-03-02T01:00Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,87.0,25,OKC,Oklahoma City Thunder,100.0
+401810732,2026-03-01,2026-03-02T02:00Z,2026,2,True,post,False,12,LAC,LA Clippers,137.0,3,NO,New Orleans Pelicans,117.0
+401810733,2026-03-01,2026-03-02T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,128.0,23,SAC,Sacramento Kings,104.0
+401810734,2026-03-02,2026-03-03T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,118.0,10,HOU,Houston Rockets,123.0
+401810735,2026-03-02,2026-03-03T00:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,81.0,2,BOS,Boston Celtics,108.0
+401810736,2026-03-02,2026-03-03T02:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,125.0,7,DEN,Denver Nuggets,128.0
+401810737,2026-03-02,2026-03-03T03:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,101.0,12,LAC,LA Clippers,114.0
+401810738,2026-03-03,2026-03-04T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,117.0,6,DAL,Dallas Mavericks,90.0
+401810739,2026-03-03,2026-03-04T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,113.0,8,DET,Detroit Pistons,109.0
+401810740,2026-03-03,2026-03-04T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,126.0,27,WSH,Washington Wizards,109.0
+401810741,2026-03-03,2026-03-04T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,124.0,17,BKN,Brooklyn Nets,98.0
+401810742,2026-03-03,2026-03-04T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,95.0,18,NY,New York Knicks,111.0
+401810743,2026-03-03,2026-03-04T01:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,91.0,24,SA,San Antonio Spurs,131.0
+401810744,2026-03-03,2026-03-04T01:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,108.0,25,OKC,Oklahoma City Thunder,116.0
+401810745,2026-03-03,2026-03-04T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,117.0,29,MEM,Memphis Grizzlies,110.0
+401810746,2026-03-03,2026-03-04T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,110.0,3,NO,New Orleans Pelicans,101.0
+401810747,2026-03-03,2026-03-04T04:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,103.0,21,PHX,Phoenix Suns,114.0
+401810748,2026-03-04,2026-03-05T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,100.0,25,OKC,Oklahoma City Thunder,103.0
+401810749,2026-03-04,2026-03-05T00:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,89.0,30,CHA,Charlotte Hornets,118.0
+401810750,2026-03-04,2026-03-05T00:30Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,106.0,26,UTAH,Utah Jazz,102.0
+401810751,2026-03-04,2026-03-05T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,114.0,22,POR,Portland Trail Blazers,122.0
+401810752,2026-03-04,2026-03-05T02:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,113.0,1,ATL,Atlanta Hawks,131.0
+401810753,2026-03-04,2026-03-05T03:30Z,2026,2,True,post,False,12,LAC,LA Clippers,130.0,11,IND,Indiana Pacers,107.0
+401810754,2026-03-05,2026-03-06T00:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,115.0,6,DAL,Dallas Mavericks,114.0
+401810755,2026-03-05,2026-03-06T00:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,112.0,26,UTAH,Utah Jazz,122.0
+401810756,2026-03-05,2026-03-06T00:30Z,2026,2,True,post,False,14,MIA,Miami Heat,126.0,17,BKN,Brooklyn Nets,110.0
+401810757,2026-03-05,2026-03-06T00:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,113.0,9,GS,Golden State Warriors,115.0
+401810758,2026-03-05,2026-03-06T01:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,115.0,28,TOR,Toronto Raptors,107.0
+401810759,2026-03-05,2026-03-06T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,121.0,8,DET,Detroit Pistons,106.0
+401810760,2026-03-05,2026-03-06T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,103.0,4,CHI,Chicago Bulls,105.0
+401810761,2026-03-05,2026-03-06T03:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,120.0,13,LAL,Los Angeles Lakers,113.0
+401810762,2026-03-05,2026-03-06T03:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,123.0,3,NO,New Orleans Pelicans,133.0
+401810763,2026-03-06,2026-03-07T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,120.0,6,DAL,Dallas Mavericks,100.0
+401810764,2026-03-06,2026-03-07T00:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,120.0,14,MIA,Miami Heat,128.0
+401810765,2026-03-06,2026-03-07T01:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,106.0,22,POR,Portland Trail Blazers,99.0
+401810766,2026-03-06,2026-03-07T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,103.0,18,NY,New York Knicks,142.0
+401810767,2026-03-06,2026-03-07T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,118.0,3,NO,New Orleans Pelicans,116.0
+401810768,2026-03-06,2026-03-07T02:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,116.0,12,LAC,LA Clippers,112.0
+401810769,2026-03-06,2026-03-07T03:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,128.0,11,IND,Indiana Pacers,117.0
+401810770,2026-03-07,2026-03-07T20:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,92.0,19,ORL,Orlando Magic,119.0
+401810771,2026-03-07,2026-03-07T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,105.0,17,BKN,Brooklyn Nets,107.0
+401810772,2026-03-07,2026-03-07T23:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,125.0,20,PHI,Philadelphia 76ers,116.0
+401810773,2026-03-07,2026-03-08T01:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,120.0,12,LAC,LA Clippers,123.0
+401810774,2026-03-07,2026-03-08T01:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,113.0,26,UTAH,Utah Jazz,99.0
+401810775,2026-03-07,2026-03-08T01:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,104.0,9,GS,Golden State Warriors,97.0
+401810776,2026-03-08,2026-03-08T17:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,98.0,2,BOS,Boston Celtics,109.0
+401810777,2026-03-08,2026-03-08T19:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,110.0,18,NY,New York Knicks,97.0
+401810778,2026-03-08,2026-03-08T22:00Z,2026,2,True,post,False,14,MIA,Miami Heat,121.0,8,DET,Detroit Pistons,110.0
+401810779,2026-03-08,2026-03-08T22:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,122.0,6,DAL,Dallas Mavericks,92.0
+401810780,2026-03-08,2026-03-08T23:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,138.0,27,WSH,Washington Wizards,118.0
+401810781,2026-03-08,2026-03-09T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,91.0,19,ORL,Orlando Magic,130.0
+401810782,2026-03-08,2026-03-09T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,145.0,10,HOU,Houston Rockets,120.0
+401810783,2026-03-08,2026-03-09T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,111.0,30,CHA,Charlotte Hornets,99.0
+401810784,2026-03-08,2026-03-09T01:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,131.0,11,IND,Indiana Pacers,111.0
+401810785,2026-03-08,2026-03-09T01:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,126.0,4,CHI,Chicago Bulls,110.0
+401810786,2026-03-09,2026-03-09T23:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,115.0,20,PHI,Philadelphia 76ers,101.0
+401810787,2026-03-09,2026-03-09T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,126.0,29,MEM,Memphis Grizzlies,115.0
+401810788,2026-03-09,2026-03-09T23:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,129.0,7,DEN,Denver Nuggets,126.0
+401810789,2026-03-09,2026-03-10T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,119.0,9,GS,Golden State Warriors,116.0
+401810790,2026-03-09,2026-03-10T02:00Z,2026,2,True,post,False,12,LAC,LA Clippers,126.0,18,NY,New York Knicks,118.0
+401810791,2026-03-10,2026-03-10T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,139.0,29,MEM,Memphis Grizzlies,129.0
+401810792,2026-03-10,2026-03-10T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,100.0,8,DET,Detroit Pistons,138.0
+401810793,2026-03-10,2026-03-10T23:30Z,2026,2,True,post,False,14,MIA,Miami Heat,150.0,27,WSH,Washington Wizards,129.0
+401810794,2026-03-10,2026-03-10T23:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,124.0,6,DAL,Dallas Mavericks,112.0
+401810795,2026-03-10,2026-03-11T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,113.0,28,TOR,Toronto Raptors,99.0
+401810796,2026-03-10,2026-03-11T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,114.0,21,PHX,Phoenix Suns,129.0
+401810797,2026-03-10,2026-03-11T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,125.0,2,BOS,Boston Celtics,116.0
+401810798,2026-03-10,2026-03-11T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,124.0,4,CHI,Chicago Bulls,130.0
+401810799,2026-03-10,2026-03-11T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,101.0,30,CHA,Charlotte Hornets,103.0
+401810800,2026-03-10,2026-03-11T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,114.0,11,IND,Indiana Pacers,109.0
+401810801,2026-03-10,2026-03-11T03:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,120.0,16,MIN,Minnesota Timberwolves,106.0
+401810802,2026-03-11,2026-03-11T23:30Z,2026,2,True,post,False,19,ORL,Orlando Magic,128.0,5,CLE,Cleveland Cavaliers,122.0
+401810803,2026-03-11,2026-03-12T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,122.0,28,TOR,Toronto Raptors,111.0
+401810804,2026-03-11,2026-03-12T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,117.0,18,NY,New York Knicks,134.0
+401810805,2026-03-11,2026-03-12T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,129.0,10,HOU,Houston Rockets,93.0
+401810806,2026-03-11,2026-03-12T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,109.0,30,CHA,Charlotte Hornets,117.0
+401810807,2026-03-11,2026-03-12T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,153.0,16,MIN,Minnesota Timberwolves,128.0
+401810808,2026-03-12,2026-03-12T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,131.0,20,PHI,Philadelphia 76ers,109.0
+401810809,2026-03-12,2026-03-12T23:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,108.0,21,PHX,Phoenix Suns,123.0
+401810810,2026-03-12,2026-03-12T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,136.0,27,WSH,Washington Wizards,131.0
+401810811,2026-03-12,2026-03-12T23:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,108.0,17,BKN,Brooklyn Nets,97.0
+401810812,2026-03-12,2026-03-12T23:30Z,2026,2,True,post,False,14,MIA,Miami Heat,112.0,15,MIL,Milwaukee Bucks,105.0
+401810813,2026-03-12,2026-03-13T01:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,131.0,7,DEN,Denver Nuggets,136.0
+401810814,2026-03-12,2026-03-13T01:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,104.0,2,BOS,Boston Celtics,102.0
+401810815,2026-03-12,2026-03-13T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,142.0,4,CHI,Chicago Bulls,130.0
+401810966,2026-03-12,2026-03-13T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,112.0,6,DAL,Dallas Mavericks,120.0
+401810816,2026-03-13,2026-03-13T23:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,126.0,29,MEM,Memphis Grizzlies,110.0
+401810817,2026-03-13,2026-03-13T23:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,92.0,18,NY,New York Knicks,101.0
+401810818,2026-03-13,2026-03-13T23:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,122.0,21,PHX,Phoenix Suns,115.0
+401810819,2026-03-13,2026-03-14T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,107.0,3,NO,New Orleans Pelicans,105.0
+401810820,2026-03-13,2026-03-13T23:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,105.0,5,CLE,Cleveland Cavaliers,138.0
+401810821,2026-03-13,2026-03-14T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,117.0,16,MIN,Minnesota Timberwolves,127.0
+401810822,2026-03-13,2026-03-14T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,124.0,26,UTAH,Utah Jazz,114.0
+401810823,2026-03-13,2026-03-14T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,119.0,4,CHI,Chicago Bulls,108.0
+401810824,2026-03-14,2026-03-14T17:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,104.0,17,BKN,Brooklyn Nets,97.0
+401810825,2026-03-14,2026-03-14T19:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,122.0,15,MIL,Milwaukee Bucks,99.0
+401810826,2026-03-14,2026-03-14T22:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,111.0,27,WSH,Washington Wizards,100.0
+401810827,2026-03-14,2026-03-15T00:00Z,2026,2,True,post,False,14,MIA,Miami Heat,117.0,19,ORL,Orlando Magic,121.0
+401810828,2026-03-14,2026-03-14T19:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,115.0,30,CHA,Charlotte Hornets,102.0
+401810829,2026-03-14,2026-03-15T00:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,127.0,7,DEN,Denver Nuggets,125.0
+401810830,2026-03-14,2026-03-15T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,109.0,23,SAC,Sacramento Kings,118.0
+401810831,2026-03-15,2026-03-15T17:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,116.0,16,MIN,Minnesota Timberwolves,103.0
+401810832,2026-03-15,2026-03-15T19:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,120.0,6,DAL,Dallas Mavericks,130.0
+401810833,2026-03-15,2026-03-15T19:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,119.0,8,DET,Detroit Pistons,108.0
+401810834,2026-03-15,2026-03-15T19:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,134.0,11,IND,Indiana Pacers,123.0
+401810835,2026-03-15,2026-03-15T22:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,109.0,22,POR,Portland Trail Blazers,103.0
+401810836,2026-03-15,2026-03-16T00:00Z,2026,2,True,post,False,18,NY,New York Knicks,110.0,9,GS,Golden State Warriors,107.0
+401810837,2026-03-15,2026-03-16T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,116.0,26,UTAH,Utah Jazz,111.0
+401810838,2026-03-16,2026-03-16T23:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,124.0,19,ORL,Orlando Magic,112.0
+401810839,2026-03-16,2026-03-16T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,117.0,9,GS,Golden State Warriors,125.0
+401810840,2026-03-16,2026-03-16T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,95.0,22,POR,Portland Trail Blazers,114.0
+401810841,2026-03-16,2026-03-16T23:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,120.0,21,PHX,Phoenix Suns,112.0
+401810842,2026-03-16,2026-03-17T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,132.0,29,MEM,Memphis Grizzlies,107.0
+401810843,2026-03-16,2026-03-17T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,129.0,6,DAL,Dallas Mavericks,111.0
+401810844,2026-03-16,2026-03-17T01:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,92.0,13,LAL,Los Angeles Lakers,100.0
+401810845,2026-03-16,2026-03-17T02:00Z,2026,2,True,post,False,12,LAC,LA Clippers,115.0,24,SA,San Antonio Spurs,119.0
+401810846,2026-03-17,2026-03-17T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,136.0,14,MIA,Miami Heat,106.0
+401810847,2026-03-17,2026-03-17T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,108.0,25,OKC,Oklahoma City Thunder,113.0
+401810848,2026-03-17,2026-03-17T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,117.0,8,DET,Detroit Pistons,130.0
+401810849,2026-03-17,2026-03-17T23:30Z,2026,2,True,post,False,18,NY,New York Knicks,136.0,11,IND,Indiana Pacers,110.0
+401810850,2026-03-17,2026-03-18T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,116.0,5,CLE,Cleveland Cavaliers,123.0
+401810851,2026-03-17,2026-03-18T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,116.0,21,PHX,Phoenix Suns,104.0
+401810852,2026-03-17,2026-03-18T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,124.0,20,PHI,Philadelphia 76ers,96.0
+401810853,2026-03-17,2026-03-18T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,104.0,24,SA,San Antonio Spurs,132.0
+401810854,2026-03-18,2026-03-18T23:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,120.0,9,GS,Golden State Warriors,99.0
+401810855,2026-03-18,2026-03-18T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,92.0,25,OKC,Oklahoma City Thunder,121.0
+401810856,2026-03-18,2026-03-18T23:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,119.0,22,POR,Portland Trail Blazers,127.0
+401810857,2026-03-18,2026-03-19T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,109.0,28,TOR,Toronto Raptors,139.0
+401810859,2026-03-18,2026-03-19T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,147.0,26,UTAH,Utah Jazz,111.0
+401810860,2026-03-18,2026-03-19T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,124.0,12,LAC,LA Clippers,109.0
+401810861,2026-03-18,2026-03-19T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,120.0,1,ATL,Atlanta Hawks,135.0
+401810862,2026-03-18,2026-03-19T01:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,116.0,13,LAL,Los Angeles Lakers,124.0
+401858693,2026-03-18,2026-03-19T00:30Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,125.0,7,DEN,Denver Nuggets,118.0
+401810863,2026-03-19,2026-03-19T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,130.0,19,ORL,Orlando Magic,111.0
+401810864,2026-03-19,2026-03-19T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,95.0,8,DET,Detroit Pistons,117.0
+401810865,2026-03-19,2026-03-20T00:00Z,2026,2,True,post,False,14,MIA,Miami Heat,126.0,13,LAL,Los Angeles Lakers,134.0
+401810866,2026-03-19,2026-03-20T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,110.0,5,CLE,Cleveland Cavaliers,115.0
+401810867,2026-03-19,2026-03-20T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,105.0,12,LAC,LA Clippers,99.0
+401810868,2026-03-19,2026-03-20T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,101.0,21,PHX,Phoenix Suns,100.0
+401810869,2026-03-19,2026-03-20T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,128.0,15,MIL,Milwaukee Bucks,96.0
+401810870,2026-03-19,2026-03-20T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,118.0,20,PHI,Philadelphia 76ers,139.0
+401810871,2026-03-20,2026-03-20T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,92.0,18,NY,New York Knicks,93.0
+401810872,2026-03-20,2026-03-20T23:30Z,2026,2,True,post,False,8,DET,Detroit Pistons,115.0,9,GS,Golden State Warriors,101.0
+401810873,2026-03-20,2026-03-21T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,117.0,1,ATL,Atlanta Hawks,95.0
+401810874,2026-03-20,2026-03-21T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,112.0,2,BOS,Boston Celtics,117.0
+401810875,2026-03-20,2026-03-21T00:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,104.0,22,POR,Portland Trail Blazers,108.0
+401810876,2026-03-20,2026-03-21T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,121.0,28,TOR,Toronto Raptors,115.0
+401810877,2026-03-21,2026-03-21T21:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,111.0,25,OKC,Oklahoma City Thunder,132.0
+401810878,2026-03-21,2026-03-21T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,124.0,29,MEM,Memphis Grizzlies,101.0
+401810879,2026-03-21,2026-03-21T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,104.0,13,LAL,Los Angeles Lakers,105.0
+401810880,2026-03-21,2026-03-21T23:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,106.0,5,CLE,Cleveland Cavaliers,111.0
+401810881,2026-03-21,2026-03-22T00:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,126.0,9,GS,Golden State Warriors,110.0
+401810882,2026-03-21,2026-03-22T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,123.0,14,MIA,Miami Heat,122.0
+401810883,2026-03-21,2026-03-22T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,134.0,11,IND,Indiana Pacers,119.0
+401810884,2026-03-21,2026-03-22T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,131.0,12,LAC,LA Clippers,138.0
+401810885,2026-03-21,2026-03-22T01:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,116.0,20,PHI,Philadelphia 76ers,126.0
+401810886,2026-03-21,2026-03-22T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,105.0,15,MIL,Milwaukee Bucks,108.0
+401810887,2026-03-22,2026-03-22T21:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,128.0,22,POR,Portland Trail Blazers,112.0
+401810888,2026-03-22,2026-03-22T22:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,126.0,17,BKN,Brooklyn Nets,122.0
+401810889,2026-03-22,2026-03-22T23:30Z,2026,2,True,post,False,18,NY,New York Knicks,145.0,27,WSH,Washington Wizards,113.0
+401810890,2026-03-22,2026-03-23T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,92.0,16,MIN,Minnesota Timberwolves,102.0
+401810891,2026-03-22,2026-03-23T01:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,120.0,28,TOR,Toronto Raptors,98.0
+401810892,2026-03-23,2026-03-23T23:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,146.0,29,MEM,Memphis Grizzlies,107.0
+401810893,2026-03-23,2026-03-23T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,113.0,13,LAL,Los Angeles Lakers,110.0
+401810894,2026-03-23,2026-03-23T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,126.0,11,IND,Indiana Pacers,128.0
+401810895,2026-03-23,2026-03-23T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,103.0,25,OKC,Oklahoma City Thunder,123.0
+401810896,2026-03-23,2026-03-23T23:00Z,2026,2,True,post,False,14,MIA,Miami Heat,111.0,24,SA,San Antonio Spurs,136.0
+401810897,2026-03-23,2026-03-24T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,132.0,10,HOU,Houston Rockets,124.0
+401810898,2026-03-23,2026-03-24T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,127.0,28,TOR,Toronto Raptors,143.0
+401810899,2026-03-23,2026-03-24T01:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,131.0,9,GS,Golden State Warriors,137.0
+401810900,2026-03-23,2026-03-24T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,134.0,17,BKN,Brooklyn Nets,99.0
+401810901,2026-03-23,2026-03-24T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,129.0,15,MIL,Milwaukee Bucks,96.0
+401810902,2026-03-24,2026-03-24T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,134.0,23,SAC,Sacramento Kings,90.0
+401810903,2026-03-24,2026-03-24T23:30Z,2026,2,True,post,False,18,NY,New York Knicks,121.0,3,NO,New Orleans Pelicans,116.0
+401810904,2026-03-24,2026-03-25T00:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,136.0,19,ORL,Orlando Magic,131.0
+401810905,2026-03-24,2026-03-25T03:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,123.0,7,DEN,Denver Nuggets,125.0
+401810906,2026-03-25,2026-03-25T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,129.0,1,ATL,Atlanta Hawks,130.0
+401810907,2026-03-25,2026-03-25T23:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,130.0,13,LAL,Los Angeles Lakers,137.0
+401810908,2026-03-25,2026-03-25T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,157.0,4,CHI,Chicago Bulls,137.0
+401810909,2026-03-25,2026-03-25T23:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,119.0,25,OKC,Oklahoma City Thunder,109.0
+401810910,2026-03-25,2026-03-25T23:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,103.0,14,MIA,Miami Heat,120.0
+401810911,2026-03-25,2026-03-26T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,98.0,24,SA,San Antonio Spurs,123.0
+401810912,2026-03-25,2026-03-26T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,110.0,27,WSH,Washington Wizards,133.0
+401810913,2026-03-25,2026-03-26T01:42Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,110.0,10,HOU,Houston Rockets,108.0
+401810914,2026-03-25,2026-03-26T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,142.0,6,DAL,Dallas Mavericks,135.0
+401810915,2026-03-25,2026-03-26T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,109.0,17,BKN,Brooklyn Nets,106.0
+401810916,2026-03-25,2026-03-26T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,130.0,15,MIL,Milwaukee Bucks,99.0
+401810917,2026-03-25,2026-03-26T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,119.0,28,TOR,Toronto Raptors,94.0
+401810918,2026-03-26,2026-03-26T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,114.0,18,NY,New York Knicks,103.0
+401810919,2026-03-26,2026-03-26T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,129.0,3,NO,New Orleans Pelicans,108.0
+401810920,2026-03-26,2026-03-26T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,121.0,23,SAC,Sacramento Kings,117.0
+401810921,2026-03-27,2026-03-27T23:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,113.0,12,LAC,LA Clippers,114.0
+401810922,2026-03-27,2026-03-27T23:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,109.0,1,ATL,Atlanta Hawks,102.0
+401810923,2026-03-27,2026-03-27T23:30Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,149.0,14,MIA,Miami Heat,128.0
+401810924,2026-03-27,2026-03-28T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,109.0,10,HOU,Houston Rockets,119.0
+401810925,2026-03-27,2026-03-28T00:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,131.0,4,CHI,Chicago Bulls,113.0
+401810926,2026-03-27,2026-03-28T00:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,119.0,3,NO,New Orleans Pelicans,106.0
+401810927,2026-03-27,2026-03-28T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,135.0,26,UTAH,Utah Jazz,129.0
+401810928,2026-03-27,2026-03-28T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,131.0,27,WSH,Washington Wizards,126.0
+401810929,2026-03-27,2026-03-28T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,93.0,6,DAL,Dallas Mavericks,100.0
+401810930,2026-03-27,2026-03-28T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,116.0,17,BKN,Brooklyn Nets,99.0
+401810931,2026-03-28,2026-03-28T19:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,95.0,24,SA,San Antonio Spurs,127.0
+401810932,2026-03-28,2026-03-28T22:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,114.0,20,PHI,Philadelphia 76ers,118.0
+401810933,2026-03-28,2026-03-28T23:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,123.0,23,SAC,Sacramento Kings,113.0
+401810934,2026-03-28,2026-03-29T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,125.0,4,CHI,Chicago Bulls,124.0
+401810935,2026-03-28,2026-03-28T21:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,87.0,8,DET,Detroit Pistons,109.0
+401810936,2026-03-28,2026-03-29T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,134.0,26,UTAH,Utah Jazz,109.0
+401810937,2026-03-29,2026-03-29T19:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,113.0,12,LAC,LA Clippers,127.0
+401810938,2026-03-29,2026-03-29T21:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,135.0,14,MIA,Miami Heat,118.0
+401810939,2026-03-29,2026-03-29T22:00Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,116.0,23,SAC,Sacramento Kings,99.0
+401810940,2026-03-29,2026-03-29T22:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,99.0,2,BOS,Boston Celtics,114.0
+401810941,2026-03-29,2026-03-29T22:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,139.0,19,ORL,Orlando Magic,87.0
+401810942,2026-03-29,2026-03-29T22:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,123.0,27,WSH,Washington Wizards,88.0
+401810943,2026-03-29,2026-03-29T23:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,102.0,10,HOU,Houston Rockets,134.0
+401810944,2026-03-29,2026-03-29T23:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,111.0,18,NY,New York Knicks,100.0
+401810945,2026-03-29,2026-03-30T02:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,116.0,9,GS,Golden State Warriors,93.0
+401810946,2026-03-30,2026-03-30T23:00Z,2026,2,True,post,False,14,MIA,Miami Heat,119.0,20,PHI,Philadelphia 76ers,109.0
+401810947,2026-03-30,2026-03-30T23:30Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,112.0,2,BOS,Boston Celtics,102.0
+401810948,2026-03-30,2026-03-31T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,105.0,21,PHX,Phoenix Suns,131.0
+401810949,2026-03-30,2026-03-31T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,129.0,4,CHI,Chicago Bulls,114.0
+401810950,2026-03-30,2026-03-31T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,94.0,16,MIN,Minnesota Timberwolves,124.0
+401810951,2026-03-30,2026-03-31T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,113.0,5,CLE,Cleveland Cavaliers,122.0
+401810952,2026-03-30,2026-03-31T01:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,114.0,8,DET,Detroit Pistons,110.0
+401810953,2026-03-30,2026-03-31T02:00Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,120.0,27,WSH,Washington Wizards,101.0
+401810954,2026-03-31,2026-03-31T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,115.0,21,PHX,Phoenix Suns,111.0
+401810955,2026-03-31,2026-03-31T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,86.0,30,CHA,Charlotte Hornets,117.0
+401810956,2026-03-31,2026-04-01T00:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,127.0,28,TOR,Toronto Raptors,116.0
+401810957,2026-03-31,2026-04-01T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,111.0,18,NY,New York Knicks,94.0
+401810958,2026-03-31,2026-04-01T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,127.0,5,CLE,Cleveland Cavaliers,113.0
+401810959,2026-03-31,2026-04-01T03:00Z,2026,2,True,post,False,12,LAC,LA Clippers,104.0,22,POR,Portland Trail Blazers,114.0
+401858694,2026-03-31,2026-04-01T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,123.0,6,DAL,Dallas Mavericks,99.0
+401810858,2026-04-01,2026-04-02T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,119.0,18,NY,New York Knicks,130.0
+401810960,2026-04-01,2026-04-01T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,131.0,20,PHI,Philadelphia 76ers,153.0
+401810961,2026-04-01,2026-04-01T23:30Z,2026,2,True,post,False,14,MIA,Miami Heat,129.0,2,BOS,Boston Celtics,147.0
+401810962,2026-04-01,2026-04-01T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,101.0,1,ATL,Atlanta Hawks,130.0
+401810963,2026-04-01,2026-04-02T00:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,115.0,23,SAC,Sacramento Kings,123.0
+401810964,2026-04-01,2026-04-02T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,126.0,11,IND,Indiana Pacers,145.0
+401810965,2026-04-01,2026-04-02T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,119.0,15,MIL,Milwaukee Bucks,113.0
+401810967,2026-04-01,2026-04-02T01:00Z,2026,2,True,post,False,26,UTAH,Utah Jazz,117.0,7,DEN,Denver Nuggets,130.0
+401810968,2026-04-01,2026-04-02T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,113.0,24,SA,San Antonio Spurs,127.0
+401810969,2026-04-02,2026-04-02T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,127.0,21,PHX,Phoenix Suns,107.0
+401810970,2026-04-02,2026-04-02T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,113.0,16,MIN,Minnesota Timberwolves,108.0
+401810971,2026-04-02,2026-04-03T01:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,139.0,13,LAL,Los Angeles Lakers,96.0
+401810972,2026-04-02,2026-04-03T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,111.0,5,CLE,Cleveland Cavaliers,118.0
+401810973,2026-04-02,2026-04-03T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,118.0,3,NO,New Orleans Pelicans,106.0
+401810974,2026-04-02,2026-04-03T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,99.0,24,SA,San Antonio Spurs,118.0
+401810975,2026-04-03,2026-04-03T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,129.0,11,IND,Indiana Pacers,108.0
+401810976,2026-04-03,2026-04-03T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,115.0,16,MIN,Minnesota Timberwolves,103.0
+401810977,2026-04-03,2026-04-03T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,107.0,1,ATL,Atlanta Hawks,141.0
+401810978,2026-04-03,2026-04-03T23:30Z,2026,2,True,post,False,18,NY,New York Knicks,136.0,4,CHI,Chicago Bulls,96.0
+401810979,2026-04-03,2026-04-04T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,140.0,26,UTAH,Utah Jazz,106.0
+401810980,2026-04-03,2026-04-04T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,96.0,28,TOR,Toronto Raptors,128.0
+401810981,2026-04-03,2026-04-04T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,101.0,2,BOS,Boston Celtics,133.0
+401810982,2026-04-03,2026-04-04T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,127.0,19,ORL,Orlando Magic,138.0
+401810983,2026-04-03,2026-04-04T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,117.0,3,NO,New Orleans Pelicans,113.0
+401810984,2026-04-04,2026-04-04T19:00Z,2026,2,True,post,False,14,MIA,Miami Heat,152.0,27,WSH,Washington Wizards,136.0
+401810985,2026-04-04,2026-04-04T19:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,136.0,24,SA,San Antonio Spurs,134.0
+401810986,2026-04-04,2026-04-04T23:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,93.0,8,DET,Detroit Pistons,116.0
+401810987,2026-04-05,2026-04-05T19:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,115.0,28,TOR,Toronto Raptors,101.0
+401810988,2026-04-05,2026-04-05T19:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,121.0,27,WSH,Washington Wizards,115.0
+401810989,2026-04-05,2026-04-05T19:30Z,2026,2,True,post,False,4,CHI,Chicago Bulls,110.0,21,PHX,Phoenix Suns,120.0
+401810990,2026-04-05,2026-04-05T19:30Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,131.0,29,MEM,Memphis Grizzlies,115.0
+401810991,2026-04-05,2026-04-05T22:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,117.0,11,IND,Indiana Pacers,108.0
+401810992,2026-04-05,2026-04-05T23:00Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,108.0,30,CHA,Charlotte Hornets,122.0
+401810993,2026-04-05,2026-04-05T23:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,108.0,19,ORL,Orlando Magic,112.0
+401810994,2026-04-05,2026-04-05T23:00Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,146.0,26,UTAH,Utah Jazz,111.0
+401810995,2026-04-05,2026-04-05T23:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,134.0,13,LAL,Los Angeles Lakers,128.0
+401810996,2026-04-05,2026-04-06T01:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,109.0,12,LAC,LA Clippers,138.0
+401810997,2026-04-05,2026-04-06T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,116.0,10,HOU,Houston Rockets,117.0
+401810998,2026-04-06,2026-04-06T23:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,105.0,18,NY,New York Knicks,108.0
+401810999,2026-04-06,2026-04-06T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,123.0,8,DET,Detroit Pistons,107.0
+401811000,2026-04-06,2026-04-07T00:00Z,2026,2,True,post,False,29,MEM,Memphis Grizzlies,126.0,5,CLE,Cleveland Cavaliers,142.0
+401811001,2026-04-06,2026-04-07T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,115.0,20,PHI,Philadelphia 76ers,102.0
+401811002,2026-04-06,2026-04-07T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,137.0,22,POR,Portland Trail Blazers,132.0
+401811003,2026-04-07,2026-04-07T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,98.0,4,CHI,Chicago Bulls,129.0
+401811004,2026-04-07,2026-04-08T00:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,113.0,30,CHA,Charlotte Hornets,102.0
+401811005,2026-04-07,2026-04-07T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,96.0,15,MIL,Milwaukee Bucks,90.0
+401811006,2026-04-07,2026-04-07T23:30Z,2026,2,True,post,False,28,TOR,Toronto Raptors,121.0,14,MIA,Miami Heat,95.0
+401811007,2026-04-07,2026-04-07T23:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,104.0,16,MIN,Minnesota Timberwolves,124.0
+401811008,2026-04-07,2026-04-08T00:00Z,2026,2,True,post,False,3,NO,New Orleans Pelicans,156.0,26,UTAH,Utah Jazz,137.0
+401811009,2026-04-07,2026-04-08T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,110.0,23,SAC,Sacramento Kings,105.0
+401811010,2026-04-07,2026-04-08T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,87.0,25,OKC,Oklahoma City Thunder,123.0
+401811011,2026-04-07,2026-04-08T02:30Z,2026,2,True,post,False,12,LAC,LA Clippers,116.0,6,DAL,Dallas Mavericks,103.0
+401811012,2026-04-07,2026-04-08T03:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,105.0,10,HOU,Houston Rockets,119.0
+401811013,2026-04-08,2026-04-08T23:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,122.0,1,ATL,Atlanta Hawks,116.0
+401811014,2026-04-08,2026-04-08T23:00Z,2026,2,True,post,False,19,ORL,Orlando Magic,132.0,16,MIN,Minnesota Timberwolves,120.0
+401811015,2026-04-08,2026-04-08T23:00Z,2026,2,True,post,False,8,DET,Detroit Pistons,137.0,15,MIL,Milwaukee Bucks,111.0
+401811016,2026-04-08,2026-04-09T01:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,112.0,22,POR,Portland Trail Blazers,101.0
+401811017,2026-04-08,2026-04-09T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,136.0,29,MEM,Memphis Grizzlies,119.0
+401811018,2026-04-08,2026-04-09T02:00Z,2026,2,True,post,False,12,LAC,LA Clippers,110.0,25,OKC,Oklahoma City Thunder,128.0
+401811019,2026-04-08,2026-04-09T02:00Z,2026,2,True,post,False,21,PHX,Phoenix Suns,112.0,6,DAL,Dallas Mavericks,107.0
+401811020,2026-04-09,2026-04-09T23:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,128.0,14,MIA,Miami Heat,114.0
+401811021,2026-04-09,2026-04-09T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,108.0,4,CHI,Chicago Bulls,119.0
+401811022,2026-04-09,2026-04-09T23:30Z,2026,2,True,post,False,17,BKN,Brooklyn Nets,94.0,11,IND,Indiana Pacers,123.0
+401811023,2026-04-09,2026-04-09T23:30Z,2026,2,True,post,False,18,NY,New York Knicks,112.0,2,BOS,Boston Celtics,106.0
+401811024,2026-04-09,2026-04-10T00:00Z,2026,2,True,post,False,10,HOU,Houston Rockets,113.0,20,PHI,Philadelphia 76ers,102.0
+401811025,2026-04-09,2026-04-10T02:00Z,2026,2,True,post,False,9,GS,Golden State Warriors,103.0,13,LAL,Los Angeles Lakers,119.0
+401811026,2026-04-10,2026-04-10T23:00Z,2026,2,True,post,False,30,CHA,Charlotte Hornets,100.0,8,DET,Detroit Pistons,118.0
+401811027,2026-04-10,2026-04-10T23:00Z,2026,2,True,post,False,27,WSH,Washington Wizards,117.0,14,MIA,Miami Heat,140.0
+401811028,2026-04-10,2026-04-10T23:00Z,2026,2,True,post,False,1,ATL,Atlanta Hawks,124.0,5,CLE,Cleveland Cavaliers,102.0
+401811029,2026-04-10,2026-04-10T23:30Z,2026,2,True,post,False,2,BOS,Boston Celtics,144.0,3,NO,New Orleans Pelicans,118.0
+401811030,2026-04-10,2026-04-10T23:30Z,2026,2,True,post,False,11,IND,Indiana Pacers,94.0,20,PHI,Philadelphia 76ers,105.0
+401811031,2026-04-10,2026-04-10T23:30Z,2026,2,True,post,False,18,NY,New York Knicks,112.0,28,TOR,Toronto Raptors,95.0
+401811032,2026-04-10,2026-04-11T00:00Z,2026,2,True,post,False,4,CHI,Chicago Bulls,103.0,19,ORL,Orlando Magic,127.0
+401811033,2026-04-10,2026-04-11T01:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,132.0,16,MIN,Minnesota Timberwolves,136.0
+401811034,2026-04-10,2026-04-11T00:00Z,2026,2,True,post,False,15,MIL,Milwaukee Bucks,125.0,17,BKN,Brooklyn Nets,108.0
+401811035,2026-04-10,2026-04-11T00:00Z,2026,2,True,post,False,24,SA,San Antonio Spurs,139.0,6,DAL,Dallas Mavericks,120.0
+401811036,2026-04-10,2026-04-11T01:30Z,2026,2,True,post,False,26,UTAH,Utah Jazz,147.0,29,MEM,Memphis Grizzlies,101.0
+401811037,2026-04-10,2026-04-11T01:00Z,2026,2,True,post,False,7,DEN,Denver Nuggets,127.0,25,OKC,Oklahoma City Thunder,107.0
+401811038,2026-04-10,2026-04-11T02:00Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,116.0,12,LAC,LA Clippers,97.0
+401811039,2026-04-10,2026-04-11T02:00Z,2026,2,True,post,False,23,SAC,Sacramento Kings,124.0,9,GS,Golden State Warriors,118.0
+401811040,2026-04-10,2026-04-11T02:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,101.0,21,PHX,Phoenix Suns,73.0
+401811041,2026-04-12,2026-04-12T22:00Z,2026,2,True,post,False,2,BOS,Boston Celtics,113.0,19,ORL,Orlando Magic,108.0
+401811042,2026-04-12,2026-04-12T22:00Z,2026,2,True,post,False,5,CLE,Cleveland Cavaliers,130.0,27,WSH,Washington Wizards,117.0
+401811043,2026-04-12,2026-04-12T22:00Z,2026,2,True,post,False,11,IND,Indiana Pacers,121.0,8,DET,Detroit Pistons,133.0
+401811044,2026-04-12,2026-04-12T22:00Z,2026,2,True,post,False,14,MIA,Miami Heat,143.0,1,ATL,Atlanta Hawks,117.0
+401811045,2026-04-12,2026-04-12T22:00Z,2026,2,True,post,False,18,NY,New York Knicks,96.0,30,CHA,Charlotte Hornets,110.0
+401811046,2026-04-12,2026-04-12T22:00Z,2026,2,True,post,False,20,PHI,Philadelphia 76ers,126.0,15,MIL,Milwaukee Bucks,106.0
+401811047,2026-04-12,2026-04-12T22:00Z,2026,2,True,post,False,28,TOR,Toronto Raptors,136.0,17,BKN,Brooklyn Nets,101.0
+401811048,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,6,DAL,Dallas Mavericks,149.0,4,CHI,Chicago Bulls,128.0
+401811049,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,10,HOU,Houston Rockets,132.0,29,MEM,Memphis Grizzlies,101.0
+401811050,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,16,MIN,Minnesota Timberwolves,132.0,3,NO,New Orleans Pelicans,126.0
+401811051,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,25,OKC,Oklahoma City Thunder,103.0,21,PHX,Phoenix Suns,135.0
+401811052,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,24,SA,San Antonio Spurs,118.0,7,DEN,Denver Nuggets,128.0
+401811053,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,13,LAL,Los Angeles Lakers,131.0,26,UTAH,Utah Jazz,107.0
+401811054,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,12,LAC,LA Clippers,115.0,9,GS,Golden State Warriors,110.0
+401811055,2026-04-12,2026-04-13T00:30Z,2026,2,True,post,False,22,POR,Portland Trail Blazers,122.0,23,SAC,Sacramento Kings,110.0
+401866754,2026-04-14,2026-04-15T02:00Z,2026,5,True,post,False,21,PHX,Phoenix Suns,110.0,22,POR,Portland Trail Blazers,114.0
+401866755,2026-04-14,2026-04-14T23:30Z,2026,5,True,post,False,30,CHA,Charlotte Hornets,127.0,14,MIA,Miami Heat,126.0
+401866756,2026-04-15,2026-04-16T02:00Z,2026,5,True,post,False,12,LAC,LA Clippers,121.0,9,GS,Golden State Warriors,126.0
+401866757,2026-04-15,2026-04-15T23:30Z,2026,5,True,post,False,20,PHI,Philadelphia 76ers,109.0,19,ORL,Orlando Magic,97.0
+401866758,2026-04-17,2026-04-17T23:30Z,2026,5,True,post,False,19,ORL,Orlando Magic,121.0,30,CHA,Charlotte Hornets,90.0
+401866759,2026-04-17,2026-04-18T02:00Z,2026,5,True,post,False,21,PHX,Phoenix Suns,111.0,9,GS,Golden State Warriors,96.0
+401869187,2026-04-18,2026-04-18T17:00Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,126.0,28,TOR,Toronto Raptors,113.0
+401869188,2026-04-18,2026-04-18T19:30Z,2026,3,True,post,False,7,DEN,Denver Nuggets,116.0,16,MIN,Minnesota Timberwolves,105.0
+401869189,2026-04-18,2026-04-18T22:00Z,2026,3,True,post,False,18,NY,New York Knicks,113.0,1,ATL,Atlanta Hawks,102.0
+401869190,2026-04-18,2026-04-19T00:30Z,2026,3,True,post,False,13,LAL,Los Angeles Lakers,107.0,10,HOU,Houston Rockets,98.0
+401869191,2026-04-19,2026-04-19T17:00Z,2026,3,True,post,False,2,BOS,Boston Celtics,123.0,20,PHI,Philadelphia 76ers,91.0
+401869192,2026-04-19,2026-04-19T19:30Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,119.0,21,PHX,Phoenix Suns,84.0
+401869193,2026-04-19,2026-04-19T22:30Z,2026,3,True,post,False,8,DET,Detroit Pistons,101.0,19,ORL,Orlando Magic,112.0
+401869194,2026-04-19,2026-04-20T01:00Z,2026,3,True,post,False,24,SA,San Antonio Spurs,111.0,22,POR,Portland Trail Blazers,98.0
+401869369,2026-04-20,2026-04-20T23:00Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,115.0,28,TOR,Toronto Raptors,105.0
+401869387,2026-04-20,2026-04-21T00:00Z,2026,3,True,post,False,18,NY,New York Knicks,106.0,1,ATL,Atlanta Hawks,107.0
+401869395,2026-04-20,2026-04-21T02:30Z,2026,3,True,post,False,7,DEN,Denver Nuggets,114.0,16,MIN,Minnesota Timberwolves,119.0
+401869378,2026-04-21,2026-04-22T00:00Z,2026,3,True,post,False,24,SA,San Antonio Spurs,103.0,22,POR,Portland Trail Blazers,106.0
+401869396,2026-04-21,2026-04-21T23:00Z,2026,3,True,post,False,2,BOS,Boston Celtics,97.0,20,PHI,Philadelphia 76ers,111.0
+401869397,2026-04-21,2026-04-22T02:30Z,2026,3,True,post,False,13,LAL,Los Angeles Lakers,101.0,10,HOU,Houston Rockets,94.0
+401869368,2026-04-22,2026-04-23T01:30Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,120.0,21,PHX,Phoenix Suns,107.0
+401869411,2026-04-22,2026-04-22T23:00Z,2026,3,True,post,False,8,DET,Detroit Pistons,98.0,19,ORL,Orlando Magic,83.0
+401869375,2026-04-23,2026-04-24T00:00Z,2026,3,True,post,False,28,TOR,Toronto Raptors,126.0,5,CLE,Cleveland Cavaliers,104.0
+401869389,2026-04-23,2026-04-23T23:00Z,2026,3,True,post,False,1,ATL,Atlanta Hawks,109.0,18,NY,New York Knicks,108.0
+401869398,2026-04-23,2026-04-24T01:30Z,2026,3,True,post,False,16,MIN,Minnesota Timberwolves,113.0,7,DEN,Denver Nuggets,96.0
+401869382,2026-04-24,2026-04-25T02:30Z,2026,3,True,post,False,22,POR,Portland Trail Blazers,108.0,24,SA,San Antonio Spurs,120.0
+401869400,2026-04-24,2026-04-25T00:00Z,2026,3,True,post,False,10,HOU,Houston Rockets,108.0,13,LAL,Los Angeles Lakers,112.0
+401869404,2026-04-24,2026-04-24T23:00Z,2026,3,True,post,False,20,PHI,Philadelphia 76ers,100.0,2,BOS,Boston Celtics,108.0
+401869370,2026-04-25,2026-04-25T19:30Z,2026,3,True,post,False,21,PHX,Phoenix Suns,109.0,25,OKC,Oklahoma City Thunder,121.0
+401869391,2026-04-25,2026-04-25T22:00Z,2026,3,True,post,False,1,ATL,Atlanta Hawks,98.0,18,NY,New York Knicks,114.0
+401869399,2026-04-25,2026-04-26T00:30Z,2026,3,True,post,False,16,MIN,Minnesota Timberwolves,112.0,7,DEN,Denver Nuggets,96.0
+401869414,2026-04-25,2026-04-25T17:00Z,2026,3,True,post,False,19,ORL,Orlando Magic,113.0,8,DET,Detroit Pistons,105.0
+401869377,2026-04-26,2026-04-26T17:00Z,2026,3,True,post,False,28,TOR,Toronto Raptors,93.0,5,CLE,Cleveland Cavaliers,89.0
+401869385,2026-04-26,2026-04-26T19:30Z,2026,3,True,post,False,22,POR,Portland Trail Blazers,93.0,24,SA,San Antonio Spurs,114.0
+401869405,2026-04-26,2026-04-27T01:30Z,2026,3,True,post,False,10,HOU,Houston Rockets,115.0,13,LAL,Los Angeles Lakers,96.0
+401869406,2026-04-26,2026-04-26T23:00Z,2026,3,True,post,False,20,PHI,Philadelphia 76ers,96.0,2,BOS,Boston Celtics,128.0
+401869373,2026-04-27,2026-04-28T01:30Z,2026,3,True,post,False,21,PHX,Phoenix Suns,122.0,25,OKC,Oklahoma City Thunder,131.0
+401869401,2026-04-27,2026-04-28T02:30Z,2026,3,True,post,False,7,DEN,Denver Nuggets,125.0,16,MIN,Minnesota Timberwolves,113.0
+401869415,2026-04-27,2026-04-28T00:00Z,2026,3,True,post,False,19,ORL,Orlando Magic,94.0,8,DET,Detroit Pistons,88.0
+401869386,2026-04-28,2026-04-29T01:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,114.0,22,POR,Portland Trail Blazers,95.0
+401869392,2026-04-28,2026-04-29T00:00Z,2026,3,True,post,False,18,NY,New York Knicks,126.0,1,ATL,Atlanta Hawks,97.0
+401869408,2026-04-28,2026-04-28T23:00Z,2026,3,True,post,False,2,BOS,Boston Celtics,97.0,20,PHI,Philadelphia 76ers,113.0
+401869380,2026-04-29,2026-04-29T23:30Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,125.0,28,TOR,Toronto Raptors,120.0
+401869407,2026-04-29,2026-04-30T02:00Z,2026,3,True,post,False,13,LAL,Los Angeles Lakers,93.0,10,HOU,Houston Rockets,99.0
+401869416,2026-04-29,2026-04-29T23:00Z,2026,3,True,post,False,8,DET,Detroit Pistons,116.0,19,ORL,Orlando Magic,109.0
+401869393,2026-04-30,2026-04-30T23:00Z,2026,3,True,post,False,1,ATL,Atlanta Hawks,89.0,18,NY,New York Knicks,140.0
+401869402,2026-04-30,2026-05-01T01:30Z,2026,3,True,post,False,16,MIN,Minnesota Timberwolves,110.0,7,DEN,Denver Nuggets,98.0
+401869410,2026-04-30,2026-05-01T00:00Z,2026,3,True,post,False,20,PHI,Philadelphia 76ers,106.0,2,BOS,Boston Celtics,93.0
+401869381,2026-05-01,2026-05-01T23:30Z,2026,3,True,post,False,28,TOR,Toronto Raptors,112.0,5,CLE,Cleveland Cavaliers,110.0
+401869409,2026-05-01,2026-05-02T01:30Z,2026,3,True,post,False,10,HOU,Houston Rockets,78.0,13,LAL,Los Angeles Lakers,98.0
+401869417,2026-05-01,2026-05-01T23:00Z,2026,3,True,post,False,19,ORL,Orlando Magic,79.0,8,DET,Detroit Pistons,93.0
+401869412,2026-05-02,2026-05-02T23:30Z,2026,3,True,post,False,2,BOS,Boston Celtics,100.0,20,PHI,Philadelphia 76ers,109.0
+401869384,2026-05-03,2026-05-03T23:30Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,114.0,28,TOR,Toronto Raptors,102.0
+401869418,2026-05-03,2026-05-03T19:30Z,2026,3,True,post,False,8,DET,Detroit Pistons,116.0,19,ORL,Orlando Magic,94.0
+401871152,2026-05-04,2026-05-05T01:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,102.0,16,MIN,Minnesota Timberwolves,104.0
+401871159,2026-05-04,2026-05-05T00:00Z,2026,3,True,post,False,18,NY,New York Knicks,137.0,20,PHI,Philadelphia 76ers,98.0
+401871326,2026-05-05,2026-05-06T00:30Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,108.0,13,LAL,Los Angeles Lakers,90.0
+401871333,2026-05-05,2026-05-05T23:00Z,2026,3,True,post,False,8,DET,Detroit Pistons,111.0,5,CLE,Cleveland Cavaliers,101.0
+401871153,2026-05-06,2026-05-07T01:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,133.0,16,MIN,Minnesota Timberwolves,95.0
+401871160,2026-05-06,2026-05-06T23:00Z,2026,3,True,post,False,18,NY,New York Knicks,108.0,20,PHI,Philadelphia 76ers,102.0
+401871327,2026-05-07,2026-05-08T01:30Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,125.0,13,LAL,Los Angeles Lakers,107.0
+401871334,2026-05-07,2026-05-07T23:00Z,2026,3,True,post,False,8,DET,Detroit Pistons,107.0,5,CLE,Cleveland Cavaliers,97.0
+401871154,2026-05-08,2026-05-09T01:30Z,2026,3,True,post,False,16,MIN,Minnesota Timberwolves,108.0,24,SA,San Antonio Spurs,115.0
+401871161,2026-05-08,2026-05-08T23:00Z,2026,3,True,post,False,20,PHI,Philadelphia 76ers,94.0,18,NY,New York Knicks,108.0
+401871328,2026-05-09,2026-05-10T00:30Z,2026,3,True,post,False,13,LAL,Los Angeles Lakers,108.0,25,OKC,Oklahoma City Thunder,131.0
+401871335,2026-05-09,2026-05-09T19:00Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,116.0,8,DET,Detroit Pistons,109.0
+401871155,2026-05-10,2026-05-10T23:30Z,2026,3,True,post,False,16,MIN,Minnesota Timberwolves,114.0,24,SA,San Antonio Spurs,109.0
+401871162,2026-05-10,2026-05-10T19:30Z,2026,3,True,post,False,20,PHI,Philadelphia 76ers,114.0,18,NY,New York Knicks,144.0
+401871329,2026-05-11,2026-05-12T02:30Z,2026,3,True,post,False,13,LAL,Los Angeles Lakers,110.0,25,OKC,Oklahoma City Thunder,115.0
+401871336,2026-05-11,2026-05-12T00:00Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,112.0,8,DET,Detroit Pistons,103.0
+401871156,2026-05-12,2026-05-13T00:00Z,2026,3,True,post,False,24,SA,San Antonio Spurs,126.0,16,MIN,Minnesota Timberwolves,97.0
+401871337,2026-05-13,2026-05-14T00:00Z,2026,3,True,post,False,8,DET,Detroit Pistons,113.0,5,CLE,Cleveland Cavaliers,117.0
+401871157,2026-05-15,2026-05-16T01:30Z,2026,3,True,post,False,16,MIN,Minnesota Timberwolves,109.0,24,SA,San Antonio Spurs,139.0
+401871338,2026-05-15,2026-05-15T23:00Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,94.0,8,DET,Detroit Pistons,115.0
+401871339,2026-05-17,2026-05-18T00:00Z,2026,3,True,post,False,8,DET,Detroit Pistons,94.0,5,CLE,Cleveland Cavaliers,125.0
+401873197,2026-05-18,2026-05-19T00:30Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,115.0,24,SA,San Antonio Spurs,122.0
+401873341,2026-05-19,2026-05-20T00:00Z,2026,3,True,post,False,18,NY,New York Knicks,115.0,5,CLE,Cleveland Cavaliers,104.0
+401873198,2026-05-20,2026-05-21T00:30Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,122.0,24,SA,San Antonio Spurs,113.0
+401873342,2026-05-21,2026-05-22T00:00Z,2026,3,True,post,False,18,NY,New York Knicks,109.0,5,CLE,Cleveland Cavaliers,93.0
+401873199,2026-05-22,2026-05-23T00:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,108.0,25,OKC,Oklahoma City Thunder,123.0
+401873343,2026-05-23,2026-05-24T00:00Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,108.0,18,NY,New York Knicks,121.0
+401873200,2026-05-24,2026-05-25T00:00Z,2026,3,True,post,False,24,SA,San Antonio Spurs,103.0,25,OKC,Oklahoma City Thunder,82.0
+401873344,2026-05-25,2026-05-26T00:00Z,2026,3,True,post,False,5,CLE,Cleveland Cavaliers,93.0,18,NY,New York Knicks,130.0
+401873201,2026-05-26,2026-05-27T00:30Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,127.0,24,SA,San Antonio Spurs,114.0
+401873202,2026-05-28,2026-05-29T00:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,118.0,25,OKC,Oklahoma City Thunder,91.0
+401873203,2026-05-30,2026-05-31T00:00Z,2026,3,True,post,False,25,OKC,Oklahoma City Thunder,103.0,24,SA,San Antonio Spurs,111.0
+401859963,2026-06-03,2026-06-04T00:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,95.0,18,NY,New York Knicks,105.0
+401859964,2026-06-05,2026-06-06T00:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,104.0,18,NY,New York Knicks,105.0
+401859965,2026-06-08,2026-06-09T00:30Z,2026,3,True,post,False,18,NY,New York Knicks,111.0,24,SA,San Antonio Spurs,115.0
+401859966,2026-06-10,2026-06-11T00:30Z,2026,3,True,post,False,18,NY,New York Knicks,107.0,24,SA,San Antonio Spurs,106.0
+401859967,2026-06-13,2026-06-14T00:30Z,2026,3,True,post,False,24,SA,San Antonio Spurs,90.0,18,NY,New York Knicks,94.0
