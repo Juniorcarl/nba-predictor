@@ -115,8 +115,14 @@ def daily(use_odds=True, offline=False, demo_odds=False):
         except RuntimeError as e:
             log.error("injuries failed: %s", e)
 
+    rosters = {}
+    if not offline:  # also keeps the Players page on current teams between slates
+        recent = games[games["season"] == games["season"].max()]
+        rosters = espn.fetch_rosters(set(recent["home_id"]) | set(recent["away_id"]))
+        log.info("current rosters for %d teams", len(rosters))
+
     hist_games = games[games["completed"].astype(bool)]
-    PF, G = models.assemble(box, hist_games, upcoming, injuries)
+    PF, G = models.assemble(box, hist_games, upcoming, injuries, rosters)
     pm, pinfo = models.train_player_models(PF)
     gm, ginfo = models.train_game_models(G)
     pp = models.predict_players(pm, pinfo, PF)
@@ -142,10 +148,10 @@ def daily(use_odds=True, offline=False, demo_odds=False):
         picks.log_picks(slate_date, rows)
         picks.log_projections(slate_date, pp)
     track = picks.track_record(box)
-    players = site.players_index(box, games, pp)
+    players = site.players_index(box, games, pp, rosters)
     site.write_all(slate, pinfo, ginfo, track, players, {
         "slate_date": str(slate_date) if slate_date else None, "edge_threshold": EDGE_THRESHOLD, "max_edge": MAX_EDGE, "odds_credits_remaining": odds.credits["remaining"],
-        "injuries_count": len(injuries), "has_odds": bool(glines), "has_props": bool(plines),
+        "injuries_count": len(injuries), "rosters_loaded": len(rosters), "has_odds": bool(glines), "has_props": bool(plines),
         "games_in_db": int(len(hist_games)), "player_games_in_db": int((box["min"] > 0).sum()),
     })
     log.info("slate %s: %d games, %d player projections, %d flagged picks",

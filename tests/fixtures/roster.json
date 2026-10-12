@@ -1,0 +1,5 @@
+{"timestamp":"2026-10-12T09:00:00Z","status":"success","season":{"year":2027},
+ "athletes":[
+  {"id":"3917376","displayName":"Jaylen Brown","fullName":"Jaylen Brown","position":{"abbreviation":"SG"},"jersey":"7","injuries":[]},
+  {"id":"5105565","displayName":"Rookie Guy","position":{"abbreviation":"G"}}],
+ "team":{"id":"2","abbreviation":"BOS","displayName":"Boston Celtics"}}

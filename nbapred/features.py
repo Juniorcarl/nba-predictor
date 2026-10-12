@@ -144,12 +144,13 @@ def absences(box: pd.DataFrame) -> tuple[pd.DataFrame, RosterState]:
         for r in played.itertuples(index=False):
             s = st.players.get(r.player_id)
             if s is None:
-                s = {"min": r.min, "fga": r.fga, "team": tid, "last_idx": idx, "player": r.player, "pos": r.pos}
+                s = {"min": r.min, "fga": r.fga, "team": tid, "last_idx": idx, "player": r.player, "pos": r.pos,
+                     "last_date": r.date}
                 st.players[r.player_id] = s
             else:
                 s["min"] = _ALPHA * r.min + (1 - _ALPHA) * s["min"]
                 s["fga"] = _ALPHA * r.fga + (1 - _ALPHA) * s["fga"]
-                s.update(team=tid, last_idx=idx, player=r.player, pos=r.pos or s.get("pos"))
+                s.update(team=tid, last_idx=idx, player=r.player, pos=r.pos or s.get("pos"), last_date=r.date)
     return pd.DataFrame(out), st
 
 
@@ -173,7 +174,27 @@ def injury_status_map(injuries: list[dict]) -> tuple[dict, dict]:
     return by_id, by_name
 
 
-def upcoming_candidates(st: RosterState, upcoming: pd.DataFrame, injuries: list[dict]):
+ROSTER_RECENT_DAYS = 400  # covers an offseason plus most of a season lost to injury
+
+
+def team_pool(st: RosterState, tid: str, rosters: dict | None, as_of) -> list[str]:
+    """Players likely to play for team `tid` next game.
+
+    With a current ESPN roster: everyone on it with enough recent history, wherever they played before
+    (so offseason trades and signings land on the right team). Without one: the team's recent regulars.
+    """
+    if rosters and rosters.get(tid):
+        cutoff = pd.Timestamp(as_of) - pd.Timedelta(days=ROSTER_RECENT_DAYS)
+        out = []
+        for pid in rosters[tid]:
+            s = st.players.get(pid)
+            if s and s["min"] >= CANDIDATE_MIN and pd.Timestamp(s.get("last_date")) >= cutoff:
+                out.append(pid)
+        return out
+    return st.regulars(tid, st.team_idx.get(tid, 0) + 1, min_ewm=CANDIDATE_MIN)
+
+
+def upcoming_candidates(st: RosterState, upcoming: pd.DataFrame, injuries: list[dict], rosters: dict | None = None):
     """Players to project for upcoming games, plus team absence features."""
     by_id, by_name = injury_status_map(injuries)
 
@@ -184,9 +205,8 @@ def upcoming_candidates(st: RosterState, upcoming: pd.DataFrame, injuries: list[
     for g in upcoming.itertuples(index=False):
         for side in ("home", "away"):
             tid = getattr(g, f"{side}_id")
-            nxt = st.team_idx.get(tid, 0) + 1
             miss_min = miss_fga = miss_n = 0.0
-            for pid in st.regulars(tid, nxt, min_ewm=CANDIDATE_MIN):
+            for pid in team_pool(st, tid, rosters, g.date):
                 s = st.players[pid]
                 stat, comment = status(pid, s["player"])
                 is_out = stat.lower() in OUT_STATUSES

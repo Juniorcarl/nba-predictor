@@ -48,6 +48,10 @@ def fetch_injuries() -> dict:
     return _get(f"{BASE}/injuries")
 
 
+def fetch_roster(team_id: str) -> dict:
+    return _get(f"{BASE}/teams/{team_id}/roster")
+
+
 # ---------------------------------------------------------------- parsers
 def _int(x):
     try:
@@ -191,4 +195,31 @@ def parse_injuries(js: dict) -> list[dict]:
                 "status": inj.get("status") or (inj.get("type") or {}).get("description"),
                 "comment": inj.get("shortComment") or "",
             })
+    return out
+
+
+def parse_roster(js: dict) -> list[dict]:
+    """Current roster for one team. ESPN returns either a flat list or position groups."""
+    out = []
+    for a in js.get("athletes", []) or []:
+        items = a.get("items") if isinstance(a, dict) and "items" in a else [a]
+        for p in items or []:
+            if p.get("id"):
+                out.append({"player_id": str(p["id"]), "player": p.get("displayName") or p.get("fullName"),
+                            "pos": (p.get("position") or {}).get("abbreviation")})
+    return out
+
+
+def fetch_rosters(team_ids) -> dict:
+    """{team_id: [player_id, ...]} for every team that answered. Teams that fail are left out,
+    and the model falls back to recent history for them."""
+    out = {}
+    for tid in sorted(set(map(str, team_ids))):
+        try:
+            ids = [p["player_id"] for p in parse_roster(fetch_roster(tid))]
+            if ids:
+                out[tid] = ids
+        except RuntimeError as e:
+            log.warning("roster %s failed: %s", tid, e)
+        time.sleep(0.2)
     return out

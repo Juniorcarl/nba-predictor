@@ -80,7 +80,7 @@ def normal_probs(mu: float, sd: float, line: float) -> dict:
 
 
 # ---------------------------------------------------------------- data assembly
-def assemble(box, games, upcoming=None, injuries=None):
+def assemble(box, games, upcoming=None, injuries=None, rosters=None):
     """Return (player frame, game frame). Upcoming rows have is_upcoming=True."""
     games = games.copy()
     games = games[games["season_type"].isin(list(SEASON_TYPES))]
@@ -88,7 +88,7 @@ def assemble(box, games, upcoming=None, injuries=None):
     absn_hist, st = F.absences(base)
 
     upcoming = upcoming if upcoming is not None else pd.DataFrame(columns=games.columns)
-    cand, absn_up = (F.upcoming_candidates(st, upcoming, injuries or []) if len(upcoming)
+    cand, absn_up = (F.upcoming_candidates(st, upcoming, injuries or [], rosters) if len(upcoming)
                      else (pd.DataFrame(), pd.DataFrame(columns=["game_id", "team_id", "miss_min", "miss_fga", "miss_n"])))
     absn = pd.concat([absn_hist, absn_up], ignore_index=True)
     absn[["miss_min", "miss_fga", "miss_n"]] = absn[["miss_min", "miss_fga", "miss_n"]].astype(float)

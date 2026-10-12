@@ -83,7 +83,7 @@ def write_all(slate: dict, pinfo: dict, ginfo: dict, track: dict, players: list,
     _write("meta.json", meta)
 
 
-def players_index(box: pd.DataFrame, games: pd.DataFrame, pp: pd.DataFrame, n_logs=12) -> list:
+def players_index(box: pd.DataFrame, games: pd.DataFrame, pp: pd.DataFrame, rosters: dict | None = None, n_logs=12) -> list:
     """Recent game logs for everyone who played in the last two seasons."""
     gi = games[["game_id", "date", "season", "home_id", "away_id", "home_abbr", "away_abbr"]]
     df = box[box["min"] > 0].merge(gi, on="game_id")
@@ -98,6 +98,8 @@ def players_index(box: pd.DataFrame, games: pd.DataFrame, pp: pd.DataFrame, n_lo
     df = df.sort_values("date")
     proj = {r.player_id: {s: getattr(r, f"p_{s}") for s in ("min", "pts", "reb", "ast", "fg3m", "pra")} | {"game_id": r.game_id}
             for r in pp.itertuples()} if len(pp) else {}
+    abbr = dict(zip(games["home_id"], games["home_abbr"])) | dict(zip(games["away_id"], games["away_abbr"]))
+    now_team = {pid: abbr.get(tid, "") for tid, ids in (rosters or {}).items() for pid in ids}
     out = []
     for pid, d in df.groupby("player_id"):
         last = d.iloc[-1]
@@ -105,7 +107,7 @@ def players_index(box: pd.DataFrame, games: pd.DataFrame, pp: pd.DataFrame, n_lo
         avg = cur[["min", "pts", "reb", "ast", "fg3m"]].mean()
         logs = d.tail(n_logs).iloc[::-1]
         out.append({
-            "id": pid, "name": last["player"], "team": last["team"], "pos": last["pos"],
+            "id": pid, "name": last["player"], "team": now_team.get(pid) or last["team"], "pos": last["pos"],
             "season": int(last["season"]), "gp": int(len(cur)), "avg": avg.to_dict(),
             "logs": [{"d": r.date.strftime("%Y-%m-%d"), "opp": ("vs " if r.home else "@ ") + str(r.opp),
                       "min": r.min, "pts": r.pts, "reb": r.reb, "ast": r.ast, "fg3m": r.fg3m} for r in logs.itertuples()],

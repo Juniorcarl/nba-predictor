@@ -97,3 +97,27 @@ def test_betway_line_extracted():
                                            {"name": "Under", "price": -108, "point": 225.5}]}]}]}
     t = odds.game_lines(ev)["total"]
     assert t["point"] == 225.5 and t["betway"] == {"point": 226.5, "over": -110, "under": -110}
+
+
+def test_roster_parse_flat_and_grouped():
+    flat = espn.parse_roster(load("roster.json"))
+    assert [p["player_id"] for p in flat] == ["3917376", "5105565"] and flat[0]["pos"] == "SG"
+    grouped = espn.parse_roster({"athletes": [{"position": "guards", "items": [{"id": "1", "displayName": "A"}]},
+                                              {"position": "forwards", "items": [{"id": "2", "fullName": "B"}]}]})
+    assert [p["player"] for p in grouped] == ["A", "B"]
+
+
+def test_offseason_trade_uses_current_roster():
+    """A player whose last game was for team 1 but is now on team 2's roster is projected for team 2."""
+    from nbapred import features as F
+    st = F.RosterState(team_idx={"1": 82, "2": 82}, players={
+        "p1": {"min": 30.0, "fga": 15.0, "team": "1", "last_idx": 82, "player": "Traded Star", "pos": "G",
+               "last_date": pd.Timestamp("2026-04-12")},
+        "p2": {"min": 25.0, "fga": 10.0, "team": "2", "last_idx": 82, "player": "Stays Put", "pos": "F",
+               "last_date": pd.Timestamp("2026-04-12")}})
+    up = pd.DataFrame([{"game_id": "g", "date": pd.Timestamp("2026-10-21").date(), "home_id": "2", "away_id": "1"}])
+    cand, _ = F.upcoming_candidates(st, up, [], rosters={"2": ["p1", "p2"], "1": ["newcomer"]})
+    assert set(cand[cand.team_id == "2"]["player_id"]) == {"p1", "p2"}
+    assert cand[cand.team_id == "1"].empty
+    cand2, _ = F.upcoming_candidates(st, up, [], rosters=None)  # fallback: last team played for
+    assert set(cand2[cand2.team_id == "1"]["player_id"]) == {"p1"}
