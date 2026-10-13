@@ -1,0 +1,1260 @@
+{
+ "proposals": [
+  {
+   "id": "P-0001",
+   "created": "2026-10-13T07:09+00:00",
+   "status": "pending",
+   "kind": "add_group",
+   "target": "fatigue_travel",
+   "value": null,
+   "title": "Add factor: fatigue travel",
+   "why": "Games in the last 4 and 7 days, time zones crossed, road-trip length, altitude (Denver, Utah), recent minutes load",
+   "evidence": {
+    "kind": "add_group",
+    "target": "fatigue_travel",
+    "value": null,
+    "gain": 0.0015,
+    "basis": "overall",
+    "per": {
+     "pts": {
+      "before": 4.493,
+      "after": 4.479,
+      "change": -0.0031
+     },
+     "reb": {
+      "before": 1.853,
+      "after": 1.849,
+      "change": -0.0025
+     },
+     "ast": {
+      "before": 1.33,
+      "after": 1.329,
+      "change": -0.0009
+     },
+     "fg3m": {
+      "before": 0.883,
+      "after": 0.882,
+      "change": -0.0014
+     },
+     "min": {
+      "before": 4.696,
+      "after": 4.676,
+      "change": -0.0044
+     },
+     "margin": {
+      "before": 11.866,
+      "after": 11.933,
+      "change": 0.0057
+     },
+     "total": {
+      "before": 14.918,
+      "after": 14.857,
+      "change": -0.0041
+     }
+    },
+    "halves": [
+     0.0008,
+     0.0022
+    ],
+    "segment": {
+     "label": "back-to-backs, 3-in-4s, altitude and long road trips",
+     "n": 5405,
+     "gain": 0.0004,
+     "halves": [
+      0.0007,
+      0.0
+     ],
+     "per": {
+      "pts": {
+       "before": 4.537,
+       "after": 4.533
+      },
+      "reb": {
+       "before": 1.894,
+       "after": 1.891
+      },
+      "ast": {
+       "before": 1.352,
+       "after": 1.351
+      },
+      "fg3m": {
+       "before": 0.899,
+       "after": 0.898
+      },
+      "min": {
+       "before": 4.767,
+       "after": 4.767
+      }
+     }
+    },
+    "passed": true
+   }
+  },
+  {
+   "id": "P-0002",
+   "created": "2026-10-13T07:12+00:00",
+   "status": "pending",
+   "kind": "set_param",
+   "target": "max_depth",
+   "value": 4,
+   "title": "Change setting: max depth to 4",
+   "why": "Simpler trees (depth 4): less likely to memorise noise",
+   "evidence": {
+    "kind": "set_param",
+    "target": "max_depth",
+    "value": 4,
+    "gain": 0.0015,
+    "basis": "overall",
+    "per": {
+     "pts": {
+      "before": 4.493,
+      "after": 4.49,
+      "change": -0.0006
+     },
+     "reb": {
+      "before": 1.853,
+      "after": 1.854,
+      "change": 0.0005
+     },
+     "ast": {
+      "before": 1.33,
+      "after": 1.331,
+      "change": 0.0006
+     },
+     "fg3m": {
+      "before": 0.883,
+      "after": 0.882,
+      "change": -0.0006
+     },
+     "min": {
+      "before": 4.696,
+      "after": 4.693,
+      "change": -0.0007
+     },
+     "margin": {
+      "before": 11.866,
+      "after": 11.822,
+      "change": -0.0036
+     },
+     "total": {
+      "before": 14.918,
+      "after": 14.828,
+      "change": -0.006
+     }
+    },
+    "halves": [
+     0.0004,
+     0.0025
+    ],
+    "segment": null,
+    "passed": true
+   }
+  }
+ ],
+ "changes": [],
+ "postmortems": [],
+ "patterns": {
+  "updated": "2026-10-13T07:06+00:00",
+  "items": [
+   {
+    "segment": "First 3 games back from injury",
+    "stat": "min",
+    "bias": -1.24,
+    "n": 1671,
+    "t": -8.4,
+    "text": "First 3 games back from injury: the model over-predicts minutes by 1.2 on average (1,671 cases).",
+    "group": "injury_return",
+    "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "First 3 games back from injury",
+    "stat": "pts",
+    "bias": -0.82,
+    "n": 1671,
+    "t": -7.1,
+    "text": "First 3 games back from injury: the model over-predicts points by 0.8 on average (1,671 cases).",
+    "group": "injury_return",
+    "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Playoffs",
+    "stat": "pts",
+    "bias": -0.76,
+    "n": 1897,
+    "t": -6.0,
+    "text": "Playoffs: the model over-predicts points by 0.8 on average (1,897 cases).",
+    "group": "motivation",
+    "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "First 3 games back from injury",
+    "stat": "reb",
+    "bias": -0.27,
+    "n": 1671,
+    "t": -5.5,
+    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,671 cases).",
+    "group": "injury_return",
+    "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Playoffs",
+    "stat": "ast",
+    "bias": -0.18,
+    "n": 1897,
+    "t": -5.0,
+    "text": "Playoffs: the model over-predicts assists by 0.2 on average (1,897 cases).",
+    "group": "motivation",
+    "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Opponent has an elite shot-blocker",
+    "stat": "pts",
+    "bias": -0.76,
+    "n": 980,
+    "t": -3.9,
+    "text": "Opponent has an elite shot-blocker: the model over-predicts points by 0.8 on average (980 cases).",
+    "group": "opposing_defenders",
+    "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Opponent has an elite shot-blocker",
+    "stat": "reb",
+    "bias": -0.23,
+    "n": 980,
+    "t": -3.1,
+    "text": "Opponent has an elite shot-blocker: the model over-predicts rebounds by 0.2 on average (980 cases).",
+    "group": "opposing_defenders",
+    "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Opponent has an elite shot-blocker",
+    "stat": "min",
+    "bias": -0.65,
+    "n": 980,
+    "t": -3.1,
+    "text": "Opponent has an elite shot-blocker: the model over-predicts minutes by 0.7 on average (980 cases).",
+    "group": "opposing_defenders",
+    "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   }
+  ]
+ },
+ "experiments": [
+  {
+   "at": "2026-10-13T07:14+00:00",
+   "champion": {
+    "pts": 4.493,
+    "reb": 1.853,
+    "ast": 1.33,
+    "fg3m": 0.883,
+    "min": 4.696,
+    "margin": 11.866,
+    "total": 14.918
+   },
+   "groups": [],
+   "params": {
+    "max_depth": 5,
+    "min_child_weight": 20,
+    "learning_rate": 0.03
+   },
+   "tested": [
+    {
+     "kind": "add_group",
+     "target": "position_defense",
+     "value": null,
+     "gain": 0.0003,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.484,
+       "change": -0.0021
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.853,
+       "change": -0.0004
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.331,
+       "change": 0.0005
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.883,
+       "change": 0.0002
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.698,
+       "change": 0.0004
+      }
+     },
+     "halves": [
+      0.0004,
+      0.0001
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "size",
+     "value": null,
+     "gain": -0.0011,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.497,
+       "change": 0.0008
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.853,
+       "change": -0.0001
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.331,
+       "change": 0.0009
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.885,
+       "change": 0.002
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.707,
+       "change": 0.0022
+      }
+     },
+     "halves": [
+      -0.0002,
+      -0.002
+     ],
+     "segment": {
+      "label": "centers and players with a big height gap",
+      "n": 11559,
+      "gain": -0.003,
+      "halves": [
+       -0.0023,
+       -0.0037
+      ],
+      "per": {
+       "pts": {
+        "before": 4.549,
+        "after": 4.561
+       },
+       "reb": {
+        "before": 1.847,
+        "after": 1.847
+       },
+       "ast": {
+        "before": 1.37,
+        "after": 1.373
+       },
+       "fg3m": {
+        "before": 0.898,
+        "after": 0.901
+       },
+       "min": {
+        "before": 4.649,
+        "after": 4.665
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "opposing_defenders",
+     "value": null,
+     "gain": -0.0007,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.483,
+       "change": -0.0022
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.855,
+       "change": 0.0007
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.329,
+       "change": -0.0007
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.883,
+       "change": 0.0002
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.708,
+       "change": 0.0024
+      },
+      "margin": {
+       "before": 11.866,
+       "after": 11.931,
+       "change": 0.0055
+      },
+      "total": {
+       "before": 14.918,
+       "after": 14.904,
+       "change": -0.0009
+      }
+     },
+     "halves": [
+      -0.0009,
+      -0.0005
+     ],
+     "segment": {
+      "label": "games against an elite shot-blocker",
+      "n": 980,
+      "gain": 0.0031,
+      "halves": [
+       -0.0007,
+       0.006
+      ],
+      "per": {
+       "pts": {
+        "before": 4.777,
+        "after": 4.731
+       },
+       "reb": {
+        "before": 1.816,
+        "after": 1.812
+       },
+       "ast": {
+        "before": 1.345,
+        "after": 1.349
+       },
+       "fg3m": {
+        "before": 0.901,
+        "after": 0.903
+       },
+       "min": {
+        "before": 5.226,
+        "after": 5.244
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "blowout_risk",
+     "value": null,
+     "gain": -0.0002,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.484,
+       "change": -0.002
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.854,
+       "change": 0.0003
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.332,
+       "change": 0.0013
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.884,
+       "change": 0.0006
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.699,
+       "change": 0.0006
+      }
+     },
+     "halves": [
+      -0.0002,
+      -0.0002
+     ],
+     "segment": {
+      "label": "expected blowouts (10+ points)",
+      "n": 4919,
+      "gain": 0.0008,
+      "halves": [
+       0.0008,
+       0.0009
+      ],
+      "per": {
+       "pts": {
+        "before": 4.521,
+        "after": 4.514
+       },
+       "reb": {
+        "before": 1.852,
+        "after": 1.853
+       },
+       "ast": {
+        "before": 1.325,
+        "after": 1.328
+       },
+       "fg3m": {
+        "before": 0.886,
+        "after": 0.887
+       },
+       "min": {
+        "before": 4.723,
+        "after": 4.722
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "fatigue_travel",
+     "value": null,
+     "gain": 0.0015,
+     "basis": "overall",
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.479,
+       "change": -0.0031
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.849,
+       "change": -0.0025
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.329,
+       "change": -0.0009
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.882,
+       "change": -0.0014
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.676,
+       "change": -0.0044
+      },
+      "margin": {
+       "before": 11.866,
+       "after": 11.933,
+       "change": 0.0057
+      },
+      "total": {
+       "before": 14.918,
+       "after": 14.857,
+       "change": -0.0041
+      }
+     },
+     "halves": [
+      0.0008,
+      0.0022
+     ],
+     "segment": {
+      "label": "back-to-backs, 3-in-4s, altitude and long road trips",
+      "n": 5405,
+      "gain": 0.0004,
+      "halves": [
+       0.0007,
+       0.0
+      ],
+      "per": {
+       "pts": {
+        "before": 4.537,
+        "after": 4.533
+       },
+       "reb": {
+        "before": 1.894,
+        "after": 1.891
+       },
+       "ast": {
+        "before": 1.352,
+        "after": 1.351
+       },
+       "fg3m": {
+        "before": 0.899,
+        "after": 0.898
+       },
+       "min": {
+        "before": 4.767,
+        "after": 4.767
+       }
+      }
+     },
+     "passed": true
+    },
+    {
+     "kind": "add_group",
+     "target": "injury_return",
+     "value": null,
+     "gain": 0.0007,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.482,
+       "change": -0.0023
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.851,
+       "change": -0.0012
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.331,
+       "change": 0.0002
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.884,
+       "change": 0.0008
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.692,
+       "change": -0.001
+      }
+     },
+     "halves": [
+      0.0011,
+      0.0004
+     ],
+     "segment": {
+      "label": "first 3 games back from injury",
+      "n": 1671,
+      "gain": 0.0179,
+      "halves": [
+       0.0207,
+       0.0154
+      ],
+      "per": {
+       "pts": {
+        "before": 3.633,
+        "after": 3.573
+       },
+       "reb": {
+        "before": 1.518,
+        "after": 1.497
+       },
+       "ast": {
+        "before": 1.08,
+        "after": 1.072
+       },
+       "fg3m": {
+        "before": 0.69,
+        "after": 0.69
+       },
+       "min": {
+        "before": 4.804,
+        "after": 4.712
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "revenge_game",
+     "value": null,
+     "gain": -0.0006,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.486,
+       "change": -0.0015
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.855,
+       "change": 0.001
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.331,
+       "change": 0.0007
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.885,
+       "change": 0.0019
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.701,
+       "change": 0.0009
+      }
+     },
+     "halves": [
+      -0.0001,
+      -0.0012
+     ],
+     "segment": {
+      "label": "games against a former team",
+      "n": 307,
+      "gain": -0.0028,
+      "halves": [
+       -0.0104,
+       0.0045
+      ],
+      "per": {
+       "pts": {
+        "before": 3.928,
+        "after": 3.92
+       },
+       "reb": {
+        "before": 1.702,
+        "after": 1.705
+       },
+       "ast": {
+        "before": 1.213,
+        "after": 1.219
+       },
+       "fg3m": {
+        "before": 0.817,
+        "after": 0.82
+       },
+       "min": {
+        "before": 4.359,
+        "after": 4.392
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "vs_opponent_history",
+     "value": null,
+     "gain": 0.0,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.489,
+       "change": -0.0008
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.853,
+       "change": -0.0002
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.331,
+       "change": 0.0003
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.883,
+       "change": 0.0002
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.698,
+       "change": 0.0003
+      }
+     },
+     "halves": [
+      0.0005,
+      -0.0004
+     ],
+     "segment": {
+      "label": "opponents the player has faced 3+ times",
+      "n": 11058,
+      "gain": -0.0005,
+      "halves": [
+       0.0001,
+       -0.0009
+      ],
+      "per": {
+       "pts": {
+        "before": 4.629,
+        "after": 4.627
+       },
+       "reb": {
+        "before": 1.89,
+        "after": 1.89
+       },
+       "ast": {
+        "before": 1.371,
+        "after": 1.371
+       },
+       "fg3m": {
+        "before": 0.925,
+        "after": 0.925
+       },
+       "min": {
+        "before": 4.528,
+        "after": 4.533
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "motivation",
+     "value": null,
+     "gain": 0.001,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.473,
+       "change": -0.0044
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.851,
+       "change": -0.001
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.33,
+       "change": -0.0005
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.883,
+       "change": -0.0002
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.673,
+       "change": -0.0051
+      },
+      "margin": {
+       "before": 11.866,
+       "after": 11.915,
+       "change": 0.0041
+      },
+      "total": {
+       "before": 14.918,
+       "after": 14.922,
+       "change": 0.0003
+      }
+     },
+     "halves": [
+      -0.0006,
+      0.0024
+     ],
+     "segment": {
+      "label": "playoffs and the last 15 games of the season",
+      "n": 6700,
+      "gain": 0.0094,
+      "halves": [
+       0.0,
+       0.0094
+      ],
+      "per": {
+       "pts": {
+        "before": 4.503,
+        "after": 4.475
+       },
+       "reb": {
+        "before": 1.841,
+        "after": 1.837
+       },
+       "ast": {
+        "before": 1.327,
+        "after": 1.322
+       },
+       "fg3m": {
+        "before": 0.874,
+        "after": 0.872
+       },
+       "min": {
+        "before": 4.808,
+        "after": 4.746
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "shooting_luck",
+     "value": null,
+     "gain": 0.0001,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.49,
+       "change": -0.0007
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.852,
+       "change": -0.0008
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.332,
+       "change": 0.0013
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.883,
+       "change": -0.0003
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.697,
+       "change": 0.0001
+      }
+     },
+     "halves": [
+      0.0,
+      0.0001
+     ],
+     "segment": {
+      "label": "players on hot or cold shooting streaks",
+      "n": 2497,
+      "gain": -0.0022,
+      "halves": [
+       -0.0013,
+       -0.003
+      ],
+      "per": {
+       "pts": {
+        "before": 3.797,
+        "after": 3.794
+       },
+       "reb": {
+        "before": 1.822,
+        "after": 1.822
+       },
+       "ast": {
+        "before": 1.131,
+        "after": 1.137
+       },
+       "fg3m": {
+        "before": 0.704,
+        "after": 0.704
+       },
+       "min": {
+        "before": 4.883,
+        "after": 4.908
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "age_experience",
+     "value": null,
+     "gain": -0.0012,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.488,
+       "change": -0.0011
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.855,
+       "change": 0.0011
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.332,
+       "change": 0.0012
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.884,
+       "change": 0.0015
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.713,
+       "change": 0.0035
+      }
+     },
+     "halves": [
+      -0.0002,
+      -0.0022
+     ],
+     "segment": {
+      "label": "players aged 32+",
+      "n": 1447,
+      "gain": -0.0018,
+      "halves": [
+       -0.0018,
+       -0.0017
+      ],
+      "per": {
+       "pts": {
+        "before": 4.576,
+        "after": 4.589
+       },
+       "reb": {
+        "before": 1.828,
+        "after": 1.829
+       },
+       "ast": {
+        "before": 1.447,
+        "after": 1.45
+       },
+       "fg3m": {
+        "before": 0.977,
+        "after": 0.981
+       },
+       "min": {
+        "before": 4.482,
+        "after": 4.486
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "max_depth",
+     "value": 4,
+     "gain": 0.0015,
+     "basis": "overall",
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.49,
+       "change": -0.0006
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.854,
+       "change": 0.0005
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.331,
+       "change": 0.0006
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.882,
+       "change": -0.0006
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.693,
+       "change": -0.0007
+      },
+      "margin": {
+       "before": 11.866,
+       "after": 11.822,
+       "change": -0.0036
+      },
+      "total": {
+       "before": 14.918,
+       "after": 14.828,
+       "change": -0.006
+      }
+     },
+     "halves": [
+      0.0004,
+      0.0025
+     ],
+     "segment": null,
+     "passed": true
+    },
+    {
+     "kind": "set_param",
+     "target": "max_depth",
+     "value": 6,
+     "gain": -0.0032,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.486,
+       "change": -0.0015
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.855,
+       "change": 0.0007
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.332,
+       "change": 0.0015
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.884,
+       "change": 0.0008
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.691,
+       "change": -0.0011
+      },
+      "margin": {
+       "before": 11.866,
+       "after": 11.995,
+       "change": 0.0109
+      },
+      "total": {
+       "before": 14.918,
+       "after": 15.079,
+       "change": 0.0108
+      }
+     },
+     "halves": [
+      -0.004,
+      -0.0024
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "min_child_weight",
+     "value": 40,
+     "gain": -0.0009,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.488,
+       "change": -0.0012
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.855,
+       "change": 0.0009
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.331,
+       "change": 0.0004
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.883,
+       "change": 0.0002
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.698,
+       "change": 0.0004
+      },
+      "margin": {
+       "before": 11.866,
+       "after": 11.849,
+       "change": -0.0014
+      },
+      "total": {
+       "before": 14.918,
+       "after": 15.02,
+       "change": 0.0069
+      }
+     },
+     "halves": [
+      -0.0013,
+      -0.0005
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "min_child_weight",
+     "value": 10,
+     "gain": -0.001,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.493,
+       "after": 4.483,
+       "change": -0.0021
+      },
+      "reb": {
+       "before": 1.853,
+       "after": 1.853,
+       "change": -0.0002
+      },
+      "ast": {
+       "before": 1.33,
+       "after": 1.332,
+       "change": 0.0013
+      },
+      "fg3m": {
+       "before": 0.883,
+       "after": 0.883,
+       "change": 0.0001
+      },
+      "min": {
+       "before": 4.696,
+       "after": 4.689,
+       "change": -0.0017
+      },
+      "margin": {
+       "before": 11.866,
+       "after": 11.911,
+       "change": 0.0038
+      },
+      "total": {
+       "before": 14.918,
+       "after": 15.0,
+       "change": 0.0056
+      }
+     },
+     "halves": [
+      -0.0011,
+      -0.0008
+     ],
+     "segment": null,
+     "passed": false
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "at": "2026-10-13T07:09+00:00",
+   "kind": "proposal",
+   "text": "P-0001: Add factor: fatigue travel. Cuts the average miss by 0.15% on games it hadn't seen.",
+   "proposal": "P-0001"
+  },
+  {
+   "at": "2026-10-13T07:12+00:00",
+   "kind": "proposal",
+   "text": "P-0002: Change setting: max depth to 4. Cuts the average miss by 0.15% on games it hadn't seen.",
+   "proposal": "P-0002"
+  },
+  {
+   "at": "2026-10-13T07:14+00:00",
+   "kind": "experiment",
+   "text": "Tested 15 possible changes against the current model. 2 improved accuracy on games the model hadn't seen; 2 new proposal(s) waiting for your decision."
+  }
+ ]
+}
