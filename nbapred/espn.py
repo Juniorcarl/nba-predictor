@@ -206,19 +206,31 @@ def parse_roster(js: dict) -> list[dict]:
         for p in items or []:
             if p.get("id"):
                 out.append({"player_id": str(p["id"]), "player": p.get("displayName") or p.get("fullName"),
-                            "pos": (p.get("position") or {}).get("abbreviation")})
+                            "pos": (p.get("position") or {}).get("abbreviation"),
+                            "height": _num(p.get("height")), "weight": _num(p.get("weight")),
+                            "birth": (p.get("dateOfBirth") or "")[:10] or None,
+                            "exp": _num((p.get("experience") or {}).get("years"))})
     return out
 
 
-def fetch_rosters(team_ids) -> dict:
+def _num(x):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return None
+
+
+def fetch_rosters(team_ids, bio_out: list | None = None) -> dict:
     """{team_id: [player_id, ...]} for every team that answered. Teams that fail are left out,
-    and the model falls back to recent history for them."""
+    and the model falls back to recent history for them. Player bio rows (height etc.) go to bio_out."""
     out = {}
     for tid in sorted(set(map(str, team_ids))):
         try:
-            ids = [p["player_id"] for p in parse_roster(fetch_roster(tid))]
-            if ids:
-                out[tid] = ids
+            players = parse_roster(fetch_roster(tid))
+            if players:
+                out[tid] = [p["player_id"] for p in players]
+                if bio_out is not None:
+                    bio_out.extend(players)
         except RuntimeError as e:
             log.warning("roster %s failed: %s", tid, e)
         time.sleep(0.2)

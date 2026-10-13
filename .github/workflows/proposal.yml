@@ -1,0 +1,55 @@
+name: Proposal decision
+
+# Open an issue titled "[approve] P-0003", "[reject] P-0003" or "[undo] P-0003".
+# Only issues opened by the repository owner are acted on.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  decide:
+    if: github.event.issue.user.login == github.repository_owner && startsWith(github.event.issue.title, '[')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Apply decision
+        id: apply
+        env:
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          set -o pipefail
+          python scripts/apply_proposal.py "$TITLE" | tee result.txt
+          echo "action=$(echo "$TITLE" | sed -E 's/^\s*\[([a-zA-Z]+)\].*/\1/' | tr 'A-Z' 'a-z')" >> "$GITHUB_OUTPUT"
+      - name: Commit
+        run: |
+          git config user.name "nba-predictor bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data docs/data
+          git diff --cached --quiet || git commit -m "Proposal decision: $(cat result.txt)"
+          git pull --rebase --autostash || true
+          git push
+      - name: Reply and close the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "$(cat result.txt) The model retrains with this in the update that starts now."
+          gh issue close ${{ github.event.issue.number }}
+      - name: Retrain now
+        if: steps.apply.outputs.action != 'reject'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run daily.yml -f odds=false

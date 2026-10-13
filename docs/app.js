@@ -480,6 +480,109 @@ function renderMyBets() {
   };
 }
 
+
+/* ---------------------------------------------------------------- learning */
+const UNIT = { pts: "pts", reb: "reb", ast: "ast", fg3m: "3pm", min: "min", margin: "margin", total: "total" };
+const STAT_NAME = { pts: "Points", reb: "Rebounds", ast: "Assists", fg3m: "3-pointers", min: "Minutes", margin: "Game margin", total: "Game total" };
+const when = (iso) => { try { return new Date(iso).toLocaleString([], { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); } catch { return iso; } };
+const issueUrl = (action, id) => `https://github.com/${S.meta?.repo || "Juniorcarl/nba-predictor"}/issues/new?title=${encodeURIComponent(`[${action}] ${id}`)}&body=${encodeURIComponent(
+  action === "approve" ? `Approving ${id}. Tap "Submit new issue" to confirm.` : action === "undo" ? `Undoing ${id}. Tap "Submit new issue" to confirm.` : `Rejecting ${id}. Tap "Submit new issue" to confirm.`)}`;
+
+function proposalCard(p) {
+  const ev = p.evidence || {}, seg = ev.segment, targeted = ev.basis === "targeted";
+  const per = targeted ? seg.per : ev.per || {};
+  const rows = Object.entries(per).map(([k, v]) => {
+    const ch = (v.after - v.before) / v.before;
+    return `<tr><td>${STAT_NAME[k] || k}</td><td>${v.before.toFixed(2)}</td><td>${v.after.toFixed(2)}</td>
+      <td class="${ch < 0 ? "pos" : ch > 0 ? "neg" : ""}">${sign(ch * 100, 1)}%</td></tr>`;
+  }).join("");
+  const headline = targeted ? -seg.gain : -ev.gain;
+  return `<article class="panel edge hot">
+    <div class="edge-top"><div class="edge-who"><p class="muted small">${esc(p.id)}, proposed ${when(p.created)}</p><h3>${esc(p.title)}</h3></div>
+      <div class="edge-bet">${sign(headline * 100, targeted ? 1 : 2)}%<small>${targeted ? "miss in its games" : "average miss"}</small></div></div>
+    <p>${esc(p.why)}</p>
+    ${targeted ? `<p class="small">Tested on <b>${seg.n.toLocaleString()} ${esc(seg.label)}</b> the model hadn't seen. Across all games the change is ${sign(-ev.gain * 100, 2)}%, so it helps where it should without hurting elsewhere.</p>` : ""}
+    <div class="tbl-wrap"><table><thead><tr><th>Average miss${targeted ? " in those games" : ""}</th><th>Now</th><th>With change</th><th>Change</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="muted small">It was better in both the earlier and the later half of the test period, so it isn't a one-off.</p>
+    <div class="chips"><a class="add" href="${issueUrl("approve", p.id)}" target="_blank" rel="noopener">Approve</a>
+      <a class="chip" href="${issueUrl("reject", p.id)}" target="_blank" rel="noopener">Reject</a></div>
+  </article>`;
+}
+
+function groupPatterns(items) {
+  const by = new Map();
+  for (const p of items) {
+    if (!by.has(p.segment + p.source)) by.set(p.segment + p.source, { ...p, parts: [] });
+    by.get(p.segment + p.source).parts.push(p);
+  }
+  return [...by.values()].map((g) => {
+    const words = g.parts.map((x) => `${x.bias > 0 ? "under" : "over"}-predicts ${({ pts: "points", reb: "rebounds", ast: "assists", min: "minutes" })[x.stat]} by ${Math.abs(x.bias).toFixed(1)}`);
+    return { ...g, text: `${g.segment}: the model ${words.join(", ")} on average (${g.n.toLocaleString()} cases).` };
+  });
+}
+
+function postmortemBlock(pm) {
+  if (!pm) return `<div class="empty"><p>The first review appears the morning after the first games of the season.</p></div>`;
+  const reasons = Object.entries(pm.reasons || {}).sort((a, b) => b[1] - a[1]);
+  const total = reasons.reduce((a, [, n]) => a + n, 0) || 1;
+  return `<div class="panel pcard">
+    <h3>Games of ${esc(day(pm.date + "T12:00:00"))}</h3>
+    <div class="kpis">
+      <div class="kpi"><b>${f1(pm.mae.pts)}</b><span>Avg miss, points</span></div>
+      <div class="kpi"><b>${f1(pm.mae.reb)}</b><span>Rebounds</span></div>
+      <div class="kpi"><b>${f1(pm.mae.ast)}</b><span>Assists</span></div>
+      <div class="kpi"><b>${pct(pm.share_minutes)}</b><span>of the points miss came from wrong minutes</span></div></div>
+    ${reasons.length ? `<div><h3>Why the big misses happened (6+ points off)</h3>
+      <div class="reasons">${reasons.map(([r, n]) => `<div class="reason"><span>${esc(r)}</span><i style="width:${(n / total) * 100}%"></i><b>${n}</b></div>`).join("")}</div></div>` : ""}
+    <div><h3>Biggest misses</h3><div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Pts exp / actual</th><th>Min exp / actual</th><th>Likely reason</th></tr></thead><tbody>
+      ${(pm.biggest || []).map((b) => `<tr><td>${esc(b.player)}</td><td>${f1(b.p_pts)} / ${b.played ? f1(b.a_pts) : "DNP"}</td><td>${f1(b.p_min)} / ${b.played ? f1(b.a_min) : "–"}</td>
+        <td><b>${esc(b.reason)}</b><br><span class="muted small">${esc(b.detail)}</span></td></tr>`).join("")}</tbody></table></div></div>
+    <p class="muted small">${pm.n} players reviewed${pm.dnp ? `, ${pm.dnp} projected players didn't play` : ""}. Reasons are best guesses from the box score.</p>
+  </div>`;
+}
+
+async function renderLearning() {
+  if (!S.learning) {
+    view.innerHTML = `<div class="empty"><p>Loading…</p></div>`;
+    try { S.learning = await load("learning"); } catch { view.innerHTML = `<div class="empty"><h2>No learning data yet</h2><p>It appears after the next daily update.</p></div>`; return; }
+  }
+  const L = S.learning, cfg = L.config || { groups: [] }, pm = (L.postmortems || [])[0];
+  const exp = (L.experiments || [])[0];
+  const on = cfg.groups || [], all = Object.keys(L.groups || {});
+  const pats = groupPatterns(L.patterns?.items || []);
+  view.innerHTML = `
+    <div class="section-head"><div><h2>Learning</h2>
+      <p class="muted small">After every slate the model checks each prediction against what happened, looks for where it keeps missing, and tests possible fixes on games it hasn't seen. Nothing changes until you approve it.</p></div></div>
+
+    <div class="block"><h2>${L.proposals?.length ? `${L.proposals.length} change${L.proposals.length > 1 ? "s" : ""} waiting for you` : "No changes waiting"}</h2>
+      ${L.proposals?.length ? `<p class="muted small">Approve or Reject opens GitHub with the decision filled in. Tap "Submit new issue" and the model retrains with it within a few minutes.</p>
+        <div class="edges">${L.proposals.map(proposalCard).join("")}</div>`
+      : `<p class="muted small">${exp ? `The last test round (${when(exp.at)}) found nothing that clearly beats the current model. Tests run every Monday.` : "The first test round runs with the next update."}</p>`}</div>
+
+    <div class="block"><h2>Last review</h2>${postmortemBlock(pm)}</div>
+
+    <div class="block"><h2>Patterns being watched</h2>
+      <p class="muted small">Groups of games where the model is consistently too high or too low.</p>
+      ${pats.length ? `<div class="edges">${pats.map((p) => `<div class="panel edge"><p><b>${esc(p.text)}</b></p>
+        ${p.fix ? `<p class="muted small">${esc(p.fix)}</p>` : ""}<p class="muted small">Seen in ${esc(p.source)}.</p></div>`).join("")}</div>`
+      : `<div class="empty"><p>No consistent blind spots found right now.</p></div>`}</div>
+
+    ${exp ? `<div class="block"><h2>Last test round</h2><p class="muted small">${when(exp.at)}. Each idea was trained and scored on games the model hadn't seen, against the current model.</p>
+      <div class="tbl-wrap"><table><thead><tr><th>Idea</th><th>Change in avg miss</th><th>Result</th></tr></thead><tbody>
+      ${exp.tested.slice().sort((a, b) => b.gain - a.gain).map((t) => `<tr><td>${esc(t.kind === "add_group" ? "Add " : t.kind === "remove_group" ? "Remove " : "Set ")}${esc(t.target.replace(/_/g, " "))}${t.value != null ? " = " + t.value : ""}</td>
+        <td class="${t.gain > 0 ? "pos" : "neg"}">${sign(-t.gain * 100, 2)}%${t.segment && t.segment.gain != null ? `<br><span class="muted small">${sign(-t.segment.gain * 100, 1)}% in ${esc(t.segment.label)}</span>` : ""}</td><td>${t.passed ? "<b>Proposed</b>" : "Not enough"}</td></tr>`).join("")}</tbody></table></div></div>` : ""}
+
+    <div class="block"><h2>Activity log</h2>
+      <ol class="log">${(L.events || []).map((e) => `<li class="ev-${esc(e.kind)}"><time>${when(e.at)}</time><span>${esc(e.text)}</span>
+        ${e.kind === "approved" && e.proposal && !(L.changes || []).find((c) => c.proposal === e.proposal && c.undone) ? ` <a href="${issueUrl("undo", e.proposal)}" target="_blank" rel="noopener">Undo</a>` : ""}</li>`).join("")
+        || `<li><span class="muted">Nothing yet.</span></li>`}</ol></div>
+
+    <div class="block"><h2>Current model</h2><p class="muted small">Version ${cfg.version || 1}. Settings: tree depth ${cfg.params?.max_depth}, at least ${cfg.params?.min_child_weight} games per pattern.</p>
+      <div class="factors">${all.map((g) => `<div class="factor ${on.includes(g) ? "on" : ""}"><b>${on.includes(g) ? "On" : "Off"}</b>
+        <span><strong>${esc(g.replace(/_/g, " "))}</strong>: ${esc(L.groups[g])}</span></div>`).join("")}</div>
+      <p class="muted small" style="margin-top:8px">Always on: recent form, season averages, per-minute production, rest, home/away, team and opponent strength, pace, and injured teammates.</p></div>`;
+}
+
 /* ---------------------------------------------------------------- routing */
 function route() {
   const h = location.hash.replace("#", "") || "picks";
@@ -490,6 +593,7 @@ function route() {
   else if (h === "players") renderPlayers();
   else if (h === "record") renderRecord();
   else if (h === "mybets") renderMyBets();
+  else if (h === "learning") renderLearning();
   else renderEdges();
   window.scrollTo(0, 0);
 }

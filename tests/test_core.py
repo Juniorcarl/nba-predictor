@@ -121,3 +121,39 @@ def test_offseason_trade_uses_current_roster():
     assert cand[cand.team_id == "1"].empty
     cand2, _ = F.upcoming_candidates(st, up, [], rosters=None)  # fallback: last team played for
     assert set(cand2[cand2.team_id == "1"]["player_id"]) == {"p1"}
+
+
+def test_postmortem_reasons(tmp_path, monkeypatch):
+    from nbapred import learning
+    monkeypatch.setattr(learning, "LEARN", tmp_path / "learning.json")
+    games = pd.DataFrame([{"game_id": "1", "completed": True, "home_score": 130, "away_score": 100, "home_id": "A", "away_id": "B"}])
+    base = {"game_id": "1", "team_id": "A", "fg3m": 0, "reb": 5, "ast": 3}
+    box = pd.DataFrame([
+        {**base, "player_id": "blow", "player": "Blow", "min": 20, "pts": 8, "fgm": 3, "fga": 7, "dnp": False},
+        {**base, "player_id": "hot", "player": "Hot", "min": 30, "pts": 30, "fgm": 12, "fga": 16, "dnp": False},
+        {**base, "player_id": "norm", "player": "Norm", "min": 30, "pts": 15, "fgm": 6, "fga": 13, "dnp": False}])
+    pr = pd.DataFrame([
+        {"date": "2026-11-01", "game_id": "1", "player_id": pid, "player": pid, "team_id": "A",
+         "p_min": pm, "p_pts": pp, "p_reb": 5, "p_ast": 3, "p_fg3m": 0, "p_pra": pp + 8}
+        for pid, pm, pp in [("blow", 34, 18), ("hot", 30, 18), ("norm", 30, 15), ("ghost", 25, 10)]])
+    d = learning.load()
+    assert learning.postmortem(d, pr, box, games) == ["2026-11-01"]
+    rep = d["postmortems"][0]
+    why = {b["player"]: b["reason"] for b in rep["biggest"]}
+    assert why["blow"] == "Blowout" and why["hot"] == "Hot shooting" and why["ghost"] == "Did not play"
+    assert learning.postmortem(d, pr, box, games) == []  # not reviewed twice
+
+
+def test_proposal_approve_and_undo(tmp_path, monkeypatch):
+    from nbapred import learning, models
+    monkeypatch.setattr(learning, "LEARN", tmp_path / "learning.json")
+    monkeypatch.setattr(models, "config_path", lambda: tmp_path / "cfg.json")
+    d = learning.load()
+    p = learning._make_proposal(d, {"kind": "add_group", "target": "fatigue_travel", "value": None, "gain": 0.004,
+                                    "per": {}, "halves": [0.003, 0.005], "passed": True})
+    assert p["id"] == "P-0001" and p["status"] == "pending"
+    assert "Approved" in learning.apply(d, "approve", "P-0001")
+    assert models.load_config()["groups"] == ["fatigue_travel"]
+    assert "already" in learning.apply(d, "approve", "P-0001")
+    assert "Undid" in learning.apply(d, "undo", "P-0001")
+    assert models.load_config()["groups"] == []

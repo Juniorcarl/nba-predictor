@@ -7,6 +7,7 @@
 """
 import argparse
 import json
+import os
 import logging
 import sys
 from datetime import timedelta
@@ -15,7 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nbapred import espn, models, odds, picks, site, store  # noqa: E402
+from nbapred import espn, learning, models, odds, picks, site, store  # noqa: E402
 from nbapred.config import EDGE_THRESHOLD, HISTORY_SEASONS, LOG_DIR, MAX_EDGE, SEASON_TYPES  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
@@ -90,7 +91,7 @@ def load_odds(slate_date):
     return c["glines"], plines
 
 
-def daily(use_odds=True, offline=False, demo_odds=False):
+def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
     today = store.today_et()
     if not offline:
         if store.load_box().empty:
@@ -106,6 +107,13 @@ def daily(use_odds=True, offline=False, demo_odds=False):
     n = picks.grade(games, box)
     log.info("graded %d picks", n)
 
+    # learning loop, step 1: review finished slates
+    L = learning.load()
+    projections = pd.read_csv(picks.PROJ, dtype={"game_id": str, "player_id": str}) if picks.PROJ.exists() else pd.DataFrame()
+    reviewed = learning.postmortem(L, projections, box, games)
+    if reviewed:
+        log.info("post-mortem written for %s", ", ".join(reviewed))
+
     slate_date, upcoming, started = next_slate(games, today)
     injuries = []
     if not offline:
@@ -118,13 +126,30 @@ def daily(use_odds=True, offline=False, demo_odds=False):
     rosters = {}
     if not offline:  # also keeps the Players page on current teams between slates
         recent = games[games["season"] == games["season"].max()]
-        rosters = espn.fetch_rosters(set(recent["home_id"]) | set(recent["away_id"]))
-        log.info("current rosters for %d teams", len(rosters))
+        bio_rows = []
+        rosters = espn.fetch_rosters(set(recent["home_id"]) | set(recent["away_id"]), bio_rows)
+        store.update_bio(bio_rows)
+        log.info("current rosters for %d teams, bio for %d players", len(rosters), len(bio_rows))
 
     hist_games = games[games["completed"].astype(bool)]
     PF, G = models.assemble(box, hist_games, upcoming, injuries, rosters)
-    pm, pinfo = models.train_player_models(PF)
-    gm, ginfo = models.train_game_models(G)
+    cfg = models.load_config()
+    pm, pinfo = models.train_player_models(PF, cfg)
+    gm, ginfo = models.train_game_models(G, cfg)
+    valid = pinfo.pop("_valid")
+
+    # learning loop, step 2: where is the model consistently wrong?
+    pats = learning.find_patterns(valid, cfg["groups"], "test games")
+    live = learning.live_frame(projections, PF)
+    if len(live) >= 300:
+        pats = learning.find_patterns(live, cfg["groups"], "this season") + pats
+    L["patterns"] = {"updated": learning.now(), "items": pats[:15]}
+
+    # learning loop, step 3 (weekly, or on request): test possible changes and propose the ones that help
+    if learn or not L["experiments"]:
+        learning.run_experiments(L, PF, G)
+    learning.save(L)
+    site._write("learning.json", learning.site_view(L, cfg))
     pp = models.predict_players(pm, pinfo, PF)
     gp = models.predict_games(gm, ginfo, G)
 
@@ -152,7 +177,7 @@ def daily(use_odds=True, offline=False, demo_odds=False):
     site.write_all(slate, pinfo, ginfo, track, players, {
         "slate_date": str(slate_date) if slate_date else None, "edge_threshold": EDGE_THRESHOLD, "max_edge": MAX_EDGE, "odds_credits_remaining": odds.credits["remaining"],
         "injuries_count": len(injuries), "rosters_loaded": len(rosters), "has_odds": bool(glines), "has_props": bool(plines),
-        "games_in_db": int(len(hist_games)), "player_games_in_db": int((box["min"] > 0).sum()),
+        "games_in_db": int(len(hist_games)), "repo": os.environ.get("GITHUB_REPOSITORY", "Juniorcarl/nba-predictor"), "player_games_in_db": int((box["min"] > 0).sum()),
     })
     log.info("slate %s: %d games, %d player projections, %d flagged picks",
              slate_date, len(gp), len(pp), sum(1 for r in rows if r.get("flagged")))
@@ -165,8 +190,9 @@ if __name__ == "__main__":
     ap.add_argument("--offline", action="store_true")
     ap.add_argument("--max-games", type=int, default=None)
     ap.add_argument("--demo-odds", action="store_true", help=argparse.SUPPRESS)
+    ap.add_argument("--learn", action="store_true", help="run the weekly experiments now")
     a = ap.parse_args()
     if a.mode == "backfill":
         backfill(a.max_games)
     else:
-        daily(use_odds=not a.no_odds, offline=a.offline, demo_odds=a.demo_odds)
+        daily(use_odds=not a.no_odds, offline=a.offline, demo_odds=a.demo_odds, learn=a.learn)

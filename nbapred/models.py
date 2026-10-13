@@ -20,16 +20,60 @@ VALID_FRAC = 0.2
 MIN_HISTORY = 3
 
 
-def _xgb(objective, n_estimators=1500):
-    return XGBRegressor(n_estimators=n_estimators, learning_rate=0.03, max_depth=5, min_child_weight=20,
-                        subsample=0.8, colsample_bytree=0.8, reg_lambda=2.0, objective=objective,
-                        tree_method="hist", n_jobs=-1, early_stopping_rounds=60, verbosity=0)
+# ---------------------------------------------------------------- config (what the learning loop changes)
+DEFAULT_PARAMS = {"max_depth": 5, "min_child_weight": 20, "learning_rate": 0.03}
+DEFAULT_CONFIG = {"groups": [], "params": DEFAULT_PARAMS, "version": 1}
 
 
-def _final(objective, n):
-    return XGBRegressor(n_estimators=max(n, 50), learning_rate=0.03, max_depth=5, min_child_weight=20,
-                        subsample=0.8, colsample_bytree=0.8, reg_lambda=2.0, objective=objective,
-                        tree_method="hist", n_jobs=-1, verbosity=0)
+def config_path():
+    from .config import DATA_DIR
+    return DATA_DIR / "model_config.json"
+
+
+def load_config() -> dict:
+    import json
+    p = config_path()
+    if not p.exists():
+        return json.loads(json.dumps(DEFAULT_CONFIG))
+    cfg = json.loads(p.read_text())
+    cfg.setdefault("groups", [])
+    cfg["params"] = {**DEFAULT_PARAMS, **cfg.get("params", {})}
+    return cfg
+
+
+def save_config(cfg: dict) -> None:
+    import json
+    config_path().write_text(json.dumps(cfg, indent=2))
+
+
+def player_feats(cfg: dict) -> list[str]:
+    from .extra import GROUPS
+    cols = list(F.PLAYER_FEATURES)
+    for g in cfg.get("groups", []):
+        cols += [c for c in GROUPS[g][1] if c not in cols]
+    return cols
+
+
+def game_feats(cfg: dict) -> list[str]:
+    from .extra import GROUPS
+    cols = list(F.GAME_FEATURES)
+    for g in cfg.get("groups", []):
+        cols += [c for c in GROUPS[g][2] if c not in cols]
+    return cols
+
+
+def _xgb(objective, params=None, n_estimators=1500):
+    p = {**DEFAULT_PARAMS, **(params or {})}
+    return XGBRegressor(n_estimators=n_estimators, learning_rate=p["learning_rate"], max_depth=int(p["max_depth"]),
+                        min_child_weight=p["min_child_weight"], subsample=0.8, colsample_bytree=0.8, reg_lambda=2.0,
+                        objective=objective, tree_method="hist", n_jobs=-1, early_stopping_rounds=60, verbosity=0)
+
+
+def _final(objective, n, params=None):
+    p = {**DEFAULT_PARAMS, **(params or {})}
+    return XGBRegressor(n_estimators=max(n, 50), learning_rate=p["learning_rate"], max_depth=int(p["max_depth"]),
+                        min_child_weight=p["min_child_weight"], subsample=0.8, colsample_bytree=0.8, reg_lambda=2.0,
+                        objective=objective, tree_method="hist", n_jobs=-1, verbosity=0)
 
 
 def _time_split(df: pd.DataFrame):
@@ -108,22 +152,41 @@ def assemble(box, games, upcoming=None, injuries=None, rosters=None):
         parts.append(up)
     P = pd.concat(parts, ignore_index=True)
     P = F.player_features(P)
+
+    # ---- extra factor groups (always computed; the config decides which ones the models use)
+    from . import extra as X
+    from .store import load_bio
+    bio = load_bio()
+    tctx, pctx, lstate = X.lineup_context(base, bio)
+    tctx_up, pctx_up = X.upcoming_lineup_context(lstate, cand, upcoming) if len(cand) else (pd.DataFrame(), pd.DataFrame())
+    team_ctx = pd.concat([tctx, tctx_up], ignore_index=True)
+    player_ctx = pd.concat([pctx, pctx_up], ignore_index=True)
+    up_rows = T[T["game_id"].isin(set(upcoming["game_id"]))] if len(upcoming) else None
+    pdef = X.position_defense(base, up_rows)
+    all_games = pd.concat([games, upcoming], ignore_index=True)
+    sched = X.team_schedule(T, all_games)
+    P = X.player_extras(P, bio)
+
     PF = F.player_model_frame(P, T, absn)
+    PF = X.attach(PF, team_ctx, player_ctx, pdef, sched)
 
     G = F.game_model_frame(T, absn, pd.concat([games[games["completed"].astype(bool)], upcoming], ignore_index=True))
+    G = X.attach_game(G, team_ctx, sched)
     G["is_upcoming"] = G["game_id"].isin(set(upcoming["game_id"])) if len(upcoming) else False
     G["date"] = pd.to_datetime(G["date"])
     return PF, G
 
 
 # ---------------------------------------------------------------- training
-def train_player_models(PF: pd.DataFrame):
+def train_player_models(PF: pd.DataFrame, cfg: dict | None = None):
+    cfg = cfg or load_config()
+    feats, params = player_feats(cfg), cfg["params"]
     data = PF[(~PF["is_upcoming"]) & (PF["n_games"] >= MIN_HISTORY)].dropna(subset=["pts"])
     tr, va = _time_split(data)
-    X_tr, X_va = tr[F.PLAYER_FEATURES], va[F.PLAYER_FEATURES]
+    X_tr, X_va = tr[feats], va[feats]
     models, var_params, metrics, va_preds = {}, {}, {}, {}
     for t in PROP_STATS + ["min"]:
-        m = _xgb(OBJECTIVES[t])
+        m = _xgb(OBJECTIVES[t], params)
         m.fit(X_tr, tr[t], eval_set=[(X_va, va[t])], verbose=False)
         best = int(m.best_iteration or m.n_estimators) + 1
         pred = m.predict(X_va)
@@ -133,8 +196,8 @@ def train_player_models(PF: pd.DataFrame):
         base = va[f"{t}_e10"].fillna(va[f"{t}_szn"]).fillna(tr[t].mean()).to_numpy()
         metrics[t] = {"mae": float(np.mean(np.abs(resid))), "baseline_mae": float(np.mean(np.abs(va[t] - base))),
                       "n_valid": int(len(va)), "trees": best}
-        final = _final(OBJECTIVES[t], best)
-        final.fit(data[F.PLAYER_FEATURES], data[t], verbose=False)
+        final = _final(OBJECTIVES[t], best, params)
+        final.fit(data[feats], data[t], verbose=False)
         models[t] = final
         log.info("%-4s MAE %.2f (baseline %.2f), trees %d", t, metrics[t]["mae"], metrics[t]["baseline_mae"], best)
 
@@ -149,7 +212,11 @@ def train_player_models(PF: pd.DataFrame):
     calib = _calibration(va, va_preds, var_params)
     info = {"metrics": metrics, "var": var_params, "calibration": calib,
             "valid_from": str(pd.Timestamp(va["date"].min()).date()), "valid_to": str(pd.Timestamp(va["date"].max()).date()),
-            "train_rows": int(len(data))}
+            "train_rows": int(len(data)), "features": feats, "groups": list(cfg.get("groups", []))}
+    valid = va.copy()
+    for t, pr in va_preds.items():
+        valid[f"p_{t}"] = pr
+    info["_valid"] = valid  # held-out predictions, used by the pattern finder (not published)
     return models, info
 
 
@@ -170,22 +237,24 @@ def _calibration(va, va_preds, var_params):
             for r in out.itertuples()]
 
 
-def train_game_models(G: pd.DataFrame):
+def train_game_models(G: pd.DataFrame, cfg: dict | None = None):
+    cfg = cfg or load_config()
+    feats, params = game_feats(cfg), cfg["params"]
     data = G[(~G["is_upcoming"]) & (G["h_t_ngames"] >= 3) & (G["a_t_ngames"] >= 3)].dropna(subset=["margin"])
     tr, va = _time_split(data)
-    models, info = {}, {}
+    models, info = {}, {"features": feats}
     for t in ("margin", "total"):
-        m = _xgb("reg:squarederror")
-        m.fit(tr[F.GAME_FEATURES], tr[t], eval_set=[(va[F.GAME_FEATURES], va[t])], verbose=False)
+        m = _xgb("reg:squarederror", params)
+        m.fit(tr[feats], tr[t], eval_set=[(va[feats], va[t])], verbose=False)
         best = int(m.best_iteration or m.n_estimators) + 1
-        pred = m.predict(va[F.GAME_FEATURES])
+        pred = m.predict(va[feats])
         resid = va[t].to_numpy() - pred
         info[t] = {"mae": float(np.mean(np.abs(resid))), "sd": float(np.std(resid)), "n_valid": int(len(va)), "trees": best}
         if t == "margin":
             info[t]["winner_acc"] = float(np.mean((pred > 0) == (va[t].to_numpy() > 0)))
             info[t]["home_baseline_acc"] = float(np.mean(va[t].to_numpy() > 0))
-        final = _final("reg:squarederror", best)
-        final.fit(data[F.GAME_FEATURES], data[t], verbose=False)
+        final = _final("reg:squarederror", best, params)
+        final.fit(data[feats], data[t], verbose=False)
         models[t] = final
         log.info("game %-6s MAE %.2f sd %.2f", t, info[t]["mae"], info[t]["sd"])
     return models, info
@@ -196,7 +265,7 @@ def predict_players(models, info, PF: pd.DataFrame) -> pd.DataFrame:
     up = PF[PF["is_upcoming"]].copy()
     if up.empty:
         return up
-    X = up[F.PLAYER_FEATURES]
+    X = up[info["features"]]
     for t, m in models.items():
         up[f"p_{t}"] = np.clip(m.predict(X), 0, None)
     up["p_pra"] = up["p_pts"] + up["p_reb"] + up["p_ast"]
@@ -211,7 +280,7 @@ def predict_games(models, info, G: pd.DataFrame) -> pd.DataFrame:
     up = G[G["is_upcoming"]].copy()
     if up.empty:
         return up
-    X = up[F.GAME_FEATURES]
+    X = up[info["features"]]
     up["p_margin"] = models["margin"].predict(X)
     up["p_total"] = models["total"].predict(X)
     sd = info["margin"]["sd"]

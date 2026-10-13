@@ -148,3 +148,33 @@ def _flush_box(pending: dict[int, list[dict]]) -> None:
         p = box_path(season)
         df = pd.DataFrame(rows)[BOX_COLS]
         df.to_csv(p, mode="a", header=not p.exists(), index=False)
+
+
+# ------------------------------------------------------------------ player bio (height, weight, birth date)
+BIO_COLS = ["player_id", "player", "height", "weight", "birth", "exp"]
+
+
+def bio_path():
+    from .config import DATA_DIR
+    return DATA_DIR / "players_bio.csv"
+
+
+def load_bio() -> pd.DataFrame:
+    p = bio_path()
+    if not p.exists():
+        return pd.DataFrame(columns=BIO_COLS)
+    return pd.read_csv(p, dtype={"player_id": str})
+
+
+def update_bio(rows: list[dict]) -> int:
+    """Upsert roster bio rows. Players who leave the league keep their last known values."""
+    if not rows:
+        return 0
+    new = pd.DataFrame(rows)
+    for c in BIO_COLS:
+        if c not in new:
+            new[c] = None
+    old = load_bio()
+    df = pd.concat([old, new[BIO_COLS]], ignore_index=True).drop_duplicates("player_id", keep="last")
+    df.sort_values("player_id").to_csv(bio_path(), index=False)
+    return len(new)

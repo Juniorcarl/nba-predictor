@@ -33,6 +33,39 @@ Runs for free on GitHub: GitHub Actions updates the data and models every day, a
 
 Data is stored as plain CSV in `data/` (one file per season), so the repo is the database.
 
+## How it learns
+
+The model retrains every day, and a learning loop sits on top of that. **It never changes itself without your approval.**
+
+1. **Review (every morning).** Every projection is compared with what happened. Each big miss gets a likely reason from the box score:
+   blowout, left early, did not play, overtime, bigger role, hot or cold shooting. The review also measures how much of the miss came from wrong minutes.
+2. **Patterns (every run).** It looks for groups of games where it is consistently too high or too low, for example back-to-backs,
+   games at altitude, players just back from injury, or opponents with an elite shot-blocker. It checks both held-out test games and this season's live predictions.
+3. **Experiments (every Monday, or on request).** Each switchable factor group, plus a few model settings, is trained and scored against
+   the current model on games the model hasn't seen. A change is proposed only if it cuts the average miss in both halves of that test period.
+4. **Your decision.** Proposals appear on the Learning page. Approve or Reject opens a GitHub issue titled `[approve] P-0003`.
+   Submitting it runs the "Proposal decision" workflow, which applies the change, logs it, and retrains. Approved changes can be undone the same way (`[undo] P-0003`).
+
+Everything is recorded in `data/logs/learning.json` and shown on the Learning page. The current model settings are in `data/model_config.json`.
+
+### Factor groups
+
+| Group | What it adds |
+| --- | --- |
+| position defense | What the opponent allows to guards, forwards, and centers |
+| size | Height and weight, and the height gap to the opponent's tallest and average available players |
+| opposing defenders | The opponent's best available shot-blocker and ball thieves, after injuries |
+| blowout risk | Expected margin: starters sit late in blowouts |
+| fatigue travel | Games in the last 4 and 7 days, time zones crossed, road-trip length, altitude, minutes load |
+| injury return | Games missed just before, and games since coming back |
+| revenge game | Playing a former team |
+| vs opponent history | Past results against this opponent, compared with his usual level |
+| motivation | Records, games left, playoffs |
+| shooting luck | Recent shooting compared with the player's normal |
+| age experience | Age and years in the league |
+
+Not possible with free data: who guards whom, wingspan, shot locations, and referee assignments.
+
 ## Setup
 
 1. **Enable Pages:** Settings → Pages → Source: **GitHub Actions**.

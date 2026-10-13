@@ -78,8 +78,8 @@ def write_all(slate: dict, pinfo: dict, ginfo: dict, track: dict, players: list,
     _write("track.json", track)
     _write("players.json", players)
     meta = {"generated_at": datetime.now(timezone.utc).isoformat(timespec="minutes"),
-            "player_model": {k: v for k, v in pinfo.items() if k != "var"}, "var": pinfo.get("var"),
-            "game_model": ginfo, **extra_meta}
+            "player_model": {k: v for k, v in pinfo.items() if k not in ("var", "features")}, "var": pinfo.get("var"),
+            "game_model": {k: v for k, v in ginfo.items() if k != "features"}, **extra_meta}
     _write("meta.json", meta)
 
 
