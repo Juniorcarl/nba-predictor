@@ -1,12 +1,12 @@
-22:22:54 INFO box scores to fetch: 0
-22:22:54 INFO graded 0 picks
-22:22:54 INFO injury report: 137 entries
-22:23:02 INFO current rosters for 31 teams
-22:23:31 INFO pts  MAE 4.48 (baseline 4.71), trees 219
-22:23:50 INFO reb  MAE 1.85 (baseline 1.91), trees 679
-22:24:08 INFO ast  MAE 1.33 (baseline 1.38), trees 584
-22:24:28 INFO fg3m MAE 0.88 (baseline 0.89), trees 714
-22:24:42 INFO min  MAE 4.69 (baseline 5.48), trees 537
-22:25:13 INFO game margin MAE 11.80 sd 15.06
-22:25:13 INFO game total  MAE 14.94 sd 18.99
-22:25:15 INFO slate None: 0 games, 0 player projections, 0 flagged picks
+02:41:38 INFO box scores to fetch: 0
+02:41:38 INFO graded 0 picks
+02:41:38 INFO injury report: 134 entries
+02:41:46 INFO current rosters for 31 teams
+02:41:59 INFO pts  MAE 4.48 (baseline 4.71), trees 219
+02:42:10 INFO reb  MAE 1.85 (baseline 1.91), trees 679
+02:42:19 INFO ast  MAE 1.33 (baseline 1.38), trees 584
+02:42:30 INFO fg3m MAE 0.88 (baseline 0.89), trees 714
+02:42:37 INFO min  MAE 4.69 (baseline 5.48), trees 537
+02:42:50 INFO game margin MAE 11.80 sd 15.06
+02:42:50 INFO game total  MAE 14.94 sd 18.99
+02:42:52 INFO slate None: 0 games, 0 player projections, 0 flagged picks

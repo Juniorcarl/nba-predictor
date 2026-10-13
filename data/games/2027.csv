@@ -35,10 +35,10 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401898401,2026-10-11,2026-10-11T22:30Z,2027,1,True,post,False,5,CLE,Cleveland Cavaliers,119.0,19,ORL,Orlando Magic,105.0
 401901821,2026-10-11,2026-10-11T23:00Z,2027,1,True,post,False,30,CHA,Charlotte Hornets,105.0,15,MIL,Milwaukee Bucks,90.0
 401908941,2026-10-11,2026-10-12T01:00Z,2027,1,True,post,False,7,DEN,Denver Nuggets,133.0,4,CHI,Chicago Bulls,128.0
-401898402,2026-10-12,2026-10-12T23:00Z,2027,1,False,pre,False,1,ATL,Atlanta Hawks,,25,OKC,Oklahoma City Thunder,
-401898721,2026-10-12,2026-10-13T01:00Z,2027,1,False,pre,False,26,UTAH,Utah Jazz,,24,SA,San Antonio Spurs,
-401901824,2026-10-12,2026-10-12T23:00Z,2027,1,False,pre,False,27,WSH,Washington Wizards,,17,BKN,Brooklyn Nets,
-401914124,2026-10-12,2026-10-12T23:30Z,2027,1,False,pre,False,18,NY,New York Knicks,,16,MIN,Minnesota Timberwolves,
+401898402,2026-10-12,2026-10-12T23:00Z,2027,1,True,post,False,1,ATL,Atlanta Hawks,113.0,25,OKC,Oklahoma City Thunder,110.0
+401898721,2026-10-12,2026-10-13T01:00Z,2027,1,False,in,False,26,UTAH,Utah Jazz,,24,SA,San Antonio Spurs,
+401901824,2026-10-12,2026-10-12T23:00Z,2027,1,True,post,False,27,WSH,Washington Wizards,122.0,17,BKN,Brooklyn Nets,131.0
+401914124,2026-10-12,2026-10-12T23:30Z,2027,1,True,post,False,18,NY,New York Knicks,104.0,16,MIN,Minnesota Timberwolves,122.0
 401914130,2026-10-12,2026-10-12T20:00Z,2027,1,True,post,False,22,POR,Portland Trail Blazers,119.0,134478,LON,London Lions,66.0
 401898403,2026-10-13,2026-10-13T23:00Z,2027,1,False,pre,False,19,ORL,Orlando Magic,,5,CLE,Cleveland Cavaliers,
 401898718,2026-10-13,2026-10-14T02:00Z,2027,1,False,pre,True,13,LAL,Los Angeles Lakers,,9,GS,Golden State Warriors,
