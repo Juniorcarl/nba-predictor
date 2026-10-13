@@ -93,7 +93,7 @@
   {
    "id": "P-0002",
    "created": "2026-10-13T07:12+00:00",
-   "status": "pending",
+   "status": "rejected",
    "kind": "set_param",
    "target": "max_depth",
    "value": 4,
@@ -148,7 +148,8 @@
     ],
     "segment": null,
     "passed": true
-   }
+   },
+   "closed": "2026-10-13T08:16+00:00"
   }
  ],
  "changes": [],
@@ -1255,6 +1256,12 @@
    "at": "2026-10-13T07:14+00:00",
    "kind": "experiment",
    "text": "Tested 15 possible changes against the current model. 2 improved accuracy on games the model hadn't seen; 2 new proposal(s) waiting for your decision."
+  },
+  {
+   "at": "2026-10-13T08:16+00:00",
+   "kind": "rejected",
+   "text": "You rejected P-0002 (Change setting: max depth to 4). It won't be proposed again for 45 days.",
+   "proposal": "P-0002"
   }
  ]
 }
