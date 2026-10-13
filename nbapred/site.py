@@ -59,7 +59,7 @@ def build_slate(slate_date, gp: pd.DataFrame, pp: pd.DataFrame, glines: dict, pl
                 "proj": {s: getattr(pl, f"p_{s}") for s in ("min", "pts", "reb", "ast", "fg3m", "pra")},
                 "var": {s: getattr(pl, f"v_{s}") for s in ("pts", "reb", "ast", "fg3m", "pra")},
                 "recent": {s: getattr(pl, f"{s}_r10") for s in ("min", "pts", "reb", "ast", "fg3m")},
-                "props": popts,
+                "props": popts, "why": getattr(pl, "why", None),
             })
         games_out.append({
             "id": g.game_id, "start": g.start_utc, "home": {"id": g.home_id, "abbr": g.home_abbr, "name": g.home_name},
@@ -68,6 +68,7 @@ def build_slate(slate_date, gp: pd.DataFrame, pp: pd.DataFrame, glines: dict, pl
                      "total": g.p_total, "home_win": g.p_home_win},
             "missing": {"home": g.h_miss_min, "away": g.a_miss_min},
             "lines": {k: v for k, v in lines.items() if v}, "options": gopts, "players": players,
+            "why": getattr(g, "why", None),
         })
     slate = {"date": str(slate_date), "games": games_out}
     return slate, log_rows

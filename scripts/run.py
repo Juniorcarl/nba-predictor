@@ -16,7 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nbapred import espn, learning, models, odds, picks, site, store  # noqa: E402
+from nbapred import espn, explain, learning, models, odds, picks, site, store  # noqa: E402
 from nbapred.config import EDGE_THRESHOLD, HISTORY_SEASONS, LOG_DIR, MAX_EDGE, SEASON_TYPES  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
@@ -152,6 +152,12 @@ def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
     site._write("learning.json", learning.site_view(L, cfg))
     pp = models.predict_players(pm, pinfo, PF)
     gp = models.predict_games(gm, ginfo, G)
+    # plain-English reasons behind every number
+    abbr = dict(zip(games["home_id"], games["home_abbr"])) | dict(zip(games["away_id"], games["away_abbr"]))
+    if len(pp):
+        pp["why"] = explain.explain_players(pm, pinfo, pp, abbr)
+    if len(gp):
+        gp["why"] = explain.explain_games(gm, ginfo, gp)
 
     glines, plines = ({}, {})
     if use_odds and not offline and len(gp):

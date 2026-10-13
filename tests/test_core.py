@@ -157,3 +157,24 @@ def test_proposal_approve_and_undo(tmp_path, monkeypatch):
     assert "already" in learning.apply(d, "approve", "P-0001")
     assert "Undid" in learning.apply(d, "undo", "P-0001")
     assert models.load_config()["groups"] == []
+
+
+def test_reasons_add_up():
+    """The starting point plus every reason equals the prediction."""
+    import numpy as np
+    from xgboost import XGBRegressor
+    from nbapred import explain
+    rng = np.random.default_rng(0)
+    X = pd.DataFrame({"pts_e10": rng.normal(15, 5, 400), "miss_min": rng.uniform(0, 60, 400), "home": rng.integers(0, 2, 400),
+                      "o_t_def_rel": rng.normal(1, .05, 400), "opp_id": "2"})
+    y = X["pts_e10"] + 0.05 * X["miss_min"] + X["home"] + rng.normal(0, 2, 400)
+    feats = ["pts_e10", "miss_min", "home", "o_t_def_rel"]
+    m = XGBRegressor(n_estimators=50, max_depth=3).fit(X[feats], y)
+    up = X.head(3).copy()
+    for t in ("pts", "reb", "ast", "min", "fg3m"):
+        up[f"p_{t}"] = m.predict(up[feats])
+    up["p_pra"] = up["p_pts"] * 3
+    ex = explain.explain_players({t: m for t in ("pts", "reb", "ast", "min", "fg3m")}, {"features": feats}, up, {"2": "BOS"})
+    w = ex[0]["pts"]
+    assert abs(w["level"] + sum(i["amt"] for i in w["items"]) + w["other"] - w["pred"]) < 0.11
+    assert {i["cat"] for i in w["items"]} <= {"teammates", "home", "opp_defense"}

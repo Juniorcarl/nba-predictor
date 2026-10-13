@@ -116,6 +116,34 @@ function pickLabel(r) {
   return r.market === "total" ? `${ou} ${r.line} total points` : `${ou} ${r.line} ${MARKET[r.market].toLowerCase()}`;
 }
 
+
+/* ---------------------------------------------------------------- reasons behind a prediction */
+function whyBlock(w, unitWord, title) {
+  if (!w) return "";
+  const rows = w.items.map((it) => `<li><b class="${it.amt > 0 ? "pos" : "neg"}">${sign(it.amt)}</b>
+      <span><strong>${esc(it.label)}</strong><br><span class="muted small">${esc(it.detail)}</span></span></li>`).join("");
+  return `<div class="why"><h3>${esc(title)}</h3>
+    <ol class="why-list">
+      <li class="start"><b>${f1(w.level)}</b><span><strong>Starting point</strong><br><span class="muted small">His usual level from season and recent averages</span></span></li>
+      ${rows}
+      ${Math.abs(w.other) >= 0.05 ? `<li><b class="${w.other > 0 ? "pos" : "neg"}">${sign(w.other)}</b><span><strong>Smaller factors</strong><br><span class="muted small">Everything else combined</span></span></li>` : ""}
+      <li class="end"><b>${f1(w.pred)}</b><span><strong>Projection</strong> ${esc(unitWord)}</span></li>
+    </ol></div>`;
+}
+function shortWhy(w) {
+  if (!w || !w.items?.length) return "";
+  return `<p class="small why-short">Why: ${w.items.slice(0, 3).map((it) => `<span class="${it.amt > 0 ? "pos" : "neg"}">${sign(it.amt)}</span> ${esc(it.label.toLowerCase())}`).join(", ")}</p>`;
+}
+function gameWhy(g) {
+  if (!g.why) return "";
+  const fav = g.pred.margin >= 0 ? g.home.abbr : g.away.abbr;
+  const m = { ...g.why.margin }, t = g.why.total;
+  return `<div class="why-games">
+    ${whyBlock(m, `(${g.home.abbr} margin; negative means ${g.away.abbr} win)`, `Why ${fav} by ${f1(Math.abs(g.pred.margin))}`).replace("His usual level from season and recent averages", "Average home-court edge")}
+    ${whyBlock(t, "total points", `Why ${f1(g.pred.total)} total points`).replace("His usual level from season and recent averages", "A typical NBA game")}
+  </div>`;
+}
+
 /* ---------------------------------------------------------------- views */
 function edgeCard(o) {
   const who = o.kind === "prop"
@@ -131,6 +159,7 @@ function edgeCard(o) {
       <span>Value <b class="${o.ev > 0 ? "pos" : "neg"}">${sign(o.ev, 2)}u</b></span>
     </div>
     ${optionLine(o)}
+    ${o.kind === "prop" ? shortWhy(o.p.why?.[o.market]) : ""}
     ${betwayLine(o)}
   </article>`;
 }
@@ -195,7 +224,7 @@ function gameCard(g) {
       <div><span class="muted">Spread</span><b>${esc(modelSpread)}</b><span class="muted small">Book ${esc(bookSpread)}</span></div>
       <div><span class="muted">Total</span><b>${f1(g.pred.total)}</b><span class="muted small">Book ${L.total ? L.total.point : "–"}</span></div>
     </div>
-    <div class="game-body" hidden>${table("away", g.away)}${table("home", g.home)}
+    <div class="game-body" hidden>${gameWhy(g)}${table("away", g.away)}${table("home", g.home)}
       <p class="muted small" style="margin-top:10px">Highlighted cells have a flagged prop. Tap a player to check any line.</p></div>
   </article>`;
 }
@@ -241,7 +270,8 @@ function renderPlayer(id) {
     ${sp?.inj ? `<span class="tag inj" title="${esc(sp.inj_note)}">${esc(sp.inj)}</span>` : ""}</div>`;
   const projBlock = sp ? `<div><h3>${esc(g.away.abbr)} @ ${esc(g.home.abbr)}, ${day(g.start)} ${time(g.start)}</h3>
       <div class="projgrid" style="margin-top:8px">${["min", ...STATS].map((s) => `<div class="proj"><b>${f1(sp.proj[s])}</b><span>${s === "min" ? "Minutes" : MARKET[s]}</span></div>`).join("")}</div>
-      ${sp.low_sample ? `<p class="muted small" style="margin-top:6px">Fewer than 10 games of history, so treat this projection with extra caution.</p>` : ""}</div>`
+      ${sp.low_sample ? `<p class="muted small" style="margin-top:6px">Fewer than 10 games of history, so treat this projection with extra caution.</p>` : ""}</div>
+      <div id="why-box"></div>`
     : `<p class="muted">Not on the current slate. The line checker uses the recent average instead of a projection.</p>`;
   const opts = STATS.map((s) => `<option value="${s}">${MARKET[s]}</option>`).join("");
   view.innerHTML = `<div class="panel pcard">${head}${projBlock}
@@ -260,6 +290,8 @@ function renderPlayer(id) {
   const recentMean = (s) => { const vals = logs.slice(0, 10).map((l) => (s === "pra" ? l.pts + l.reb + l.ast : l[s])); return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0; };
   const update = () => {
     const s = statSel.value, line = parseFloat(lineIn.value), pr = parseOdds(priceIn.value);
+    const wb = document.getElementById("why-box");
+    if (wb && sp?.why?.[s]) wb.innerHTML = whyBlock(sp.why[s], MARKET[s].toLowerCase(), `Why ${f1(sp.proj[s])} ${MARKET[s].toLowerCase()}`);
     const mu = sp ? sp.proj[s] : recentMean(s), v = sp ? sp.var[s] : variance(s, mu);
     const vals = logs.slice().reverse().map((l) => (s === "pra" ? l.pts + l.reb + l.ast : l[s]));
     const ref = Number.isFinite(line) ? line : mu, max = Math.max(...vals, ref, 1) * 1.1;
@@ -267,7 +299,7 @@ function renderPlayer(id) {
     document.getElementById("bars").innerHTML = vals.map((x) => `<i class="${Number.isFinite(line) && x > line ? "over" : ""}" style="height:${(x / max) * 100}%" title="${x}"></i>`).join("")
       + `<div class="ref" style="bottom:${(ref / max) * 100}%"></div>`;
     const out = document.getElementById("ck-out"), viz = document.getElementById("ck-line-viz");
-    if (!Number.isFinite(line)) { out.innerHTML = `${sp ? "Projection" : "Recent average"}: <b class="num">${f1(mu)}</b>. Enter the sportsbook line to see the chance of the over and under.`; viz.innerHTML = ""; return; }
+    if (!Number.isFinite(line)) { out.innerHTML = `<span>${sp ? "Projection" : "Recent average"}: <b class="num">${f1(mu)}</b>. Enter the sportsbook line to see the chance of the over and under.</span>`; viz.innerHTML = ""; return; }
     const pr2 = countProbs(mu, v, line);
     let ev = "";
     if (pr != null) {
