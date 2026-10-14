@@ -40,11 +40,11 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401901824,2026-10-12,2026-10-12T23:00Z,2027,1,True,post,False,27,WSH,Washington Wizards,122.0,17,BKN,Brooklyn Nets,131.0
 401914124,2026-10-12,2026-10-12T23:30Z,2027,1,True,post,False,18,NY,New York Knicks,104.0,16,MIN,Minnesota Timberwolves,122.0
 401914130,2026-10-12,2026-10-12T20:00Z,2027,1,True,post,False,22,POR,Portland Trail Blazers,119.0,134478,LON,London Lions,66.0
-401898403,2026-10-13,2026-10-13T23:00Z,2027,1,False,pre,False,19,ORL,Orlando Magic,,5,CLE,Cleveland Cavaliers,
+401898403,2026-10-13,2026-10-13T23:00Z,2027,1,False,in,False,19,ORL,Orlando Magic,,5,CLE,Cleveland Cavaliers,
 401898718,2026-10-13,2026-10-14T02:00Z,2027,1,False,pre,True,13,LAL,Los Angeles Lakers,,9,GS,Golden State Warriors,
 401901826,2026-10-13,2026-10-14T02:00Z,2027,1,False,pre,False,23,SAC,Sacramento Kings,,22,POR,Portland Trail Blazers,
-401908621,2026-10-13,2026-10-14T00:00Z,2027,1,False,pre,False,25,OKC,Oklahoma City Thunder,,11,IND,Indiana Pacers,
-401908944,2026-10-13,2026-10-13T23:00Z,2027,1,False,pre,False,28,TOR,Toronto Raptors,,18,NY,New York Knicks,
+401908621,2026-10-13,2026-10-14T00:00Z,2027,1,False,in,False,25,OKC,Oklahoma City Thunder,,11,IND,Indiana Pacers,
+401908944,2026-10-13,2026-10-13T23:00Z,2027,1,False,in,False,28,TOR,Toronto Raptors,,18,NY,New York Knicks,
 401898404,2026-10-14,2026-10-14T23:30Z,2027,1,False,pre,False,14,MIA,Miami Heat,,17,BKN,Brooklyn Nets,
 401898405,2026-10-14,2026-10-14T23:30Z,2027,1,False,pre,False,2,BOS,Boston Celtics,,30,CHA,Charlotte Hornets,
 401898722,2026-10-14,2026-10-15T00:00Z,2027,1,False,pre,False,24,SA,San Antonio Spurs,,21,PHX,Phoenix Suns,
