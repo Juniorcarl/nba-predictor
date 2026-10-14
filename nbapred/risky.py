@@ -34,7 +34,8 @@ MILESTONES = {
 }
 NAME = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes", "stl": "steals", "blk": "blocks",
         "pra": "points + rebounds + assists"}
-BANDS = {"high": (0.10, 0.30), "medium": (0.30, 0.48)}   # chance of hitting
+BANDS = {"long": (0.05, 0.10), "high": (0.10, 0.30), "medium": (0.30, 0.48)}   # chance of hitting
+LONG_MIN_BOOST = 1.5   # long shots need a much stronger reason: at least 1.5x his normal-night chance
 MIN_BOOST = 1.20       # tonight's chance must be at least 20% higher than on his normal night
 MIN_UPLIFT = 0.04      # ... and at least 4 percentage points higher
 MIN_MINUTES = 24       # only players with a real role tonight
@@ -131,7 +132,10 @@ def bold_calls(pp: pd.DataFrame, tails: dict, logs: dict, abbr: dict, limit: int
                     continue
                 p_n = _cal(stat, models.tail_prob(mu_n, vv_n, T), cal)
                 boost = p / max(p_n, 1e-3)
-                if boost < MIN_BOOST or p - p_n < MIN_UPLIFT:
+                if band == "long":
+                    if boost < LONG_MIN_BOOST or p - p_n < 0.025:
+                        continue
+                elif boost < MIN_BOOST or p - p_n < MIN_UPLIFT:
                     continue
                 h = _recent_hits(logs, r.player_id, stat, T, n=15)
                 if not h or h["hits"] < 1:  # he must have actually done it recently

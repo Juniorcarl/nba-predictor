@@ -658,7 +658,7 @@ function boldCallCard(c, i) {
       <p class="muted small">Tonight's projection ${f1(c.proj)}, on a normal night ${f1(c.normal)}</p></div>
       <div class="bold-odds"><b>${pct(c.p)}</b><span>fair odds ${c.fair_odds.toFixed(2)}</span></div></div>
     ${chanceBlock(c.p, c.p_normal)}
-    <p class="small"><b>${c.boost.toFixed(1)}× more likely than on a normal night.</b> ${c.band === "high" ? "High risk: expect to lose most of these." : "Medium risk."}</p>
+    <p class="small"><b>${c.boost.toFixed(1)}× more likely than on a normal night.</b> ${c.band === "long" ? "Long shot: hits roughly 1 time in 10–20. Only worth it at big odds, with a tiny stake." : c.band === "high" ? "High risk: expect to lose most of these." : "Medium risk."}</p>
     <ul class="reasons-list">${reasonList(c.reasons.for, "for")}${c.reasons.facts.map((f) => `<li class="fact">${esc(f)}</li>`).join("")}${reasonList(c.reasons.against, "against")}</ul>
     ${oddsBox(`bc${i}`, c.p)}
   </article>`;
@@ -695,7 +695,7 @@ async function renderBold() {
   const B = S.bold, band = S.riskBand;
   const calls = (B.calls || []).filter((c) => band === "all" || c.band === band);
   const rec = B.record || {};
-  const chips = [["high", "High risk (10–30%)"], ["medium", "Medium (30–48%)"], ["all", "All"]]
+  const chips = [["long", "Long shots (5–10%)"], ["high", "High risk (10–30%)"], ["medium", "Medium (30–48%)"], ["all", "All"]]
     .map(([k, l]) => `<button class="chip" data-band="${k}" aria-pressed="${band === k}">${l}</button>`).join("");
   view.innerHTML = `
     <div class="section-head"><div><h2>Bold</h2>
