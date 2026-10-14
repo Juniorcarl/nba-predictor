@@ -38,7 +38,7 @@ BANDS = {"high": (0.10, 0.30), "medium": (0.30, 0.48)}   # chance of hitting
 MIN_BOOST = 1.20       # tonight's chance must be at least 20% higher than on his normal night
 MIN_UPLIFT = 0.04      # ... and at least 4 percentage points higher
 MIN_MINUTES = 24       # only players with a real role tonight
-SKIP_STATUS = {"out", "doubtful", "questionable", "game-time decision", "day-to-day", "suspension"}
+SKIP_STATUS = {"out", "doubtful", "questionable", "game-time decision", "suspension"}
 CORR_STATS = PROP_STATS + ["pra"]
 
 
@@ -184,7 +184,11 @@ def _reasons(r, stat, T, w, logs, vr, abbr):
     # dedupe teammates line from SHAP list if names given
     if names:
         fors = [f for i, f in enumerate(fors) if not (i > 0 and f["label"] == "Teammates out")]
-    return {"for": fors[:4], "against": against[:2], "facts": facts}
+    against = against[:2]
+    if str(getattr(r, "inj_status", "") or "").lower() == "day-to-day":
+        note = getattr(r, "inj_comment", "") or ""
+        against.insert(0, {"label": "Listed day-to-day", "detail": "Check he's playing before you bet. " + note[:140], "amt": None})
+    return {"for": fors[:4], "against": against, "facts": facts}
 
 
 _var_params: dict = {}
