@@ -1,3 +1,7 @@
 date,kind,game_id,desc,detail,p,fair_odds,result
+2026-10-20,call,401909089,OG Anunoby 20+ points,"{""player_id"": ""3934719"", ""stat"": ""pts"", ""line"": 20}",0.414,2.41,
+2026-10-20,call,401909090,Dylan Harper 15+ points,"{""player_id"": ""5037871"", ""stat"": ""pts"", ""line"": 15}",0.317,3.15,
+2026-10-20,call,401909090,Dylan Harper 25+ points + rebounds + assists,"{""player_id"": ""5037871"", ""stat"": ""pra"", ""line"": 25}",0.21,4.76,
 2026-10-20,upset,401909088,BOS to beat DET,"{""side"": ""away""}",0.311,3.21,
 2026-10-20,upset,401909090,OKC to beat SA,"{""side"": ""away""}",0.268,3.73,
+2026-10-20,multi,401909089,OG Anunoby 20+ points + NY to win,"[{""text"": ""OG Anunoby 20+ points"", ""p"": 0.414, ""kind"": ""player"", ""player_id"": ""3934719"", ""stat"": ""pts"", ""line"": 20}, {""text"": ""NY to win"", ""p"": 0.809, ""kind"": ""win"", ""team_id"": ""18""}]",0.351,2.84,
