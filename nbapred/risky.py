@@ -116,11 +116,8 @@ def bold_calls(pp: pd.DataFrame, tails: dict, logs: dict, abbr: dict, limit: int
         for stat, ladder in MILESTONES.items():
             mu = float(getattr(r, f"p_{stat}"))
             vv = float(getattr(r, f"vv_{stat}"))
-            # his normal night: recent average with the same volatility
-            if stat == "pra":
-                mu_n = float(np.nansum([getattr(r, "pts_e10"), getattr(r, "reb_e10"), getattr(r, "ast_e10")]))
-            else:
-                mu_n = float(getattr(r, f"{stat}_e10") or 0)
+            # his normal night: the model's average projection over his last 10 games
+            mu_n = float(getattr(r, f"n_{stat}", np.nan))
             if not mu_n or math.isnan(mu_n) or mu <= 0:
                 continue
             vr = vol.get(stat, {}).get(r.player_id, 1.0)
@@ -143,7 +140,8 @@ def bold_calls(pp: pd.DataFrame, tails: dict, logs: dict, abbr: dict, limit: int
                     "player_id": r.player_id, "player": r.player, "team": abbr.get(r.team_id, ""), "opp": abbr.get(r.opp_id, ""),
                     "game_id": r.game_id, "home": int(r.home), "stat": stat, "line": T, "p": round(p, 3), "p_normal": round(p_n, 3),
                     "boost": round(boost, 2), "band": band, "fair_odds": round(1 / p, 2), "proj": round(mu, 1),
-                    "normal": round(mu_n, 1), "vol": round(vr, 2), "uplift": p - p_n,
+                    "normal": round(mu_n, 1), "avg10": round(float(getattr(r, f"{stat}_e10") if stat != "pra" else r.pts_e10 + r.reb_e10 + r.ast_e10), 1),
+                    "vol": round(vr, 2), "uplift": p - p_n,
                     "reasons": _reasons(r, stat, T, why.get(stat), logs, vr, abbr),
                 })
         # best 2 per player: biggest uplift, different stats
@@ -251,7 +249,8 @@ def _leg_candidates(pp_game: pd.DataFrame, tails: dict, gp_row) -> list[dict]:
         for stat, ladder in MILESTONES.items():
             mu = float(getattr(r, f"p_{stat}"))
             vv = float(getattr(r, f"vv_{stat}"))
-            mu_n = float(np.nansum([r.pts_e10, r.reb_e10, r.ast_e10])) if stat == "pra" else float(getattr(r, f"{stat}_e10") or 0)
+            mu_n = float(getattr(r, f"n_{stat}", np.nan))
+            mu_n = 0.0 if math.isnan(mu_n) else mu_n
             for T in ladder:
                 p = _cal(stat, models.tail_prob(mu, vv, T), cal)
                 if not 0.40 <= p <= 0.80:

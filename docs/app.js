@@ -655,7 +655,7 @@ function boldCallCard(c, i) {
   return `<article class="panel bold-card">
     <div class="bold-head"><div><p class="muted small">${esc(c.team)} ${c.home ? "vs" : "@"} ${esc(c.opp)}${when ? ", " + when : ""}</p>
       <h3>${esc(c.player)} ${c.line}+ ${STAT_PLURAL[c.stat]}</h3>
-      <p class="muted small">Projection ${f1(c.proj)}, usual ${f1(c.normal)}</p></div>
+      <p class="muted small">Tonight's projection ${f1(c.proj)}, on a normal night ${f1(c.normal)}</p></div>
       <div class="bold-odds"><b>${pct(c.p)}</b><span>fair odds ${c.fair_odds.toFixed(2)}</span></div></div>
     ${chanceBlock(c.p, c.p_normal)}
     <p class="small"><b>${c.boost.toFixed(1)}× more likely than on a normal night.</b> ${c.band === "high" ? "High risk: expect to lose most of these." : "Medium risk."}</p>

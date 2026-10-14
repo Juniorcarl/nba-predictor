@@ -337,6 +337,18 @@ def predict_players(models, info, PF: pd.DataFrame) -> pd.DataFrame:
     for t, m in models.items():
         up[f"p_{t}"] = np.clip(m.predict(X), 0, None)
     up["p_pra"] = up["p_pts"] + up["p_reb"] + up["p_ast"]
+    # "normal night": the same model's average projection over each player's last 10 games,
+    # so tonight can be compared like for like (used by the Bold page)
+    hist = PF[(~PF["is_upcoming"]) & PF["player_id"].isin(set(up["player_id"]))]
+    hist = hist.sort_values("date").groupby("player_id").tail(10)
+    if len(hist):
+        HX = hist[info["features"]]
+        normal = pd.DataFrame({"player_id": hist["player_id"].to_numpy()})
+        for t, m in models.items():
+            normal[f"n_{t}"] = np.clip(m.predict(HX), 0, None)
+        normal = normal.groupby("player_id").mean()
+        normal["n_pra"] = normal["n_pts"] + normal["n_reb"] + normal["n_ast"]
+        up = up.merge(normal, left_on="player_id", right_index=True, how="left")
     vol = info.get("_tails", {}).get("vol", {})
     for t in PROP_STATS + ["pra"]:
         up[f"v_{t}"] = variance(up[f"p_{t}"], info["var"][t])
