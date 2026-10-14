@@ -259,7 +259,7 @@ def _leg_candidates(pp_game: pd.DataFrame, tails: dict, gp_row) -> list[dict]:
             mu_n = 0.0 if math.isnan(mu_n) else mu_n
             for T in ladder:
                 p = _cal(stat, models.tail_prob(mu, vv, T), cal)
-                if not 0.40 <= p <= 0.80:
+                if not 0.35 <= p <= 0.85:
                     continue
                 vr = tails.get("vol", {}).get(stat, {}).get(r.player_id, 1.0)
                 p_n = _cal(stat, models.tail_prob(mu_n, float(models.variance(max(mu_n, .1), _var_params[stat])) * vr, T), cal) if mu_n else p
@@ -268,7 +268,7 @@ def _leg_candidates(pp_game: pd.DataFrame, tails: dict, gp_row) -> list[dict]:
                         "line": T, "p": round(p, 3), "score": score}
                 if best is None or score > best["score"] or (score == best["score"] and p < best["p"]):
                     best = cand
-        if best and best["score"] > 0.02:
+        if best and best["score"] >= 0.0:
             legs.append(best)
     legs.sort(key=lambda x: -x["score"])
     legs = legs[:9]
