@@ -73,7 +73,7 @@ def game_options(g, lines: dict, sd_margin: float, sd_total: float) -> list[dict
 def prop_options(pl, plines: dict, var_params: dict) -> list[dict]:
     out = []
     key_name = norm_player(pl.player)
-    for stat in ("pts", "reb", "ast", "fg3m", "pra"):
+    for stat in ("pts", "reb", "ast", "fg3m", "stl", "blk", "pra"):
         c = plines.get((key_name, stat))
         if not c:
             continue

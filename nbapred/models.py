@@ -15,7 +15,8 @@ from .config import PROP_STATS, SEASON_TYPES
 log = logging.getLogger(__name__)
 
 OBJECTIVES = {"pts": "reg:squarederror", "min": "reg:squarederror",
-              "reb": "count:poisson", "ast": "count:poisson", "fg3m": "count:poisson"}
+              "reb": "count:poisson", "ast": "count:poisson", "fg3m": "count:poisson",
+              "stl": "count:poisson", "blk": "count:poisson"}
 VALID_FRAC = 0.2
 MIN_HISTORY = 3
 
@@ -97,6 +98,68 @@ def _fit_var(pred: np.ndarray, resid: np.ndarray) -> dict:
 def variance(mu, vp: dict):
     mu = np.maximum(np.asarray(mu, dtype=float), 0.05)
     return vp["a"] * mu ** vp["b"]
+
+
+# ---------------------------------------------------------------- tails (for bold calls)
+VOL_SHRINK = 25  # games of evidence before a player's own volatility counts fully
+
+
+def tail_prob(mu, var, thresh):
+    """Raw P(X >= thresh) under the negative binomial with this mean and variance (vectorised)."""
+    mu = np.maximum(np.asarray(mu, float), 0.05)
+    var = np.maximum(np.asarray(var, float), mu * 1.02)
+    r = mu * mu / (var - mu)
+    p = r / (r + mu)
+    return sps.nbinom.sf(np.asarray(thresh) - 1, r, p)
+
+
+def fit_tails(valid: pd.DataFrame, var_params: dict, stats) -> dict:
+    """Player volatility (first half of the held-out games) and tail calibration (second half).
+
+    Volatility: how much more (or less) a player swings than the model's typical spread for his mean.
+    Calibration: maps the raw chance of a big night to how often big nights really happened.
+    """
+    from sklearn.isotonic import IsotonicRegression
+    v = valid.copy()
+    v["pra"] = v["pts"] + v["reb"] + v["ast"]
+    v["p_pra"] = v["p_pts"] + v["p_reb"] + v["p_ast"]
+    half = v["date"] < v["date"].quantile(0.5)
+    first, second = v[half], v[~half]
+    vol, tails, check = {}, {}, {}
+    for t in stats:
+        base_var = variance(first[f"p_{t}"], var_params[t])
+        z = (first[t] - first[f"p_{t}"]) ** 2 / base_var
+        g = pd.DataFrame({"pid": first["player_id"], "z": z}).groupby("pid")["z"].agg(["sum", "count"])
+        ratio = ((g["sum"] + VOL_SHRINK) / (g["count"] + VOL_SHRINK)).clip(0.6, 2.0)
+        vol[t] = ratio.round(3).to_dict()
+        # calibration on the second half: thresholds above the mean, the region bold calls live in
+        sv = second
+        mu = sv[f"p_{t}"].to_numpy()
+        var = variance(mu, var_params[t]) * sv["player_id"].map(vol[t]).fillna(1.0).to_numpy()
+        xs, ys = [], []
+        for mult in (1.15, 1.3, 1.5, 1.75, 2.0, 2.5):
+            T = np.maximum(np.ceil(mu * mult), 1)
+            xs.append(tail_prob(mu, var, T))
+            ys.append((sv[t].to_numpy() >= T).astype(float))
+        x, y = np.concatenate(xs), np.concatenate(ys)
+        keep = (x > 0.01) & (x < 0.7)
+        x, y = x[keep], y[keep]
+        iso = IsotonicRegression(y_min=0, y_max=1, out_of_bounds="clip").fit(x, y)
+        grid = np.round(np.linspace(0.01, 0.7, 40), 4)
+        tails[t] = {"x": grid.tolist(), "y": np.round(iso.predict(grid), 4).tolist()}
+        bins = pd.cut(x, [0, .1, .2, .3, .45, .7])
+        c = pd.DataFrame({"raw": x, "cal": iso.predict(x), "hit": y, "b": bins}).groupby("b", observed=True).agg(
+            raw=("raw", "mean"), cal=("cal", "mean"), hit=("hit", "mean"), n=("hit", "size"))
+        check[t] = [{"bucket": str(i), **{k: round(float(r[k]), 3) for k in ("raw", "cal", "hit")}, "n": int(r["n"])}
+                    for i, r in c.iterrows()]
+    return {"vol": vol, "tails": tails, "check": check}
+
+
+def calibrated(stat: str, p_raw, tails: dict):
+    knots = tails.get(stat)
+    if not knots:
+        return np.asarray(p_raw)
+    return np.interp(np.asarray(p_raw), knots["x"], knots["y"])
 
 
 # ---------------------------------------------------------------- probabilities
@@ -217,6 +280,11 @@ def train_player_models(PF: pd.DataFrame, cfg: dict | None = None):
     for t, pr in va_preds.items():
         valid[f"p_{t}"] = pr
     info["_valid"] = valid  # held-out predictions, used by the pattern finder (not published)
+    try:
+        info["_tails"] = fit_tails(valid, var_params, PROP_STATS + ["pra"])
+    except Exception as e:  # noqa: BLE001 - bold calls are optional; never break the daily run
+        log.warning("tail calibration failed: %s", e)
+        info["_tails"] = {"vol": {}, "tails": {}, "check": {}}
     return models, info
 
 
@@ -269,8 +337,11 @@ def predict_players(models, info, PF: pd.DataFrame) -> pd.DataFrame:
     for t, m in models.items():
         up[f"p_{t}"] = np.clip(m.predict(X), 0, None)
     up["p_pra"] = up["p_pts"] + up["p_reb"] + up["p_ast"]
+    vol = info.get("_tails", {}).get("vol", {})
     for t in PROP_STATS + ["pra"]:
         up[f"v_{t}"] = variance(up[f"p_{t}"], info["var"][t])
+        # bold-call variance: includes the player's own volatility
+        up[f"vv_{t}"] = up[f"v_{t}"] * up["player_id"].map(vol.get(t, {})).fillna(1.0)
     # Low-sample players get a confidence flag
     up["low_sample"] = up["n_games"] < 10
     return up

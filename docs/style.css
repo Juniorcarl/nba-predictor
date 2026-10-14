@@ -224,3 +224,30 @@ a.chip { color: var(--ink); }
 .why-short { margin: 0; color: var(--muted); }
 .why-short span { font-weight: 700; font-family: "Barlow Condensed", sans-serif; font-size: 1rem; }
 .why-games { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 8px; }
+
+/* ---------- bold */
+.bold-settings { padding: 14px 16px; display: grid; gap: 10px; }
+.bold-settings input, .odds-box input { padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); width: 120px; margin-left: 6px; }
+.bold-card { padding: 16px; display: grid; gap: 12px; border-top: 4px solid var(--ball); }
+.bold-head { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+.bold-head h3 { font-size: 1.45rem; line-height: 1.1; margin-top: 2px; }
+.bold-odds { text-align: right; flex: none; }
+.bold-odds b { display: block; font: 700 2.2rem/1 "Barlow Condensed", sans-serif; color: var(--ball); }
+.bold-odds span { font-size: .8rem; color: var(--muted); }
+.chance { display: grid; gap: 6px; }
+.chance div { display: grid; grid-template-columns: 90px 1fr 44px; align-items: center; gap: 8px; }
+.chance .bar { display: block; height: 10px; border-radius: 5px; }
+.chance .bar.n { background: var(--book); }
+.chance .bar.t { background: var(--ball); }
+.chance b { font-family: "Barlow Condensed", sans-serif; text-align: right; }
+.reasons-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.reasons-list li { padding-left: 14px; border-left: 3px solid var(--line); }
+.reasons-list li.for { border-color: var(--win); }
+.reasons-list li.against { border-color: var(--loss); }
+.reasons-list li.fact { border-color: var(--model); font-size: .9rem; }
+.legs { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.legs li { display: flex; justify-content: space-between; gap: 10px; padding: 8px 10px; background: var(--floor); border-radius: 6px; }
+.legs b { font-family: "Barlow Condensed", sans-serif; }
+.odds-box { background: var(--floor); border-radius: 8px; padding: 10px 12px; }
+.odds-box label { font-weight: 600; font-size: .9rem; }
+.odds-box p { margin: 6px 0 0; }

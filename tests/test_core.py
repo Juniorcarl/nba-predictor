@@ -178,3 +178,20 @@ def test_reasons_add_up():
     w = ex[0]["pts"]
     assert abs(w["level"] + sum(i["amt"] for i in w["items"]) + w["other"] - w["pred"]) < 0.11
     assert {i["cat"] for i in w["items"]} <= {"teammates", "home", "opp_defense"}
+
+
+def test_joint_probability_and_kelly():
+    from nbapred import risky
+    S = risky.CORR_STATS
+    zero = [[1.0 if i == j else 0.0 for j in range(len(S))] for i in range(len(S))]
+    none = [[0.0] * len(S) for _ in S]
+    corr = {"stats": S, "same": zero, "mate": none, "opp": none, "win": {s: 0.0 for s in S}}
+    a = {"kind": "player", "player_id": "1", "team_id": "A", "stat": "pts", "p": 0.5}
+    b = {"kind": "player", "player_id": "2", "team_id": "A", "stat": "pts", "p": 0.4}
+    assert abs(risky.joint_prob([a, b], corr) - 0.2) < 0.01           # independent: multiply
+    same = [[1.0] * len(S) for _ in S]
+    corr2 = {**corr, "same": same}
+    c = {**a, "player_id": "1", "stat": "pra", "p": 0.4}
+    assert abs(risky.joint_prob([a, c], corr2) - 0.4) < 0.01          # perfectly linked: the harder leg
+    assert risky.kelly(0.25, 3.0) == 0.0                                # no value at fair-ish odds
+    assert 0 < risky.kelly(0.25, 6.0) < 0.25 * 0.25 + 1e-9

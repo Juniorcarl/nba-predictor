@@ -14,7 +14,7 @@ import xgboost as xgb
 
 from .extra import GROUPS
 
-UNIT = {"pts": "pts", "reb": "reb", "ast": "ast", "fg3m": "threes", "min": "min", "pra": "PRA"}
+UNIT = {"pts": "pts", "reb": "reb", "ast": "ast", "fg3m": "threes", "stl": "stl", "blk": "blk", "min": "min", "pra": "PRA"}
 LONG_RUN = ("_e10", "_r10", "_szn", "_pm", "_sd10")
 
 
@@ -71,7 +71,7 @@ def player_detail(cat: str, r: pd.Series, stat: str, opp: str, amt: float) -> tu
     if cat == "opp_defense":
         key = {"reb": "o_t_a_reb_rel", "ast": "o_t_a_ast_rel", "fg3m": "o_t_a_fg3m_rel"}.get(s, "o_t_def_rel")
         rel = v(key, 1.0)
-        what = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes", "min": "points"}[s]
+        what = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes", "min": "points", "stl": "points", "blk": "points"}[s]
         if pd.isna(rel):
             return ("Opponent defense", f"{opp}'s defense")
         word = "more" if rel > 1 else "fewer"
@@ -160,7 +160,7 @@ def explain_players(models: dict, info: dict, up: pd.DataFrame, opp_abbr: dict, 
         expl = {}
         for stat, parts in row.items():
             items = sorted(((c, a) for c, a in parts["cats"].items() if c != "level"), key=lambda x: -abs(x[1]))
-            min_amt = {"pts": .3, "pra": .4, "min": .4}.get(stat, .12)
+            min_amt = {"pts": .3, "pra": .4, "min": .4, "stl": .03, "blk": .03, "fg3m": .08}.get(stat, .12)
             shown = [(c, a) for c, a in items if abs(a) >= min_amt][:top]
             rest = parts["pred"] - parts["level"] - sum(a for _, a in shown)
             expl[stat] = {"level": round(parts["level"], 1), "pred": round(parts["pred"], 1), "other": round(rest, 1),

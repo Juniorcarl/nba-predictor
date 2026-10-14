@@ -20,7 +20,7 @@ HISTORY_SEASONS = [2024, 2025, 2026]
 SEASON_TYPES = {2: "regular", 3: "playoffs"}  # skip preseason (1) / all-star
 
 # Prop markets we model. PRA is derived from the other three.
-PROP_STATS = ["pts", "reb", "ast", "fg3m"]
+PROP_STATS = ["pts", "reb", "ast", "fg3m", "stl", "blk"]
 ALL_TARGETS = PROP_STATS + ["min"]
 
 # Odds API (https://the-odds-api.com). Free tier = 500 credits / month.

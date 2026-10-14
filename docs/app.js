@@ -3,9 +3,9 @@
 const S = { meta: null, slate: null, players: [], track: null, byId: new Map(), slateById: new Map(), filter: "all" };
 const view = document.getElementById("view");
 
-const MARKET = { pts: "Points", reb: "Rebounds", ast: "Assists", fg3m: "3-pointers", pra: "Pts + Reb + Ast",
+const MARKET = { pts: "Points", reb: "Rebounds", ast: "Assists", fg3m: "3-pointers", stl: "Steals", blk: "Blocks", pra: "Pts + Reb + Ast",
   moneyline: "Moneyline", spread: "Spread", total: "Total points" };
-const STATS = ["pts", "reb", "ast", "fg3m", "pra"];
+const STATS = ["pts", "reb", "ast", "fg3m", "stl", "blk", "pra"];
 
 /* ---------------------------------------------------------------- utils */
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -282,8 +282,8 @@ function renderPlayer(id) {
       <div id="ck-out" class="result muted small">Enter the sportsbook line to see the chance of the over and under.</div>
       <div id="ck-line-viz"></div></div>
     <div><h3 id="bars-title">Last ${logs.length} games</h3><div class="bars" id="bars"></div></div>
-    <div class="tbl-wrap"><table><thead><tr><th>Date</th><th>Opp</th><th>Min</th><th>Pts</th><th>Reb</th><th>Ast</th><th>3PM</th></tr></thead>
-      <tbody>${logs.map((l) => `<tr><td>${esc(l.d.slice(5))}</td><td>${esc(l.opp)}</td><td>${f1(l.min)}</td><td>${l.pts}</td><td>${l.reb}</td><td>${l.ast}</td><td>${l.fg3m}</td></tr>`).join("")}</tbody></table></div>
+    <div class="tbl-wrap"><table><thead><tr><th>Date</th><th>Opp</th><th>Min</th><th>Pts</th><th>Reb</th><th>Ast</th><th>3PM</th><th>Stl</th><th>Blk</th></tr></thead>
+      <tbody>${logs.map((l) => `<tr><td>${esc(l.d.slice(5))}</td><td>${esc(l.opp)}</td><td>${f1(l.min)}</td><td>${l.pts}</td><td>${l.reb}</td><td>${l.ast}</td><td>${l.fg3m}</td><td>${l.stl ?? "–"}</td><td>${l.blk ?? "–"}</td></tr>`).join("")}</tbody></table></div>
   </div>`;
 
   const statSel = document.getElementById("ck-stat"), lineIn = document.getElementById("ck-line"), priceIn = document.getElementById("ck-price");
@@ -615,6 +615,125 @@ async function renderLearning() {
       <p class="muted small" style="margin-top:8px">Always on: recent form, season averages, per-minute production, rest, home/away, team and opponent strength, pace, and injured teammates.</p></div>`;
 }
 
+
+/* ---------------------------------------------------------------- bold */
+S.bank = store.get("bankroll", null);
+S.riskBand = store.get("riskBand", "high");
+const STAT_PLURAL = { pts: "points", reb: "rebounds", ast: "assists", fg3m: "threes", stl: "steals", blk: "blocks", pra: "pts + reb + ast" };
+const dec = (p) => (1 / p).toFixed(2);
+
+function valueLine(p, oddsStr) {
+  const am = parseOdds(oddsStr);
+  if (am == null) return `<span class="muted">Type the odds Betway is offering to see if it's worth it.</span>`;
+  const d = toDecimal(am), ev = p * (d - 1) - (1 - p);
+  if (ev <= 0) return `<span><b class="neg">Skip at ${d.toFixed(2)}</b>: below the fair price of ${dec(p)}, you'd lose ${Math.abs(ev).toFixed(2)} per unit on average.</span>`;
+  const k = Math.max(0, (p * (d - 1) - (1 - p)) / (d - 1)) / 4;
+  const amt = S.bank ? ` = <b>P${(S.bank * k).toFixed(2)}</b>` : "";
+  return `<span><b class="pos">Value at ${d.toFixed(2)}</b>: +${ev.toFixed(2)} per unit on average. Suggested stake <b>${(k * 100).toFixed(1)}%</b> of bankroll${amt}.</span>`;
+}
+
+function oddsBox(id, p) {
+  return `<div class="odds-box"><label>Betway odds <input data-p="${p}" data-out="${id}" type="text" inputmode="decimal" placeholder="e.g. 3.50"></label>
+    <p id="${id}" class="small">${valueLine(p, "")}</p></div>`;
+}
+
+function chanceBlock(p, pn) {
+  const w = (x) => Math.max(2, Math.min(100, x * 200));
+  return `<div class="chance">
+    <div><span class="muted small">Normal night</span><i class="bar n" style="width:${w(pn)}%"></i><b>${pct(pn)}</b></div>
+    <div><span class="muted small">Tonight</span><i class="bar t" style="width:${w(p)}%"></i><b>${pct(p)}</b></div>
+  </div>`;
+}
+
+function reasonList(items, cls) {
+  return items.map((r) => `<li class="${cls}"><b>${esc(r.label)}</b>${r.amt != null ? ` <span class="${r.amt > 0 ? "pos" : "neg"}">${sign(r.amt)}</span>` : ""}<br><span class="muted small">${esc(r.detail)}</span></li>`).join("");
+}
+
+function boldCallCard(c, i) {
+  const g = (S.slate?.games || []).find((x) => x.id === c.game_id);
+  const when = g ? time(g.start) : "";
+  return `<article class="panel bold-card">
+    <div class="bold-head"><div><p class="muted small">${esc(c.team)} ${c.home ? "vs" : "@"} ${esc(c.opp)}${when ? ", " + when : ""}</p>
+      <h3>${esc(c.player)} ${c.line}+ ${STAT_PLURAL[c.stat]}</h3>
+      <p class="muted small">Projection ${f1(c.proj)}, usual ${f1(c.normal)}</p></div>
+      <div class="bold-odds"><b>${pct(c.p)}</b><span>fair odds ${c.fair_odds.toFixed(2)}</span></div></div>
+    ${chanceBlock(c.p, c.p_normal)}
+    <p class="small"><b>${c.boost.toFixed(1)}× more likely than on a normal night.</b> ${c.band === "high" ? "High risk: expect to lose most of these." : "Medium risk."}</p>
+    <ul class="reasons-list">${reasonList(c.reasons.for, "for")}${c.reasons.facts.map((f) => `<li class="fact">${esc(f)}</li>`).join("")}${reasonList(c.reasons.against, "against")}</ul>
+    ${oddsBox(`bc${i}`, c.p)}
+  </article>`;
+}
+
+function upsetCard(u, i) {
+  return `<article class="panel bold-card">
+    <div class="bold-head"><div><p class="muted small">${time(u.start)}</p><h3>${esc(u.team)} to beat ${esc(u.fav)}</h3>
+      <p class="muted small">Model has ${esc(u.fav)} by ${f1(Math.abs(u.margin))}${u.book_p != null ? `. Bookmakers give ${esc(u.team)} ${pct(u.book_p)}` : ""}${u.betway_price != null ? `, Betway pays ${price(u.betway_price)}` : ""}</p></div>
+      <div class="bold-odds"><b>${pct(u.p)}</b><span>fair odds ${u.fair_odds.toFixed(2)}</span></div></div>
+    <ul class="reasons-list">${u.reasons.map((r) => `<li class="${r.helps ? "for" : "against"}"><b>${esc(r.label)}</b> <span class="${r.amt_dog > 0 ? "pos" : "neg"}">${sign(r.amt_dog)}</span><br><span class="muted small">${esc(r.detail)}</span></li>`).join("")}</ul>
+    ${oddsBox(`up${i}`, u.p)}
+  </article>`;
+}
+
+function multiCard(m, i) {
+  return `<article class="panel bold-card">
+    <div class="bold-head"><div><p class="muted small">${esc(m.matchup)}, ${time(m.start)}</p><h3>${m.legs.length}-leg multi</h3></div>
+      <div class="bold-odds"><b>${pct(m.p)}</b><span>fair odds ${m.fair_odds.toFixed(2)}</span></div></div>
+    <ol class="legs">${m.legs.map((l) => `<li><span>${esc(l.text)}</span><b>${pct(l.p)}</b></li>`).join("")}</ol>
+    <p class="small">All legs together: <b>${pct(m.p)}</b>. Multiplying the legs gives ${pct(m.naive)}; ${m.lift > 1.005
+      ? `they tend to hit together, so it's ${m.lift.toFixed(2)}× more likely than that.`
+      : m.lift < 0.995 ? `they tend to work against each other, so it's less likely than that.` : `they're mostly independent.`}
+      Only worth it if Betway pays more than <b>${m.fair_odds.toFixed(2)}</b>.</p>
+    ${oddsBox(`mu${i}`, m.p)}
+  </article>`;
+}
+
+async function renderBold() {
+  if (!S.bold) {
+    view.innerHTML = `<div class="empty"><p>Loading…</p></div>`;
+    try { S.bold = await load("bold"); } catch { view.innerHTML = `<div class="empty"><h2>No bold calls yet</h2><p>They appear with the next daily update.</p></div>`; return; }
+  }
+  const B = S.bold, band = S.riskBand;
+  const calls = (B.calls || []).filter((c) => band === "all" || c.band === band);
+  const rec = B.record || {};
+  const chips = [["high", "High risk (10–30%)"], ["medium", "Medium (30–48%)"], ["all", "All"]]
+    .map(([k, l]) => `<button class="chip" data-band="${k}" aria-pressed="${band === k}">${l}</button>`).join("");
+  view.innerHTML = `
+    <div class="section-head"><div><h2>Bold</h2>
+      <p class="muted small">Big nights and upsets that are clearly more likely than usual tonight, priced honestly. Every chance shown is checked against past games. Most of these lose; the ones that hit pay enough to make up for it, but only if the odds beat the fair price.</p></div></div>
+    <div class="panel bold-settings">
+      <div class="chips">${chips}</div>
+      <label class="small">Bankroll (pula) <input id="bank" type="text" inputmode="decimal" value="${S.bank ?? ""}" placeholder="e.g. 500"></label>
+      <p class="muted small">Stakes use a quarter of the Kelly formula: small bets, so a cold streak can't wipe you out. Saved on this phone only.</p>
+    </div>
+
+    <div class="block"><h2>Bold calls</h2>
+      ${calls.length ? `<div class="edges">${calls.map(boldCallCard).join("")}</div>` : `<div class="empty"><p>${B.calls?.length ? "No calls at this risk level tonight. Try another level." : "No standout big-night spots on the current slate."}</p></div>`}</div>
+
+    <div class="block"><h2>Upset picks</h2><p class="muted small">Underdogs the model gives a real chance to win.</p>
+      ${B.upsets?.length ? `<div class="edges">${B.upsets.map(upsetCard).join("")}</div>` : `<div class="empty"><p>No upset worth a look on the current slate.</p></div>`}</div>
+
+    <div class="block"><h2>Same-game multis</h2><p class="muted small">2–3 picks from one game. The chance accounts for how the picks are linked: a player who scores big usually also has a big PRA, and a team that wins usually got big games from its stars. Bookmakers take a bigger cut on multis, so check the price.</p>
+      ${B.multis?.length ? `<div class="edges">${B.multis.map(multiCard).join("")}</div>` : `<div class="empty"><p>No multis that make sense on the current slate.</p></div>`}</div>
+
+    <div class="block"><h2>Bold record</h2>
+      ${rec.graded ? `<div class="tbl-wrap"><table><thead><tr><th>Type</th><th>Hit</th><th>Expected</th><th>Hit rate</th><th>Avg chance</th></tr></thead><tbody>
+        ${["call", "upset", "multi"].filter((k) => rec[k]).map((k) => `<tr><td>${{ call: "Bold calls", upset: "Upsets", multi: "Multis" }[k]}</td><td>${rec[k].hits} of ${rec[k].n}</td><td>${f1(rec[k].expected)}</td><td>${pct(rec[k].hit_rate)}</td><td>${pct(rec[k].avg_p)}</td></tr>`).join("")}
+        </tbody></table></div>
+        <p class="muted small" style="margin-top:6px">If the page is honest, the number of hits should be close to the number expected. More hits than expected means the calls are better than their price.</p>
+        ${rec.calibration?.length ? `<div class="tbl-wrap"><table><thead><tr><th>Page said</th><th>Happened</th><th>Calls</th></tr></thead><tbody>${rec.calibration.map((c) => `<tr><td>${pct(c.said)}</td><td>${pct(c.happened)}</td><td>${c.n}</td></tr>`).join("")}</tbody></table></div>` : ""}
+        <h3 style="margin-top:14px">Recent</h3><div class="tbl-wrap"><table><tbody>${(rec.recent || []).map((r) => `<tr><td class="nw">${esc(day(r.date + "T12:00:00"))}</td><td>${esc(r.desc)}</td><td>${pct(r.p)}</td><td class="${r.result === "hit" ? "res-win" : r.result === "miss" ? "res-loss" : "muted"}">${r.result || "pending"}</td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="empty"><p>Bold calls are graded the morning after each game. The record starts with the first slate of the season.</p></div>`}
+      ${B.tail_check?.pts ? `<p class="muted small" style="margin-top:10px">Tested on past games the model hadn't seen: when it said a big points night had a ${pct(B.tail_check.pts[1]?.cal)} chance, it happened ${pct(B.tail_check.pts[1]?.hit)} of the time (${(B.tail_check.pts[1]?.n || 0).toLocaleString()} cases).</p>` : ""}
+    </div>`;
+
+  view.querySelectorAll("[data-band]").forEach((b) => (b.onclick = () => { S.riskBand = b.dataset.band; store.set("riskBand", S.riskBand); renderBold(); }));
+  const bank = document.getElementById("bank");
+  bank.onchange = () => { const v = parseFloat(bank.value.replace(",", ".")); S.bank = Number.isFinite(v) && v > 0 ? v : null; store.set("bankroll", S.bank); renderBold(); };
+  view.querySelectorAll("input[data-p]").forEach((inp) => (inp.oninput = () => {
+    document.getElementById(inp.dataset.out).innerHTML = valueLine(parseFloat(inp.dataset.p), inp.value);
+  }));
+}
+
 /* ---------------------------------------------------------------- routing */
 function route() {
   const h = location.hash.replace("#", "") || "picks";
@@ -626,6 +745,7 @@ function route() {
   else if (h === "record") renderRecord();
   else if (h === "mybets") renderMyBets();
   else if (h === "learning") renderLearning();
+  else if (h === "bold") renderBold();
   else renderEdges();
   window.scrollTo(0, 0);
 }

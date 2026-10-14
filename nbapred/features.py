@@ -13,8 +13,8 @@ import numpy as np
 import pandas as pd
 
 OUT_STATUSES = {"out", "doubtful", "suspension", "suspended", "inactive"}
-ROLL_STATS = ["min", "pts", "reb", "ast", "fg3m", "fga", "fg3a", "fta", "tov"]
-SEASON_STATS = ["min", "pts", "reb", "ast", "fg3m"]
+ROLL_STATS = ["min", "pts", "reb", "ast", "fg3m", "stl", "blk", "fga", "fg3a", "fta", "tov"]
+SEASON_STATS = ["min", "pts", "reb", "ast", "fg3m", "stl", "blk"]
 STD_STATS = ["min", "pts", "reb", "ast", "fg3m"]
 TEAM_STATS = ["pts", "reb", "ast", "fg3m", "fga", "fta", "oreb", "tov"]
 
@@ -206,6 +206,7 @@ def upcoming_candidates(st: RosterState, upcoming: pd.DataFrame, injuries: list[
         for side in ("home", "away"):
             tid = getattr(g, f"{side}_id")
             miss_min = miss_fga = miss_n = 0.0
+            out_names = []
             for pid in team_pool(st, tid, rosters, g.date):
                 s = st.players[pid]
                 stat, comment = status(pid, s["player"])
@@ -214,11 +215,12 @@ def upcoming_candidates(st: RosterState, upcoming: pd.DataFrame, injuries: list[
                     miss_min += s["min"]
                     miss_fga += s["fga"]
                     miss_n += 1
+                    out_names.append(f"{s['player']} ({s['min']:.0f} min, {s['fga']:.0f} shots a game)")
                 if not is_out:
                     cand.append({"game_id": g.game_id, "team_id": tid, "player_id": pid, "player": s["player"],
                                  "pos": s.get("pos"), "inj_status": stat, "inj_comment": comment})
             team_abs.append({"game_id": g.game_id, "team_id": tid,
-                             "miss_min": miss_min, "miss_fga": miss_fga, "miss_n": miss_n})
+                             "miss_min": miss_min, "miss_fga": miss_fga, "miss_n": miss_n, "out_names": "; ".join(out_names)})
     return pd.DataFrame(cand), pd.DataFrame(team_abs)
 
 
@@ -245,7 +247,7 @@ def player_features(P: pd.DataFrame) -> pd.DataFrame:
     P["n_szn"] = gs.cumcount()
     P["rest"] = g["date"].diff().dt.days.clip(upper=15).fillna(15)
     # Per-minute production
-    for c in ["pts", "reb", "ast", "fg3m", "fga"]:
+    for c in ["pts", "reb", "ast", "fg3m", "stl", "blk", "fga"]:
         P[f"{c}_pm"] = P[f"{c}_e10"] / P["min_e10"].replace(0, np.nan)
     return P
 
@@ -260,7 +262,8 @@ def player_model_frame(P: pd.DataFrame, T: pd.DataFrame, absn: pd.DataFrame) -> 
     df = P.merge(tcols, on=["game_id", "team_id"], how="left")
     df = df.merge(ocols, on=["game_id", "opp_id"], how="left")
     df = df.merge(absn, on=["game_id", "team_id"], how="left")
-    oab = absn.rename(columns={"team_id": "opp_id", "miss_min": "o_miss_min", "miss_fga": "o_miss_fga", "miss_n": "o_miss_n"})
+    oab = absn.rename(columns={"team_id": "opp_id", "miss_min": "o_miss_min", "miss_fga": "o_miss_fga", "miss_n": "o_miss_n",
+                               "out_names": "o_out_names"})
     df = df.merge(oab, on=["game_id", "opp_id"], how="left")
     # How much of the missing workload this player could absorb
     df["miss_min_share"] = df["miss_min"] * df["min_e10"] / 240.0
@@ -273,7 +276,7 @@ PLAYER_FEATURES = (
     + [f"{c}_sd10" for c in STD_STATS]
     + [f"{c}_szn" for c in SEASON_STATS]
     + ["starter_e", "starter_last", "n_games", "n_szn", "rest", "home"]
-    + [f"{c}_pm" for c in ["pts", "reb", "ast", "fg3m", "fga"]]
+    + [f"{c}_pm" for c in ["pts", "reb", "ast", "fg3m", "stl", "blk", "fga"]]
     + TEAM_FEATS + [f"o_{c}" for c in OPP_FEATS]
     + ["miss_min", "miss_fga", "miss_n", "o_miss_min", "o_miss_n", "miss_min_share", "miss_fga_share"]
 )

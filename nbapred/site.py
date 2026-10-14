@@ -56,9 +56,9 @@ def build_slate(slate_date, gp: pd.DataFrame, pp: pd.DataFrame, glines: dict, pl
             players.append({
                 "id": pl.player_id, "name": pl.player, "pos": pl.pos, "side": "home" if pl.home == 1 else "away",
                 "inj": pl.inj_status or "", "inj_note": pl.inj_comment or "", "low_sample": bool(pl.low_sample),
-                "proj": {s: getattr(pl, f"p_{s}") for s in ("min", "pts", "reb", "ast", "fg3m", "pra")},
-                "var": {s: getattr(pl, f"v_{s}") for s in ("pts", "reb", "ast", "fg3m", "pra")},
-                "recent": {s: getattr(pl, f"{s}_r10") for s in ("min", "pts", "reb", "ast", "fg3m")},
+                "proj": {s: getattr(pl, f"p_{s}") for s in ("min", "pts", "reb", "ast", "fg3m", "stl", "blk", "pra")},
+                "var": {s: getattr(pl, f"v_{s}") for s in ("pts", "reb", "ast", "fg3m", "stl", "blk", "pra")},
+                "recent": {s: getattr(pl, f"{s}_r10") for s in ("min", "pts", "reb", "ast", "fg3m", "stl", "blk")},
                 "props": popts, "why": getattr(pl, "why", None),
             })
         games_out.append({
@@ -97,7 +97,7 @@ def players_index(box: pd.DataFrame, games: pd.DataFrame, pp: pd.DataFrame, rost
     df["team"] = np.where(df["home"], df["home_abbr"], df["away_abbr"])
     df["opp"] = np.where(df["home"], df["away_abbr"], df["home_abbr"])
     df = df.sort_values("date")
-    proj = {r.player_id: {s: getattr(r, f"p_{s}") for s in ("min", "pts", "reb", "ast", "fg3m", "pra")} | {"game_id": r.game_id}
+    proj = {r.player_id: {s: getattr(r, f"p_{s}") for s in ("min", "pts", "reb", "ast", "fg3m", "stl", "blk", "pra")} | {"game_id": r.game_id}
             for r in pp.itertuples()} if len(pp) else {}
     abbr = dict(zip(games["home_id"], games["home_abbr"])) | dict(zip(games["away_id"], games["away_abbr"]))
     now_team = {pid: abbr.get(tid, "") for tid, ids in (rosters or {}).items() for pid in ids}
@@ -105,13 +105,14 @@ def players_index(box: pd.DataFrame, games: pd.DataFrame, pp: pd.DataFrame, rost
     for pid, d in df.groupby("player_id"):
         last = d.iloc[-1]
         cur = d[d["season"] == d["season"].max()]
-        avg = cur[["min", "pts", "reb", "ast", "fg3m"]].mean()
+        avg = cur[["min", "pts", "reb", "ast", "fg3m", "stl", "blk"]].mean()
         logs = d.tail(n_logs).iloc[::-1]
         out.append({
             "id": pid, "name": last["player"], "team": now_team.get(pid) or last["team"], "pos": last["pos"],
             "season": int(last["season"]), "gp": int(len(cur)), "avg": avg.to_dict(),
             "logs": [{"d": r.date.strftime("%Y-%m-%d"), "opp": ("vs " if r.home else "@ ") + str(r.opp),
-                      "min": r.min, "pts": r.pts, "reb": r.reb, "ast": r.ast, "fg3m": r.fg3m} for r in logs.itertuples()],
+                      "min": r.min, "pts": r.pts, "reb": r.reb, "ast": r.ast, "fg3m": r.fg3m,
+                      "stl": r.stl, "blk": r.blk} for r in logs.itertuples()],
             "proj": proj.get(pid),
         })
     out.sort(key=lambda p: -(p["avg"].get("min") or 0))

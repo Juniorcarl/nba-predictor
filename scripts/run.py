@@ -16,7 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nbapred import espn, explain, learning, models, odds, picks, site, store  # noqa: E402
+from nbapred import espn, explain, learning, models, odds, picks, risky, site, store  # noqa: E402
 from nbapred.config import EDGE_THRESHOLD, HISTORY_SEASONS, LOG_DIR, MAX_EDGE, SEASON_TYPES  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
@@ -105,7 +105,7 @@ def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
         sys.exit(1)
 
     n = picks.grade(games, box)
-    log.info("graded %d picks", n)
+    log.info("graded %d picks, %d bold calls", n, risky.grade_bold(games, box))
 
     # learning loop, step 1: review finished slates
     L = learning.load()
@@ -137,6 +137,7 @@ def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
     pm, pinfo = models.train_player_models(PF, cfg)
     gm, ginfo = models.train_game_models(G, cfg)
     valid = pinfo.pop("_valid")
+    tails = pinfo.get("_tails", {"vol": {}, "tails": {}, "check": {}})
 
     # learning loop, step 2: where is the model consistently wrong?
     pats = learning.find_patterns(valid, cfg["groups"], "test games")
@@ -180,6 +181,18 @@ def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
         picks.log_projections(slate_date, pp)
     track = picks.track_record(box)
     players = site.players_index(box, games, pp, rosters)
+
+    # bold page: calibrated big-night calls, upsets and same-game multis
+    try:
+        corr = risky.fit_corr(valid, pinfo["var"], games)
+    except Exception as e:  # noqa: BLE001
+        log.warning("correlation fit failed: %s", e)
+        corr = None
+    bold = risky.build(slate_date, pp, gp, glines, pinfo, tails, corr, players, abbr)
+    bold["record"] = risky.bold_record()
+    site._write("bold.json", bold)
+    pinfo.pop("_tails", None)
+    log.info("bold: %d calls, %d upsets, %d multis", len(bold["calls"]), len(bold["upsets"]), len(bold["multis"]))
     site.write_all(slate, pinfo, ginfo, track, players, {
         "slate_date": str(slate_date) if slate_date else None, "edge_threshold": EDGE_THRESHOLD, "max_edge": MAX_EDGE, "odds_credits_remaining": odds.credits["remaining"],
         "injuries_count": len(injuries), "rosters_loaded": len(rosters), "has_odds": bool(glines), "has_props": bool(plines),

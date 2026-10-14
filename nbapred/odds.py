@@ -20,6 +20,9 @@ log = logging.getLogger(__name__)
 BASE = "https://api.the-odds-api.com/v4/sports/basketball_nba"
 PROP_MARKETS = {"player_points": "pts", "player_rebounds": "reb", "player_assists": "ast",
                 "player_threes": "fg3m", "player_points_rebounds_assists": "pra"}
+# Steals and blocks cost 2 more credits per game; switch on with PROP_MARKETS_EXTRA=1 if your plan allows.
+if __import__("os").environ.get("PROP_MARKETS_EXTRA") == "1":
+    PROP_MARKETS.update({"player_steals": "stl", "player_blocks": "blk"})
 
 credits = {"remaining": None, "used": None}
 

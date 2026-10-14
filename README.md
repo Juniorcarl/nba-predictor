@@ -33,6 +33,20 @@ Runs for free on GitHub: GitHub Actions updates the data and models every day, a
 
 Data is stored as plain CSV in `data/` (one file per season), so the repo is the database.
 
+## Bold page (calculated risk)
+
+A separate page for bigger, riskier bets. It doesn't use the most likely outcome. It looks for nights when a big outcome is clearly more likely than usual.
+
+- **Bold calls:** milestones like "35+ points" or "4+ blocks" for points, rebounds, assists, threes, steals, blocks, and PRA.
+  A call is listed only if tonight's chance is at least 1.2× his normal night's chance (and 4+ points higher), the player has actually reached that number recently,
+  and he projects 24+ minutes. Each call shows the reasons for and against, including teammates out by name.
+- **Calibrated chances:** each player's own volatility is measured, and the big-night chances are calibrated on held-out games, so a "25%" call should hit about 1 time in 4.
+- **Upset picks:** underdogs with a 25–49% chance to win, compared with the bookmakers when lines are loaded.
+- **Same-game multis:** 2–3 legs from one game. The joint chance uses correlations measured on past games (same player's stats, teammates, opponents, and the team result)
+  in a simulation, and the page gives the minimum price worth taking.
+- **Stakes:** a quarter of the Kelly formula, based on the odds you type in from Betway. Optional bankroll in pula, stored only on your phone.
+- **Bold record:** every call, upset, and multi is logged and graded, and the page shows hits against the number expected.
+
 ## How it learns
 
 The model retrains every day, and a learning loop sits on top of that. **It never changes itself without your approval.**
