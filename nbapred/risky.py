@@ -35,10 +35,10 @@ MILESTONES = {
 NAME = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "threes", "stl": "steals", "blk": "blocks",
         "pra": "points + rebounds + assists"}
 BANDS = {"long": (0.05, 0.10), "high": (0.10, 0.30), "medium": (0.30, 0.48)}   # chance of hitting
-LONG_MIN_BOOST = 1.5   # long shots need a much stronger reason: at least 1.5x his normal-night chance
-MIN_BOOST = 1.20       # tonight's chance must be at least 20% higher than on his normal night
-MIN_UPLIFT = 0.04      # ... and at least 4 percentage points higher
-MIN_MINUTES = 24       # only players with a real role tonight
+LONG_MIN_BOOST = 1.4   # long shots need a much stronger reason: at least 1.4x his normal-night chance
+MIN_BOOST = 1.10       # tonight's chance must be at least 10% higher than on his normal night
+MIN_UPLIFT = 0.025     # ... and at least 2.5 percentage points higher
+MIN_MINUTES = 20       # only players with a real role tonight
 SKIP_STATUS = {"out", "doubtful", "questionable", "game-time decision", "suspension"}
 CORR_STATS = PROP_STATS + ["pra"]
 
@@ -105,7 +105,7 @@ def _recent_hits(logs: dict, pid: str, stat: str, T: int, n=10):
 
 
 # ================================================================== bold calls
-def bold_calls(pp: pd.DataFrame, tails: dict, logs: dict, abbr: dict, limit: int = 20) -> list[dict]:
+def bold_calls(pp: pd.DataFrame, tails: dict, logs: dict, abbr: dict, limit: int = 200) -> list[dict]:
     cal = tails.get("tails", {})
     vol = tails.get("vol", {})
     out = []
@@ -133,7 +133,7 @@ def bold_calls(pp: pd.DataFrame, tails: dict, logs: dict, abbr: dict, limit: int
                 p_n = _cal(stat, models.tail_prob(mu_n, vv_n, T), cal)
                 boost = p / max(p_n, 1e-3)
                 if band == "long":
-                    if boost < LONG_MIN_BOOST or p - p_n < 0.025:
+                    if boost < LONG_MIN_BOOST or p - p_n < 0.02:
                         continue
                 elif boost < MIN_BOOST or p - p_n < MIN_UPLIFT:
                     continue
@@ -148,16 +148,14 @@ def bold_calls(pp: pd.DataFrame, tails: dict, logs: dict, abbr: dict, limit: int
                     "vol": round(vr, 2), "uplift": p - p_n,
                     "reasons": _reasons(r, stat, T, why.get(stat), logs, vr, abbr),
                 })
-        # best 2 per player: biggest uplift, different stats
+        # for each stat and risk level, keep his best milestone (so every stat and level has options)
         best_for_player.sort(key=lambda c: -c["uplift"])
         seen = set()
         for c in best_for_player:
-            if c["stat"] in seen:
+            if (c["stat"], c["band"]) in seen:
                 continue
-            seen.add(c["stat"])
+            seen.add((c["stat"], c["band"]))
             out.append(c)
-            if len(seen) == 2:
-                break
     # headline stats first: a points or PRA spike matters more than an extra steal
     weight = {"pts": 1.4, "pra": 1.3, "reb": 1.15, "ast": 1.15, "fg3m": 1.0, "stl": 0.8, "blk": 0.8}
     out.sort(key=lambda c: -c["uplift"] * weight[c["stat"]])
@@ -273,7 +271,7 @@ def _leg_candidates(pp_game: pd.DataFrame, tails: dict, gp_row) -> list[dict]:
         if best and best["score"] > 0.02:
             legs.append(best)
     legs.sort(key=lambda x: -x["score"])
-    legs = legs[:6]
+    legs = legs[:9]
     ph = float(gp_row.p_home_win)
     fav_home = ph >= 0.5
     legs.append({"kind": "win", "team_id": gp_row.home_id if fav_home else gp_row.away_id,
@@ -311,7 +309,7 @@ def joint_prob(legs: list[dict], corr: dict, n: int = 40_000, seed: int = 7) -> 
     return float(np.mean(np.all(z >= cut, axis=1)))
 
 
-def multis(pp: pd.DataFrame, gp: pd.DataFrame, tails: dict, corr: dict | None, limit: int = 8) -> list[dict]:
+def multis(pp: pd.DataFrame, gp: pd.DataFrame, tails: dict, corr: dict | None, limit: int = 40) -> list[dict]:
     if not corr or pp.empty:
         return []
     out = []
@@ -328,16 +326,23 @@ def multis(pp: pd.DataFrame, gp: pd.DataFrame, tails: dict, corr: dict | None, l
                 if naive < 0.05:
                     continue
                 joint = joint_prob(list(combo), corr, n=20_000)
-                if not 0.10 <= joint <= 0.40:
+                if not 0.08 <= joint <= 0.45:
                     continue
                 cands.append({"game_id": g.game_id, "matchup": f"{g.away_abbr} @ {g.home_abbr}", "start": g.start_utc,
                               "legs": [_leg_text(leg) for leg in combo], "p": round(joint, 3), "naive": round(naive, 3),
                               "lift": round(joint / naive, 2), "fair_odds": round(1 / joint, 2),
                               "score": joint * sum(leg["score"] for leg in combo) + (joint / naive - 1) * 0.1})
         cands.sort(key=lambda c: -c["score"])
-        for c in cands[:2]:
+        used = set()
+        for c in cands:
+            key = tuple(sorted(x["text"] for x in c["legs"]))
+            if key in used:
+                continue
+            used.add(key)
             c.pop("score")
             out.append(c)
+            if len(used) == 6:
+                break
     out.sort(key=lambda c: -c["lift"])
     return out[:limit]
 

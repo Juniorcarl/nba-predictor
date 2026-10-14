@@ -251,3 +251,5 @@ a.chip { color: var(--ink); }
 .odds-box { background: var(--floor); border-radius: 8px; padding: 10px 12px; }
 .odds-box label { font-weight: 600; font-size: .9rem; }
 .odds-box p { margin: 6px 0 0; }
+
+.chip:disabled { opacity: .4; cursor: default; }

@@ -618,7 +618,8 @@ async function renderLearning() {
 
 /* ---------------------------------------------------------------- bold */
 S.bank = store.get("bankroll", null);
-S.riskBand = store.get("riskBand", "high");
+S.riskBand = store.get("riskBand", "all");
+S.boldStat = "all";
 const STAT_PLURAL = { pts: "points", reb: "rebounds", ast: "assists", fg3m: "threes", stl: "steals", blk: "blocks", pra: "pts + reb + ast" };
 const dec = (p) => (1 / p).toFixed(2);
 
@@ -693,7 +694,13 @@ async function renderBold() {
     try { S.bold = await load("bold"); } catch { view.innerHTML = `<div class="empty"><h2>No bold calls yet</h2><p>They appear with the next daily update.</p></div>`; return; }
   }
   const B = S.bold, band = S.riskBand;
-  const calls = (B.calls || []).filter((c) => band === "all" || c.band === band);
+  const inBand = (B.calls || []).filter((c) => band === "all" || c.band === band);
+  const calls = inBand.filter((c) => S.boldStat === "all" || c.stat === S.boldStat);
+  const STAT_LABEL = { pts: "Points", reb: "Rebounds", ast: "Assists", fg3m: "Threes", stl: "Steals", blk: "Blocks", pra: "Pts+Reb+Ast" };
+  const statChips = [["all", "All stats"], ...Object.entries(STAT_LABEL)].map(([k, l]) => {
+    const n = k === "all" ? inBand.length : inBand.filter((c) => c.stat === k).length;
+    return `<button class="chip" data-stat="${k}" aria-pressed="${S.boldStat === k}" ${n ? "" : "disabled"}>${l} (${n})</button>`;
+  }).join("");
   const rec = B.record || {};
   const chips = [["long", "Long shots (5–10%)"], ["high", "High risk (10–30%)"], ["medium", "Medium (30–48%)"], ["all", "All"]]
     .map(([k, l]) => `<button class="chip" data-band="${k}" aria-pressed="${band === k}">${l}</button>`).join("");
@@ -706,7 +713,7 @@ async function renderBold() {
       <p class="muted small">Stakes use a quarter of the Kelly formula: small bets, so a cold streak can't wipe you out. Saved on this phone only.</p>
     </div>
 
-    <div class="block"><h2>Bold calls</h2>
+    <div class="block"><h2>Bold calls</h2><div class="chips" style="margin-bottom:10px">${statChips}</div>
       ${calls.length ? `<div class="edges">${calls.map(boldCallCard).join("")}</div>` : `<div class="empty"><p>${B.calls?.length ? "No calls at this risk level tonight. Try another level." : "No standout big-night spots on the current slate."}</p></div>`}</div>
 
     <div class="block"><h2>Upset picks</h2><p class="muted small">Underdogs the model gives a real chance to win.</p>
@@ -727,6 +734,7 @@ async function renderBold() {
     </div>`;
 
   view.querySelectorAll("[data-band]").forEach((b) => (b.onclick = () => { S.riskBand = b.dataset.band; store.set("riskBand", S.riskBand); renderBold(); }));
+  view.querySelectorAll("[data-stat]").forEach((b) => (b.onclick = () => { S.boldStat = b.dataset.stat; renderBold(); }));
   const bank = document.getElementById("bank");
   bank.onchange = () => { const v = parseFloat(bank.value.replace(",", ".")); S.bank = Number.isFinite(v) && v > 0 ? v : null; store.set("bankroll", S.bank); renderBold(); };
   view.querySelectorAll("input[data-p]").forEach((inp) => (inp.oninput = () => {
