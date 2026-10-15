@@ -195,3 +195,33 @@ def test_joint_probability_and_kelly():
     assert abs(risky.joint_prob([a, c], corr2) - 0.4) < 0.01          # perfectly linked: the harder leg
     assert risky.kelly(0.25, 3.0) == 0.0                                # no value at fair-ish odds
     assert 0 < risky.kelly(0.25, 6.0) < 0.25 * 0.25 + 1e-9
+
+
+def test_news_tags():
+    from nbapred import adapt
+    js = {"articles": [
+        {"id": 1, "headline": "Embiid to play under minutes restriction in season debut", "description": "",
+         "published": "2026-10-20T15:00Z", "categories": [{"type": "athlete", "athleteId": 3059318}, {"type": "team", "teamId": 20}]},
+        {"id": 2, "headline": "Bucks sign veteran guard", "description": "Milwaukee signed a deal.", "published": "2026-10-20T15:00Z",
+         "categories": [{"type": "athlete", "athlete": {"id": 77}}]},
+        {"id": 3, "headline": "Celtics coach fired", "description": "Interim coach named.", "published": "2026-10-20T15:00Z", "categories": []}]}
+    rows = adapt.parse_news(js)
+    assert set(rows[0]["tags"].split(";")) >= {"minutes_limit", "returning"} and rows[0]["athletes"] == "3059318"
+    assert rows[2]["team_tags"] == "coach_change"
+    assert "trade" not in adapt.tag_text("Scored 30 in a win")  # no accidental matches
+
+
+def test_corrections_learn_from_base_not_final():
+    from nbapred import adapt
+    # player beat his base projection by +6 in each of 8 games; earlier corrections were already applied
+    proj = pd.DataFrame([{"date": f"2026-11-{d:02d}", "game_id": str(d), "player_id": "7", "p_pts": 20 + 3, "adj_pts": 3,
+                          "p_min": 30, "p_reb": 5, "p_ast": 3, "tags": ""} for d in range(1, 9)])
+    box = pd.DataFrame([{"game_id": str(d), "player_id": "7", "min": 31, "pts": 26, "reb": 5, "ast": 3, "fg3m": 1, "stl": 1, "blk": 0}
+                        for d in range(1, 9)])
+    j = adapt._joined(proj, box)
+    c = adapt.player_corrections(j)["7"]["pts"]
+    assert c["avg"] == 6.0 and 2.0 < c["adj"] < 6.0   # measured vs base (20), shrunk toward 0
+    pp = pd.DataFrame([{"player_id": "7", "p_pts": 20.0, "p_reb": 5.0, "p_ast": 3.0, "p_min": 30.0, "p_fg3m": 1.0,
+                        "p_stl": 1.0, "p_blk": .3, "v_pts": 30.0, "inj_comment": ""}])
+    out = adapt.apply_players(pp, {"7": {"pts": c}}, {}, {}, {})
+    assert abs(out.loc[0, "p_pts"] - (20 + min(c["adj"], 0.25 * 20 + 0.3))) < 1e-6 and out.loc[0, "adj_pts"] > 0

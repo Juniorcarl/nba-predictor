@@ -16,7 +16,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from nbapred import espn, explain, learning, models, odds, picks, risky, site, store  # noqa: E402
+from nbapred import adapt, espn, explain, learning, models, odds, picks, risky, site, store  # noqa: E402
 from nbapred.config import EDGE_THRESHOLD, HISTORY_SEASONS, LOG_DIR, MAX_EDGE, SEASON_TYPES  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
@@ -160,6 +160,21 @@ def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
     if len(gp):
         gp["why"] = explain.explain_games(gm, ginfo, gp)
 
+    # day-to-day learning: news tags + corrections learned from how recent projections turned out
+    news = adapt.update_news() if not offline else adapt.load_news()
+    ptags, heads = adapt.player_news(news)
+    joined = adapt._joined(projections, box)
+    pcorr, teffects = adapt.player_corrections(joined), adapt.tag_effects(joined)
+    tcorr = adapt.team_corrections(games)
+    if len(pp):
+        inj_notes = dict(zip(pp["player_id"].astype(str), pp["inj_comment"].fillna("").astype(str)))
+        pp = adapt.apply_players(pp, pcorr, teffects, ptags, adapt.injury_tags(inj_notes))
+        pp["news"] = pp["player_id"].astype(str).map(heads)
+    if len(gp):
+        gp = adapt.apply_games(gp, tcorr, ginfo["margin"]["sd"])
+    log.info("learning: %d player corrections, %d news tags measured, %d team corrections, %d players in the news",
+             len(pcorr), len(teffects), len(tcorr), len(ptags))
+
     glines, plines = ({}, {})
     if use_odds and not offline and len(gp):
         glines, plines = odds.fetch_all(gp)
@@ -179,6 +194,7 @@ def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
     if slate_date is not None:
         picks.log_picks(slate_date, rows)
         picks.log_projections(slate_date, pp)
+        adapt.log_games(slate_date, gp)
     track = picks.track_record(box)
     players = site.players_index(box, games, pp, rosters)
 
@@ -193,6 +209,8 @@ def daily(use_odds=True, offline=False, demo_odds=False, learn=False):
     site._write("bold.json", bold)
     pinfo.pop("_tails", None)
     log.info("bold: %d calls, %d upsets, %d multis", len(bold["calls"]), len(bold["upsets"]), len(bold["multis"]))
+    names = {p["id"]: p["name"] for p in players}
+    site._write("adapt.json", adapt.summary(joined, pcorr, teffects, tcorr, news, names, abbr))
     site.write_all(slate, pinfo, ginfo, track, players, {
         "slate_date": str(slate_date) if slate_date else None, "edge_threshold": EDGE_THRESHOLD, "max_edge": MAX_EDGE, "odds_credits_remaining": odds.credits["remaining"],
         "injuries_count": len(injuries), "rosters_loaded": len(rosters), "has_odds": bool(glines), "has_props": bool(plines),

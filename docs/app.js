@@ -271,7 +271,9 @@ function renderPlayer(id) {
   const projBlock = sp ? `<div><h3>${esc(g.away.abbr)} @ ${esc(g.home.abbr)}, ${day(g.start)} ${time(g.start)}</h3>
       <div class="projgrid" style="margin-top:8px">${["min", ...STATS].map((s) => `<div class="proj"><b>${f1(sp.proj[s])}</b><span>${s === "min" ? "Minutes" : MARKET[s]}</span></div>`).join("")}</div>
       ${sp.low_sample ? `<p class="muted small" style="margin-top:6px">Fewer than 10 games of history, so treat this projection with extra caution.</p>` : ""}</div>
-      <div id="why-box"></div>`
+      <div id="why-box"></div>
+      ${sp.news?.length ? `<div><h3>In the news</h3><ul class="newslist">${sp.news.map((n) => `<li><time>${esc(day(n.date + "T12:00:00"))}</time>
+        <span>${n.link ? `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.headline)}</a>` : esc(n.headline)}<br>${(n.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join(" ")}</span></li>`).join("")}</ul></div>` : ""}`
     : `<p class="muted">Not on the current slate. The line checker uses the recent average instead of a projection.</p>`;
   const opts = STATS.map((s) => `<option value="${s}">${MARKET[s]}</option>`).join("");
   view.innerHTML = `<div class="panel pcard">${head}${projBlock}
@@ -577,6 +579,7 @@ async function renderLearning() {
   if (!S.learning) {
     view.innerHTML = `<div class="empty"><p>Loading…</p></div>`;
     try { S.learning = await load("learning"); } catch { view.innerHTML = `<div class="empty"><h2>No learning data yet</h2><p>It appears after the next daily update.</p></div>`; return; }
+    try { S.adapt = await load("adapt"); } catch { S.adapt = null; }
   }
   const L = S.learning, cfg = L.config || { groups: [] }, pm = (L.postmortems || [])[0];
   const exp = (L.experiments || [])[0];
@@ -584,7 +587,7 @@ async function renderLearning() {
   const pats = groupPatterns(L.patterns?.items || []);
   view.innerHTML = `
     <div class="section-head"><div><h2>Learning</h2>
-      <p class="muted small">After every slate the model checks each prediction against what happened, looks for where it keeps missing, and tests possible fixes on games it hasn't seen. Nothing changes until you approve it.</p></div></div>
+      <p class="muted small">After every slate the model checks each prediction against what happened. Small corrections for players, teams and news update by themselves every day. Bigger design changes are tested on games the model hasn't seen and wait for your approval.</p></div></div>
 
     <div class="block"><h2>${L.proposals?.length ? `${L.proposals.length} change${L.proposals.length > 1 ? "s" : ""} waiting for you` : "No changes waiting"}</h2>
       ${L.proposals?.length ? `<p class="muted small">Approve or Reject opens GitHub with the decision filled in. Tap "Submit new issue" and the model retrains with it within a few minutes.</p>
@@ -592,6 +595,7 @@ async function renderLearning() {
       : `<p class="muted small">${exp ? `The last test round (${when(exp.at)}) found nothing that clearly beats the current model. Tests run every Monday.` : "The first test round runs with the next update."}</p>`}</div>
 
     <div class="block"><h2>Last review</h2>${postmortemBlock(pm)}</div>
+    ${adaptBlocks(S.adapt)}
 
     <div class="block"><h2>Patterns being watched</h2>
       <p class="muted small">Groups of games where the model is consistently too high or too low.</p>
@@ -740,6 +744,49 @@ async function renderBold() {
   view.querySelectorAll("input[data-p]").forEach((inp) => (inp.oninput = () => {
     document.getElementById(inp.dataset.out).innerHTML = valueLine(parseFloat(inp.dataset.p), inp.value);
   }));
+}
+
+
+/* ---------------------------------------------------------------- day-to-day learning */
+function monthChart(months) {
+  if (!months?.length) return `<div class="empty"><p>The month-by-month chart starts after the first games of the season.</p></div>`;
+  const W = 600, H = 200, P = 30, vals = months.flatMap((m) => [m.pts, m.b_pts]), lo = Math.min(...vals) * 0.9, hi = Math.max(...vals) * 1.05;
+  const X = (i) => P + (months.length === 1 ? (W - 2 * P) / 2 : (i / (months.length - 1)) * (W - 2 * P));
+  const Y = (v) => H - P - ((v - lo) / (hi - lo || 1)) * (H - 2 * P);
+  const line = (k, color, dash) => `<polyline fill="none" stroke="${color}" stroke-width="2.5" ${dash ? 'stroke-dasharray="5 4"' : ""} points="${months.map((m, i) => `${X(i)},${Y(m[k])}`).join(" ")}"/>`
+    + months.map((m, i) => `<circle cx="${X(i)}" cy="${Y(m[k])}" r="4" fill="${color}"/>`).join("");
+  return `<svg class="curve panel" viewBox="0 0 ${W} ${H}" role="img" aria-label="Average points miss by month">
+      ${line("b_pts", "var(--book)", true)}${line("pts", "var(--model)", false)}
+      ${months.map((m, i) => `<text x="${X(i)}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${m.month.slice(5)}/${m.month.slice(2, 4)}</text>`).join("")}
+    </svg>
+    <p class="small"><span style="color:var(--model)">Solid line</span>: average points miss with today's learning. <span class="muted">Dashed</span>: the same projections before the day-to-day corrections. Lower is better.</p>
+    <div class="tbl-wrap"><table><thead><tr><th>Month</th><th>Pts</th><th>Reb</th><th>Ast</th><th>Min</th><th>Players</th></tr></thead><tbody>
+      ${months.map((m) => `<tr><td>${esc(m.month)}</td><td>${f1(m.pts)}</td><td>${f1(m.reb)}</td><td>${f1(m.ast)}</td><td>${f1(m.min)}</td><td>${m.n.toLocaleString()}</td></tr>`).join("")}</tbody></table></div>`;
+}
+
+function adaptBlocks(A) {
+  if (!A) return "";
+  return `
+    <div class="block"><h2>Getting better month by month</h2>${monthChart(A.months)}</div>
+
+    <div class="block"><h2>Learned about players</h2>
+      <p class="muted small">Players who keep beating or missing their projections get a small correction, updated every day. A few lucky games barely move it; a steady trend does. Positive means he's been doing better than the model expected.</p>
+      ${A.players?.length ? `<div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Pts</th><th>Reb</th><th>Ast</th><th>Min</th><th>Games</th></tr></thead><tbody>
+        ${A.players.map((p) => `<tr><td>${esc(p.player)}</td>${["pts", "reb", "ast", "min"].map((k) => `<td class="${(p[k] || 0) > 0 ? "pos" : (p[k] || 0) < 0 ? "neg" : ""}">${p[k] == null ? "–" : sign(p[k])}</td>`).join("")}<td>${p.n}</td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="empty"><p>Starts after each player's first 3 games of the season.</p></div>`}</div>
+
+    <div class="block"><h2>What the news means</h2>
+      <p class="muted small">Every run reads ESPN's NBA news and the injury-report notes for things like minutes limits, returns, bench moves, rest and illness. Here's how players actually did against their projection with each one. A news item starts changing projections once it has ${A.settings?.tag_min_n || 10} cases.</p>
+      ${A.tags?.length ? `<div class="tbl-wrap"><table><thead><tr><th>In the news</th><th>Cases</th><th>Min</th><th>Pts</th><th>Reb</th><th>Ast</th><th>Used?</th></tr></thead><tbody>
+        ${A.tags.map((t) => `<tr><td>${esc(t.label)}</td><td>${t.n}</td>${["min", "pts", "reb", "ast"].map((k) => `<td class="${t[k] > 0 ? "pos" : t[k] < 0 ? "neg" : ""}">${sign(t[k])}</td>`).join("")}<td>${t.applied ? "<b>Yes</b>" : "Not yet"}</td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="empty"><p>Builds up as news items are matched to games.</p></div>`}
+      ${A.news?.length ? `<h3 style="margin-top:14px">Latest news picked up</h3><ul class="newslist">${A.news.map((n) => `<li><time>${esc(day(n.date + "T12:00:00"))}</time>
+        <span>${n.link ? `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.headline)}</a>` : esc(n.headline)}<br>${n.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join(" ")}</span></li>`).join("")}</ul>` : ""}
+    </div>
+
+    ${A.teams?.length ? `<div class="block"><h2>Learned about teams</h2><p class="muted small">Same idea for game results: points per game the team has been beating or missing its projected margin and total by.</p>
+      <div class="tbl-wrap"><table><thead><tr><th>Team</th><th>Margin</th><th>Total</th><th>Games</th></tr></thead><tbody>
+      ${A.teams.map((t) => `<tr><td>${esc(t.team)}</td><td class="${t.margin > 0 ? "pos" : "neg"}">${sign(t.margin)}</td><td>${sign(t.total)}</td><td>${t.n}</td></tr>`).join("")}</tbody></table></div></div>` : ""}`;
 }
 
 /* ---------------------------------------------------------------- routing */

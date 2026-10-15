@@ -60,6 +60,8 @@ def build_slate(slate_date, gp: pd.DataFrame, pp: pd.DataFrame, glines: dict, pl
                 "var": {s: getattr(pl, f"v_{s}") for s in ("pts", "reb", "ast", "fg3m", "stl", "blk", "pra")},
                 "recent": {s: getattr(pl, f"{s}_r10") for s in ("min", "pts", "reb", "ast", "fg3m", "stl", "blk")},
                 "props": popts, "why": getattr(pl, "why", None),
+                "news": getattr(pl, "news", None) if isinstance(getattr(pl, "news", None), list) else [],
+                "adj": {s: getattr(pl, f"adj_{s}", 0.0) for s in ("min", "pts", "reb", "ast", "fg3m", "stl", "blk")},
             })
         games_out.append({
             "id": g.game_id, "start": g.start_utc, "home": {"id": g.home_id, "abbr": g.home_abbr, "name": g.home_name},

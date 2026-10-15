@@ -22,7 +22,7 @@ MIN_HISTORY = 3
 
 
 # ---------------------------------------------------------------- config (what the learning loop changes)
-DEFAULT_PARAMS = {"max_depth": 5, "min_child_weight": 20, "learning_rate": 0.03}
+DEFAULT_PARAMS = {"max_depth": 5, "min_child_weight": 20, "learning_rate": 0.03, "recency_halflife": 0}
 DEFAULT_CONFIG = {"groups": [], "params": DEFAULT_PARAMS, "version": 1}
 
 
@@ -75,6 +75,16 @@ def _final(objective, n, params=None):
     return XGBRegressor(n_estimators=max(n, 50), learning_rate=p["learning_rate"], max_depth=int(p["max_depth"]),
                         min_child_weight=p["min_child_weight"], subsample=0.8, colsample_bytree=0.8, reg_lambda=2.0,
                         objective=objective, tree_method="hist", n_jobs=-1, verbosity=0)
+
+
+def recency_weights(df: pd.DataFrame, params: dict) -> np.ndarray:
+    """Recent games count more: a game `halflife` days old counts half as much as last night's."""
+    hl = float((params or {}).get("recency_halflife", DEFAULT_PARAMS["recency_halflife"]) or 0)
+    if hl <= 0:
+        return np.ones(len(df))
+    d = pd.to_datetime(df["date"])
+    age = (d.max() - d).dt.days.to_numpy()
+    return 0.5 ** (age / hl)
 
 
 def _time_split(df: pd.DataFrame):
@@ -250,7 +260,7 @@ def train_player_models(PF: pd.DataFrame, cfg: dict | None = None):
     models, var_params, metrics, va_preds = {}, {}, {}, {}
     for t in PROP_STATS + ["min"]:
         m = _xgb(OBJECTIVES[t], params)
-        m.fit(X_tr, tr[t], eval_set=[(X_va, va[t])], verbose=False)
+        m.fit(X_tr, tr[t], eval_set=[(X_va, va[t])], sample_weight=recency_weights(tr, params), verbose=False)
         best = int(m.best_iteration or m.n_estimators) + 1
         pred = m.predict(X_va)
         va_preds[t] = pred
@@ -260,7 +270,7 @@ def train_player_models(PF: pd.DataFrame, cfg: dict | None = None):
         metrics[t] = {"mae": float(np.mean(np.abs(resid))), "baseline_mae": float(np.mean(np.abs(va[t] - base))),
                       "n_valid": int(len(va)), "trees": best}
         final = _final(OBJECTIVES[t], best, params)
-        final.fit(data[feats], data[t], verbose=False)
+        final.fit(data[feats], data[t], sample_weight=recency_weights(data, params), verbose=False)
         models[t] = final
         log.info("%-4s MAE %.2f (baseline %.2f), trees %d", t, metrics[t]["mae"], metrics[t]["baseline_mae"], best)
 
@@ -313,7 +323,7 @@ def train_game_models(G: pd.DataFrame, cfg: dict | None = None):
     models, info = {}, {"features": feats}
     for t in ("margin", "total"):
         m = _xgb("reg:squarederror", params)
-        m.fit(tr[feats], tr[t], eval_set=[(va[feats], va[t])], verbose=False)
+        m.fit(tr[feats], tr[t], eval_set=[(va[feats], va[t])], sample_weight=recency_weights(tr, params), verbose=False)
         best = int(m.best_iteration or m.n_estimators) + 1
         pred = m.predict(va[feats])
         resid = va[t].to_numpy() - pred
@@ -322,7 +332,7 @@ def train_game_models(G: pd.DataFrame, cfg: dict | None = None):
             info[t]["winner_acc"] = float(np.mean((pred > 0) == (va[t].to_numpy() > 0)))
             info[t]["home_baseline_acc"] = float(np.mean(va[t].to_numpy() > 0))
         final = _final("reg:squarederror", best, params)
-        final.fit(data[feats], data[t], verbose=False)
+        final.fit(data[feats], data[t], sample_weight=recency_weights(data, params), verbose=False)
         models[t] = final
         log.info("game %-6s MAE %.2f sd %.2f", t, info[t]["mae"], info[t]["sd"])
     return models, info

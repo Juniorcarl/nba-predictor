@@ -253,3 +253,8 @@ a.chip { color: var(--ink); }
 .odds-box p { margin: 6px 0 0; }
 
 .chip:disabled { opacity: .4; cursor: default; }
+
+.newslist { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 8px; }
+.newslist li { display: grid; grid-template-columns: 74px 1fr; gap: 8px; font-size: .92rem; }
+.newslist time { color: var(--muted); font-size: .8rem; padding-top: 2px; }
+.newslist .tag { margin-top: 3px; }

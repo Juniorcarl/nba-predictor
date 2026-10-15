@@ -118,10 +118,13 @@ def log_picks(slate_date, rows: list[dict]) -> None:
 def log_projections(slate_date, pp: pd.DataFrame) -> None:
     if pp.empty:
         return
-    cols = ["game_id", "player_id", "player", "team_id", "p_min", "p_pts", "p_reb", "p_ast", "p_fg3m", "p_pra"]
-    new = pp[cols].copy()
+    cols = ["game_id", "player_id", "player", "team_id", "p_min", "p_pts", "p_reb", "p_ast", "p_fg3m", "p_stl", "p_blk", "p_pra"]
+    cols += [c for c in ("adj_min", "adj_pts", "adj_reb", "adj_ast", "adj_fg3m", "adj_stl", "adj_blk") if c in pp]
+    cols = [c for c in cols if c in pp]
+    num = [c for c in cols if c.startswith(("p_", "adj_"))]
+    new = pp[cols + (["tags"] if "tags" in pp else [])].copy()
     new.insert(0, "date", str(slate_date))
-    new[cols[4:]] = new[cols[4:]].round(2)
+    new[num] = new[num].round(2)
     old = pd.read_csv(PROJ, dtype={"game_id": str, "player_id": str}) if PROJ.exists() else None
     if old is not None:
         old = old[~((old["date"] == str(slate_date)) & old["game_id"].isin(set(new["game_id"])))]

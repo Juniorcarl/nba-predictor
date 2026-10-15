@@ -27,6 +27,8 @@ PARAM_IDEAS = [
     ("max_depth", 6, "Deeper trees (depth 6): can learn more complex interactions"),
     ("min_child_weight", 40, "Require more games per pattern before trusting it"),
     ("min_child_weight", 10, "Allow patterns backed by fewer games"),
+    ("recency_halflife", 365, "Weight recent games more: a game a year old counts half as much"),
+    ("recency_halflife", 180, "Lean hard on recent games: a game 6 months old counts half as much"),
 ]
 
 
@@ -244,7 +246,7 @@ def _scores(PF, G, cfg, lr=0.06):
     out = {"_va": va, "_half": (va["date"] < va["date"].quantile(0.5)).to_numpy()}
     for t in TARGETS:
         m = models._xgb(models.OBJECTIVES[t], params, n_estimators=800)
-        m.fit(tr[feats], tr[t], eval_set=[(va[feats], va[t])], verbose=False)
+        m.fit(tr[feats], tr[t], eval_set=[(va[feats], va[t])], sample_weight=models.recency_weights(tr, params), verbose=False)
         out[t] = np.abs(va[t].to_numpy() - m.predict(va[feats]))
     gfeats = models.game_feats(cfg)
     gd = G[(~G["is_upcoming"]) & (G["h_t_ngames"] >= 3) & (G["a_t_ngames"] >= 3)].dropna(subset=["margin"])
@@ -252,7 +254,7 @@ def _scores(PF, G, cfg, lr=0.06):
     out["_ghalf"] = (gva["date"] < gva["date"].quantile(0.5)).to_numpy()
     for t in ("margin", "total"):
         m = models._xgb("reg:squarederror", params, n_estimators=800)
-        m.fit(gtr[gfeats], gtr[t], eval_set=[(gva[gfeats], gva[t])], verbose=False)
+        m.fit(gtr[gfeats], gtr[t], eval_set=[(gva[gfeats], gva[t])], sample_weight=models.recency_weights(gtr, params), verbose=False)
         out[t] = np.abs(gva[t].to_numpy() - m.predict(gva[gfeats]))
     return out
 
