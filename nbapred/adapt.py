@@ -40,7 +40,7 @@ TAGS = {
     "minutes_limit": ("On a minutes limit", r"minutes? (restriction|limit)|limited minutes|on a minutes|ramp(ing)? up"),
     "returning": ("Returning", r"(set|expected|cleared|plans?|slated|poised) to (return|make (his|a|the) (season )?debut)|"
                                r"will return|season debut|back in the lineup|return(s|ing)? (to action|from)|(his|'s) return\b"),
-    "starting": ("Starting", r"will start\b(?! to)|(is|are) starting(?! to)|enter(s|ing)? the starting lineup|"
+    "starting": ("Starting", r"will start\b(?! to\b)|(is|are) starting(?! to\b)|enter(s|ing)? the starting lineup|"
                              r"(draw|get|earn)s? the start|starting in place of|join(s|ing)? the starting"),
     "bench": ("Moved to the bench", r"(moved|moving|demoted|relegated|sent) to the bench|out of the starting lineup|"
                                     r"come off the bench|bench role|lose(s)? (his )?starting"),
