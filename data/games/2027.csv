@@ -45,13 +45,13 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401901826,2026-10-13,2026-10-14T02:00Z,2027,1,True,post,False,23,SAC,Sacramento Kings,98.0,22,POR,Portland Trail Blazers,110.0
 401908621,2026-10-13,2026-10-14T00:00Z,2027,1,True,post,False,25,OKC,Oklahoma City Thunder,114.0,11,IND,Indiana Pacers,112.0
 401908944,2026-10-13,2026-10-13T23:00Z,2027,1,True,post,False,28,TOR,Toronto Raptors,148.0,18,NY,New York Knicks,98.0
-401898404,2026-10-14,2026-10-14T23:30Z,2027,1,False,in,False,14,MIA,Miami Heat,,17,BKN,Brooklyn Nets,
-401898405,2026-10-14,2026-10-14T23:30Z,2027,1,False,in,False,2,BOS,Boston Celtics,,30,CHA,Charlotte Hornets,
-401898722,2026-10-14,2026-10-15T00:00Z,2027,1,False,pre,False,24,SA,San Antonio Spurs,,21,PHX,Phoenix Suns,
-401901825,2026-10-14,2026-10-15T00:00Z,2027,1,False,pre,False,6,DAL,Dallas Mavericks,,3,NO,New Orleans Pelicans,
-401908942,2026-10-14,2026-10-15T00:00Z,2027,1,False,pre,False,15,MIL,Milwaukee Bucks,,4,CHI,Chicago Bulls,
-401914125,2026-10-14,2026-10-15T00:00Z,2027,1,False,pre,False,16,MIN,Minnesota Timberwolves,,8,DET,Detroit Pistons,
-401918011,2026-10-14,2026-10-15T02:30Z,2027,1,False,pre,False,12,LAC,LA Clippers,,7,DEN,Denver Nuggets,
+401898404,2026-10-14,2026-10-14T23:30Z,2027,1,True,post,False,14,MIA,Miami Heat,144.0,17,BKN,Brooklyn Nets,128.0
+401898405,2026-10-14,2026-10-14T23:30Z,2027,1,True,post,False,2,BOS,Boston Celtics,114.0,30,CHA,Charlotte Hornets,93.0
+401898722,2026-10-14,2026-10-15T00:00Z,2027,1,True,post,False,24,SA,San Antonio Spurs,123.0,21,PHX,Phoenix Suns,103.0
+401901825,2026-10-14,2026-10-15T00:00Z,2027,1,True,post,False,6,DAL,Dallas Mavericks,97.0,3,NO,New Orleans Pelicans,101.0
+401908942,2026-10-14,2026-10-15T00:00Z,2027,1,True,post,False,15,MIL,Milwaukee Bucks,104.0,4,CHI,Chicago Bulls,125.0
+401914125,2026-10-14,2026-10-15T00:00Z,2027,1,True,post,False,16,MIN,Minnesota Timberwolves,106.0,8,DET,Detroit Pistons,128.0
+401918011,2026-10-14,2026-10-15T02:30Z,2027,1,True,post,False,12,LAC,LA Clippers,122.0,7,DEN,Denver Nuggets,110.0
 401908622,2026-10-15,2026-10-16T00:30Z,2027,1,False,pre,False,10,HOU,Houston Rockets,,25,OKC,Oklahoma City Thunder,
 401908945,2026-10-15,2026-10-15T23:30Z,2027,1,False,pre,False,18,NY,New York Knicks,,28,TOR,Toronto Raptors,
 401898406,2026-10-16,2026-10-16T23:00Z,2027,1,False,pre,False,19,ORL,Orlando Magic,,14,MIA,Miami Heat,
@@ -80,3 +80,5 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909840,2026-10-21,2026-10-22T00:30Z,2027,2,False,pre,False,10,HOU,Houston Rockets,,6,DAL,Dallas Mavericks,
 401909841,2026-10-21,2026-10-22T02:00Z,2027,2,False,pre,False,22,POR,Portland Trail Blazers,,21,PHX,Phoenix Suns,
 401909842,2026-10-21,2026-10-22T02:30Z,2027,2,False,pre,False,12,LAC,LA Clippers,,23,SAC,Sacramento Kings,
+401909093,2026-10-22,2026-10-22T23:00Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,5,CLE,Cleveland Cavaliers,
+401909094,2026-10-22,2026-10-23T01:30Z,2027,2,False,pre,False,25,OKC,Oklahoma City Thunder,,7,DEN,Denver Nuggets,
