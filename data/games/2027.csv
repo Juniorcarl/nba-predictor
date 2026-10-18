@@ -60,7 +60,7 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401898409,2026-10-16,2026-10-17T02:00Z,2027,1,True,post,False,9,GS,Golden State Warriors,128.0,22,POR,Portland Trail Blazers,118.0
 401898719,2026-10-16,2026-10-17T02:30Z,2027,1,True,post,False,13,LAL,Los Angeles Lakers,106.0,7,DEN,Denver Nuggets,121.0
 401898843,2026-10-16,2026-10-17T00:00Z,2027,1,True,post,False,24,SA,San Antonio Spurs,126.0,23,SAC,Sacramento Kings,97.0
-401901822,2026-10-16,2026-10-17T00:00Z,2027,1,True,post,False,29,MEM,Memphis Grizzlies,117.0,30,CHA,Charlotte Hornets,98.0
+401901822,2026-10-16,2026-10-17T00:00Z,2027,1,True,post,False,29,MEM,Memphis Grizzlies,116.0,30,CHA,Charlotte Hornets,98.0
 401906509,2026-10-16,2026-10-17T00:00Z,2027,1,True,post,False,3,NO,New Orleans Pelicans,107.0,27,WSH,Washington Wizards,106.0
 401908943,2026-10-16,2026-10-17T00:00Z,2027,1,True,post,False,4,CHI,Chicago Bulls,133.0,16,MIN,Minnesota Timberwolves,116.0
 401908946,2026-10-16,2026-10-16T23:00Z,2027,1,True,post,False,8,DET,Detroit Pistons,129.0,28,TOR,Toronto Raptors,125.0
@@ -102,3 +102,10 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909858,2026-10-24,2026-10-25T00:00Z,2027,2,False,pre,False,6,DAL,Dallas Mavericks,,24,SA,San Antonio Spurs,
 401909859,2026-10-24,2026-10-25T01:00Z,2027,2,False,pre,False,7,DEN,Denver Nuggets,,3,NO,New Orleans Pelicans,
 401909860,2026-10-24,2026-10-25T02:00Z,2027,2,False,pre,False,21,PHX,Phoenix Suns,,9,GS,Golden State Warriors,
+401909861,2026-10-25,2026-10-25T21:00Z,2027,2,False,pre,False,26,UTAH,Utah Jazz,,13,LAL,Los Angeles Lakers,
+401909862,2026-10-25,2026-10-25T22:00Z,2027,2,False,pre,False,17,BKN,Brooklyn Nets,,11,IND,Indiana Pacers,
+401909863,2026-10-25,2026-10-25T23:00Z,2027,2,False,pre,False,18,NY,New York Knicks,,19,ORL,Orlando Magic,
+401909864,2026-10-25,2026-10-25T23:00Z,2027,2,False,pre,False,16,MIN,Minnesota Timberwolves,,28,TOR,Toronto Raptors,
+401909865,2026-10-25,2026-10-25T23:00Z,2027,2,False,pre,False,25,OKC,Oklahoma City Thunder,,12,LAC,LA Clippers,
+401909866,2026-10-25,2026-10-25T23:30Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,8,DET,Detroit Pistons,
+401909867,2026-10-25,2026-10-26T01:00Z,2027,2,False,pre,False,23,SAC,Sacramento Kings,,29,MEM,Memphis Grizzlies,
