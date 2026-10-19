@@ -1,17 +1,35 @@
-05:09:25 INFO box scores to fetch: 0
-05:09:25 INFO graded 0 picks, 0 bold calls
-05:09:25 INFO injury report: 92 entries
-05:09:34 INFO current rosters for 31 teams, bio for 539 players
-05:10:28 INFO pts  MAE 4.48 (baseline 4.71), trees 194
-05:10:45 INFO reb  MAE 1.85 (baseline 1.91), trees 690
-05:11:02 INFO ast  MAE 1.33 (baseline 1.38), trees 624
-05:11:20 INFO fg3m MAE 0.88 (baseline 0.89), trees 702
-05:11:31 INFO stl  MAE 0.72 (baseline 0.73), trees 378
-05:11:46 INFO blk  MAE 0.52 (baseline 0.51), trees 580
-05:11:58 INFO min  MAE 4.71 (baseline 5.48), trees 478
-05:12:31 INFO game margin MAE 11.80 sd 15.06
-05:12:31 INFO game total  MAE 14.94 sd 18.99
-05:12:32 INFO news: 50 new articles, 95 stored
-05:12:32 INFO learning: 0 player corrections, 0 news tags measured, 0 team corrections, 16 players in the news
-05:12:35 INFO bold: 13 calls, 2 upsets, 18 multis
-05:12:35 INFO slate 2026-10-20: 3 games, 73 player projections, 0 flagged picks
+20:20:33 INFO box scores to fetch: 0
+20:20:33 INFO graded 0 picks, 0 bold calls
+20:20:33 INFO injury report: 95 entries
+20:20:41 INFO current rosters for 31 teams, bio for 537 players
+20:22:09 INFO pts  MAE 4.48 (baseline 4.71), trees 194
+20:22:33 INFO reb  MAE 1.85 (baseline 1.91), trees 690
+20:22:56 INFO ast  MAE 1.33 (baseline 1.38), trees 624
+20:23:20 INFO fg3m MAE 0.88 (baseline 0.89), trees 702
+20:23:34 INFO stl  MAE 0.72 (baseline 0.73), trees 378
+20:23:53 INFO blk  MAE 0.52 (baseline 0.51), trees 580
+20:24:09 INFO min  MAE 4.71 (baseline 5.48), trees 478
+20:24:55 INFO game margin MAE 11.80 sd 15.06
+20:24:55 INFO game total  MAE 14.94 sd 18.99
+20:24:55 INFO experiments: champion has groups none
+20:26:34 INFO   add_group    position_defense     overall +0.04% halves ['+0.02%', '+0.06%'] | targeted - -> no
+20:27:28 INFO   add_group    size                 overall -0.08% halves ['-0.06%', '-0.10%'] | targeted -0.3% over 11553 -> no
+20:28:17 INFO   add_group    opposing_defenders   overall -0.03% halves ['-0.12%', '+0.05%'] | targeted +0.6% over 980 -> no
+20:29:06 INFO   add_group    blowout_risk         overall -0.02% halves ['-0.04%', '+0.00%'] | targeted -0.1% over 4919 -> no
+20:29:59 INFO   add_group    fatigue_travel       overall +0.12% halves ['+0.05%', '+0.20%'] | targeted +0.3% over 5405 -> PROPOSE
+20:30:45 INFO   add_group    injury_return        overall +0.05% halves ['+0.02%', '+0.08%'] | targeted +1.9% over 1671 -> no
+20:31:36 INFO   add_group    revenge_game         overall +0.03% halves ['+0.05%', '+0.01%'] | targeted -0.1% over 307 -> no
+20:32:31 INFO   add_group    vs_opponent_history  overall -0.02% halves ['-0.01%', '-0.04%'] | targeted -0.1% over 11058 -> no
+20:33:23 INFO   add_group    motivation           overall +0.08% halves ['-0.06%', '+0.22%'] | targeted +1.0% over 6700 -> no
+20:34:16 INFO   add_group    shooting_luck        overall -0.00% halves ['-0.02%', '+0.01%'] | targeted -0.1% over 2497 -> no
+20:35:02 INFO   add_group    age_experience       overall -0.13% halves ['-0.12%', '-0.15%'] | targeted -0.3% over 1447 -> no
+20:35:49 INFO   set_param    max_depth            overall -0.29% halves ['-0.36%', '-0.23%'] | targeted - -> no
+20:36:41 INFO   set_param    min_child_weight     overall -0.07% halves ['-0.11%', '-0.03%'] | targeted - -> no
+20:37:26 INFO   set_param    min_child_weight     overall -0.14% halves ['-0.15%', '-0.13%'] | targeted - -> no
+20:38:12 INFO   set_param    recency_halflife     overall +0.02% halves ['-0.01%', '+0.05%'] | targeted - -> no
+20:38:52 INFO   set_param    recency_halflife     overall -0.18% halves ['-0.10%', '-0.26%'] | targeted - -> no
+20:38:53 INFO news: 50 new articles, 104 stored
+20:38:53 INFO learning: 0 player corrections, 0 news tags measured, 0 team corrections, 14 players in the news
+20:38:53 INFO No ODDS_API_KEY set - skipping sportsbook lines
+20:38:57 INFO bold: 12 calls, 2 upsets, 18 multis
+20:38:57 INFO slate 2026-10-20: 3 games, 72 player projections, 0 flagged picks
