@@ -172,17 +172,160 @@
   }
  ],
  "changes": [],
- "postmortems": [],
+ "postmortems": [
+  {
+   "date": "2026-10-20",
+   "n": 60,
+   "dnp": 10,
+   "mae": {
+    "min": 3.32,
+    "pts": 4.64,
+    "reb": 1.8,
+    "ast": 1.32
+   },
+   "share_minutes": 0.268,
+   "reasons": {
+    "Normal variation": 6,
+    "Cold shooting": 5,
+    "Bigger role": 2,
+    "Did not play": 2,
+    "Fewer minutes": 1,
+    "Hot shooting": 1
+   },
+   "biggest": [
+    {
+     "player": "Paul George",
+     "played": true,
+     "p_pts": 13.8,
+     "a_pts": 38.0,
+     "p_min": 34.8,
+     "a_min": 31.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Javonte Green",
+     "played": true,
+     "p_pts": 2.8,
+     "a_pts": 19.0,
+     "p_min": 13.6,
+     "a_min": 18.0,
+     "reason": "Bigger role",
+     "detail": "18 min vs 14 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Jared McCain",
+     "played": true,
+     "p_pts": 7.7,
+     "a_pts": 20.0,
+     "p_min": 17.8,
+     "a_min": 22.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 7/9: well above normal"
+    },
+    {
+     "player": "Duncan Robinson",
+     "played": true,
+     "p_pts": 9.2,
+     "a_pts": 21.0,
+     "p_min": 24.7,
+     "a_min": 28.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Victor Wembanyama",
+     "played": true,
+     "p_pts": 23.7,
+     "a_pts": 12.0,
+     "p_min": 35.9,
+     "a_min": 34.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 1/13: well below normal"
+    },
+    {
+     "player": "Joel Embiid",
+     "played": true,
+     "p_pts": 22.6,
+     "a_pts": 13.0,
+     "p_min": 30.8,
+     "a_min": 33.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 4/15: well below normal"
+    },
+    {
+     "player": "Jayson Tatum",
+     "played": true,
+     "p_pts": 22.3,
+     "a_pts": 13.0,
+     "p_min": 36.8,
+     "a_min": 38.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 6/23: well below normal"
+    },
+    {
+     "player": "Andre Drummond",
+     "played": true,
+     "p_pts": 3.0,
+     "a_pts": 12.0,
+     "p_min": 10.5,
+     "a_min": 24.0,
+     "reason": "Bigger role",
+     "detail": "24 min vs 11 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Jalen Duren",
+     "played": true,
+     "p_pts": 13.1,
+     "a_pts": 22.0,
+     "p_min": 29.2,
+     "a_min": 28.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Rayan Rupert",
+     "played": false,
+     "p_pts": 8.8,
+     "a_pts": 0.0,
+     "p_min": 25.5,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "OG Anunoby",
+     "played": true,
+     "p_pts": 18.1,
+     "a_pts": 10.0,
+     "p_min": 32.8,
+     "a_min": 32.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 3/12: well below normal"
+    },
+    {
+     "player": "Stephon Castle",
+     "played": true,
+     "p_pts": 15.9,
+     "a_pts": 24.0,
+     "p_min": 32.7,
+     "a_min": 28.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    }
+   ]
+  }
+ ],
  "patterns": {
-  "updated": "2026-10-21T00:07+00:00",
+  "updated": "2026-10-21T05:15+00:00",
   "items": [
    {
     "segment": "2+ teammates out",
     "stat": "min",
     "bias": -0.64,
-    "n": 10527,
+    "n": 10536,
     "t": -10.4,
-    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (10,527 cases).",
+    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (10,536 cases).",
     "group": null,
     "fix": null,
     "source": "test games"
@@ -191,9 +334,9 @@
     "segment": "First 3 games back from injury",
     "stat": "min",
     "bias": -1.27,
-    "n": 1664,
+    "n": 1669,
     "t": -8.6,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 1.3 on average (1,664 cases).",
+    "text": "First 3 games back from injury: the model over-predicts minutes by 1.3 on average (1,669 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -202,9 +345,9 @@
     "segment": "First 3 games back from injury",
     "stat": "pts",
     "bias": -0.83,
-    "n": 1664,
+    "n": 1669,
     "t": -7.2,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.8 on average (1,664 cases).",
+    "text": "First 3 games back from injury: the model over-predicts points by 0.8 on average (1,669 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -224,9 +367,9 @@
     "segment": "First 3 games back from injury",
     "stat": "reb",
     "bias": -0.27,
-    "n": 1664,
+    "n": 1669,
     "t": -5.4,
-    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,664 cases).",
+    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,669 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -236,7 +379,7 @@
     "stat": "ast",
     "bias": -0.18,
     "n": 1897,
-    "t": -5.0,
+    "t": -5.1,
     "text": "Playoffs: the model over-predicts assists by 0.2 on average (1,897 cases).",
     "group": "motivation",
     "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
@@ -245,10 +388,10 @@
    {
     "segment": "Opponent has an elite shot-blocker",
     "stat": "pts",
-    "bias": -0.76,
-    "n": 960,
+    "bias": -0.75,
+    "n": 971,
     "t": -3.8,
-    "text": "Opponent has an elite shot-blocker: the model over-predicts points by 0.8 on average (960 cases).",
+    "text": "Opponent has an elite shot-blocker: the model over-predicts points by 0.7 on average (971 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -256,10 +399,10 @@
    {
     "segment": "Opponent has an elite shot-blocker",
     "stat": "min",
-    "bias": -0.66,
-    "n": 960,
-    "t": -3.1,
-    "text": "Opponent has an elite shot-blocker: the model over-predicts minutes by 0.7 on average (960 cases).",
+    "bias": -0.68,
+    "n": 971,
+    "t": -3.2,
+    "text": "Opponent has an elite shot-blocker: the model over-predicts minutes by 0.7 on average (971 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -2569,6 +2712,11 @@
    "at": "2026-10-19T20:38+00:00",
    "kind": "experiment",
    "text": "Tested 16 possible changes against the current model. 1 improved accuracy on games the model hadn't seen."
+  },
+  {
+   "at": "2026-10-21T05:11+00:00",
+   "kind": "postmortem",
+   "text": "Reviewed 60 player projections from 2026-10-20: average miss 4.64 pts, 1.8 reb, 1.32 ast."
   }
  ]
 }
