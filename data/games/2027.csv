@@ -66,8 +66,8 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401908946,2026-10-16,2026-10-16T23:00Z,2027,1,True,post,False,8,DET,Detroit Pistons,129.0,28,TOR,Toronto Raptors,125.0
 401908948,2026-10-16,2026-10-17T02:00Z,2027,1,True,post,False,21,PHX,Phoenix Suns,116.0,26,UTAH,Utah Jazz,119.0
 401914126,2026-10-16,2026-10-16T23:00Z,2027,1,True,post,False,11,IND,Indiana Pacers,127.0,15,MIL,Milwaukee Bucks,128.0
-401909088,2026-10-20,2026-10-20T19:00Z,2027,2,False,pre,False,8,DET,Detroit Pistons,,2,BOS,Boston Celtics,
-401909089,2026-10-20,2026-10-20T23:00Z,2027,2,False,pre,False,18,NY,New York Knicks,,20,PHI,Philadelphia 76ers,
+401909088,2026-10-20,2026-10-20T19:00Z,2027,2,True,post,False,8,DET,Detroit Pistons,121.0,2,BOS,Boston Celtics,113.0
+401909089,2026-10-20,2026-10-20T23:00Z,2027,2,False,in,False,18,NY,New York Knicks,,20,PHI,Philadelphia 76ers,
 401909090,2026-10-20,2026-10-21T01:30Z,2027,2,False,pre,False,24,SA,San Antonio Spurs,,25,OKC,Oklahoma City Thunder,
 401909091,2026-10-21,2026-10-21T23:30Z,2027,2,False,pre,False,14,MIA,Miami Heat,,16,MIN,Minnesota Timberwolves,
 401909092,2026-10-21,2026-10-22T02:00Z,2027,2,False,pre,False,13,LAL,Los Angeles Lakers,,9,GS,Golden State Warriors,
