@@ -69,12 +69,12 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909088,2026-10-20,2026-10-20T19:00Z,2027,2,True,post,False,8,DET,Detroit Pistons,121.0,2,BOS,Boston Celtics,113.0
 401909089,2026-10-20,2026-10-20T23:00Z,2027,2,True,post,False,18,NY,New York Knicks,100.0,20,PHI,Philadelphia 76ers,106.0
 401909090,2026-10-20,2026-10-21T01:50Z,2027,2,True,post,False,24,SA,San Antonio Spurs,104.0,25,OKC,Oklahoma City Thunder,116.0
-401909091,2026-10-21,2026-10-21T23:30Z,2027,2,False,pre,False,14,MIA,Miami Heat,,16,MIN,Minnesota Timberwolves,
+401909091,2026-10-21,2026-10-21T23:30Z,2027,2,False,in,False,14,MIA,Miami Heat,,16,MIN,Minnesota Timberwolves,
 401909092,2026-10-21,2026-10-22T02:00Z,2027,2,False,pre,False,13,LAL,Los Angeles Lakers,,9,GS,Golden State Warriors,
-401909834,2026-10-21,2026-10-21T23:00Z,2027,2,False,pre,False,19,ORL,Orlando Magic,,1,ATL,Atlanta Hawks,
-401909835,2026-10-21,2026-10-21T23:00Z,2027,2,False,pre,False,27,WSH,Washington Wizards,,15,MIL,Milwaukee Bucks,
-401909836,2026-10-21,2026-10-21T23:30Z,2027,2,False,pre,False,17,BKN,Brooklyn Nets,,30,CHA,Charlotte Hornets,
-401909837,2026-10-21,2026-10-21T23:30Z,2027,2,False,pre,False,28,TOR,Toronto Raptors,,4,CHI,Chicago Bulls,
+401909834,2026-10-21,2026-10-21T23:00Z,2027,2,False,in,False,19,ORL,Orlando Magic,,1,ATL,Atlanta Hawks,
+401909835,2026-10-21,2026-10-21T23:00Z,2027,2,False,in,False,27,WSH,Washington Wizards,,15,MIL,Milwaukee Bucks,
+401909836,2026-10-21,2026-10-21T23:30Z,2027,2,False,in,False,17,BKN,Brooklyn Nets,,30,CHA,Charlotte Hornets,
+401909837,2026-10-21,2026-10-21T23:30Z,2027,2,False,in,False,28,TOR,Toronto Raptors,,4,CHI,Chicago Bulls,
 401909838,2026-10-21,2026-10-22T00:00Z,2027,2,False,pre,False,29,MEM,Memphis Grizzlies,,26,UTAH,Utah Jazz,
 401909839,2026-10-21,2026-10-22T00:00Z,2027,2,False,pre,False,3,NO,New Orleans Pelicans,,11,IND,Indiana Pacers,
 401909840,2026-10-21,2026-10-22T00:30Z,2027,2,False,pre,False,10,HOU,Houston Rockets,,6,DAL,Dallas Mavericks,
