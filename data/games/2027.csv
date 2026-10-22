@@ -69,17 +69,17 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909088,2026-10-20,2026-10-20T19:00Z,2027,2,True,post,False,8,DET,Detroit Pistons,121.0,2,BOS,Boston Celtics,113.0
 401909089,2026-10-20,2026-10-20T23:00Z,2027,2,True,post,False,18,NY,New York Knicks,100.0,20,PHI,Philadelphia 76ers,106.0
 401909090,2026-10-20,2026-10-21T01:50Z,2027,2,True,post,False,24,SA,San Antonio Spurs,104.0,25,OKC,Oklahoma City Thunder,116.0
-401909091,2026-10-21,2026-10-21T23:30Z,2027,2,False,in,False,14,MIA,Miami Heat,,16,MIN,Minnesota Timberwolves,
-401909092,2026-10-21,2026-10-22T02:00Z,2027,2,False,pre,False,13,LAL,Los Angeles Lakers,,9,GS,Golden State Warriors,
-401909834,2026-10-21,2026-10-21T23:00Z,2027,2,False,in,False,19,ORL,Orlando Magic,,1,ATL,Atlanta Hawks,
-401909835,2026-10-21,2026-10-21T23:00Z,2027,2,False,in,False,27,WSH,Washington Wizards,,15,MIL,Milwaukee Bucks,
-401909836,2026-10-21,2026-10-21T23:30Z,2027,2,False,in,False,17,BKN,Brooklyn Nets,,30,CHA,Charlotte Hornets,
-401909837,2026-10-21,2026-10-21T23:30Z,2027,2,False,in,False,28,TOR,Toronto Raptors,,4,CHI,Chicago Bulls,
-401909838,2026-10-21,2026-10-22T00:00Z,2027,2,False,pre,False,29,MEM,Memphis Grizzlies,,26,UTAH,Utah Jazz,
-401909839,2026-10-21,2026-10-22T00:00Z,2027,2,False,pre,False,3,NO,New Orleans Pelicans,,11,IND,Indiana Pacers,
-401909840,2026-10-21,2026-10-22T00:30Z,2027,2,False,pre,False,10,HOU,Houston Rockets,,6,DAL,Dallas Mavericks,
-401909841,2026-10-21,2026-10-22T02:00Z,2027,2,False,pre,False,22,POR,Portland Trail Blazers,,21,PHX,Phoenix Suns,
-401909842,2026-10-21,2026-10-22T02:30Z,2027,2,False,pre,False,12,LAC,LA Clippers,,23,SAC,Sacramento Kings,
+401909091,2026-10-21,2026-10-21T23:30Z,2027,2,True,post,False,14,MIA,Miami Heat,106.0,16,MIN,Minnesota Timberwolves,131.0
+401909092,2026-10-21,2026-10-22T02:00Z,2027,2,True,post,False,13,LAL,Los Angeles Lakers,127.0,9,GS,Golden State Warriors,105.0
+401909834,2026-10-21,2026-10-21T23:00Z,2027,2,True,post,False,19,ORL,Orlando Magic,125.0,1,ATL,Atlanta Hawks,132.0
+401909835,2026-10-21,2026-10-21T23:00Z,2027,2,True,post,False,27,WSH,Washington Wizards,128.0,15,MIL,Milwaukee Bucks,116.0
+401909836,2026-10-21,2026-10-21T23:30Z,2027,2,True,post,False,17,BKN,Brooklyn Nets,103.0,30,CHA,Charlotte Hornets,110.0
+401909837,2026-10-21,2026-10-21T23:30Z,2027,2,True,post,False,28,TOR,Toronto Raptors,135.0,4,CHI,Chicago Bulls,92.0
+401909838,2026-10-21,2026-10-22T00:00Z,2027,2,True,post,False,29,MEM,Memphis Grizzlies,123.0,26,UTAH,Utah Jazz,103.0
+401909839,2026-10-21,2026-10-22T00:00Z,2027,2,True,post,False,3,NO,New Orleans Pelicans,120.0,11,IND,Indiana Pacers,123.0
+401909840,2026-10-21,2026-10-22T00:30Z,2027,2,True,post,False,10,HOU,Houston Rockets,128.0,6,DAL,Dallas Mavericks,110.0
+401909841,2026-10-21,2026-10-22T02:00Z,2027,2,True,post,False,22,POR,Portland Trail Blazers,124.0,21,PHX,Phoenix Suns,83.0
+401909842,2026-10-21,2026-10-22T02:30Z,2027,2,True,post,False,12,LAC,LA Clippers,121.0,23,SAC,Sacramento Kings,96.0
 401909093,2026-10-22,2026-10-22T23:00Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,5,CLE,Cleveland Cavaliers,
 401909094,2026-10-22,2026-10-23T01:30Z,2027,2,False,pre,False,25,OKC,Oklahoma City Thunder,,7,DEN,Denver Nuggets,
 401909095,2026-10-23,2026-10-23T23:00Z,2027,2,False,pre,False,2,BOS,Boston Celtics,,18,NY,New York Knicks,
@@ -134,3 +134,6 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909890,2026-10-28,2026-10-29T01:00Z,2027,2,False,pre,False,26,UTAH,Utah Jazz,,24,SA,San Antonio Spurs,
 401909891,2026-10-28,2026-10-29T01:30Z,2027,2,False,pre,False,6,DAL,Dallas Mavericks,,25,OKC,Oklahoma City Thunder,
 401909892,2026-10-28,2026-10-29T02:30Z,2027,2,False,pre,False,12,LAC,LA Clippers,,13,LAL,Los Angeles Lakers,
+401909893,2026-10-29,2026-10-29T23:00Z,2027,2,False,pre,False,1,ATL,Atlanta Hawks,,5,CLE,Cleveland Cavaliers,
+401909894,2026-10-29,2026-10-30T00:00Z,2027,2,False,pre,False,3,NO,New Orleans Pelicans,,23,SAC,Sacramento Kings,
+401909895,2026-10-29,2026-10-30T02:00Z,2027,2,False,pre,False,22,POR,Portland Trail Blazers,,29,MEM,Memphis Grizzlies,
