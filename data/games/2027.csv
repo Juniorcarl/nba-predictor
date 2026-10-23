@@ -80,7 +80,7 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909840,2026-10-21,2026-10-22T00:30Z,2027,2,True,post,False,10,HOU,Houston Rockets,128.0,6,DAL,Dallas Mavericks,110.0
 401909841,2026-10-21,2026-10-22T02:00Z,2027,2,True,post,False,22,POR,Portland Trail Blazers,124.0,21,PHX,Phoenix Suns,83.0
 401909842,2026-10-21,2026-10-22T02:30Z,2027,2,True,post,False,12,LAC,LA Clippers,121.0,23,SAC,Sacramento Kings,96.0
-401909093,2026-10-22,2026-10-22T23:00Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,5,CLE,Cleveland Cavaliers,
+401909093,2026-10-22,2026-10-22T23:00Z,2027,2,False,in,False,20,PHI,Philadelphia 76ers,,5,CLE,Cleveland Cavaliers,
 401909094,2026-10-22,2026-10-23T01:30Z,2027,2,False,pre,False,25,OKC,Oklahoma City Thunder,,7,DEN,Denver Nuggets,
 401909095,2026-10-23,2026-10-23T23:00Z,2027,2,False,pre,False,2,BOS,Boston Celtics,,18,NY,New York Knicks,
 401909096,2026-10-23,2026-10-24T01:30Z,2027,2,False,pre,False,24,SA,San Antonio Spurs,,10,HOU,Houston Rockets,
