@@ -457,18 +457,161 @@
      "detail": "Minutes and shooting close to expected"
     }
    ]
+  },
+  {
+   "date": "2026-10-22",
+   "n": 38,
+   "dnp": 9,
+   "mae": {
+    "min": 3.97,
+    "pts": 4.15,
+    "reb": 2.03,
+    "ast": 1.39
+   },
+   "share_minutes": 0.443,
+   "reasons": {
+    "Normal variation": 4,
+    "Cold shooting": 3,
+    "Did not play": 2,
+    "Hot shooting": 1,
+    "Left early or benched": 1,
+    "Fewer minutes": 1,
+    "Bigger role": 1
+   },
+   "biggest": [
+    {
+     "player": "Jamal Murray",
+     "played": true,
+     "p_pts": 21.6,
+     "a_pts": 6.0,
+     "p_min": 34.9,
+     "a_min": 37.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 2/11: well below normal"
+    },
+    {
+     "player": "Shai Gilgeous-Alexander",
+     "played": true,
+     "p_pts": 29.1,
+     "a_pts": 17.0,
+     "p_min": 34.4,
+     "a_min": 35.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 6/19: well below normal"
+    },
+    {
+     "player": "Donovan Mitchell",
+     "played": true,
+     "p_pts": 22.0,
+     "a_pts": 32.0,
+     "p_min": 31.9,
+     "a_min": 35.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Nikola Jokic",
+     "played": true,
+     "p_pts": 22.7,
+     "a_pts": 13.0,
+     "p_min": 34.8,
+     "a_min": 35.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 5/19: well below normal"
+    },
+    {
+     "player": "Anfernee Simons",
+     "played": true,
+     "p_pts": 11.2,
+     "a_pts": 2.0,
+     "p_min": 20.4,
+     "a_min": 17.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Rayan Rupert",
+     "played": false,
+     "p_pts": 8.5,
+     "a_pts": 0.0,
+     "p_min": 18.9,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Aaron Gordon",
+     "played": true,
+     "p_pts": 11.6,
+     "a_pts": 20.0,
+     "p_min": 25.9,
+     "a_min": 29.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 6/9: well above normal"
+    },
+    {
+     "player": "Tyrese Maxey",
+     "played": true,
+     "p_pts": 23.8,
+     "a_pts": 32.0,
+     "p_min": 35.8,
+     "a_min": 42.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Cam Whitmore",
+     "played": false,
+     "p_pts": 6.5,
+     "a_pts": 0.0,
+     "p_min": 16.8,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Spencer Jones",
+     "played": false,
+     "p_pts": 4.4,
+     "a_pts": 0.0,
+     "p_min": 20.5,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Tristan Enaruna",
+     "played": false,
+     "p_pts": 4.0,
+     "a_pts": 0.0,
+     "p_min": 9.8,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Caleb Love",
+     "played": false,
+     "p_pts": 3.7,
+     "a_pts": 0.0,
+     "p_min": 4.6,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    }
+   ]
   }
  ],
  "patterns": {
-  "updated": "2026-10-23T00:10+00:00",
+  "updated": "2026-10-23T05:18+00:00",
   "items": [
    {
     "segment": "2+ teammates out",
     "stat": "min",
-    "bias": -0.64,
-    "n": 10632,
-    "t": -10.5,
-    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (10,632 cases).",
+    "bias": -0.65,
+    "n": 10553,
+    "t": -10.6,
+    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (10,553 cases).",
     "group": null,
     "fix": null,
     "source": "test games"
@@ -476,10 +619,10 @@
    {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": -1.18,
-    "n": 1724,
-    "t": -8.1,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 1.2 on average (1,724 cases).",
+    "bias": -1.2,
+    "n": 1716,
+    "t": -8.2,
+    "text": "First 3 games back from injury: the model over-predicts minutes by 1.2 on average (1,716 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -487,10 +630,10 @@
    {
     "segment": "First 3 games back from injury",
     "stat": "pts",
-    "bias": -0.82,
-    "n": 1724,
-    "t": -7.1,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.8 on average (1,724 cases).",
+    "bias": -0.85,
+    "n": 1716,
+    "t": -7.3,
+    "text": "First 3 games back from injury: the model over-predicts points by 0.8 on average (1,716 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -498,10 +641,10 @@
    {
     "segment": "Playoffs",
     "stat": "pts",
-    "bias": -0.81,
+    "bias": -0.74,
     "n": 1897,
-    "t": -6.4,
-    "text": "Playoffs: the model over-predicts points by 0.8 on average (1,897 cases).",
+    "t": -5.8,
+    "text": "Playoffs: the model over-predicts points by 0.7 on average (1,897 cases).",
     "group": "motivation",
     "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -509,10 +652,10 @@
    {
     "segment": "First 3 games back from injury",
     "stat": "reb",
-    "bias": -0.25,
-    "n": 1724,
-    "t": -5.1,
-    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,724 cases).",
+    "bias": -0.26,
+    "n": 1716,
+    "t": -5.2,
+    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,716 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -531,9 +674,9 @@
    {
     "segment": "Opponent has an elite shot-blocker",
     "stat": "pts",
-    "bias": -0.81,
+    "bias": -0.78,
     "n": 941,
-    "t": -4.1,
+    "t": -3.9,
     "text": "Opponent has an elite shot-blocker: the model over-predicts points by 0.8 on average (941 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
@@ -542,23 +685,23 @@
    {
     "segment": "Opponent has an elite shot-blocker",
     "stat": "min",
-    "bias": -0.7,
+    "bias": -0.73,
     "n": 941,
-    "t": -3.2,
+    "t": -3.4,
     "text": "Opponent has an elite shot-blocker: the model over-predicts minutes by 0.7 on average (941 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
-    "segment": "Opponent has an elite shot-blocker",
-    "stat": "reb",
-    "bias": -0.24,
-    "n": 941,
-    "t": -3.0,
-    "text": "Opponent has an elite shot-blocker: the model over-predicts rebounds by 0.2 on average (941 cases).",
-    "group": "opposing_defenders",
-    "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
+    "segment": "Late season, team out of contention",
+    "stat": "pts",
+    "bias": 0.54,
+    "n": 1313,
+    "t": 3.0,
+    "text": "Late season, team out of contention: the model under-predicts points by 0.5 on average (1,313 cases).",
+    "group": "motivation",
+    "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    }
   ]
@@ -2876,6 +3019,11 @@
    "at": "2026-10-22T05:15+00:00",
    "kind": "postmortem",
    "text": "Reviewed 212 player projections from 2026-10-21: average miss 4.99 pts, 1.79 reb, 1.42 ast."
+  },
+  {
+   "at": "2026-10-23T05:14+00:00",
+   "kind": "postmortem",
+   "text": "Reviewed 38 player projections from 2026-10-22: average miss 4.15 pts, 2.03 reb, 1.39 ast."
   }
  ]
 }
