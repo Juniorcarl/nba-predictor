@@ -603,15 +603,15 @@
   }
  ],
  "patterns": {
-  "updated": "2026-10-23T18:56+00:00",
+  "updated": "2026-10-24T00:02+00:00",
   "items": [
    {
     "segment": "2+ teammates out",
     "stat": "min",
-    "bias": -0.65,
-    "n": 10553,
-    "t": -10.6,
-    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (10,553 cases).",
+    "bias": -0.64,
+    "n": 10571,
+    "t": -10.5,
+    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (10,571 cases).",
     "group": null,
     "fix": null,
     "source": "test games"
@@ -619,10 +619,10 @@
    {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": -1.2,
-    "n": 1716,
+    "bias": -1.19,
+    "n": 1721,
     "t": -8.2,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 1.2 on average (1,716 cases).",
+    "text": "First 3 games back from injury: the model over-predicts minutes by 1.2 on average (1,721 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -631,9 +631,9 @@
     "segment": "First 3 games back from injury",
     "stat": "pts",
     "bias": -0.85,
-    "n": 1716,
-    "t": -7.3,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.8 on average (1,716 cases).",
+    "n": 1721,
+    "t": -7.4,
+    "text": "First 3 games back from injury: the model over-predicts points by 0.9 on average (1,721 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -653,9 +653,9 @@
     "segment": "First 3 games back from injury",
     "stat": "reb",
     "bias": -0.26,
-    "n": 1716,
-    "t": -5.2,
-    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,716 cases).",
+    "n": 1721,
+    "t": -5.1,
+    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,721 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -691,6 +691,17 @@
     "text": "Opponent has an elite shot-blocker: the model over-predicts minutes by 0.7 on average (941 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Cold shooters (last 3 games)",
+    "stat": "reb",
+    "bias": -0.21,
+    "n": 1176,
+    "t": -3.0,
+    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,176 cases).",
+    "group": "shooting_luck",
+    "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
