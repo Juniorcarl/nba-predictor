@@ -1,19 +1,36 @@
-01:37:30 INFO box scores to fetch: 4
-01:37:31 INFO graded 0 picks, 148 bold calls
-01:37:32 INFO injury report: 83 entries
-01:37:40 INFO current rosters for 31 teams, bio for 531 players
-/home/runner/work/nba-predictor/nba-predictor/nbapred/features.py:270: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
-  df["miss_fga_share"] = df["miss_fga"] * df["fga_pm"]
-01:38:50 INFO pts  MAE 4.51 (baseline 4.74), trees 167
-01:39:22 INFO reb  MAE 1.86 (baseline 1.92), trees 882
-01:39:47 INFO ast  MAE 1.33 (baseline 1.38), trees 659
-01:40:05 INFO fg3m MAE 0.88 (baseline 0.89), trees 494
-01:40:21 INFO stl  MAE 0.72 (baseline 0.73), trees 403
-01:40:40 INFO blk  MAE 0.52 (baseline 0.51), trees 477
-01:41:03 INFO min  MAE 4.72 (baseline 5.51), trees 686
-01:41:45 INFO game margin MAE 11.80 sd 15.06
-01:41:46 INFO game total  MAE 14.94 sd 18.99
-01:41:46 INFO news: 50 new articles, 353 stored
-01:41:46 INFO learning: 162 player corrections, 6 news tags measured, 30 team corrections, 10 players in the news
-01:41:48 INFO bold: 0 calls, 0 upsets, 0 multis
-01:41:48 INFO slate 2026-10-25: 0 games, 0 player projections, 0 flagged picks
+20:17:39 INFO box scores to fetch: 3
+20:17:41 INFO graded 0 picks, 111 bold calls
+20:17:41 INFO post-mortem written for 2026-10-25
+20:17:41 INFO injury report: 89 entries
+20:17:51 INFO current rosters for 31 teams, bio for 531 players
+20:19:11 INFO pts  MAE 4.51 (baseline 4.74), trees 167
+20:19:40 INFO reb  MAE 1.86 (baseline 1.92), trees 889
+20:20:02 INFO ast  MAE 1.33 (baseline 1.38), trees 659
+20:20:19 INFO fg3m MAE 0.88 (baseline 0.89), trees 494
+20:20:34 INFO stl  MAE 0.72 (baseline 0.73), trees 403
+20:20:49 INFO blk  MAE 0.52 (baseline 0.51), trees 422
+20:21:10 INFO min  MAE 4.72 (baseline 5.52), trees 686
+20:21:56 INFO game margin MAE 11.80 sd 15.06
+20:21:56 INFO game total  MAE 14.94 sd 18.99
+20:21:56 INFO experiments: champion has groups none
+20:23:42 INFO   add_group    position_defense     overall +0.02% halves ['+0.06%', '-0.03%'] | targeted - -> no
+20:24:33 INFO   add_group    size                 overall -0.09% halves ['-0.03%', '-0.15%'] | targeted -0.3% over 11671 -> no
+20:25:23 INFO   add_group    opposing_defenders   overall -0.08% halves ['-0.10%', '-0.06%'] | targeted +0.3% over 984 -> no
+20:26:13 INFO   add_group    blowout_risk         overall -0.01% halves ['+0.01%', '-0.03%'] | targeted +0.0% over 4924 -> no
+20:27:05 INFO   add_group    fatigue_travel       overall +0.17% halves ['+0.12%', '+0.21%'] | targeted +0.3% over 5225 -> PROPOSE
+20:27:55 INFO   add_group    injury_return        overall +0.06% halves ['+0.10%', '+0.02%'] | targeted +1.6% over 1822 -> no
+20:28:44 INFO   add_group    revenge_game         overall -0.07% halves ['-0.03%', '-0.10%'] | targeted -1.2% over 325 -> no
+20:29:37 INFO   add_group    vs_opponent_history  overall -0.03% halves ['+0.01%', '-0.06%'] | targeted -0.2% over 11292 -> no
+20:30:27 INFO   add_group    motivation           overall +0.08% halves ['-0.05%', '+0.21%'] | targeted +0.8% over 6700 -> no
+20:31:23 INFO   add_group    shooting_luck        overall +0.00% halves ['-0.01%', '+0.02%'] | targeted -0.2% over 2666 -> no
+20:32:14 INFO   add_group    age_experience       overall -0.12% halves ['-0.05%', '-0.19%'] | targeted +0.1% over 1487 -> no
+20:33:00 INFO   set_param    max_depth            overall -0.30% halves ['-0.36%', '-0.24%'] | targeted - -> no
+20:33:52 INFO   set_param    min_child_weight     overall -0.07% halves ['-0.12%', '-0.01%'] | targeted - -> no
+20:34:41 INFO   set_param    min_child_weight     overall -0.12% halves ['-0.09%', '-0.15%'] | targeted - -> no
+20:35:21 INFO   set_param    recency_halflife     overall -0.09% halves ['-0.12%', '-0.06%'] | targeted - -> no
+20:35:59 INFO   set_param    recency_halflife     overall -0.30% halves ['-0.19%', '-0.41%'] | targeted - -> no
+20:36:00 INFO news: 50 new articles, 386 stored
+20:36:01 INFO learning: 200 player corrections, 6 news tags measured, 30 team corrections, 17 players in the news
+20:36:01 INFO No ODDS_API_KEY set - skipping sportsbook lines
+20:36:07 INFO bold: 200 calls, 6 upsets, 40 multis
+20:36:07 INFO slate 2026-10-26: 9 games, 239 player projections, 0 flagged picks
