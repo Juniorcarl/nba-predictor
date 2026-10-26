@@ -102,13 +102,13 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909858,2026-10-24,2026-10-25T00:00Z,2027,2,True,post,False,6,DAL,Dallas Mavericks,106.0,24,SA,San Antonio Spurs,122.0
 401909859,2026-10-24,2026-10-25T01:00Z,2027,2,True,post,False,7,DEN,Denver Nuggets,141.0,3,NO,New Orleans Pelicans,135.0
 401909860,2026-10-24,2026-10-25T02:00Z,2027,2,True,post,False,21,PHX,Phoenix Suns,131.0,9,GS,Golden State Warriors,122.0
-401909861,2026-10-25,2026-10-25T21:00Z,2027,2,False,in,False,26,UTAH,Utah Jazz,,13,LAL,Los Angeles Lakers,
-401909862,2026-10-25,2026-10-25T22:00Z,2027,2,False,in,False,17,BKN,Brooklyn Nets,,11,IND,Indiana Pacers,
+401909861,2026-10-25,2026-10-25T21:00Z,2027,2,True,post,False,26,UTAH,Utah Jazz,123.0,13,LAL,Los Angeles Lakers,132.0
+401909862,2026-10-25,2026-10-25T22:00Z,2027,2,True,post,False,17,BKN,Brooklyn Nets,109.0,11,IND,Indiana Pacers,136.0
 401909863,2026-10-25,2026-10-25T23:00Z,2027,2,False,in,False,18,NY,New York Knicks,,19,ORL,Orlando Magic,
-401909864,2026-10-25,2026-10-25T23:00Z,2027,2,False,in,False,16,MIN,Minnesota Timberwolves,,28,TOR,Toronto Raptors,
-401909865,2026-10-25,2026-10-25T23:00Z,2027,2,False,in,False,25,OKC,Oklahoma City Thunder,,12,LAC,LA Clippers,
-401909866,2026-10-25,2026-10-25T23:30Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,8,DET,Detroit Pistons,
-401909867,2026-10-25,2026-10-26T01:00Z,2027,2,False,pre,False,23,SAC,Sacramento Kings,,29,MEM,Memphis Grizzlies,
+401909864,2026-10-25,2026-10-25T23:00Z,2027,2,True,post,False,16,MIN,Minnesota Timberwolves,117.0,28,TOR,Toronto Raptors,94.0
+401909865,2026-10-25,2026-10-25T23:00Z,2027,2,True,post,False,25,OKC,Oklahoma City Thunder,108.0,12,LAC,LA Clippers,101.0
+401909866,2026-10-25,2026-10-25T23:30Z,2027,2,False,in,False,20,PHI,Philadelphia 76ers,,8,DET,Detroit Pistons,
+401909867,2026-10-25,2026-10-26T01:00Z,2027,2,False,in,False,23,SAC,Sacramento Kings,,29,MEM,Memphis Grizzlies,
 401909868,2026-10-26,2026-10-26T23:00Z,2027,2,False,pre,False,30,CHA,Charlotte Hornets,,27,WSH,Washington Wizards,
 401909869,2026-10-26,2026-10-26T23:00Z,2027,2,False,pre,False,5,CLE,Cleveland Cavaliers,,16,MIN,Minnesota Timberwolves,
 401909870,2026-10-26,2026-10-26T23:30Z,2027,2,False,pre,False,2,BOS,Boston Celtics,,4,CHI,Chicago Bulls,

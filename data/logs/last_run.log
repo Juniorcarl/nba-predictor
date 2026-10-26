@@ -1,17 +1,19 @@
-23:29:41 INFO box scores to fetch: 0
-23:29:41 INFO graded 0 picks, 0 bold calls
-23:29:41 INFO injury report: 80 entries
-23:29:51 INFO current rosters for 31 teams, bio for 531 players
-23:30:31 INFO pts  MAE 4.50 (baseline 4.73), trees 243
-23:30:50 INFO reb  MAE 1.86 (baseline 1.92), trees 1026
-23:31:02 INFO ast  MAE 1.33 (baseline 1.38), trees 593
-23:31:12 INFO fg3m MAE 0.88 (baseline 0.89), trees 493
-23:31:23 INFO stl  MAE 0.72 (baseline 0.73), trees 483
-23:31:35 INFO blk  MAE 0.52 (baseline 0.51), trees 615
-23:31:44 INFO min  MAE 4.71 (baseline 5.50), trees 489
-23:32:05 INFO game margin MAE 11.80 sd 15.06
-23:32:05 INFO game total  MAE 14.94 sd 18.99
-23:32:06 INFO news: 50 new articles, 349 stored
-23:32:06 INFO learning: 93 player corrections, 6 news tags measured, 30 team corrections, 9 players in the news
-23:32:07 INFO bold: 65 calls, 2 upsets, 12 multis
-23:32:08 INFO slate 2026-10-25: 2 games, 47 player projections, 0 flagged picks
+01:37:30 INFO box scores to fetch: 4
+01:37:31 INFO graded 0 picks, 148 bold calls
+01:37:32 INFO injury report: 83 entries
+01:37:40 INFO current rosters for 31 teams, bio for 531 players
+/home/runner/work/nba-predictor/nba-predictor/nbapred/features.py:270: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df["miss_fga_share"] = df["miss_fga"] * df["fga_pm"]
+01:38:50 INFO pts  MAE 4.51 (baseline 4.74), trees 167
+01:39:22 INFO reb  MAE 1.86 (baseline 1.92), trees 882
+01:39:47 INFO ast  MAE 1.33 (baseline 1.38), trees 659
+01:40:05 INFO fg3m MAE 0.88 (baseline 0.89), trees 494
+01:40:21 INFO stl  MAE 0.72 (baseline 0.73), trees 403
+01:40:40 INFO blk  MAE 0.52 (baseline 0.51), trees 477
+01:41:03 INFO min  MAE 4.72 (baseline 5.51), trees 686
+01:41:45 INFO game margin MAE 11.80 sd 15.06
+01:41:46 INFO game total  MAE 14.94 sd 18.99
+01:41:46 INFO news: 50 new articles, 353 stored
+01:41:46 INFO learning: 162 player corrections, 6 news tags measured, 30 team corrections, 10 players in the news
+01:41:48 INFO bold: 0 calls, 0 upsets, 0 multis
+01:41:48 INFO slate 2026-10-25: 0 games, 0 player projections, 0 flagged picks
