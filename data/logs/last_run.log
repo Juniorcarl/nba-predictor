@@ -1,17 +1,18 @@
-00:42:54 INFO box scores to fetch: 0
-00:42:54 INFO graded 0 picks, 0 bold calls
-00:42:54 INFO injury report: 85 entries
-00:43:02 INFO current rosters for 31 teams, bio for 531 players
-00:44:23 INFO pts  MAE 4.51 (baseline 4.74), trees 167
-00:44:52 INFO reb  MAE 1.86 (baseline 1.92), trees 889
-00:45:15 INFO ast  MAE 1.33 (baseline 1.38), trees 659
-00:45:32 INFO fg3m MAE 0.88 (baseline 0.89), trees 494
-00:45:47 INFO stl  MAE 0.72 (baseline 0.73), trees 403
-00:46:02 INFO blk  MAE 0.52 (baseline 0.51), trees 422
-00:46:24 INFO min  MAE 4.72 (baseline 5.52), trees 686
-00:47:10 INFO game margin MAE 11.80 sd 15.06
-00:47:10 INFO game total  MAE 14.94 sd 18.99
-00:47:11 INFO news: 50 new articles, 390 stored
-00:47:11 INFO learning: 200 player corrections, 6 news tags measured, 30 team corrections, 20 players in the news
-00:47:14 INFO bold: 62 calls, 2 upsets, 12 multis
-00:47:14 INFO slate 2026-10-26: 2 games, 57 player projections, 0 flagged picks
+06:44:17 INFO box scores to fetch: 9
+06:44:20 INFO graded 0 picks, 286 bold calls
+06:44:20 INFO post-mortem written for 2026-10-26
+06:44:20 INFO injury report: 83 entries
+06:44:29 INFO current rosters for 31 teams, bio for 531 players
+06:45:39 INFO pts  MAE 4.51 (baseline 4.74), trees 198
+06:46:10 INFO reb  MAE 1.86 (baseline 1.93), trees 825
+06:46:34 INFO ast  MAE 1.33 (baseline 1.38), trees 610
+06:46:53 INFO fg3m MAE 0.88 (baseline 0.89), trees 498
+06:47:11 INFO stl  MAE 0.72 (baseline 0.73), trees 442
+06:47:31 INFO blk  MAE 0.52 (baseline 0.51), trees 484
+06:47:53 INFO min  MAE 4.73 (baseline 5.53), trees 583
+06:48:35 INFO game margin MAE 11.76 sd 15.01
+06:48:36 INFO game total  MAE 14.95 sd 18.99
+06:48:36 INFO news: 50 new articles, 421 stored
+06:48:37 INFO learning: 270 player corrections, 6 news tags measured, 30 team corrections, 21 players in the news
+06:48:40 INFO bold: 178 calls, 2 upsets, 24 multis
+06:48:41 INFO slate 2026-10-27: 4 games, 96 player projections, 0 flagged picks
