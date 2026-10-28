@@ -118,9 +118,9 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909874,2026-10-26,2026-10-27T00:30Z,2027,2,True,post,False,10,HOU,Houston Rockets,120.0,1,ATL,Atlanta Hawks,110.0
 401909875,2026-10-26,2026-10-27T01:00Z,2027,2,True,post,False,26,UTAH,Utah Jazz,105.0,29,MEM,Memphis Grizzlies,110.0
 401909876,2026-10-26,2026-10-27T02:00Z,2027,2,True,post,False,7,DEN,Denver Nuggets,114.0,9,GS,Golden State Warriors,134.0
-401909877,2026-10-27,2026-10-27T23:30Z,2027,2,False,pre,False,2,BOS,Boston Celtics,,17,BKN,Brooklyn Nets,
-401909878,2026-10-27,2026-10-28T00:00Z,2027,2,False,pre,False,18,NY,New York Knicks,,8,DET,Detroit Pistons,
-401909879,2026-10-27,2026-10-28T00:00Z,2027,2,False,pre,False,24,SA,San Antonio Spurs,,23,SAC,Sacramento Kings,
+401909877,2026-10-27,2026-10-27T23:30Z,2027,2,False,in,False,2,BOS,Boston Celtics,,17,BKN,Brooklyn Nets,
+401909878,2026-10-27,2026-10-28T00:00Z,2027,2,False,in,False,18,NY,New York Knicks,,8,DET,Detroit Pistons,
+401909879,2026-10-27,2026-10-28T00:00Z,2027,2,False,in,False,24,SA,San Antonio Spurs,,23,SAC,Sacramento Kings,
 401909880,2026-10-27,2026-10-28T03:00Z,2027,2,False,pre,False,13,LAL,Los Angeles Lakers,,22,POR,Portland Trail Blazers,
 401909881,2026-10-28,2026-10-28T23:00Z,2027,2,False,pre,False,1,ATL,Atlanta Hawks,,14,MIA,Miami Heat,
 401909882,2026-10-28,2026-10-28T23:00Z,2027,2,False,pre,False,5,CLE,Cleveland Cavaliers,,27,WSH,Washington Wizards,
