@@ -1348,7 +1348,7 @@
   }
  ],
  "patterns": {
-  "updated": "2026-10-28T07:20+00:00",
+  "updated": "2026-10-28T12:30+00:00",
   "items": [
    {
     "segment": "2+ teammates out",
@@ -1413,92 +1413,59 @@
     "t": 3.1,
     "text": "Back-to-back games: the model under-predicts minutes by 1.6 on average (190 cases).",
     "group": "fatigue_travel",
-    "fix": "The 'fatigue travel' factor targets this; experiments test whether adding it helps.",
+    "fix": "The 'fatigue travel' factor is already on; the gap may shrink as it learns.",
     "source": "this season"
-   },
-   {
-    "segment": "2+ teammates out",
-    "stat": "min",
-    "bias": -0.63,
-    "n": 10847,
-    "t": -10.4,
-    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (10,847 cases).",
-    "group": null,
-    "fix": null,
-    "source": "test games"
-   },
-   {
-    "segment": "First 3 games back from injury",
-    "stat": "min",
-    "bias": -1.12,
-    "n": 1808,
-    "t": -7.9,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 1.1 on average (1,808 cases).",
-    "group": "injury_return",
-    "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
-    "source": "test games"
    },
    {
     "segment": "First 3 games back from injury",
     "stat": "pts",
-    "bias": -0.87,
+    "bias": -0.69,
     "n": 1808,
-    "t": -7.6,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.9 on average (1,808 cases).",
+    "t": -6.1,
+    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,808 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
-    "source": "test games"
-   },
-   {
-    "segment": "Forwards",
-    "stat": "min",
-    "bias": -0.6,
-    "n": 5404,
-    "t": -7.3,
-    "text": "Forwards: the model over-predicts minutes by 0.6 on average (5,404 cases).",
-    "group": "position_defense",
-    "fix": "The 'position defense' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
     "segment": "Playoffs",
     "stat": "pts",
-    "bias": -0.77,
+    "bias": -0.69,
     "n": 1897,
-    "t": -6.1,
-    "text": "Playoffs: the model over-predicts points by 0.8 on average (1,897 cases).",
+    "t": -5.5,
+    "text": "Playoffs: the model over-predicts points by 0.7 on average (1,897 cases).",
     "group": "motivation",
     "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
+    "segment": "First 3 games back from injury",
+    "stat": "min",
+    "bias": -0.71,
+    "n": 1808,
+    "t": -5.1,
+    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,808 cases).",
+    "group": "injury_return",
+    "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
     "segment": "Playoffs",
     "stat": "ast",
-    "bias": -0.19,
+    "bias": -0.16,
     "n": 1897,
-    "t": -5.3,
+    "t": -4.6,
     "text": "Playoffs: the model over-predicts assists by 0.2 on average (1,897 cases).",
     "group": "motivation",
     "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
-    "segment": "First 3 games back from injury",
-    "stat": "reb",
-    "bias": -0.26,
-    "n": 1808,
-    "t": -5.2,
-    "text": "First 3 games back from injury: the model over-predicts rebounds by 0.3 on average (1,808 cases).",
-    "group": "injury_return",
-    "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
-    "source": "test games"
-   },
-   {
     "segment": "Opponent has an elite shot-blocker",
     "stat": "pts",
-    "bias": -0.83,
+    "bias": -0.82,
     "n": 982,
-    "t": -4.3,
+    "t": -4.2,
     "text": "Opponent has an elite shot-blocker: the model over-predicts points by 0.8 on average (982 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
@@ -1507,12 +1474,34 @@
    {
     "segment": "Opponent has an elite shot-blocker",
     "stat": "min",
-    "bias": -0.78,
+    "bias": -0.75,
     "n": 982,
-    "t": -3.7,
+    "t": -3.6,
     "text": "Opponent has an elite shot-blocker: the model over-predicts minutes by 0.8 on average (982 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Cold shooters (last 3 games)",
+    "stat": "reb",
+    "bias": -0.2,
+    "n": 1309,
+    "t": -3.2,
+    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,309 cases).",
+    "group": "shooting_luck",
+    "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Late season, team out of contention",
+    "stat": "pts",
+    "bias": 0.56,
+    "n": 1313,
+    "t": 3.1,
+    "text": "Late season, team out of contention: the model under-predicts points by 0.6 on average (1,313 cases).",
+    "group": "motivation",
+    "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    }
   ]
