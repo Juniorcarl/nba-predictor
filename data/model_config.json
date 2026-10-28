@@ -1,0 +1,12 @@
+{
+  "groups": [
+    "fatigue_travel"
+  ],
+  "params": {
+    "max_depth": 5,
+    "min_child_weight": 20,
+    "learning_rate": 0.03,
+    "recency_halflife": 0
+  },
+  "version": 2
+}

@@ -3,7 +3,7 @@
   {
    "id": "P-0001",
    "created": "2026-10-13T07:09+00:00",
-   "status": "pending",
+   "status": "approved",
    "kind": "add_group",
    "target": "fatigue_travel",
    "value": null,
@@ -107,7 +107,8 @@
     },
     "passed": true
    },
-   "updated": "2026-10-26T20:27+00:00"
+   "updated": "2026-10-26T20:27+00:00",
+   "closed": "2026-10-28T12:25+00:00"
   },
   {
    "id": "P-0002",
@@ -171,7 +172,37 @@
    "closed": "2026-10-13T08:16+00:00"
   }
  ],
- "changes": [],
+ "changes": [
+  {
+   "id": "C-0001",
+   "proposal": "P-0001",
+   "at": "2026-10-28T12:25+00:00",
+   "title": "Add factor: fatigue travel",
+   "config_before": {
+    "groups": [],
+    "params": {
+     "max_depth": 5,
+     "min_child_weight": 20,
+     "learning_rate": 0.03,
+     "recency_halflife": 0
+    },
+    "version": 1
+   },
+   "config_after": {
+    "groups": [
+     "fatigue_travel"
+    ],
+    "params": {
+     "max_depth": 5,
+     "min_child_weight": 20,
+     "learning_rate": 0.03,
+     "recency_halflife": 0
+    },
+    "version": 2
+   },
+   "gain": 0.0017
+  }
+ ],
  "postmortems": [
   {
    "date": "2026-10-20",
@@ -5117,6 +5148,12 @@
    "at": "2026-10-28T07:16+00:00",
    "kind": "postmortem",
    "text": "Reviewed 82 player projections from 2026-10-27: average miss 4.86 pts, 1.51 reb, 1.28 ast."
+  },
+  {
+   "at": "2026-10-28T12:25+00:00",
+   "kind": "approved",
+   "text": "You approved P-0001 (Add factor: fatigue travel). Model version 2 trains with it from the next run.",
+   "proposal": "P-0001"
   }
  ]
 }
