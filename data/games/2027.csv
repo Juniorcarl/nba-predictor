@@ -134,8 +134,8 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909890,2026-10-28,2026-10-29T01:00Z,2027,2,True,post,False,26,UTAH,Utah Jazz,111.0,24,SA,San Antonio Spurs,117.0
 401909891,2026-10-28,2026-10-29T01:30Z,2027,2,True,post,False,6,DAL,Dallas Mavericks,120.0,25,OKC,Oklahoma City Thunder,96.0
 401909892,2026-10-28,2026-10-29T02:30Z,2027,2,True,post,False,12,LAC,LA Clippers,87.0,13,LAL,Los Angeles Lakers,103.0
-401909893,2026-10-29,2026-10-30T00:00Z,2027,2,False,pre,False,1,ATL,Atlanta Hawks,,5,CLE,Cleveland Cavaliers,
-401909894,2026-10-29,2026-10-30T00:00Z,2027,2,False,pre,False,3,NO,New Orleans Pelicans,,23,SAC,Sacramento Kings,
+401909893,2026-10-29,2026-10-30T00:00Z,2027,2,False,in,False,1,ATL,Atlanta Hawks,,5,CLE,Cleveland Cavaliers,
+401909894,2026-10-29,2026-10-30T00:00Z,2027,2,False,in,False,3,NO,New Orleans Pelicans,,23,SAC,Sacramento Kings,
 401909895,2026-10-29,2026-10-30T02:00Z,2027,2,False,pre,False,22,POR,Portland Trail Blazers,,29,MEM,Memphis Grizzlies,
 401909277,2026-10-30,2026-10-30T23:00Z,2027,2,False,pre,False,27,WSH,Washington Wizards,,30,CHA,Charlotte Hornets,
 401909278,2026-10-30,2026-10-30T23:30Z,2027,2,False,pre,False,2,BOS,Boston Celtics,,4,CHI,Chicago Bulls,
