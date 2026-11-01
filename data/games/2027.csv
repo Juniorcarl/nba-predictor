@@ -147,12 +147,12 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909284,2026-10-30,2026-10-31T00:00Z,2027,2,True,post,False,16,MIN,Minnesota Timberwolves,127.0,12,LAC,LA Clippers,101.0
 401909285,2026-10-30,2026-10-31T02:00Z,2027,2,True,post,False,9,GS,Golden State Warriors,112.0,13,LAL,Los Angeles Lakers,95.0
 401909286,2026-10-30,2026-10-31T02:00Z,2027,2,True,post,False,21,PHX,Phoenix Suns,120.0,7,DEN,Denver Nuggets,127.0
-401909896,2026-10-31,2026-10-31T19:00Z,2027,2,False,pre,False,26,UTAH,Utah Jazz,,22,POR,Portland Trail Blazers,
-401909897,2026-10-31,2026-10-31T22:00Z,2027,2,False,pre,False,30,CHA,Charlotte Hornets,,20,PHI,Philadelphia 76ers,
-401909898,2026-10-31,2026-10-31T23:00Z,2027,2,False,pre,False,3,NO,New Orleans Pelicans,,1,ATL,Atlanta Hawks,
-401909899,2026-10-31,2026-11-01T00:00Z,2027,2,False,pre,False,29,MEM,Memphis Grizzlies,,23,SAC,Sacramento Kings,
-401909900,2026-10-31,2026-11-01T00:00Z,2027,2,False,pre,False,15,MIL,Milwaukee Bucks,,5,CLE,Cleveland Cavaliers,
-401909901,2026-10-31,2026-11-01T00:00Z,2027,2,False,pre,False,24,SA,San Antonio Spurs,,16,MIN,Minnesota Timberwolves,
+401909896,2026-10-31,2026-10-31T19:00Z,2027,2,True,post,False,26,UTAH,Utah Jazz,90.0,22,POR,Portland Trail Blazers,112.0
+401909897,2026-10-31,2026-10-31T22:00Z,2027,2,False,in,False,30,CHA,Charlotte Hornets,,20,PHI,Philadelphia 76ers,
+401909898,2026-10-31,2026-10-31T23:00Z,2027,2,False,in,False,3,NO,New Orleans Pelicans,,1,ATL,Atlanta Hawks,
+401909899,2026-10-31,2026-11-01T00:00Z,2027,2,False,in,False,29,MEM,Memphis Grizzlies,,23,SAC,Sacramento Kings,
+401909900,2026-10-31,2026-11-01T00:00Z,2027,2,False,in,False,15,MIL,Milwaukee Bucks,,5,CLE,Cleveland Cavaliers,
+401909901,2026-10-31,2026-11-01T00:00Z,2027,2,False,in,False,24,SA,San Antonio Spurs,,16,MIN,Minnesota Timberwolves,
 401909902,2026-10-31,2026-11-01T00:30Z,2027,2,False,pre,False,10,HOU,Houston Rockets,,25,OKC,Oklahoma City Thunder,
 401909903,2026-11-01,2026-11-01T20:30Z,2027,2,False,pre,False,19,ORL,Orlando Magic,,2,BOS,Boston Celtics,
 401909904,2026-11-01,2026-11-01T22:00Z,2027,2,False,pre,False,11,IND,Indiana Pacers,,17,BKN,Brooklyn Nets,
