@@ -156,8 +156,8 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909902,2026-10-31,2026-11-01T00:30Z,2027,2,True,post,False,10,HOU,Houston Rockets,119.0,25,OKC,Oklahoma City Thunder,98.0
 401909903,2026-11-01,2026-11-01T20:30Z,2027,2,True,post,False,19,ORL,Orlando Magic,97.0,2,BOS,Boston Celtics,108.0
 401909904,2026-11-01,2026-11-01T22:00Z,2027,2,True,post,False,11,IND,Indiana Pacers,90.0,17,BKN,Brooklyn Nets,98.0
-401909905,2026-11-01,2026-11-02T01:30Z,2027,2,False,pre,False,9,GS,Golden State Warriors,,12,LAC,LA Clippers,
-401909906,2026-11-01,2026-11-02T02:00Z,2027,2,False,pre,False,13,LAL,Los Angeles Lakers,,28,TOR,Toronto Raptors,
+401909905,2026-11-01,2026-11-02T01:30Z,2027,2,True,post,False,9,GS,Golden State Warriors,124.0,12,LAC,LA Clippers,112.0
+401909906,2026-11-01,2026-11-02T02:00Z,2027,2,True,post,False,13,LAL,Los Angeles Lakers,131.0,28,TOR,Toronto Raptors,125.0
 401909907,2026-11-02,2026-11-03T00:00Z,2027,2,False,pre,False,5,CLE,Cleveland Cavaliers,,25,OKC,Oklahoma City Thunder,
 401909908,2026-11-02,2026-11-03T00:30Z,2027,2,False,pre,False,30,CHA,Charlotte Hornets,,8,DET,Detroit Pistons,
 401909909,2026-11-02,2026-11-03T00:30Z,2027,2,False,pre,False,11,IND,Indiana Pacers,,1,ATL,Atlanta Hawks,
@@ -212,3 +212,11 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909949,2026-11-08,2026-11-09T01:00Z,2027,2,False,pre,False,15,MIL,Milwaukee Bucks,,2,BOS,Boston Celtics,
 401909950,2026-11-08,2026-11-09T02:00Z,2027,2,False,pre,False,12,LAC,LA Clippers,,3,NO,New Orleans Pelicans,
 401909951,2026-11-08,2026-11-09T02:00Z,2027,2,False,pre,False,23,SAC,Sacramento Kings,,14,MIA,Miami Heat,
+401909952,2026-11-09,2026-11-10T00:00Z,2027,2,False,pre,False,1,ATL,Atlanta Hawks,,13,LAL,Los Angeles Lakers,
+401909953,2026-11-09,2026-11-10T00:00Z,2027,2,False,pre,False,30,CHA,Charlotte Hornets,,5,CLE,Cleveland Cavaliers,
+401909954,2026-11-09,2026-11-10T00:00Z,2027,2,False,pre,False,8,DET,Detroit Pistons,,27,WSH,Washington Wizards,
+401909955,2026-11-09,2026-11-10T00:30Z,2027,2,False,pre,False,28,TOR,Toronto Raptors,,29,MEM,Memphis Grizzlies,
+401909956,2026-11-09,2026-11-10T01:00Z,2027,2,False,pre,False,6,DAL,Dallas Mavericks,,11,IND,Indiana Pacers,
+401909957,2026-11-09,2026-11-10T01:30Z,2027,2,False,pre,False,10,HOU,Houston Rockets,,7,DEN,Denver Nuggets,
+401909958,2026-11-09,2026-11-10T02:00Z,2027,2,False,pre,False,21,PHX,Phoenix Suns,,24,SA,San Antonio Spurs,
+401909959,2026-11-09,2026-11-10T03:00Z,2027,2,False,pre,False,9,GS,Golden State Warriors,,3,NO,New Orleans Pelicans,
