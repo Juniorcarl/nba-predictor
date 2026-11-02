@@ -2063,7 +2063,7 @@
   }
  ],
  "patterns": {
-  "updated": "2026-11-02T08:12+00:00",
+  "updated": "2026-11-02T23:04+00:00",
   "items": [
    {
     "segment": "Back-to-back games",
@@ -5733,6 +5733,1253 @@
      "passed": false
     }
    ]
+  },
+  {
+   "at": "2026-11-02T23:19+00:00",
+   "champion": {
+    "pts": 4.523,
+    "reb": 1.856,
+    "ast": 1.334,
+    "fg3m": 0.886,
+    "stl": 0.721,
+    "blk": 0.522,
+    "min": 4.724,
+    "margin": 12.055,
+    "total": 15.029
+   },
+   "groups": [
+    "fatigue_travel"
+   ],
+   "params": {
+    "max_depth": 5,
+    "min_child_weight": 20,
+    "learning_rate": 0.03,
+    "recency_halflife": 0
+   },
+   "tested": [
+    {
+     "kind": "add_group",
+     "target": "position_defense",
+     "value": null,
+     "gain": 0.0003,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.527,
+       "change": 0.0008
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.856,
+       "change": -0.0003
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.0007
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0003
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0007
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0012
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.725,
+       "change": 0.0002
+      }
+     },
+     "halves": [
+      0.0002,
+      0.0004
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "size",
+     "value": null,
+     "gain": -0.0003,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.528,
+       "change": 0.001
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.856,
+       "change": 0.0002
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.0005
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.888,
+       "change": 0.002
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.719,
+       "change": -0.0015
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.522,
+       "change": 0.0014
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.72,
+       "change": -0.0008
+      }
+     },
+     "halves": [
+      -0.0001,
+      -0.0004
+     ],
+     "segment": {
+      "label": "centers and players with a big height gap",
+      "n": 11857,
+      "gain": -0.0007,
+      "halves": [
+       -0.0006,
+       -0.0007
+      ],
+      "per": {
+       "pts": {
+        "before": 4.563,
+        "after": 4.57
+       },
+       "reb": {
+        "before": 1.842,
+        "after": 1.842
+       },
+       "ast": {
+        "before": 1.367,
+        "after": 1.368
+       },
+       "fg3m": {
+        "before": 0.897,
+        "after": 0.9
+       },
+       "stl": {
+        "before": 0.727,
+        "after": 0.727
+       },
+       "blk": {
+        "before": 0.519,
+        "after": 0.519
+       },
+       "min": {
+        "before": 4.674,
+        "after": 4.672
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "opposing_defenders",
+     "value": null,
+     "gain": -0.0018,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.528,
+       "change": 0.0012
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.856,
+       "change": -0.0003
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.331,
+       "change": -0.0022
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.885,
+       "change": -0.0013
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0004
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0015
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.731,
+       "change": 0.0015
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 12.211,
+       "change": 0.0129
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.12,
+       "change": 0.006
+      }
+     },
+     "halves": [
+      -0.0013,
+      -0.0022
+     ],
+     "segment": {
+      "label": "games against an elite shot-blocker",
+      "n": 1019,
+      "gain": -0.0057,
+      "halves": [
+       -0.0092,
+       -0.0037
+      ],
+      "per": {
+       "pts": {
+        "before": 4.711,
+        "after": 4.739
+       },
+       "reb": {
+        "before": 1.789,
+        "after": 1.787
+       },
+       "ast": {
+        "before": 1.347,
+        "after": 1.346
+       },
+       "fg3m": {
+        "before": 0.901,
+        "after": 0.901
+       },
+       "stl": {
+        "before": 0.721,
+        "after": 0.723
+       },
+       "blk": {
+        "before": 0.497,
+        "after": 0.499
+       },
+       "min": {
+        "before": 5.158,
+        "after": 5.186
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "blowout_risk",
+     "value": null,
+     "gain": 0.0003,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.522,
+       "change": -0.0003
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.856,
+       "change": -0.0
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.334,
+       "change": -0.0
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0003
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0001
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0018
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.726,
+       "change": 0.0004
+      }
+     },
+     "halves": [
+      0.0002,
+      0.0005
+     ],
+     "segment": {
+      "label": "expected blowouts (10+ points)",
+      "n": 5039,
+      "gain": 0.0001,
+      "halves": [
+       -0.0002,
+       0.0003
+      ],
+      "per": {
+       "pts": {
+        "before": 4.521,
+        "after": 4.52
+       },
+       "reb": {
+        "before": 1.841,
+        "after": 1.844
+       },
+       "ast": {
+        "before": 1.322,
+        "after": 1.322
+       },
+       "fg3m": {
+        "before": 0.888,
+        "after": 0.888
+       },
+       "stl": {
+        "before": 0.716,
+        "after": 0.715
+       },
+       "blk": {
+        "before": 0.516,
+        "after": 0.514
+       },
+       "min": {
+        "before": 4.707,
+        "after": 4.707
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "remove_group",
+     "target": "fatigue_travel",
+     "value": null,
+     "gain": -0.0016,
+     "basis": "overall",
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.531,
+       "change": 0.0019
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.858,
+       "change": 0.0009
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.336,
+       "change": 0.0019
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.889,
+       "change": 0.0026
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.721,
+       "change": 0.0009
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.522,
+       "change": -0.0002
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.751,
+       "change": 0.0058
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 12.021,
+       "change": -0.0028
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.08,
+       "change": 0.0034
+      }
+     },
+     "halves": [
+      -0.0016,
+      -0.0017
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "injury_return",
+     "value": null,
+     "gain": 0.0008,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.52,
+       "change": -0.0006
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.856,
+       "change": -0.0001
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.0005
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0006
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0008
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0022
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.72,
+       "change": -0.0008
+      }
+     },
+     "halves": [
+      0.0007,
+      0.0009
+     ],
+     "segment": {
+      "label": "first 3 games back from injury",
+      "n": 1811,
+      "gain": 0.0042,
+      "halves": [
+       0.0046,
+       0.0039
+      ],
+      "per": {
+       "pts": {
+        "before": 3.695,
+        "after": 3.67
+       },
+       "reb": {
+        "before": 1.551,
+        "after": 1.544
+       },
+       "ast": {
+        "before": 1.104,
+        "after": 1.098
+       },
+       "fg3m": {
+        "before": 0.712,
+        "after": 0.71
+       },
+       "stl": {
+        "before": 0.603,
+        "after": 0.599
+       },
+       "blk": {
+        "before": 0.415,
+        "after": 0.413
+       },
+       "min": {
+        "before": 4.686,
+        "after": 4.678
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "revenge_game",
+     "value": null,
+     "gain": -0.0004,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.528,
+       "change": 0.0012
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.857,
+       "change": 0.0002
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.0003
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.887,
+       "change": 0.0005
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.721,
+       "change": 0.0006
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.522,
+       "change": 0.0007
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.723,
+       "change": -0.0003
+      }
+     },
+     "halves": [
+      -0.0,
+      -0.0007
+     ],
+     "segment": {
+      "label": "games against a former team",
+      "n": 340,
+      "gain": 0.0018,
+      "halves": [
+       0.0066,
+       -0.0024
+      ],
+      "per": {
+       "pts": {
+        "before": 3.908,
+        "after": 3.933
+       },
+       "reb": {
+        "before": 1.664,
+        "after": 1.684
+       },
+       "ast": {
+        "before": 1.217,
+        "after": 1.215
+       },
+       "fg3m": {
+        "before": 0.798,
+        "after": 0.799
+       },
+       "stl": {
+        "before": 0.686,
+        "after": 0.688
+       },
+       "blk": {
+        "before": 0.481,
+        "after": 0.482
+       },
+       "min": {
+        "before": 4.442,
+        "after": 4.397
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "vs_opponent_history",
+     "value": null,
+     "gain": 0.0005,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.526,
+       "change": 0.0007
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.853,
+       "change": -0.0018
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.0006
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0002
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0001
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.522,
+       "change": -0.0002
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.717,
+       "change": -0.0014
+      }
+     },
+     "halves": [
+      0.0007,
+      0.0003
+     ],
+     "segment": {
+      "label": "opponents the player has faced 3+ times",
+      "n": 11560,
+      "gain": -0.0003,
+      "halves": [
+       0.0008,
+       -0.0012
+      ],
+      "per": {
+       "pts": {
+        "before": 4.643,
+        "after": 4.652
+       },
+       "reb": {
+        "before": 1.89,
+        "after": 1.887
+       },
+       "ast": {
+        "before": 1.374,
+        "after": 1.373
+       },
+       "fg3m": {
+        "before": 0.923,
+        "after": 0.923
+       },
+       "stl": {
+        "before": 0.738,
+        "after": 0.737
+       },
+       "blk": {
+        "before": 0.538,
+        "after": 0.539
+       },
+       "min": {
+        "before": 4.551,
+        "after": 4.544
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "motivation",
+     "value": null,
+     "gain": 0.0025,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.515,
+       "change": -0.0019
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.853,
+       "change": -0.0017
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.33,
+       "change": -0.0032
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0005
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0009
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0017
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.691,
+       "change": -0.0069
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 11.956,
+       "change": -0.0082
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.071,
+       "change": 0.0028
+      }
+     },
+     "halves": [
+      -0.0002,
+      0.005
+     ],
+     "segment": {
+      "label": "playoffs and the last 15 games of the season",
+      "n": 6700,
+      "gain": 0.0092,
+      "halves": [
+       0.0063,
+       0.0095
+      ],
+      "per": {
+       "pts": {
+        "before": 4.49,
+        "after": 4.475
+       },
+       "reb": {
+        "before": 1.837,
+        "after": 1.832
+       },
+       "ast": {
+        "before": 1.325,
+        "after": 1.317
+       },
+       "fg3m": {
+        "before": 0.872,
+        "after": 0.871
+       },
+       "stl": {
+        "before": 0.716,
+        "after": 0.715
+       },
+       "blk": {
+        "before": 0.512,
+        "after": 0.51
+       },
+       "min": {
+        "before": 4.791,
+        "after": 4.72
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "shooting_luck",
+     "value": null,
+     "gain": 0.0006,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.523,
+       "change": -0.0001
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.855,
+       "change": -0.0007
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.335,
+       "change": 0.0006
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0002
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0009
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0006
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.715,
+       "change": -0.0019
+      }
+     },
+     "halves": [
+      -0.0,
+      0.0011
+     ],
+     "segment": {
+      "label": "players on hot or cold shooting streaks",
+      "n": 2751,
+      "gain": 0.0045,
+      "halves": [
+       0.004,
+       0.0048
+      ],
+      "per": {
+       "pts": {
+        "before": 3.832,
+        "after": 3.818
+       },
+       "reb": {
+        "before": 1.829,
+        "after": 1.834
+       },
+       "ast": {
+        "before": 1.162,
+        "after": 1.162
+       },
+       "fg3m": {
+        "before": 0.708,
+        "after": 0.708
+       },
+       "stl": {
+        "before": 0.664,
+        "after": 0.665
+       },
+       "blk": {
+        "before": 0.482,
+        "after": 0.482
+       },
+       "min": {
+        "before": 4.919,
+        "after": 4.893
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "add_group",
+     "target": "age_experience",
+     "value": null,
+     "gain": -0.0004,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.521,
+       "change": -0.0004
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.857,
+       "change": 0.0006
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.334,
+       "change": 0.0003
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.888,
+       "change": 0.0015
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0006
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0005
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.732,
+       "change": 0.0018
+      }
+     },
+     "halves": [
+      0.0002,
+      -0.0009
+     ],
+     "segment": {
+      "label": "players aged 32+",
+      "n": 1542,
+      "gain": 0.0055,
+      "halves": [
+       0.0035,
+       0.0072
+      ],
+      "per": {
+       "pts": {
+        "before": 4.608,
+        "after": 4.582
+       },
+       "reb": {
+        "before": 1.831,
+        "after": 1.828
+       },
+       "ast": {
+        "before": 1.453,
+        "after": 1.452
+       },
+       "fg3m": {
+        "before": 0.975,
+        "after": 0.983
+       },
+       "stl": {
+        "before": 0.75,
+        "after": 0.746
+       },
+       "blk": {
+        "before": 0.527,
+        "after": 0.528
+       },
+       "min": {
+        "before": 4.583,
+        "after": 4.558
+       }
+      }
+     },
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "max_depth",
+     "value": 6,
+     "gain": -0.0013,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.515,
+       "change": -0.0017
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.856,
+       "change": 0.0002
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.334,
+       "change": -0.0002
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.887,
+       "change": 0.0004
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.721,
+       "change": 0.0003
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.522,
+       "change": -0.0
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.721,
+       "change": -0.0005
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 12.15,
+       "change": 0.0079
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.108,
+       "change": 0.0053
+      }
+     },
+     "halves": [
+      -0.0023,
+      -0.0003
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "min_child_weight",
+     "value": 40,
+     "gain": 0.0004,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.524,
+       "change": 0.0002
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.854,
+       "change": -0.001
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.001
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0004
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0006
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.521,
+       "change": -0.0015
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.714,
+       "change": -0.002
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 12.011,
+       "change": -0.0037
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.126,
+       "change": 0.0065
+      }
+     },
+     "halves": [
+      -0.0013,
+      0.0019
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "min_child_weight",
+     "value": 10,
+     "gain": 0.0,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.516,
+       "change": -0.0016
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.855,
+       "change": -0.0006
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.0004
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.886,
+       "change": -0.0006
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.72,
+       "change": -0.0004
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.522,
+       "change": 0.0012
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.719,
+       "change": -0.001
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 12.082,
+       "change": 0.0023
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.04,
+       "change": 0.0007
+      }
+     },
+     "halves": [
+      -0.0,
+      0.0002
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "recency_halflife",
+     "value": 365,
+     "gain": -0.0002,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.521,
+       "change": -0.0004
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.856,
+       "change": -0.0002
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.333,
+       "change": -0.0007
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.889,
+       "change": 0.0026
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.721,
+       "change": 0.0
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.522,
+       "change": 0.001
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.736,
+       "change": 0.0027
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 11.954,
+       "change": -0.0084
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.11,
+       "change": 0.0054
+      }
+     },
+     "halves": [
+      -0.0012,
+      0.0006
+     ],
+     "segment": null,
+     "passed": false
+    },
+    {
+     "kind": "set_param",
+     "target": "recency_halflife",
+     "value": 180,
+     "gain": -0.0033,
+     "basis": null,
+     "per": {
+      "pts": {
+       "before": 4.523,
+       "after": 4.536,
+       "change": 0.0029
+      },
+      "reb": {
+       "before": 1.856,
+       "after": 1.859,
+       "change": 0.0015
+      },
+      "ast": {
+       "before": 1.334,
+       "after": 1.334,
+       "change": 0.0002
+      },
+      "fg3m": {
+       "before": 0.886,
+       "after": 0.89,
+       "change": 0.0046
+      },
+      "stl": {
+       "before": 0.721,
+       "after": 0.721,
+       "change": 0.0011
+      },
+      "blk": {
+       "before": 0.522,
+       "after": 0.523,
+       "change": 0.0025
+      },
+      "min": {
+       "before": 4.724,
+       "after": 4.77,
+       "change": 0.0097
+      },
+      "margin": {
+       "before": 12.055,
+       "after": 12.032,
+       "change": -0.0019
+      },
+      "total": {
+       "before": 15.029,
+       "after": 15.172,
+       "change": 0.0095
+      }
+     },
+     "halves": [
+      -0.0025,
+      -0.0041
+     ],
+     "segment": null,
+     "passed": false
+    }
+   ]
   }
  ],
  "events": [
@@ -5839,6 +7086,11 @@
    "at": "2026-11-02T08:07+00:00",
    "kind": "postmortem",
    "text": "Reviewed 80 player projections from 2026-11-01: average miss 4.47 pts, 2.0 reb, 1.29 ast."
+  },
+  {
+   "at": "2026-11-02T23:19+00:00",
+   "kind": "experiment",
+   "text": "Tested 16 possible changes against the current model. 0 improved accuracy on games the model hadn't seen."
   }
  ]
 }
