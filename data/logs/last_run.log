@@ -1,17 +1,19 @@
-03:02:13 INFO box scores to fetch: 5
-03:02:14 INFO graded 0 picks, 92 bold calls
-03:02:14 INFO injury report: 93 entries
-03:02:23 INFO current rosters for 31 teams, bio for 534 players
-03:03:49 INFO pts  MAE 4.51 (baseline 4.76), trees 249
-03:04:20 INFO reb  MAE 1.85 (baseline 1.92), trees 794
-03:04:49 INFO ast  MAE 1.33 (baseline 1.38), trees 785
-03:05:09 INFO fg3m MAE 0.89 (baseline 0.89), trees 502
-03:05:25 INFO stl  MAE 0.72 (baseline 0.73), trees 412
-03:05:44 INFO blk  MAE 0.52 (baseline 0.51), trees 486
-03:06:01 INFO min  MAE 4.72 (baseline 5.56), trees 487
-03:06:49 INFO game margin MAE 11.99 sd 15.20
-03:06:49 INFO game total  MAE 15.10 sd 19.20
-03:06:50 INFO news: 50 new articles, 641 stored
-03:06:50 INFO learning: 339 player corrections, 6 news tags measured, 30 team corrections, 11 players in the news
-03:06:54 INFO bold: 200 calls, 3 upsets, 18 multis
-03:06:54 INFO slate 2026-11-02: 3 games, 73 player projections, 0 flagged picks
+20:45:26 INFO box scores to fetch: 10
+20:45:30 INFO graded 0 picks, 319 bold calls
+20:45:30 INFO post-mortem written for 2026-11-02
+20:45:30 INFO injury report: 93 entries
+20:45:38 INFO current rosters for 31 teams, bio for 534 players
+20:46:31 INFO pts  MAE 4.52 (baseline 4.76), trees 249
+20:46:54 INFO reb  MAE 1.85 (baseline 1.92), trees 794
+20:47:16 INFO ast  MAE 1.33 (baseline 1.38), trees 776
+20:47:30 INFO fg3m MAE 0.89 (baseline 0.89), trees 502
+20:47:43 INFO stl  MAE 0.72 (baseline 0.73), trees 412
+20:47:57 INFO blk  MAE 0.52 (baseline 0.51), trees 487
+20:48:11 INFO min  MAE 4.72 (baseline 5.56), trees 487
+20:48:46 INFO game margin MAE 11.93 sd 15.14
+20:48:46 INFO game total  MAE 15.13 sd 19.21
+20:48:47 INFO news: 50 new articles, 689 stored
+20:48:48 INFO learning: 345 player corrections, 8 news tags measured, 30 team corrections, 7 players in the news
+20:48:48 INFO No ODDS_API_KEY set - skipping sportsbook lines
+20:48:54 INFO bold: 200 calls, 6 upsets, 40 multis
+20:48:54 INFO slate 2026-11-04: 14 games, 360 player projections, 0 flagged picks
