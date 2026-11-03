@@ -1,36 +1,17 @@
-22:59:49 INFO box scores to fetch: 0
-22:59:49 INFO graded 0 picks, 0 bold calls
-22:59:49 INFO injury report: 99 entries
-22:59:57 INFO current rosters for 31 teams, bio for 534 players
-23:01:22 INFO pts  MAE 4.52 (baseline 4.76), trees 249
-23:01:51 INFO reb  MAE 1.85 (baseline 1.92), trees 794
-23:02:19 INFO ast  MAE 1.33 (baseline 1.38), trees 785
-23:02:40 INFO fg3m MAE 0.89 (baseline 0.89), trees 502
-23:02:56 INFO stl  MAE 0.72 (baseline 0.73), trees 412
-23:03:14 INFO blk  MAE 0.52 (baseline 0.51), trees 486
-23:03:32 INFO min  MAE 4.72 (baseline 5.56), trees 487
-23:04:19 INFO game margin MAE 11.99 sd 15.17
-23:04:20 INFO game total  MAE 15.08 sd 19.17
-23:04:20 INFO experiments: champion has groups ['fatigue_travel']
-23:06:11 INFO   add_group    position_defense     overall +0.03% halves ['+0.02%', '+0.04%'] | targeted - -> no
-23:07:07 INFO   add_group    size                 overall -0.03% halves ['-0.01%', '-0.04%'] | targeted -0.1% over 11857 -> no
-23:08:05 INFO   add_group    opposing_defenders   overall -0.18% halves ['-0.13%', '-0.22%'] | targeted -0.6% over 1019 -> no
-23:09:01 INFO   add_group    blowout_risk         overall +0.03% halves ['+0.02%', '+0.05%'] | targeted +0.0% over 5039 -> no
-23:09:56 INFO   remove_group fatigue_travel       overall -0.16% halves ['-0.16%', '-0.17%'] | targeted - -> no
-23:10:52 INFO   add_group    injury_return        overall +0.08% halves ['+0.07%', '+0.09%'] | targeted +0.4% over 1811 -> no
-23:11:48 INFO   add_group    revenge_game         overall -0.04% halves ['-0.00%', '-0.07%'] | targeted +0.2% over 340 -> no
-23:12:49 INFO   add_group    vs_opponent_history  overall +0.05% halves ['+0.07%', '+0.03%'] | targeted -0.0% over 11560 -> no
-23:13:46 INFO   add_group    motivation           overall +0.25% halves ['-0.02%', '+0.50%'] | targeted +0.9% over 6700 -> no
-23:14:43 INFO   add_group    shooting_luck        overall +0.06% halves ['-0.00%', '+0.11%'] | targeted +0.4% over 2751 -> no
-23:15:41 INFO   add_group    age_experience       overall -0.04% halves ['+0.02%', '-0.09%'] | targeted +0.5% over 1542 -> no
-23:16:33 INFO   set_param    max_depth            overall -0.13% halves ['-0.23%', '-0.03%'] | targeted - -> no
-23:17:28 INFO   set_param    min_child_weight     overall +0.04% halves ['-0.13%', '+0.19%'] | targeted - -> no
-23:18:22 INFO   set_param    min_child_weight     overall +0.00% halves ['-0.00%', '+0.02%'] | targeted - -> no
-23:19:05 INFO   set_param    recency_halflife     overall -0.02% halves ['-0.12%', '+0.06%'] | targeted - -> no
-23:19:49 INFO   set_param    recency_halflife     overall -0.33% halves ['-0.25%', '-0.41%'] | targeted - -> no
-23:20:10 WARNING ESPN https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news failed: HTTPSConnectionPool(host='site.api.espn.com', port=443): Read timed out. (read timeout=20)
-23:20:12 INFO news: 50 new articles, 639 stored
-23:20:13 INFO learning: 331 player corrections, 6 news tags measured, 30 team corrections, 11 players in the news
-23:20:13 INFO No ODDS_API_KEY set - skipping sportsbook lines
-23:20:22 INFO bold: 200 calls, 6 upsets, 40 multis
-23:20:22 INFO slate 2026-11-02: 15 games, 370 player projections, 0 flagged picks
+03:02:13 INFO box scores to fetch: 5
+03:02:14 INFO graded 0 picks, 92 bold calls
+03:02:14 INFO injury report: 93 entries
+03:02:23 INFO current rosters for 31 teams, bio for 534 players
+03:03:49 INFO pts  MAE 4.51 (baseline 4.76), trees 249
+03:04:20 INFO reb  MAE 1.85 (baseline 1.92), trees 794
+03:04:49 INFO ast  MAE 1.33 (baseline 1.38), trees 785
+03:05:09 INFO fg3m MAE 0.89 (baseline 0.89), trees 502
+03:05:25 INFO stl  MAE 0.72 (baseline 0.73), trees 412
+03:05:44 INFO blk  MAE 0.52 (baseline 0.51), trees 486
+03:06:01 INFO min  MAE 4.72 (baseline 5.56), trees 487
+03:06:49 INFO game margin MAE 11.99 sd 15.20
+03:06:49 INFO game total  MAE 15.10 sd 19.20
+03:06:50 INFO news: 50 new articles, 641 stored
+03:06:50 INFO learning: 339 player corrections, 6 news tags measured, 30 team corrections, 11 players in the news
+03:06:54 INFO bold: 200 calls, 3 upsets, 18 multis
+03:06:54 INFO slate 2026-11-02: 3 games, 73 player projections, 0 flagged picks
