@@ -559,7 +559,7 @@ player_id,player,height,weight,birth,exp
 5105832,Nick Martinelli,79.0,224.0,2004-04-20,0.0
 5105837,Bruce Thornton,72.0,223.0,2003-09-14,0.0
 5105839,Brice Sensabaugh,78.0,235.0,2003-10-30,4.0
-5105841,Felix Okpara,82.0,237.0,2004-04-20,0.0
+5105841,Felix Okpara,83.0,237.0,2004-04-20,0.0
 5105853,Fletcher Loyer,75.0,180.0,2003-09-01,0.0
 5105854,Braden Smith,70.0,167.0,2003-07-25,0.0
 5105875,Mike Sharavjamts,81.0,195.0,2002-01-01,
@@ -617,6 +617,7 @@ player_id,player,height,weight,birth,exp
 5175737,Yaxel Lendeborg,81.0,241.0,2002-09-30,0.0
 5176195,Joel Scott,79.0,225.0,,
 5176420,Hayden Gray,76.0,190.0,2003-05-11,2.0
+5176517,Michael Ajayi,79.0,228.0,2003-05-23,0.0
 5177362,Riley Minix,79.0,230.0,2000-09-22,3.0
 5182573,Aaron Nkrumah,78.0,175.0,2001-11-26,0.0
 5203685,Khaman Maluach,86.0,250.0,2006-09-14,2.0
