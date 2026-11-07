@@ -189,9 +189,9 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909935,2026-11-04,2026-11-05T03:30Z,2027,2,True,post,False,12,LAC,LA Clippers,116.0,14,MIA,Miami Heat,117.0
 401909936,2026-11-05,2026-11-06T02:00Z,2027,2,True,post,False,21,PHX,Phoenix Suns,117.0,19,ORL,Orlando Magic,104.0
 401909937,2026-11-05,2026-11-06T03:00Z,2027,2,True,post,False,9,GS,Golden State Warriors,120.0,14,MIA,Miami Heat,100.0
-401909287,2026-11-06,2026-11-07T00:00Z,2027,2,False,pre,False,1,ATL,Atlanta Hawks,,27,WSH,Washington Wizards,
-401909288,2026-11-06,2026-11-07T00:00Z,2027,2,False,pre,False,30,CHA,Charlotte Hornets,,2,BOS,Boston Celtics,
-401909289,2026-11-06,2026-11-07T00:30Z,2027,2,False,pre,False,5,CLE,Cleveland Cavaliers,,20,PHI,Philadelphia 76ers,
+401909287,2026-11-06,2026-11-07T00:00Z,2027,2,False,in,False,1,ATL,Atlanta Hawks,,27,WSH,Washington Wizards,
+401909288,2026-11-06,2026-11-07T00:00Z,2027,2,False,in,False,30,CHA,Charlotte Hornets,,2,BOS,Boston Celtics,
+401909289,2026-11-06,2026-11-07T00:30Z,2027,2,False,in,False,5,CLE,Cleveland Cavaliers,,20,PHI,Philadelphia 76ers,
 401909290,2026-11-06,2026-11-07T01:00Z,2027,2,False,pre,False,6,DAL,Dallas Mavericks,,26,UTAH,Utah Jazz,
 401909291,2026-11-06,2026-11-07T01:00Z,2027,2,False,pre,False,29,MEM,Memphis Grizzlies,,25,OKC,Oklahoma City Thunder,
 401909292,2026-11-06,2026-11-07T01:00Z,2027,2,False,pre,False,15,MIL,Milwaukee Bucks,,28,TOR,Toronto Raptors,
