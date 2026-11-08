@@ -198,8 +198,8 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909293,2026-11-06,2026-11-07T01:00Z,2027,2,True,post,False,3,NO,New Orleans Pelicans,109.0,16,MIN,Minnesota Timberwolves,115.0
 401909294,2026-11-06,2026-11-07T03:00Z,2027,2,True,post,False,13,LAL,Los Angeles Lakers,124.0,22,POR,Portland Trail Blazers,118.0
 401909295,2026-11-06,2026-11-07T03:00Z,2027,2,True,post,False,23,SAC,Sacramento Kings,109.0,24,SA,San Antonio Spurs,124.0
-401909938,2026-11-07,2026-11-07T22:00Z,2027,2,False,pre,True,11,IND,Indiana Pacers,,7,DEN,Denver Nuggets,
-401909939,2026-11-07,2026-11-08T00:30Z,2027,2,False,pre,False,1,ATL,Atlanta Hawks,,17,BKN,Brooklyn Nets,
+401909938,2026-11-07,2026-11-07T22:00Z,2027,2,True,post,True,11,IND,Indiana Pacers,102.0,7,DEN,Denver Nuggets,114.0
+401909939,2026-11-07,2026-11-08T00:30Z,2027,2,False,in,False,1,ATL,Atlanta Hawks,,17,BKN,Brooklyn Nets,
 401909940,2026-11-07,2026-11-08T01:00Z,2027,2,False,pre,False,5,CLE,Cleveland Cavaliers,,18,NY,New York Knicks,
 401909941,2026-11-07,2026-11-08T01:00Z,2027,2,False,pre,False,25,OKC,Oklahoma City Thunder,,27,WSH,Washington Wizards,
 401909942,2026-11-07,2026-11-08T01:30Z,2027,2,False,pre,False,9,GS,Golden State Warriors,,19,ORL,Orlando Magic,
