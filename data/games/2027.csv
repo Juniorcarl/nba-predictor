@@ -205,10 +205,10 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909942,2026-11-07,2026-11-08T01:30Z,2027,2,True,post,False,9,GS,Golden State Warriors,126.0,19,ORL,Orlando Magic,119.0
 401909943,2026-11-07,2026-11-08T02:00Z,2027,2,True,post,False,21,PHX,Phoenix Suns,102.0,10,HOU,Houston Rockets,99.0
 401909944,2026-11-07,2026-11-08T03:00Z,2027,2,True,post,False,22,POR,Portland Trail Blazers,103.0,24,SA,San Antonio Spurs,125.0
-401909945,2026-11-08,2026-11-08T20:30Z,2027,2,False,pre,False,4,CHI,Chicago Bulls,,20,PHI,Philadelphia 76ers,
-401909946,2026-11-08,2026-11-08T23:00Z,2027,2,False,pre,False,8,DET,Detroit Pistons,,13,LAL,Los Angeles Lakers,
-401909947,2026-11-08,2026-11-09T00:00Z,2027,2,False,pre,False,16,MIN,Minnesota Timberwolves,,26,UTAH,Utah Jazz,
-401909948,2026-11-08,2026-11-09T00:30Z,2027,2,False,pre,False,6,DAL,Dallas Mavericks,,17,BKN,Brooklyn Nets,
+401909945,2026-11-08,2026-11-08T20:30Z,2027,2,True,post,False,4,CHI,Chicago Bulls,121.0,20,PHI,Philadelphia 76ers,127.0
+401909946,2026-11-08,2026-11-08T23:00Z,2027,2,False,in,False,8,DET,Detroit Pistons,,13,LAL,Los Angeles Lakers,
+401909947,2026-11-08,2026-11-09T00:00Z,2027,2,False,in,False,16,MIN,Minnesota Timberwolves,,26,UTAH,Utah Jazz,
+401909948,2026-11-08,2026-11-09T00:30Z,2027,2,False,in,False,6,DAL,Dallas Mavericks,,17,BKN,Brooklyn Nets,
 401909949,2026-11-08,2026-11-09T01:00Z,2027,2,False,pre,False,15,MIL,Milwaukee Bucks,,2,BOS,Boston Celtics,
 401909950,2026-11-08,2026-11-09T02:00Z,2027,2,False,pre,False,12,LAC,LA Clippers,,3,NO,New Orleans Pelicans,
 401909951,2026-11-08,2026-11-09T02:00Z,2027,2,False,pre,False,23,SAC,Sacramento Kings,,14,MIA,Miami Heat,
