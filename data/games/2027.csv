@@ -220,8 +220,8 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909957,2026-11-09,2026-11-10T01:30Z,2027,2,True,post,False,10,HOU,Houston Rockets,110.0,7,DEN,Denver Nuggets,100.0
 401909958,2026-11-09,2026-11-10T02:00Z,2027,2,True,post,False,21,PHX,Phoenix Suns,96.0,24,SA,San Antonio Spurs,122.0
 401909959,2026-11-09,2026-11-10T03:00Z,2027,2,True,post,False,9,GS,Golden State Warriors,138.0,3,NO,New Orleans Pelicans,87.0
-401909960,2026-11-10,2026-11-11T00:30Z,2027,2,False,pre,False,18,NY,New York Knicks,,15,MIL,Milwaukee Bucks,
-401909961,2026-11-10,2026-11-11T01:00Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,2,BOS,Boston Celtics,
+401909960,2026-11-10,2026-11-11T00:30Z,2027,2,False,in,False,18,NY,New York Knicks,,15,MIL,Milwaukee Bucks,
+401909961,2026-11-10,2026-11-11T01:00Z,2027,2,False,in,False,20,PHI,Philadelphia 76ers,,2,BOS,Boston Celtics,
 401909962,2026-11-10,2026-11-11T02:00Z,2027,2,False,pre,False,21,PHX,Phoenix Suns,,12,LAC,LA Clippers,
 401909963,2026-11-10,2026-11-11T02:00Z,2027,2,False,pre,False,26,UTAH,Utah Jazz,,14,MIA,Miami Heat,
 401909964,2026-11-10,2026-11-11T03:00Z,2027,2,False,pre,False,23,SAC,Sacramento Kings,,19,ORL,Orlando Magic,
