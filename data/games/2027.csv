@@ -227,15 +227,15 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909964,2026-11-10,2026-11-11T03:00Z,2027,2,True,post,False,23,SAC,Sacramento Kings,100.0,19,ORL,Orlando Magic,107.0
 401909965,2026-11-10,2026-11-11T04:00Z,2027,2,True,post,False,22,POR,Portland Trail Blazers,123.0,25,OKC,Oklahoma City Thunder,103.0
 401909966,2026-11-11,2026-11-12T00:00Z,2027,2,True,post,False,11,IND,Indiana Pacers,114.0,27,WSH,Washington Wizards,101.0
-401909967,2026-11-11,2026-11-12T00:00Z,2027,2,False,in,False,18,NY,New York Knicks,,5,CLE,Cleveland Cavaliers,
-401909968,2026-11-11,2026-11-12T00:00Z,2027,2,False,in,False,28,TOR,Toronto Raptors,,2,BOS,Boston Celtics,
-401909969,2026-11-11,2026-11-12T01:00Z,2027,2,False,in,False,4,CHI,Chicago Bulls,,24,SA,San Antonio Spurs,
-401909970,2026-11-11,2026-11-12T01:00Z,2027,2,False,in,False,29,MEM,Memphis Grizzlies,,7,DEN,Denver Nuggets,
-401909971,2026-11-11,2026-11-12T01:00Z,2027,2,False,in,False,15,MIL,Milwaukee Bucks,,13,LAL,Los Angeles Lakers,
-401909972,2026-11-11,2026-11-12T01:00Z,2027,2,False,in,False,3,NO,New Orleans Pelicans,,17,BKN,Brooklyn Nets,
-401909973,2026-11-11,2026-11-12T02:00Z,2027,2,False,in,False,26,UTAH,Utah Jazz,,19,ORL,Orlando Magic,
-401909974,2026-11-11,2026-11-12T02:30Z,2027,2,False,pre,False,10,HOU,Houston Rockets,,9,GS,Golden State Warriors,
-401909975,2026-11-11,2026-11-12T03:00Z,2027,2,False,pre,False,22,POR,Portland Trail Blazers,,25,OKC,Oklahoma City Thunder,
+401909967,2026-11-11,2026-11-12T00:00Z,2027,2,True,post,False,18,NY,New York Knicks,107.0,5,CLE,Cleveland Cavaliers,115.0
+401909968,2026-11-11,2026-11-12T00:00Z,2027,2,True,post,False,28,TOR,Toronto Raptors,93.0,2,BOS,Boston Celtics,98.0
+401909969,2026-11-11,2026-11-12T01:00Z,2027,2,True,post,False,4,CHI,Chicago Bulls,119.0,24,SA,San Antonio Spurs,124.0
+401909970,2026-11-11,2026-11-12T01:00Z,2027,2,True,post,False,29,MEM,Memphis Grizzlies,118.0,7,DEN,Denver Nuggets,123.0
+401909971,2026-11-11,2026-11-12T01:00Z,2027,2,True,post,False,15,MIL,Milwaukee Bucks,112.0,13,LAL,Los Angeles Lakers,123.0
+401909972,2026-11-11,2026-11-12T01:00Z,2027,2,True,post,False,3,NO,New Orleans Pelicans,111.0,17,BKN,Brooklyn Nets,145.0
+401909973,2026-11-11,2026-11-12T02:00Z,2027,2,True,post,False,26,UTAH,Utah Jazz,108.0,19,ORL,Orlando Magic,123.0
+401909974,2026-11-11,2026-11-12T02:30Z,2027,2,True,post,False,10,HOU,Houston Rockets,115.0,9,GS,Golden State Warriors,108.0
+401909975,2026-11-11,2026-11-12T03:00Z,2027,2,True,post,False,22,POR,Portland Trail Blazers,118.0,25,OKC,Oklahoma City Thunder,108.0
 401909976,2026-11-12,2026-11-13T00:00Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,28,TOR,Toronto Raptors,
 401909977,2026-11-12,2026-11-13T00:00Z,2027,2,False,pre,False,27,WSH,Washington Wizards,,8,DET,Detroit Pistons,
 401909978,2026-11-12,2026-11-13T01:00Z,2027,2,False,pre,False,16,MIN,Minnesota Timberwolves,,6,DAL,Dallas Mavericks,
@@ -288,3 +288,7 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401910016,2026-11-18,2026-11-19T02:30Z,2027,2,False,pre,False,6,DAL,Dallas Mavericks,,9,GS,Golden State Warriors,
 401910017,2026-11-18,2026-11-19T03:00Z,2027,2,False,pre,False,13,LAL,Los Angeles Lakers,,26,UTAH,Utah Jazz,
 401910018,2026-11-18,2026-11-19T03:00Z,2027,2,False,pre,False,23,SAC,Sacramento Kings,,21,PHX,Phoenix Suns,
+401910019,2026-11-19,2026-11-20T01:00Z,2027,2,False,pre,False,29,MEM,Memphis Grizzlies,,9,GS,Golden State Warriors,
+401910020,2026-11-19,2026-11-20T01:00Z,2027,2,False,pre,False,15,MIL,Milwaukee Bucks,,22,POR,Portland Trail Blazers,
+401910021,2026-11-19,2026-11-20T01:00Z,2027,2,False,pre,False,16,MIN,Minnesota Timberwolves,,18,NY,New York Knicks,
+401910022,2026-11-19,2026-11-20T01:00Z,2027,2,False,pre,False,24,SA,San Antonio Spurs,,12,LAC,LA Clippers,
