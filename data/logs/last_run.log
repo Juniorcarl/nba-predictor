@@ -1,19 +1,17 @@
-21:42:47 INFO box scores to fetch: 9
-21:42:52 INFO graded 0 picks, 299 bold calls
-21:42:52 INFO post-mortem written for 2026-11-11
-21:42:52 INFO injury report: 100 entries
-21:43:02 INFO current rosters for 31 teams, bio for 534 players
-21:43:54 INFO pts  MAE 4.53 (baseline 4.79), trees 173
-21:44:18 INFO reb  MAE 1.85 (baseline 1.92), trees 860
-21:44:38 INFO ast  MAE 1.34 (baseline 1.39), trees 699
-21:44:51 INFO fg3m MAE 0.89 (baseline 0.89), trees 418
-21:45:06 INFO stl  MAE 0.72 (baseline 0.72), trees 462
-21:45:22 INFO blk  MAE 0.52 (baseline 0.51), trees 534
-21:45:37 INFO min  MAE 4.73 (baseline 5.62), trees 531
-21:46:12 INFO game margin MAE 11.84 sd 15.09
-21:46:12 INFO game total  MAE 14.84 sd 18.88
-21:46:13 INFO news: 50 new articles, 993 stored
-21:46:13 INFO learning: 383 player corrections, 8 news tags measured, 30 team corrections, 10 players in the news
-21:46:13 INFO No ODDS_API_KEY set - skipping sportsbook lines
-21:46:16 INFO bold: 200 calls, 2 upsets, 24 multis
-21:46:16 INFO slate 2026-11-12: 4 games, 97 player projections, 0 flagged picks
+02:03:59 INFO box scores to fetch: 0
+02:03:59 INFO graded 0 picks, 0 bold calls
+02:03:59 INFO injury report: 101 entries
+02:04:07 INFO current rosters for 31 teams, bio for 535 players
+02:05:27 INFO pts  MAE 4.53 (baseline 4.79), trees 173
+02:06:00 INFO reb  MAE 1.85 (baseline 1.92), trees 860
+02:06:26 INFO ast  MAE 1.34 (baseline 1.39), trees 699
+02:06:42 INFO fg3m MAE 0.89 (baseline 0.89), trees 418
+02:07:01 INFO stl  MAE 0.72 (baseline 0.72), trees 462
+02:07:22 INFO blk  MAE 0.52 (baseline 0.51), trees 534
+02:07:41 INFO min  MAE 4.73 (baseline 5.62), trees 531
+02:08:30 INFO game margin MAE 11.84 sd 15.09
+02:08:30 INFO game total  MAE 14.84 sd 18.88
+02:08:30 INFO news: 50 new articles, 994 stored
+02:08:31 INFO learning: 383 player corrections, 8 news tags measured, 30 team corrections, 12 players in the news
+02:08:34 INFO bold: 52 calls, 0 upsets, 6 multis
+02:08:34 INFO slate 2026-11-12: 1 games, 27 player projections, 0 flagged picks
