@@ -3981,10 +3981,154 @@
      "detail": "Shot 8/12: well above normal"
     }
    ]
+  },
+  {
+   "date": "2026-11-16",
+   "n": 168,
+   "dnp": 29,
+   "mae": {
+    "min": 4.38,
+    "pts": 4.61,
+    "reb": 2.0,
+    "ast": 1.34
+   },
+   "share_minutes": 0.414,
+   "reasons": {
+    "Normal variation": 11,
+    "Cold shooting": 8,
+    "Bigger role": 8,
+    "Hot shooting": 4,
+    "Fewer minutes": 4,
+    "Blowout": 2,
+    "Left early or benched": 2,
+    "Did not play": 2
+   },
+   "biggest": [
+    {
+     "player": "Terrence Shannon Jr.",
+     "played": true,
+     "p_pts": 10.6,
+     "a_pts": 34.0,
+     "p_min": 22.6,
+     "a_min": 35.0,
+     "reason": "Bigger role",
+     "detail": "35 min vs 23 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Joel Embiid",
+     "played": true,
+     "p_pts": 17.6,
+     "a_pts": 37.0,
+     "p_min": 29.1,
+     "a_min": 32.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Bam Adebayo",
+     "played": true,
+     "p_pts": 21.2,
+     "a_pts": 4.0,
+     "p_min": 36.4,
+     "a_min": 16.0,
+     "reason": "Left early or benched",
+     "detail": "Only 16 min vs 36 expected: possible injury, foul trouble or benching"
+    },
+    {
+     "player": "Amen Thompson",
+     "played": false,
+     "p_pts": 15.0,
+     "a_pts": 0.0,
+     "p_min": 32.6,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "LaMelo Ball",
+     "played": true,
+     "p_pts": 20.7,
+     "a_pts": 6.0,
+     "p_min": 30.0,
+     "a_min": 24.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 2/13: well below normal"
+    },
+    {
+     "player": "Zach Edey",
+     "played": true,
+     "p_pts": 8.8,
+     "a_pts": 23.0,
+     "p_min": 21.2,
+     "a_min": 21.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 10/15: well above normal"
+    },
+    {
+     "player": "Julius Randle",
+     "played": true,
+     "p_pts": 19.5,
+     "a_pts": 33.0,
+     "p_min": 31.6,
+     "a_min": 34.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 13/20: well above normal"
+    },
+    {
+     "player": "Donovan Mitchell",
+     "played": true,
+     "p_pts": 25.7,
+     "a_pts": 39.0,
+     "p_min": 32.3,
+     "a_min": 36.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 16/25: well above normal"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "played": true,
+     "p_pts": 21.2,
+     "a_pts": 8.0,
+     "p_min": 34.2,
+     "a_min": 30.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 3/11: well below normal"
+    },
+    {
+     "player": "Damian Lillard",
+     "played": true,
+     "p_pts": 20.6,
+     "a_pts": 9.0,
+     "p_min": 30.4,
+     "a_min": 24.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 2/15: well below normal"
+    },
+    {
+     "player": "Nolan Traore",
+     "played": true,
+     "p_pts": 11.6,
+     "a_pts": 23.0,
+     "p_min": 20.5,
+     "a_min": 30.0,
+     "reason": "Bigger role",
+     "detail": "30 min vs 21 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Georges Niang",
+     "played": true,
+     "p_pts": 11.3,
+     "a_pts": 0.0,
+     "p_min": 22.4,
+     "a_min": 14.0,
+     "reason": "Blowout",
+     "detail": "Played 14 min vs 22 expected in a 21-point game"
+    }
+   ]
   }
  ],
  "patterns": {
-  "updated": "2026-11-17T04:11+00:00",
+  "updated": "2026-11-17T22:48+00:00",
   "items": [
    {
     "segment": "First 3 games back from injury",
@@ -4011,10 +4155,10 @@
    {
     "segment": "Back-to-back games",
     "stat": "min",
-    "bias": 0.87,
-    "n": 695,
+    "bias": 0.86,
+    "n": 705,
     "t": 3.4,
-    "text": "Back-to-back games: the model under-predicts minutes by 0.9 on average (695 cases).",
+    "text": "Back-to-back games: the model under-predicts minutes by 0.9 on average (705 cases).",
     "group": "fatigue_travel",
     "fix": "The 'fatigue travel' factor is already on; the gap may shrink as it learns.",
     "source": "this season"
@@ -4023,9 +4167,9 @@
     "segment": "2+ teammates out",
     "stat": "min",
     "bias": -0.61,
-    "n": 11808,
+    "n": 11830,
     "t": -10.6,
-    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (11,808 cases).",
+    "text": "2+ teammates out: the model over-predicts minutes by 0.6 on average (11,830 cases).",
     "group": null,
     "fix": null,
     "source": "test games"
@@ -4045,9 +4189,9 @@
     "segment": "Road games",
     "stat": "pts",
     "bias": -0.42,
-    "n": 8043,
-    "t": -6.5,
-    "text": "Road games: the model over-predicts points by 0.4 on average (8,043 cases).",
+    "n": 8054,
+    "t": -6.4,
+    "text": "Road games: the model over-predicts points by 0.4 on average (8,054 cases).",
     "group": null,
     "fix": null,
     "source": "test games"
@@ -4056,9 +4200,9 @@
     "segment": "Starters",
     "stat": "pts",
     "bias": -0.41,
-    "n": 7465,
+    "n": 7475,
     "t": -5.3,
-    "text": "Starters: the model over-predicts points by 0.4 on average (7,465 cases).",
+    "text": "Starters: the model over-predicts points by 0.4 on average (7,475 cases).",
     "group": null,
     "fix": null,
     "source": "test games"
@@ -11625,6 +11769,11 @@
    "at": "2026-11-16T23:50+00:00",
    "kind": "experiment",
    "text": "Tested 16 possible changes against the current model. 0 improved accuracy on games the model hadn't seen."
+  },
+  {
+   "at": "2026-11-17T22:46+00:00",
+   "kind": "postmortem",
+   "text": "Reviewed 168 player projections from 2026-11-16: average miss 4.61 pts, 2.0 reb, 1.34 ast."
   }
  ]
 }

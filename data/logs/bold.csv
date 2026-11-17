@@ -6872,7 +6872,7 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401909996,Taylor Hendricks 6+ rebounds,"{""player_id"": ""4684806"", ""stat"": ""reb"", ""line"": 6}",0.405,2.47,miss
 2026-11-16,call,401909998,Klay Thompson 20+ points,"{""player_id"": ""6475"", ""stat"": ""pts"", ""line"": 20}",0.321,3.11,miss
 2026-11-16,call,401909998,Klay Thompson 25+ points + rebounds + assists,"{""player_id"": ""6475"", ""stat"": ""pra"", ""line"": 25}",0.31,3.23,miss
-2026-11-16,call,401910001,Jordan Goodwin 20+ points + rebounds + assists,"{""player_id"": ""4278402"", ""stat"": ""pra"", ""line"": 20}",0.32,3.12,
+2026-11-16,call,401910001,Jordan Goodwin 20+ points + rebounds + assists,"{""player_id"": ""4278402"", ""stat"": ""pra"", ""line"": 20}",0.32,3.12,miss
 2026-11-16,call,401909998,Ryan Conwell 4+ rebounds,"{""player_id"": ""5107157"", ""stat"": ""reb"", ""line"": 4}",0.317,3.15,miss
 2026-11-16,call,401910000,De'Anthony Melton 15+ points,"{""player_id"": ""4066436"", ""stat"": ""pts"", ""line"": 15}",0.43,2.32,miss
 2026-11-16,call,401909995,Tyrese Proctor 30+ points + rebounds + assists,"{""player_id"": ""5023693"", ""stat"": ""pra"", ""line"": 30}",0.225,4.44,miss
@@ -6888,7 +6888,7 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401909994,Franz Wagner 45+ points + rebounds + assists,"{""player_id"": ""4566434"", ""stat"": ""pra"", ""line"": 45}",0.325,3.07,miss
 2026-11-16,call,401909995,Tyrese Proctor 20+ points,"{""player_id"": ""5023693"", ""stat"": ""pts"", ""line"": 20}",0.182,5.5,miss
 2026-11-16,call,401909998,Davion Mitchell 12+ assists,"{""player_id"": ""4278053"", ""stat"": ""ast"", ""line"": 12}",0.265,3.77,miss
-2026-11-16,call,401910001,Jordan Goodwin 4+ assists,"{""player_id"": ""4278402"", ""stat"": ""ast"", ""line"": 4}",0.321,3.12,
+2026-11-16,call,401910001,Jordan Goodwin 4+ assists,"{""player_id"": ""4278402"", ""stat"": ""ast"", ""line"": 4}",0.321,3.12,miss
 2026-11-16,call,401909995,Norman Powell 25+ points,"{""player_id"": ""2595516"", ""stat"": ""pts"", ""line"": 25}",0.32,3.12,hit
 2026-11-16,call,401910000,LJ Cryer 6+ assists,"{""player_id"": ""4433149"", ""stat"": ""ast"", ""line"": 6}",0.204,4.9,miss
 2026-11-16,call,401909995,Tyrese Proctor 4+ threes,"{""player_id"": ""5023693"", ""stat"": ""fg3m"", ""line"": 4}",0.257,3.89,miss
@@ -6914,7 +6914,7 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401910000,LJ Cryer 20+ points,"{""player_id"": ""4433149"", ""stat"": ""pts"", ""line"": 20}",0.16,6.24,miss
 2026-11-16,call,401910000,Zion Williamson 25+ points,"{""player_id"": ""4395628"", ""stat"": ""pts"", ""line"": 25}",0.388,2.58,miss
 2026-11-16,call,401909995,Meleek Thomas 25+ points + rebounds + assists,"{""player_id"": ""5041951"", ""stat"": ""pra"", ""line"": 25}",0.282,3.54,miss
-2026-11-16,call,401910001,Jordan Goodwin 3+ threes,"{""player_id"": ""4278402"", ""stat"": ""fg3m"", ""line"": 3}",0.384,2.6,
+2026-11-16,call,401910001,Jordan Goodwin 3+ threes,"{""player_id"": ""4278402"", ""stat"": ""fg3m"", ""line"": 3}",0.384,2.6,miss
 2026-11-16,call,401909998,Davion Mitchell 20+ points,"{""player_id"": ""4278053"", ""stat"": ""pts"", ""line"": 20}",0.32,3.13,miss
 2026-11-16,call,401909998,Ryan Conwell 20+ points + rebounds + assists,"{""player_id"": ""5107157"", ""stat"": ""pra"", ""line"": 20}",0.156,6.42,miss
 2026-11-16,call,401909995,Tyrese Proctor 8+ rebounds,"{""player_id"": ""5023693"", ""stat"": ""reb"", ""line"": 8}",0.164,6.1,miss
@@ -6924,8 +6924,8 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401909996,Cedric Coward 6+ assists,"{""player_id"": ""4903027"", ""stat"": ""ast"", ""line"": 6}",0.256,3.91,hit
 2026-11-16,call,401909995,Thomas Bryant 2+ threes,"{""player_id"": ""3934723"", ""stat"": ""fg3m"", ""line"": 2}",0.384,2.6,miss
 2026-11-16,call,401909995,Jalen Smith 30+ points + rebounds + assists,"{""player_id"": ""4397189"", ""stat"": ""pra"", ""line"": 30}",0.234,4.28,hit
-2026-11-16,call,401910001,Collin Gillespie 15+ points,"{""player_id"": ""4278585"", ""stat"": ""pts"", ""line"": 15}",0.256,3.9,
-2026-11-16,call,401910001,Jordan Goodwin 15+ points,"{""player_id"": ""4278402"", ""stat"": ""pts"", ""line"": 15}",0.181,5.52,
+2026-11-16,call,401910001,Collin Gillespie 15+ points,"{""player_id"": ""4278585"", ""stat"": ""pts"", ""line"": 15}",0.256,3.9,miss
+2026-11-16,call,401910001,Jordan Goodwin 15+ points,"{""player_id"": ""4278402"", ""stat"": ""pts"", ""line"": 15}",0.181,5.52,miss
 2026-11-16,call,401909996,Cam Spencer 10+ assists,"{""player_id"": ""4433083"", ""stat"": ""ast"", ""line"": 10}",0.202,4.94,miss
 2026-11-16,call,401909996,AJ Dybantsa 8+ rebounds,"{""player_id"": ""5142718"", ""stat"": ""reb"", ""line"": 8}",0.405,2.47,miss
 2026-11-16,call,401909999,Sidy Cissoko 15+ points,"{""player_id"": ""5081727"", ""stat"": ""pts"", ""line"": 15}",0.195,5.13,miss
@@ -6954,7 +6954,7 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401910000,Will Richard 4+ rebounds,"{""player_id"": ""4897262"", ""stat"": ""reb"", ""line"": 4}",0.325,3.07,miss
 2026-11-16,call,401910000,Brandin Podziemski 4+ threes,"{""player_id"": ""4709138"", ""stat"": ""fg3m"", ""line"": 4}",0.359,2.79,miss
 2026-11-16,call,401909996,Kyshawn George 6+ assists,"{""player_id"": ""5174563"", ""stat"": ""ast"", ""line"": 6}",0.391,2.56,miss
-2026-11-16,call,401910001,Cameron Johnson 15+ points,"{""player_id"": ""3138196"", ""stat"": ""pts"", ""line"": 15}",0.383,2.61,
+2026-11-16,call,401910001,Cameron Johnson 15+ points,"{""player_id"": ""3138196"", ""stat"": ""pts"", ""line"": 15}",0.383,2.61,miss
 2026-11-16,call,401909995,Patrick Williams 20+ points + rebounds + assists,"{""player_id"": ""4431687"", ""stat"": ""pra"", ""line"": 20}",0.292,3.42,miss
 2026-11-16,call,401909998,Tari Eason 15+ points,"{""player_id"": ""4433192"", ""stat"": ""pts"", ""line"": 15}",0.328,3.05,miss
 2026-11-16,call,401909995,Tyrese Proctor 8+ assists,"{""player_id"": ""5023693"", ""stat"": ""ast"", ""line"": 8}",0.132,7.58,miss
@@ -6967,8 +6967,8 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401909994,Desmond Bane 4+ threes,"{""player_id"": ""4066320"", ""stat"": ""fg3m"", ""line"": 4}",0.475,2.1,miss
 2026-11-16,call,401909997,Danny Wolf 15+ points,"{""player_id"": ""5107173"", ""stat"": ""pts"", ""line"": 15}",0.256,3.9,miss
 2026-11-16,call,401909997,Dean Wade 6+ rebounds,"{""player_id"": ""3912848"", ""stat"": ""reb"", ""line"": 6}",0.317,3.15,hit
-2026-11-16,call,401910001,Jamal Murray 2+ blocks,"{""player_id"": ""3936299"", ""stat"": ""blk"", ""line"": 2}",0.285,3.5,
-2026-11-16,call,401910001,Jordan Goodwin 4+ threes,"{""player_id"": ""4278402"", ""stat"": ""fg3m"", ""line"": 4}",0.206,4.86,
+2026-11-16,call,401910001,Jamal Murray 2+ blocks,"{""player_id"": ""3936299"", ""stat"": ""blk"", ""line"": 2}",0.285,3.5,miss
+2026-11-16,call,401910001,Jordan Goodwin 4+ threes,"{""player_id"": ""4278402"", ""stat"": ""fg3m"", ""line"": 4}",0.206,4.86,miss
 2026-11-16,call,401909998,Ryan Conwell 4+ threes,"{""player_id"": ""5107157"", ""stat"": ""fg3m"", ""line"": 4}",0.154,6.51,miss
 2026-11-16,call,401910000,Draymond Green 10+ assists,"{""player_id"": ""6589"", ""stat"": ""ast"", ""line"": 10}",0.265,3.77,miss
 2026-11-16,call,401909997,VJ Edgecombe 6+ assists,"{""player_id"": ""5124612"", ""stat"": ""ast"", ""line"": 6}",0.265,3.77,miss
@@ -6981,7 +6981,7 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401909995,Norman Powell 30+ points,"{""player_id"": ""2595516"", ""stat"": ""pts"", ""line"": 30}",0.164,6.1,miss
 2026-11-16,call,401909998,Giannis Antetokounmpo 2+ blocks,"{""player_id"": ""3032977"", ""stat"": ""blk"", ""line"": 2}",0.362,2.76,hit
 2026-11-16,call,401910000,Charles Bassey 2+ blocks,"{""player_id"": ""4397886"", ""stat"": ""blk"", ""line"": 2}",0.362,2.76,miss
-2026-11-16,call,401910001,Miles Bridges 4+ assists,"{""player_id"": ""4066383"", ""stat"": ""ast"", ""line"": 4}",0.391,2.56,
+2026-11-16,call,401910001,Miles Bridges 4+ assists,"{""player_id"": ""4066383"", ""stat"": ""ast"", ""line"": 4}",0.391,2.56,miss
 2026-11-16,call,401909997,Danny Wolf 3+ threes,"{""player_id"": ""5107173"", ""stat"": ""fg3m"", ""line"": 3}",0.338,2.96,miss
 2026-11-16,call,401909995,Jalen Smith 20+ points,"{""player_id"": ""4397189"", ""stat"": ""pts"", ""line"": 20}",0.182,5.48,miss
 2026-11-16,call,401909996,Alex Sarr 12+ rebounds,"{""player_id"": ""5160992"", ""stat"": ""reb"", ""line"": 12}",0.201,4.99,miss
@@ -6989,16 +6989,16 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401909996,Bilal Coulibaly 2+ blocks,"{""player_id"": ""5104155"", ""stat"": ""blk"", ""line"": 2}",0.361,2.77,miss
 2026-11-16,call,401909997,Day'Ron Sharpe 2+ blocks,"{""player_id"": ""4432194"", ""stat"": ""blk"", ""line"": 2}",0.362,2.76,miss
 2026-11-16,call,401909996,Anthony Davis 45+ points + rebounds + assists,"{""player_id"": ""6583"", ""stat"": ""pra"", ""line"": 45}",0.258,3.88,miss
-2026-11-16,call,401910001,Christian Braun 3+ steals,"{""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 3}",0.305,3.28,
+2026-11-16,call,401910001,Christian Braun 3+ steals,"{""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 3}",0.305,3.28,miss
 2026-11-16,call,401910000,Saddiq Bey 30+ points + rebounds + assists,"{""player_id"": ""4397136"", ""stat"": ""pra"", ""line"": 30}",0.32,3.12,hit
 2026-11-16,call,401909998,Klay Thompson 2+ blocks,"{""player_id"": ""6475"", ""stat"": ""blk"", ""line"": 2}",0.2,5.01,miss
 2026-11-16,call,401909997,Day'Ron Sharpe 8+ assists,"{""player_id"": ""4432194"", ""stat"": ""ast"", ""line"": 8}",0.138,7.26,miss
 2026-11-16,call,401909994,Franz Wagner 8+ rebounds,"{""player_id"": ""4566434"", ""stat"": ""reb"", ""line"": 8}",0.317,3.15,hit
-2026-11-16,call,401910001,Jordan Goodwin 25+ points + rebounds + assists,"{""player_id"": ""4278402"", ""stat"": ""pra"", ""line"": 25}",0.12,8.3,
+2026-11-16,call,401910001,Jordan Goodwin 25+ points + rebounds + assists,"{""player_id"": ""4278402"", ""stat"": ""pra"", ""line"": 25}",0.12,8.3,miss
 2026-11-16,call,401909998,Alperen Sengun 8+ assists,"{""player_id"": ""4871144"", ""stat"": ""ast"", ""line"": 8}",0.435,2.3,miss
 2026-11-16,call,401909996,Kyshawn George 4+ threes,"{""player_id"": ""5174563"", ""stat"": ""fg3m"", ""line"": 4}",0.254,3.93,miss
-2026-11-16,call,401910001,Oso Ighodaro 4+ assists,"{""player_id"": ""4601023"", ""stat"": ""ast"", ""line"": 4}",0.413,2.42,
-2026-11-16,call,401910001,Collin Gillespie 20+ points + rebounds + assists,"{""player_id"": ""4278585"", ""stat"": ""pra"", ""line"": 20}",0.325,3.08,
+2026-11-16,call,401910001,Oso Ighodaro 4+ assists,"{""player_id"": ""4601023"", ""stat"": ""ast"", ""line"": 4}",0.413,2.42,miss
+2026-11-16,call,401910001,Collin Gillespie 20+ points + rebounds + assists,"{""player_id"": ""4278585"", ""stat"": ""pra"", ""line"": 20}",0.325,3.08,miss
 2026-11-16,call,401909998,Alperen Sengun 30+ points,"{""player_id"": ""4871144"", ""stat"": ""pts"", ""line"": 30}",0.253,3.96,miss
 2026-11-16,call,401910000,Saddiq Bey 6+ rebounds,"{""player_id"": ""4397136"", ""stat"": ""reb"", ""line"": 6}",0.317,3.15,hit
 2026-11-16,call,401909995,Norman Powell 35+ points + rebounds + assists,"{""player_id"": ""2595516"", ""stat"": ""pra"", ""line"": 35}",0.174,5.76,hit
@@ -7034,7 +7034,7 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401909996,Anthony Davis 30+ points,"{""player_id"": ""6583"", ""stat"": ""pts"", ""line"": 30}",0.263,3.81,miss
 2026-11-16,call,401909999,LaMelo Ball 3+ steals,"{""player_id"": ""4432816"", ""stat"": ""stl"", ""line"": 3}",0.293,3.42,miss
 2026-11-16,call,401909996,Jerami Grant 20+ points,"{""player_id"": ""2991070"", ""stat"": ""pts"", ""line"": 20}",0.198,5.06,miss
-2026-11-16,call,401910001,Jordan Goodwin 6+ assists,"{""player_id"": ""4278402"", ""stat"": ""ast"", ""line"": 6}",0.118,8.48,
+2026-11-16,call,401910001,Jordan Goodwin 6+ assists,"{""player_id"": ""4278402"", ""stat"": ""ast"", ""line"": 6}",0.118,8.48,miss
 2026-11-16,call,401909994,Anthony Black 20+ points,"{""player_id"": ""4712849"", ""stat"": ""pts"", ""line"": 20}",0.256,3.9,hit
 2026-11-16,call,401909995,Josh Giddey 12+ assists,"{""player_id"": ""4871145"", ""stat"": ""ast"", ""line"": 12}",0.234,4.28,miss
 2026-11-16,call,401909994,Anthony Black 3+ threes,"{""player_id"": ""4712849"", ""stat"": ""fg3m"", ""line"": 3}",0.322,3.1,hit
@@ -7049,7 +7049,7 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,call,401910000,Brandin Podziemski 5+ threes,"{""player_id"": ""4709138"", ""stat"": ""fg3m"", ""line"": 5}",0.205,4.88,miss
 2026-11-16,call,401909995,Isaac Okoro 20+ points + rebounds + assists,"{""player_id"": ""4432822"", ""stat"": ""pra"", ""line"": 20}",0.157,6.38,hit
 2026-11-16,call,401909997,Kentavious Caldwell-Pope 4+ rebounds,"{""player_id"": ""2581018"", ""stat"": ""reb"", ""line"": 4}",0.336,2.98,miss
-2026-11-16,call,401910001,Collin Gillespie 3+ threes,"{""player_id"": ""4278585"", ""stat"": ""fg3m"", ""line"": 3}",0.443,2.26,
+2026-11-16,call,401910001,Collin Gillespie 3+ threes,"{""player_id"": ""4278585"", ""stat"": ""fg3m"", ""line"": 3}",0.443,2.26,miss
 2026-11-16,call,401909998,Klay Thompson 6+ threes,"{""player_id"": ""6475"", ""stat"": ""fg3m"", ""line"": 6}",0.232,4.3,miss
 2026-11-16,call,401910000,Charles Bassey 3+ blocks,"{""player_id"": ""4397886"", ""stat"": ""blk"", ""line"": 3}",0.164,6.1,miss
 2026-11-16,call,401909994,Tristan da Silva 6+ rebounds,"{""player_id"": ""4702382"", ""stat"": ""reb"", ""line"": 6}",0.219,4.57,hit
@@ -7062,12 +7062,12 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,upset,401909999,POR to beat MIN,"{""side"": ""away""}",0.324,3.09,miss
 2026-11-16,upset,401909996,WSH to beat MEM,"{""side"": ""home""}",0.285,3.51,miss
 2026-11-16,upset,401909995,CHI to beat CLE,"{""side"": ""away""}",0.255,3.92,miss
-2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Christian Braun 2+ steals + DEN to win,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Christian Braun 2+ steals"", ""p"": 0.533, ""kind"": ""player"", ""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""DEN to win"", ""p"": 0.757, ""kind"": ""win"", ""team_id"": ""7""}]",0.246,4.06,
+2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Christian Braun 2+ steals + DEN to win,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Christian Braun 2+ steals"", ""p"": 0.533, ""kind"": ""player"", ""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""DEN to win"", ""p"": 0.757, ""kind"": ""win"", ""team_id"": ""7""}]",0.246,4.06,miss
 2026-11-16,multi,401909997,Day'Ron Sharpe 6+ assists + Danny Wolf 20+ points + rebounds + assists,"[{""text"": ""Day'Ron Sharpe 6+ assists"", ""p"": 0.389, ""kind"": ""player"", ""player_id"": ""4432194"", ""stat"": ""ast"", ""line"": 6}, {""text"": ""Danny Wolf 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""5107173"", ""stat"": ""pra"", ""line"": 20}]",0.23,4.35,miss
 2026-11-16,multi,401909994,Tristan da Silva 20+ points + rebounds + assists + Franz Wagner 40+ points + rebounds + assists + Paul George 30+ points + rebounds + assists,"[{""text"": ""Tristan da Silva 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4702382"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Franz Wagner 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4566434"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Paul George 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4251"", ""stat"": ""pra"", ""line"": 30}]",0.192,5.2,miss
 2026-11-16,multi,401909995,Tyrese Proctor 25+ points + rebounds + assists + James Harden 6+ assists,"[{""text"": ""Tyrese Proctor 25+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""5023693"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""James Harden 6+ assists"", ""p"": 0.702, ""kind"": ""player"", ""player_id"": ""3992"", ""stat"": ""ast"", ""line"": 6}]",0.411,2.43,miss
 2026-11-16,multi,401909999,Ayo Dosunmu 30+ points + rebounds + assists + Jaden McDaniels 30+ points + rebounds + assists + Deni Avdija 40+ points + rebounds + assists,"[{""text"": ""Ayo Dosunmu 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4397002"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Jaden McDaniels 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4431671"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Deni Avdija 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4683021"", ""stat"": ""pra"", ""line"": 40}]",0.192,5.2,miss
-2026-11-16,multi,401910001,Christian Braun 2+ steals + DEN to win,"[{""text"": ""Christian Braun 2+ steals"", ""p"": 0.533, ""kind"": ""player"", ""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""DEN to win"", ""p"": 0.757, ""kind"": ""win"", ""team_id"": ""7""}]",0.415,2.41,
+2026-11-16,multi,401910001,Christian Braun 2+ steals + DEN to win,"[{""text"": ""Christian Braun 2+ steals"", ""p"": 0.533, ""kind"": ""player"", ""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""DEN to win"", ""p"": 0.757, ""kind"": ""win"", ""team_id"": ""7""}]",0.415,2.41,miss
 2026-11-16,multi,401909994,Tristan da Silva 20+ points + rebounds + assists + Franz Wagner 40+ points + rebounds + assists,"[{""text"": ""Tristan da Silva 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4702382"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Franz Wagner 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4566434"", ""stat"": ""pra"", ""line"": 40}]",0.332,3.01,miss
 2026-11-16,multi,401909994,Tristan da Silva 20+ points + rebounds + assists + Paul George 30+ points + rebounds + assists,"[{""text"": ""Tristan da Silva 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4702382"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Paul George 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4251"", ""stat"": ""pra"", ""line"": 30}]",0.334,3.0,hit
 2026-11-16,multi,401909994,Franz Wagner 40+ points + rebounds + assists + Paul George 30+ points + rebounds + assists,"[{""text"": ""Franz Wagner 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4566434"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Paul George 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4251"", ""stat"": ""pra"", ""line"": 30}]",0.334,3.0,miss
@@ -7090,9 +7090,9 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,multi,401910000,Zion Williamson 6+ rebounds + De'Anthony Melton 20+ points + rebounds + assists + Brandin Podziemski 30+ points + rebounds + assists,"[{""text"": ""Zion Williamson 6+ rebounds"", ""p"": 0.748, ""kind"": ""player"", ""player_id"": ""4395628"", ""stat"": ""reb"", ""line"": 6}, {""text"": ""De'Anthony Melton 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4066436"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Brandin Podziemski 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4709138"", ""stat"": ""pra"", ""line"": 30}]",0.248,4.03,miss
 2026-11-16,multi,401910000,Zion Williamson 6+ rebounds + De'Anthony Melton 20+ points + rebounds + assists + Draymond Green 20+ points + rebounds + assists,"[{""text"": ""Zion Williamson 6+ rebounds"", ""p"": 0.748, ""kind"": ""player"", ""player_id"": ""4395628"", ""stat"": ""reb"", ""line"": 6}, {""text"": ""De'Anthony Melton 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4066436"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Draymond Green 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""6589"", ""stat"": ""pra"", ""line"": 20}]",0.248,4.03,miss
 2026-11-16,multi,401910000,Zion Williamson 6+ rebounds + Brandin Podziemski 30+ points + rebounds + assists + Draymond Green 20+ points + rebounds + assists,"[{""text"": ""Zion Williamson 6+ rebounds"", ""p"": 0.748, ""kind"": ""player"", ""player_id"": ""4395628"", ""stat"": ""reb"", ""line"": 6}, {""text"": ""Brandin Podziemski 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4709138"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Draymond Green 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""6589"", ""stat"": ""pra"", ""line"": 20}]",0.248,4.03,miss
-2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Christian Braun 2+ steals,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Christian Braun 2+ steals"", ""p"": 0.533, ""kind"": ""player"", ""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 2}]",0.31,3.23,
-2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Jordan Goodwin 3+ threes,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Jordan Goodwin 3+ threes"", ""p"": 0.384, ""kind"": ""player"", ""player_id"": ""4278402"", ""stat"": ""fg3m"", ""line"": 3}]",0.223,4.49,
-2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Oso Ighodaro 4+ assists,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Oso Ighodaro 4+ assists"", ""p"": 0.413, ""kind"": ""player"", ""player_id"": ""4601023"", ""stat"": ""ast"", ""line"": 4}]",0.24,4.16,
+2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Christian Braun 2+ steals,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Christian Braun 2+ steals"", ""p"": 0.533, ""kind"": ""player"", ""player_id"": ""4431767"", ""stat"": ""stl"", ""line"": 2}]",0.31,3.23,miss
+2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Jordan Goodwin 3+ threes,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Jordan Goodwin 3+ threes"", ""p"": 0.384, ""kind"": ""player"", ""player_id"": ""4278402"", ""stat"": ""fg3m"", ""line"": 3}]",0.223,4.49,miss
+2026-11-16,multi,401910001,Jamal Murray 40+ points + rebounds + assists + Oso Ighodaro 4+ assists,"[{""text"": ""Jamal Murray 40+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3936299"", ""stat"": ""pra"", ""line"": 40}, {""text"": ""Oso Ighodaro 4+ assists"", ""p"": 0.413, ""kind"": ""player"", ""player_id"": ""4601023"", ""stat"": ""ast"", ""line"": 4}]",0.24,4.16,miss
 2026-11-16,multi,401909996,Cam Spencer 25+ points + rebounds + assists + Jerami Grant 2+ threes + Cameron Boozer 10+ rebounds,"[{""text"": ""Cam Spencer 25+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4433083"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Jerami Grant 2+ threes"", ""p"": 0.833, ""kind"": ""player"", ""player_id"": ""2991070"", ""stat"": ""fg3m"", ""line"": 2}, {""text"": ""Cameron Boozer 10+ rebounds"", ""p"": 0.757, ""kind"": ""player"", ""player_id"": ""5041935"", ""stat"": ""reb"", ""line"": 10}]",0.363,2.75,miss
 2026-11-16,multi,401909996,Jerami Grant 2+ threes + Cedric Coward 30+ points + rebounds + assists + Cameron Boozer 10+ rebounds,"[{""text"": ""Jerami Grant 2+ threes"", ""p"": 0.833, ""kind"": ""player"", ""player_id"": ""2991070"", ""stat"": ""fg3m"", ""line"": 2}, {""text"": ""Cedric Coward 30+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""4903027"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Cameron Boozer 10+ rebounds"", ""p"": 0.757, ""kind"": ""player"", ""player_id"": ""5041935"", ""stat"": ""reb"", ""line"": 10}]",0.362,2.76,miss
 2026-11-16,multi,401909996,Jerami Grant 2+ threes + Cameron Boozer 10+ rebounds + Alex Sarr 25+ points + rebounds + assists,"[{""text"": ""Jerami Grant 2+ threes"", ""p"": 0.833, ""kind"": ""player"", ""player_id"": ""2991070"", ""stat"": ""fg3m"", ""line"": 2}, {""text"": ""Cameron Boozer 10+ rebounds"", ""p"": 0.757, ""kind"": ""player"", ""player_id"": ""5041935"", ""stat"": ""reb"", ""line"": 10}, {""text"": ""Alex Sarr 25+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""5160992"", ""stat"": ""pra"", ""line"": 25}]",0.363,2.75,miss
@@ -7102,3 +7102,237 @@ date,kind,game_id,desc,detail,p,fair_odds,result
 2026-11-16,multi,401909997,Danny Wolf 20+ points + rebounds + assists + Kentavious Caldwell-Pope 2+ threes,"[{""text"": ""Danny Wolf 20+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""5107173"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Kentavious Caldwell-Pope 2+ threes"", ""p"": 0.443, ""kind"": ""player"", ""player_id"": ""2581018"", ""stat"": ""fg3m"", ""line"": 2}]",0.256,3.9,miss
 2026-11-16,multi,401909998,Ryan Conwell 2+ threes + Amen Thompson 8+ rebounds + Giannis Antetokounmpo 50+ points + rebounds + assists,"[{""text"": ""Ryan Conwell 2+ threes"", ""p"": 0.79, ""kind"": ""player"", ""player_id"": ""5107157"", ""stat"": ""fg3m"", ""line"": 2}, {""text"": ""Amen Thompson 8+ rebounds"", ""p"": 0.705, ""kind"": ""player"", ""player_id"": ""4684740"", ""stat"": ""reb"", ""line"": 8}, {""text"": ""Giannis Antetokounmpo 50+ points + rebounds + assists"", ""p"": 0.571, ""kind"": ""player"", ""player_id"": ""3032977"", ""stat"": ""pra"", ""line"": 50}]",0.322,3.11,void
 2026-11-16,multi,401909998,Ryan Conwell 2+ threes + Davion Mitchell 10+ assists + Amen Thompson 8+ rebounds,"[{""text"": ""Ryan Conwell 2+ threes"", ""p"": 0.79, ""kind"": ""player"", ""player_id"": ""5107157"", ""stat"": ""fg3m"", ""line"": 2}, {""text"": ""Davion Mitchell 10+ assists"", ""p"": 0.544, ""kind"": ""player"", ""player_id"": ""4278053"", ""stat"": ""ast"", ""line"": 10}, {""text"": ""Amen Thompson 8+ rebounds"", ""p"": 0.705, ""kind"": ""player"", ""player_id"": ""4684740"", ""stat"": ""reb"", ""line"": 8}]",0.307,3.25,void
+2026-11-17,call,401910003,Terrence Shannon Jr. 25+ points + rebounds + assists,"{""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 25}",0.464,2.15,
+2026-11-17,call,401910004,Kevin Huerter 15+ points,"{""player_id"": ""4066372"", ""stat"": ""pts"", ""line"": 15}",0.419,2.39,
+2026-11-17,call,401910003,Bones Hyland 15+ points,"{""player_id"": ""4592492"", ""stat"": ""pts"", ""line"": 15}",0.434,2.3,
+2026-11-17,call,401910006,Max Strus 4+ assists,"{""player_id"": ""4065778"", ""stat"": ""ast"", ""line"": 4}",0.468,2.14,
+2026-11-17,call,401910003,Terrence Shannon Jr. 4+ assists,"{""player_id"": ""4432847"", ""stat"": ""ast"", ""line"": 4}",0.442,2.26,
+2026-11-17,call,401910003,Terrence Shannon Jr. 15+ points,"{""player_id"": ""4432847"", ""stat"": ""pts"", ""line"": 15}",0.444,2.25,
+2026-11-17,call,401910003,Sidy Cissoko 10+ points,"{""player_id"": ""5081727"", ""stat"": ""pts"", ""line"": 10}",0.444,2.25,
+2026-11-17,call,401910006,Darryn Peterson 25+ points,"{""player_id"": ""5041955"", ""stat"": ""pts"", ""line"": 25}",0.361,2.77,
+2026-11-17,call,401910006,Mo Bamba 15+ points,"{""player_id"": ""4277919"", ""stat"": ""pts"", ""line"": 15}",0.273,3.67,
+2026-11-17,call,401910006,Darryn Peterson 4+ threes,"{""player_id"": ""5041955"", ""stat"": ""fg3m"", ""line"": 4}",0.434,2.3,
+2026-11-17,call,401910006,Kobe Sanders 4+ assists,"{""player_id"": ""4702352"", ""stat"": ""ast"", ""line"": 4}",0.372,2.69,
+2026-11-17,call,401910006,Darius Garland 25+ points,"{""player_id"": ""4396907"", ""stat"": ""pts"", ""line"": 25}",0.421,2.37,
+2026-11-17,call,401910006,Darryn Peterson 35+ points + rebounds + assists,"{""player_id"": ""5041955"", ""stat"": ""pra"", ""line"": 35}",0.338,2.96,
+2026-11-17,call,401910006,Brook Lopez 4+ assists,"{""player_id"": ""3448"", ""stat"": ""ast"", ""line"": 4}",0.295,3.39,
+2026-11-17,call,401910005,Jake LaRavia 4+ assists,"{""player_id"": ""4592691"", ""stat"": ""ast"", ""line"": 4}",0.3,3.34,
+2026-11-17,call,401910006,Mo Bamba 25+ points + rebounds + assists,"{""player_id"": ""4277919"", ""stat"": ""pra"", ""line"": 25}",0.257,3.9,
+2026-11-17,call,401910004,Cade Cunningham 30+ points,"{""player_id"": ""4432166"", ""stat"": ""pts"", ""line"": 30}",0.443,2.26,
+2026-11-17,call,401910003,Bones Hyland 25+ points + rebounds + assists,"{""player_id"": ""4592492"", ""stat"": ""pra"", ""line"": 25}",0.245,4.08,
+2026-11-17,call,401910004,Dylan Harper 20+ points,"{""player_id"": ""5037871"", ""stat"": ""pts"", ""line"": 20}",0.439,2.28,
+2026-11-17,call,401910004,Kevin Huerter 25+ points + rebounds + assists,"{""player_id"": ""4066372"", ""stat"": ""pra"", ""line"": 25}",0.232,4.32,
+2026-11-17,call,401910004,Kevin Huerter 2+ blocks,"{""player_id"": ""4066372"", ""stat"": ""blk"", ""line"": 2}",0.331,3.02,
+2026-11-17,call,401910004,Daniss Jenkins 20+ points,"{""player_id"": ""5107199"", ""stat"": ""pts"", ""line"": 20}",0.278,3.6,
+2026-11-17,call,401910006,Darius Garland 4+ rebounds,"{""player_id"": ""4396907"", ""stat"": ""reb"", ""line"": 4}",0.408,2.45,
+2026-11-17,call,401910006,Brook Lopez 30+ points + rebounds + assists,"{""player_id"": ""3448"", ""stat"": ""pra"", ""line"": 30}",0.252,3.96,
+2026-11-17,call,401910002,Karl-Anthony Towns 45+ points + rebounds + assists,"{""player_id"": ""3136195"", ""stat"": ""pra"", ""line"": 45}",0.302,3.31,
+2026-11-17,call,401910006,Kobe Sanders 4+ rebounds,"{""player_id"": ""4702352"", ""stat"": ""reb"", ""line"": 4}",0.414,2.42,
+2026-11-17,call,401910006,Brook Lopez 20+ points,"{""player_id"": ""3448"", ""stat"": ""pts"", ""line"": 20}",0.262,3.82,
+2026-11-17,call,401910003,Bones Hyland 6+ assists,"{""player_id"": ""4592492"", ""stat"": ""ast"", ""line"": 6}",0.258,3.88,
+2026-11-17,call,401910005,Sandro Mamukelashvili 15+ points,"{""player_id"": ""4278580"", ""stat"": ""pts"", ""line"": 15}",0.283,3.53,
+2026-11-17,call,401910002,Karl-Anthony Towns 25+ points,"{""player_id"": ""3136195"", ""stat"": ""pts"", ""line"": 25}",0.335,2.98,
+2026-11-17,call,401910003,Bones Hyland 20+ points,"{""player_id"": ""4592492"", ""stat"": ""pts"", ""line"": 20}",0.19,5.25,
+2026-11-17,call,401910004,Paul Reed 10+ rebounds,"{""player_id"": ""4278562"", ""stat"": ""reb"", ""line"": 10}",0.324,3.09,
+2026-11-17,call,401910006,Derrick Jones Jr. 2+ blocks,"{""player_id"": ""3936099"", ""stat"": ""blk"", ""line"": 2}",0.425,2.35,
+2026-11-17,call,401910003,Sidy Cissoko 2+ threes,"{""player_id"": ""5081727"", ""stat"": ""fg3m"", ""line"": 2}",0.44,2.27,
+2026-11-17,call,401910004,Ausar Thompson 10+ rebounds,"{""player_id"": ""4684742"", ""stat"": ""reb"", ""line"": 10}",0.408,2.45,
+2026-11-17,call,401910003,Ayo Dosunmu 20+ points,"{""player_id"": ""4397002"", ""stat"": ""pts"", ""line"": 20}",0.444,2.25,
+2026-11-17,call,401910003,Terrence Shannon Jr. 30+ points + rebounds + assists,"{""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 30}",0.174,5.73,
+2026-11-17,call,401910004,Kevin Huerter 20+ points,"{""player_id"": ""4066372"", ""stat"": ""pts"", ""line"": 20}",0.153,6.52,
+2026-11-17,call,401910004,Keldon Johnson 4+ assists,"{""player_id"": ""4395723"", ""stat"": ""ast"", ""line"": 4}",0.251,3.99,
+2026-11-17,call,401910005,Sandro Mamukelashvili 3+ threes,"{""player_id"": ""4278580"", ""stat"": ""fg3m"", ""line"": 3}",0.296,3.38,
+2026-11-17,call,401910004,Keldon Johnson 8+ rebounds,"{""player_id"": ""4395723"", ""stat"": ""reb"", ""line"": 8}",0.287,3.48,
+2026-11-17,call,401910003,Terrence Shannon Jr. 20+ points,"{""player_id"": ""4432847"", ""stat"": ""pts"", ""line"": 20}",0.214,4.67,
+2026-11-17,call,401910006,Brice Sensabaugh 6+ rebounds,"{""player_id"": ""5105839"", ""stat"": ""reb"", ""line"": 6}",0.227,4.4,
+2026-11-17,call,401910006,Kobe Sanders 10+ points,"{""player_id"": ""4702352"", ""stat"": ""pts"", ""line"": 10}",0.444,2.25,
+2026-11-17,call,401910002,Landry Shamet 15+ points,"{""player_id"": ""3914044"", ""stat"": ""pts"", ""line"": 15}",0.218,4.58,
+2026-11-17,call,401910006,Max Strus 6+ assists,"{""player_id"": ""4065778"", ""stat"": ""ast"", ""line"": 6}",0.179,5.57,
+2026-11-17,call,401910004,Daniss Jenkins 30+ points + rebounds + assists,"{""player_id"": ""5107199"", ""stat"": ""pra"", ""line"": 30}",0.253,3.96,
+2026-11-17,call,401910006,Derrick Jones Jr. 3+ threes,"{""player_id"": ""3936099"", ""stat"": ""fg3m"", ""line"": 3}",0.326,3.06,
+2026-11-17,call,401910003,Terrence Shannon Jr. 6+ assists,"{""player_id"": ""4432847"", ""stat"": ""ast"", ""line"": 6}",0.18,5.56,
+2026-11-17,call,401910004,Keldon Johnson 10+ points,"{""player_id"": ""4395723"", ""stat"": ""pts"", ""line"": 10}",0.444,2.25,
+2026-11-17,call,401910004,Kevin Huerter 4+ assists,"{""player_id"": ""4066372"", ""stat"": ""ast"", ""line"": 4}",0.372,2.69,
+2026-11-17,call,401910006,Darius Garland 40+ points + rebounds + assists,"{""player_id"": ""4396907"", ""stat"": ""pra"", ""line"": 40}",0.246,4.06,
+2026-11-17,call,401910006,Mo Bamba 2+ threes,"{""player_id"": ""4277919"", ""stat"": ""fg3m"", ""line"": 2}",0.218,4.58,
+2026-11-17,call,401910006,Kobe Sanders 20+ points + rebounds + assists,"{""player_id"": ""4702352"", ""stat"": ""pra"", ""line"": 20}",0.251,3.98,
+2026-11-17,call,401910003,Sidy Cissoko 4+ rebounds,"{""player_id"": ""5081727"", ""stat"": ""reb"", ""line"": 4}",0.466,2.14,
+2026-11-17,call,401910003,Terrence Shannon Jr. 6+ rebounds,"{""player_id"": ""4432847"", ""stat"": ""reb"", ""line"": 6}",0.2,5.01,
+2026-11-17,call,401910006,Keyonte George 6+ rebounds,"{""player_id"": ""4433627"", ""stat"": ""reb"", ""line"": 6}",0.324,3.08,
+2026-11-17,call,401910005,Matisse Thybulle 3+ steals,"{""player_id"": ""3907498"", ""stat"": ""stl"", ""line"": 3}",0.456,2.19,
+2026-11-17,call,401910006,Derrick Jones Jr. 15+ points,"{""player_id"": ""3936099"", ""stat"": ""pts"", ""line"": 15}",0.295,3.39,
+2026-11-17,call,401910006,Max Strus 25+ points + rebounds + assists,"{""player_id"": ""4065778"", ""stat"": ""pra"", ""line"": 25}",0.223,4.49,
+2026-11-17,call,401910005,Quentin Grimes 2+ threes,"{""player_id"": ""4397014"", ""stat"": ""fg3m"", ""line"": 2}",0.44,2.27,
+2026-11-17,call,401910006,Keyonte George 8+ assists,"{""player_id"": ""4433627"", ""stat"": ""ast"", ""line"": 8}",0.368,2.72,
+2026-11-17,call,401910004,Ausar Thompson 30+ points + rebounds + assists,"{""player_id"": ""4684742"", ""stat"": ""pra"", ""line"": 30}",0.283,3.54,
+2026-11-17,call,401910005,Sion James 6+ rebounds,"{""player_id"": ""4602025"", ""stat"": ""reb"", ""line"": 6}",0.286,3.49,
+2026-11-17,call,401910006,Rui Hachimura 8+ rebounds,"{""player_id"": ""4066648"", ""stat"": ""reb"", ""line"": 8}",0.241,4.15,
+2026-11-17,call,401910005,Matisse Thybulle 4+ steals,"{""player_id"": ""3907498"", ""stat"": ""stl"", ""line"": 4}",0.269,3.72,
+2026-11-17,call,401910004,Ausar Thompson 6+ assists,"{""player_id"": ""4684742"", ""stat"": ""ast"", ""line"": 6}",0.372,2.69,
+2026-11-17,call,401910002,Collin Murray-Boyles 2+ blocks,"{""player_id"": ""5093267"", ""stat"": ""blk"", ""line"": 2}",0.368,2.72,
+2026-11-17,call,401910005,Matisse Thybulle 4+ rebounds,"{""player_id"": ""3907498"", ""stat"": ""reb"", ""line"": 4}",0.332,3.01,
+2026-11-17,call,401910006,Darius Garland 8+ assists,"{""player_id"": ""4396907"", ""stat"": ""ast"", ""line"": 8}",0.443,2.26,
+2026-11-17,call,401910006,Mo Bamba 8+ rebounds,"{""player_id"": ""4277919"", ""stat"": ""reb"", ""line"": 8}",0.37,2.7,
+2026-11-17,call,401910002,Landry Shamet 20+ points + rebounds + assists,"{""player_id"": ""3914044"", ""stat"": ""pra"", ""line"": 20}",0.175,5.72,
+2026-11-17,call,401910002,Karl-Anthony Towns 16+ rebounds,"{""player_id"": ""3136195"", ""stat"": ""reb"", ""line"": 16}",0.32,3.12,
+2026-11-17,call,401910003,Sidy Cissoko 15+ points,"{""player_id"": ""5081727"", ""stat"": ""pts"", ""line"": 15}",0.156,6.42,
+2026-11-17,call,401910005,Quentin Grimes 2+ steals,"{""player_id"": ""4397014"", ""stat"": ""stl"", ""line"": 2}",0.316,3.16,
+2026-11-17,call,401910006,Josh Okogie 2+ threes,"{""player_id"": ""4065663"", ""stat"": ""fg3m"", ""line"": 2}",0.296,3.38,
+2026-11-17,call,401910003,Sidy Cissoko 20+ points + rebounds + assists,"{""player_id"": ""5081727"", ""stat"": ""pra"", ""line"": 20}",0.223,4.49,
+2026-11-17,call,401910003,Sidy Cissoko 3+ threes,"{""player_id"": ""5081727"", ""stat"": ""fg3m"", ""line"": 3}",0.207,4.84,
+2026-11-17,call,401910005,Quentin Grimes 15+ points,"{""player_id"": ""4397014"", ""stat"": ""pts"", ""line"": 15}",0.211,4.74,
+2026-11-17,call,401910003,Donovan Clingan 3+ blocks,"{""player_id"": ""5105565"", ""stat"": ""blk"", ""line"": 3}",0.389,2.57,
+2026-11-17,call,401910006,Darius Garland 30+ points,"{""player_id"": ""4396907"", ""stat"": ""pts"", ""line"": 30}",0.19,5.25,
+2026-11-17,call,401910006,Derrick Jones Jr. 4+ threes,"{""player_id"": ""3936099"", ""stat"": ""fg3m"", ""line"": 4}",0.185,5.4,
+2026-11-17,call,401910002,Karl-Anthony Towns 3+ threes,"{""player_id"": ""3136195"", ""stat"": ""fg3m"", ""line"": 3}",0.33,3.03,
+2026-11-17,call,401910006,Derrick Jones Jr. 3+ blocks,"{""player_id"": ""3936099"", ""stat"": ""blk"", ""line"": 3}",0.185,5.4,
+2026-11-17,call,401910004,Cade Cunningham 45+ points + rebounds + assists,"{""player_id"": ""4432166"", ""stat"": ""pra"", ""line"": 45}",0.342,2.92,
+2026-11-17,call,401910005,Grayson Allen 4+ assists,"{""player_id"": ""3135045"", ""stat"": ""ast"", ""line"": 4}",0.44,2.27,
+2026-11-17,call,401910002,RJ Barrett 8+ rebounds,"{""player_id"": ""4395625"", ""stat"": ""reb"", ""line"": 8}",0.326,3.07,
+2026-11-17,call,401910004,Victor Wembanyama 4+ assists,"{""player_id"": ""5104157"", ""stat"": ""ast"", ""line"": 4}",0.448,2.23,
+2026-11-17,call,401910004,Dylan Harper 35+ points + rebounds + assists,"{""player_id"": ""5037871"", ""stat"": ""pra"", ""line"": 35}",0.223,4.49,
+2026-11-17,call,401910006,Max Strus 2+ steals,"{""player_id"": ""4065778"", ""stat"": ""stl"", ""line"": 2}",0.269,3.72,
+2026-11-17,call,401910004,Daniss Jenkins 3+ threes,"{""player_id"": ""5107199"", ""stat"": ""fg3m"", ""line"": 3}",0.366,2.74,
+2026-11-17,call,401910006,Keaton Wagler 4+ assists,"{""player_id"": ""5254165"", ""stat"": ""ast"", ""line"": 4}",0.462,2.16,
+2026-11-17,call,401910006,Josh Okogie 6+ rebounds,"{""player_id"": ""4065663"", ""stat"": ""reb"", ""line"": 6}",0.271,3.69,
+2026-11-17,call,401910003,Ayo Dosunmu 25+ points,"{""player_id"": ""4397002"", ""stat"": ""pts"", ""line"": 25}",0.212,4.72,
+2026-11-17,call,401910003,Jaden McDaniels 8+ rebounds,"{""player_id"": ""4431671"", ""stat"": ""reb"", ""line"": 8}",0.31,3.23,
+2026-11-17,call,401910003,LaMelo Ball 3+ steals,"{""player_id"": ""4432816"", ""stat"": ""stl"", ""line"": 3}",0.316,3.16,
+2026-11-17,call,401910004,Cade Cunningham 35+ points,"{""player_id"": ""4432166"", ""stat"": ""pts"", ""line"": 35}",0.212,4.72,
+2026-11-17,call,401910005,Matisse Thybulle 10+ points,"{""player_id"": ""3907498"", ""stat"": ""pts"", ""line"": 10}",0.323,3.1,
+2026-11-17,call,401910006,Darius Garland 10+ assists,"{""player_id"": ""4396907"", ""stat"": ""ast"", ""line"": 10}",0.239,4.19,
+2026-11-17,call,401910003,Bones Hyland 3+ threes,"{""player_id"": ""4592492"", ""stat"": ""fg3m"", ""line"": 3}",0.314,3.18,
+2026-11-17,call,401910004,Dylan Harper 25+ points,"{""player_id"": ""5037871"", ""stat"": ""pts"", ""line"": 25}",0.19,5.25,
+2026-11-17,call,401910006,Mo Bamba 3+ blocks,"{""player_id"": ""4277919"", ""stat"": ""blk"", ""line"": 3}",0.3,3.34,
+2026-11-17,call,401910002,Karl-Anthony Towns 50+ points + rebounds + assists,"{""player_id"": ""3136195"", ""stat"": ""pra"", ""line"": 50}",0.142,7.04,
+2026-11-17,call,401910005,Luka Doncic 40+ points,"{""player_id"": ""3945274"", ""stat"": ""pts"", ""line"": 40}",0.33,3.03,
+2026-11-17,call,401910006,Kobe Sanders 6+ assists,"{""player_id"": ""4702352"", ""stat"": ""ast"", ""line"": 6}",0.106,9.46,
+2026-11-17,call,401910004,Keldon Johnson 25+ points + rebounds + assists,"{""player_id"": ""4395723"", ""stat"": ""pra"", ""line"": 25}",0.143,7.0,
+2026-11-17,call,401910005,Quentin Grimes 20+ points + rebounds + assists,"{""player_id"": ""4397014"", ""stat"": ""pra"", ""line"": 20}",0.255,3.92,
+2026-11-17,call,401910004,Ausar Thompson 12+ rebounds,"{""player_id"": ""4684742"", ""stat"": ""reb"", ""line"": 12}",0.204,4.9,
+2026-11-17,call,401910003,Terrence Shannon Jr. 25+ points,"{""player_id"": ""4432847"", ""stat"": ""pts"", ""line"": 25}",0.1,10.01,
+2026-11-17,call,401910005,Quentin Grimes 3+ threes,"{""player_id"": ""4397014"", ""stat"": ""fg3m"", ""line"": 3}",0.207,4.84,
+2026-11-17,call,401910003,Rudy Gobert 30+ points + rebounds + assists,"{""player_id"": ""3032976"", ""stat"": ""pra"", ""line"": 30}",0.223,4.49,
+2026-11-17,call,401910005,Jake LaRavia 6+ rebounds,"{""player_id"": ""4592691"", ""stat"": ""reb"", ""line"": 6}",0.271,3.69,
+2026-11-17,call,401910004,Cade Cunningham 50+ points + rebounds + assists,"{""player_id"": ""4432166"", ""stat"": ""pra"", ""line"": 50}",0.213,4.69,
+2026-11-17,call,401910002,Jamal Shead 10+ points,"{""player_id"": ""4432241"", ""stat"": ""pts"", ""line"": 10}",0.42,2.38,
+2026-11-17,call,401910004,Victor Wembanyama 30+ points,"{""player_id"": ""5104157"", ""stat"": ""pts"", ""line"": 30}",0.444,2.25,
+2026-11-17,call,401910003,Deni Avdija 30+ points,"{""player_id"": ""4683021"", ""stat"": ""pts"", ""line"": 30}",0.282,3.54,
+2026-11-17,call,401910002,Karl-Anthony Towns 18+ rebounds,"{""player_id"": ""3136195"", ""stat"": ""reb"", ""line"": 18}",0.191,5.23,
+2026-11-17,call,401910004,Daniss Jenkins 4+ threes,"{""player_id"": ""5107199"", ""stat"": ""fg3m"", ""line"": 4}",0.207,4.84,
+2026-11-17,call,401910002,Jalen Brunson 8+ assists,"{""player_id"": ""3934672"", ""stat"": ""ast"", ""line"": 8}",0.324,3.09,
+2026-11-17,call,401910002,Scottie Barnes 3+ steals,"{""player_id"": ""4433134"", ""stat"": ""stl"", ""line"": 3}",0.316,3.16,
+2026-11-17,call,401910003,Joan Beringer 8+ rebounds,"{""player_id"": ""5279133"", ""stat"": ""reb"", ""line"": 8}",0.329,3.03,
+2026-11-17,call,401910006,Darius Garland 6+ rebounds,"{""player_id"": ""4396907"", ""stat"": ""reb"", ""line"": 6}",0.135,7.41,
+2026-11-17,call,401910003,Joan Beringer 2+ blocks,"{""player_id"": ""5279133"", ""stat"": ""blk"", ""line"": 2}",0.323,3.1,
+2026-11-17,call,401910004,Kevin Huerter 3+ blocks,"{""player_id"": ""4066372"", ""stat"": ""blk"", ""line"": 3}",0.12,8.35,
+2026-11-17,call,401910003,Jaden McDaniels 6+ assists,"{""player_id"": ""4431671"", ""stat"": ""ast"", ""line"": 6}",0.225,4.44,
+2026-11-17,call,401910005,Moussa Diabate 12+ rebounds,"{""player_id"": ""4433249"", ""stat"": ""reb"", ""line"": 12}",0.289,3.47,
+2026-11-17,call,401910006,Keyonte George 10+ assists,"{""player_id"": ""4433627"", ""stat"": ""ast"", ""line"": 10}",0.181,5.53,
+2026-11-17,call,401910004,De'Aaron Fox 6+ rebounds,"{""player_id"": ""4066259"", ""stat"": ""reb"", ""line"": 6}",0.285,3.51,
+2026-11-17,call,401910005,Ziaire Williams 4+ assists,"{""player_id"": ""4433137"", ""stat"": ""ast"", ""line"": 4}",0.195,5.13,
+2026-11-17,call,401910006,Josh Okogie 2+ steals,"{""player_id"": ""4065663"", ""stat"": ""stl"", ""line"": 2}",0.269,3.72,
+2026-11-17,call,401910005,Jake LaRavia 2+ threes,"{""player_id"": ""4592691"", ""stat"": ""fg3m"", ""line"": 2}",0.297,3.37,
+2026-11-17,call,401910004,Kevin Huerter 30+ points + rebounds + assists,"{""player_id"": ""4066372"", ""stat"": ""pra"", ""line"": 30}",0.079,12.61,
+2026-11-17,call,401910003,Sidy Cissoko 4+ assists,"{""player_id"": ""5081727"", ""stat"": ""ast"", ""line"": 4}",0.189,5.28,
+2026-11-17,call,401910006,Kobe Sanders 6+ rebounds,"{""player_id"": ""4702352"", ""stat"": ""reb"", ""line"": 6}",0.147,6.78,
+2026-11-17,call,401910003,Bones Hyland 8+ assists,"{""player_id"": ""4592492"", ""stat"": ""ast"", ""line"": 8}",0.098,10.24,
+2026-11-17,call,401910005,Sandro Mamukelashvili 25+ points + rebounds + assists,"{""player_id"": ""4278580"", ""stat"": ""pra"", ""line"": 25}",0.162,6.18,
+2026-11-17,call,401910006,Keyonte George 8+ rebounds,"{""player_id"": ""4433627"", ""stat"": ""reb"", ""line"": 8}",0.144,6.95,
+2026-11-17,call,401910006,Brice Sensabaugh 20+ points + rebounds + assists,"{""player_id"": ""5105839"", ""stat"": ""pra"", ""line"": 20}",0.304,3.29,
+2026-11-17,call,401910005,Sion James 4+ assists,"{""player_id"": ""4602025"", ""stat"": ""ast"", ""line"": 4}",0.372,2.69,
+2026-11-17,call,401910002,Collin Murray-Boyles 3+ blocks,"{""player_id"": ""5093267"", ""stat"": ""blk"", ""line"": 3}",0.171,5.86,
+2026-11-17,call,401910002,Jakob Poeltl 10+ points,"{""player_id"": ""3134908"", ""stat"": ""pts"", ""line"": 10}",0.39,2.56,
+2026-11-17,call,401910002,Scottie Barnes 10+ rebounds,"{""player_id"": ""4433134"", ""stat"": ""reb"", ""line"": 10}",0.245,4.08,
+2026-11-17,call,401910003,Bones Hyland 2+ steals,"{""player_id"": ""4592492"", ""stat"": ""stl"", ""line"": 2}",0.239,4.18,
+2026-11-17,call,401910005,Jake LaRavia 10+ points,"{""player_id"": ""4592691"", ""stat"": ""pts"", ""line"": 10}",0.243,4.11,
+2026-11-17,call,401910005,Luka Doncic 45+ points,"{""player_id"": ""3945274"", ""stat"": ""pts"", ""line"": 45}",0.199,5.01,
+2026-11-17,call,401910006,Josh Okogie 10+ points,"{""player_id"": ""4065663"", ""stat"": ""pts"", ""line"": 10}",0.238,4.21,
+2026-11-17,call,401910005,Naz Reid 4+ assists,"{""player_id"": ""4396971"", ""stat"": ""ast"", ""line"": 4}",0.241,4.14,
+2026-11-17,call,401910004,Keldon Johnson 2+ steals,"{""player_id"": ""4395723"", ""stat"": ""stl"", ""line"": 2}",0.218,4.6,
+2026-11-17,call,401910004,Kevin Huerter 6+ assists,"{""player_id"": ""4066372"", ""stat"": ""ast"", ""line"": 6}",0.116,8.64,
+2026-11-17,call,401910004,Kevin Huerter 3+ threes,"{""player_id"": ""4066372"", ""stat"": ""fg3m"", ""line"": 3}",0.288,3.48,
+2026-11-17,call,401910005,Jake LaRavia 6+ assists,"{""player_id"": ""4592691"", ""stat"": ""ast"", ""line"": 6}",0.07,14.31,
+2026-11-17,call,401910003,Ayo Dosunmu 3+ threes,"{""player_id"": ""4397002"", ""stat"": ""fg3m"", ""line"": 3}",0.287,3.49,
+2026-11-17,call,401910006,Brook Lopez 6+ assists,"{""player_id"": ""3448"", ""stat"": ""ast"", ""line"": 6}",0.069,14.44,
+2026-11-17,call,401910004,Daniss Jenkins 2+ steals,"{""player_id"": ""5107199"", ""stat"": ""stl"", ""line"": 2}",0.301,3.32,
+2026-11-17,call,401910005,Collin Sexton 4+ assists,"{""player_id"": ""4277811"", ""stat"": ""ast"", ""line"": 4}",0.303,3.3,
+2026-11-17,call,401910005,Matisse Thybulle 20+ points + rebounds + assists,"{""player_id"": ""3907498"", ""stat"": ""pra"", ""line"": 20}",0.123,8.13,
+2026-11-17,call,401910002,Josh Hart 2+ steals,"{""player_id"": ""3062679"", ""stat"": ""stl"", ""line"": 2}",0.419,2.38,
+2026-11-17,call,401910005,Matisse Thybulle 6+ rebounds,"{""player_id"": ""3907498"", ""stat"": ""reb"", ""line"": 6}",0.137,7.29,
+2026-11-17,call,401910004,Ausar Thompson 8+ assists,"{""player_id"": ""4684742"", ""stat"": ""ast"", ""line"": 8}",0.169,5.92,
+2026-11-17,call,401910006,Mo Bamba 10+ rebounds,"{""player_id"": ""4277919"", ""stat"": ""reb"", ""line"": 10}",0.207,4.84,
+2026-11-17,call,401910005,Grayson Allen 5+ threes,"{""player_id"": ""3135045"", ""stat"": ""fg3m"", ""line"": 5}",0.207,4.84,
+2026-11-17,call,401910002,RJ Barrett 10+ rebounds,"{""player_id"": ""4395625"", ""stat"": ""reb"", ""line"": 10}",0.143,7.0,
+2026-11-17,call,401910005,Matisse Thybulle 2+ blocks,"{""player_id"": ""3907498"", ""stat"": ""blk"", ""line"": 2}",0.246,4.07,
+2026-11-17,call,401910005,Luka Doncic 55+ points + rebounds + assists,"{""player_id"": ""3945274"", ""stat"": ""pra"", ""line"": 55}",0.325,3.07,
+2026-11-17,call,401910003,Bones Hyland 4+ threes,"{""player_id"": ""4592492"", ""stat"": ""fg3m"", ""line"": 4}",0.142,7.05,
+2026-11-17,call,401910006,Mo Bamba 3+ threes,"{""player_id"": ""4277919"", ""stat"": ""fg3m"", ""line"": 3}",0.079,12.66,
+2026-11-17,call,401910003,Terrence Shannon Jr. 35+ points + rebounds + assists,"{""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 35}",0.063,15.78,
+2026-11-17,call,401910004,Kevin Huerter 4+ rebounds,"{""player_id"": ""4066372"", ""stat"": ""reb"", ""line"": 4}",0.382,2.62,
+2026-11-17,call,401910004,Victor Wembanyama 6+ assists,"{""player_id"": ""5104157"", ""stat"": ""ast"", ""line"": 6}",0.186,5.37,
+2026-11-17,call,401910002,Mikal Bridges 6+ rebounds,"{""player_id"": ""3147657"", ""stat"": ""reb"", ""line"": 6}",0.199,5.02,
+2026-11-17,call,401910004,Dylan Harper 6+ assists,"{""player_id"": ""5037871"", ""stat"": ""ast"", ""line"": 6}",0.306,3.27,
+2026-11-17,call,401910006,Mo Bamba 4+ assists,"{""player_id"": ""4277919"", ""stat"": ""ast"", ""line"": 4}",0.078,12.79,
+2026-11-17,call,401910004,Paul Reed 25+ points + rebounds + assists,"{""player_id"": ""4278562"", ""stat"": ""pra"", ""line"": 25}",0.312,3.2,
+2026-11-17,call,401910003,Donovan Clingan 4+ blocks,"{""player_id"": ""5105565"", ""stat"": ""blk"", ""line"": 4}",0.22,4.55,
+2026-11-17,call,401910003,Rudy Gobert 15+ points,"{""player_id"": ""3032976"", ""stat"": ""pts"", ""line"": 15}",0.2,5.0,
+2026-11-17,call,401910006,Rui Hachimura 10+ rebounds,"{""player_id"": ""4066648"", ""stat"": ""reb"", ""line"": 10}",0.093,10.79,
+2026-11-17,call,401910002,Landry Shamet 20+ points,"{""player_id"": ""3914044"", ""stat"": ""pts"", ""line"": 20}",0.072,13.93,
+2026-11-17,call,401910002,RJ Barrett 6+ assists,"{""player_id"": ""4395625"", ""stat"": ""ast"", ""line"": 6}",0.295,3.4,
+2026-11-17,call,401910006,Darryn Peterson 2+ blocks,"{""player_id"": ""5041955"", ""stat"": ""blk"", ""line"": 2}",0.196,5.11,
+2026-11-17,call,401910004,John Collins 2+ threes,"{""player_id"": ""3908845"", ""stat"": ""fg3m"", ""line"": 2}",0.366,2.74,
+2026-11-17,call,401910003,Sidy Cissoko 6+ rebounds,"{""player_id"": ""5081727"", ""stat"": ""reb"", ""line"": 6}",0.197,5.07,
+2026-11-17,call,401910006,Brook Lopez 8+ rebounds,"{""player_id"": ""3448"", ""stat"": ""reb"", ""line"": 8}",0.236,4.23,
+2026-11-17,call,401910004,Keldon Johnson 6+ assists,"{""player_id"": ""4395723"", ""stat"": ""ast"", ""line"": 6}",0.069,14.57,
+2026-11-17,call,401910002,Scottie Barnes 4+ steals,"{""player_id"": ""4433134"", ""stat"": ""stl"", ""line"": 4}",0.153,6.53,
+2026-11-17,call,401910003,Rudy Gobert 14+ rebounds,"{""player_id"": ""3032976"", ""stat"": ""reb"", ""line"": 14}",0.285,3.5,
+2026-11-17,call,401910002,Immanuel Quickley 6+ rebounds,"{""player_id"": ""4395724"", ""stat"": ""reb"", ""line"": 6}",0.195,5.13,
+2026-11-17,call,401910002,Jalen Brunson 4+ threes,"{""player_id"": ""3934672"", ""stat"": ""fg3m"", ""line"": 4}",0.296,3.38,
+2026-11-17,call,401910004,Ausar Thompson 15+ points,"{""player_id"": ""4684742"", ""stat"": ""pts"", ""line"": 15}",0.242,4.14,
+2026-11-17,call,401910004,Julian Champagnie 6+ rebounds,"{""player_id"": ""4592479"", ""stat"": ""reb"", ""line"": 6}",0.269,3.72,
+2026-11-17,call,401910004,Kevin Huerter 6+ rebounds,"{""player_id"": ""4066372"", ""stat"": ""reb"", ""line"": 6}",0.137,7.28,
+2026-11-17,call,401910005,Matisse Thybulle 15+ points,"{""player_id"": ""3907498"", ""stat"": ""pts"", ""line"": 15}",0.098,10.16,
+2026-11-17,call,401910006,Ace Bailey 8+ rebounds,"{""player_id"": ""4873138"", ""stat"": ""reb"", ""line"": 8}",0.309,3.23,
+2026-11-17,call,401910003,Jaden McDaniels 35+ points + rebounds + assists,"{""player_id"": ""4431671"", ""stat"": ""pra"", ""line"": 35}",0.223,4.49,
+2026-11-17,call,401910005,Sandro Mamukelashvili 4+ assists,"{""player_id"": ""4278580"", ""stat"": ""ast"", ""line"": 4}",0.142,7.06,
+2026-11-17,call,401910002,Collin Murray-Boyles 2+ threes,"{""player_id"": ""5093267"", ""stat"": ""fg3m"", ""line"": 2}",0.126,7.95,
+2026-11-17,call,401910005,Quentin Grimes 3+ steals,"{""player_id"": ""4397014"", ""stat"": ""stl"", ""line"": 3}",0.093,10.71,
+2026-11-17,call,401910005,Jake LaRavia 2+ blocks,"{""player_id"": ""4592691"", ""stat"": ""blk"", ""line"": 2}",0.196,5.11,
+2026-11-17,call,401910006,Max Strus 3+ steals,"{""player_id"": ""4065778"", ""stat"": ""stl"", ""line"": 3}",0.082,12.16,
+2026-11-17,call,401910003,Sidy Cissoko 4+ threes,"{""player_id"": ""5081727"", ""stat"": ""fg3m"", ""line"": 4}",0.074,13.56,
+2026-11-17,call,401910002,Jalen Brunson 10+ assists,"{""player_id"": ""3934672"", ""stat"": ""ast"", ""line"": 10}",0.154,6.49,
+2026-11-17,upset,401910002,TOR to beat NY,"{""side"": ""home""}",0.369,2.71,
+2026-11-17,upset,401910003,POR to beat MIN,"{""side"": ""away""}",0.335,2.98,
+2026-11-17,upset,401910006,UTAH to beat LAC,"{""side"": ""away""}",0.299,3.35,
+2026-11-17,upset,401910004,DET to beat SA,"{""side"": ""away""}",0.251,3.99,
+2026-11-17,multi,401910002,Karl-Anthony Towns 14+ rebounds + Mikal Bridges 4+ rebounds + NY to win,"[{""text"": ""Karl-Anthony Towns 14+ rebounds"", ""p"": 0.74, ""kind"": ""player"", ""player_id"": ""3136195"", ""stat"": ""reb"", ""line"": 14}, {""text"": ""Mikal Bridges 4+ rebounds"", ""p"": 0.62, ""kind"": ""player"", ""player_id"": ""3147657"", ""stat"": ""reb"", ""line"": 4}, {""text"": ""NY to win"", ""p"": 0.631, ""kind"": ""win"", ""team_id"": ""18""}]",0.303,3.3,
+2026-11-17,multi,401910002,Karl-Anthony Towns 14+ rebounds + Scottie Barnes 2+ steals + Landry Shamet 10+ points,"[{""text"": ""Karl-Anthony Towns 14+ rebounds"", ""p"": 0.74, ""kind"": ""player"", ""player_id"": ""3136195"", ""stat"": ""reb"", ""line"": 14}, {""text"": ""Scottie Barnes 2+ steals"", ""p"": 0.706, ""kind"": ""player"", ""player_id"": ""4433134"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""Landry Shamet 10+ points"", ""p"": 0.444, ""kind"": ""player"", ""player_id"": ""3914044"", ""stat"": ""pts"", ""line"": 10}]",0.239,4.18,
+2026-11-17,multi,401910003,Terrence Shannon Jr. 20+ points + rebounds + assists + Rudy Gobert 25+ points + rebounds + assists + LaMelo Ball 2+ steals,"[{""text"": ""Terrence Shannon Jr. 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Rudy Gobert 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3032976"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""LaMelo Ball 2+ steals"", ""p"": 0.575, ""kind"": ""player"", ""player_id"": ""4432816"", ""stat"": ""stl"", ""line"": 2}]",0.263,3.8,
+2026-11-17,multi,401910004,Kevin Huerter 20+ points + rebounds + assists + Daniss Jenkins 25+ points + rebounds + assists + Keldon Johnson 20+ points + rebounds + assists,"[{""text"": ""Kevin Huerter 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4066372"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Daniss Jenkins 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5107199"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Keldon Johnson 20+ points + rebounds + assists"", ""p"": 0.515, ""kind"": ""player"", ""player_id"": ""4395723"", ""stat"": ""pra"", ""line"": 20}]",0.235,4.26,
+2026-11-17,multi,401910002,Scottie Barnes 2+ steals + Mikal Bridges 4+ rebounds,"[{""text"": ""Scottie Barnes 2+ steals"", ""p"": 0.706, ""kind"": ""player"", ""player_id"": ""4433134"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""Mikal Bridges 4+ rebounds"", ""p"": 0.62, ""kind"": ""player"", ""player_id"": ""3147657"", ""stat"": ""reb"", ""line"": 4}]",0.445,2.25,
+2026-11-17,multi,401910002,Karl-Anthony Towns 14+ rebounds + Scottie Barnes 2+ steals + Jalen Brunson 6+ assists,"[{""text"": ""Karl-Anthony Towns 14+ rebounds"", ""p"": 0.74, ""kind"": ""player"", ""player_id"": ""3136195"", ""stat"": ""reb"", ""line"": 14}, {""text"": ""Scottie Barnes 2+ steals"", ""p"": 0.706, ""kind"": ""player"", ""player_id"": ""4433134"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""Jalen Brunson 6+ assists"", ""p"": 0.527, ""kind"": ""player"", ""player_id"": ""3934672"", ""stat"": ""ast"", ""line"": 6}]",0.28,3.57,
+2026-11-17,multi,401910003,Terrence Shannon Jr. 20+ points + rebounds + assists + Rudy Gobert 25+ points + rebounds + assists + Deni Avdija 40+ points + rebounds + assists,"[{""text"": ""Terrence Shannon Jr. 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Rudy Gobert 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3032976"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Deni Avdija 40+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4683021"", ""stat"": ""pra"", ""line"": 40}]",0.304,3.29,
+2026-11-17,multi,401910003,Terrence Shannon Jr. 20+ points + rebounds + assists + Jaden McDaniels 30+ points + rebounds + assists + Deni Avdija 40+ points + rebounds + assists,"[{""text"": ""Terrence Shannon Jr. 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Jaden McDaniels 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4431671"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Deni Avdija 40+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4683021"", ""stat"": ""pra"", ""line"": 40}]",0.304,3.29,
+2026-11-17,multi,401910003,Terrence Shannon Jr. 20+ points + rebounds + assists + Rudy Gobert 25+ points + rebounds + assists + Jaden McDaniels 30+ points + rebounds + assists,"[{""text"": ""Terrence Shannon Jr. 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Rudy Gobert 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3032976"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Jaden McDaniels 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4431671"", ""stat"": ""pra"", ""line"": 30}]",0.303,3.3,
+2026-11-17,multi,401910003,Rudy Gobert 25+ points + rebounds + assists + Jaden McDaniels 30+ points + rebounds + assists + Deni Avdija 40+ points + rebounds + assists,"[{""text"": ""Rudy Gobert 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3032976"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Jaden McDaniels 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4431671"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Deni Avdija 40+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4683021"", ""stat"": ""pra"", ""line"": 40}]",0.304,3.29,
+2026-11-17,multi,401910003,Terrence Shannon Jr. 20+ points + rebounds + assists + LaMelo Ball 2+ steals,"[{""text"": ""Terrence Shannon Jr. 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4432847"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""LaMelo Ball 2+ steals"", ""p"": 0.575, ""kind"": ""player"", ""player_id"": ""4432816"", ""stat"": ""stl"", ""line"": 2}]",0.39,2.57,
+2026-11-17,multi,401910004,Kevin Huerter 20+ points + rebounds + assists + Daniss Jenkins 25+ points + rebounds + assists + Dylan Harper 30+ points + rebounds + assists,"[{""text"": ""Kevin Huerter 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4066372"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Daniss Jenkins 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5107199"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Dylan Harper 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5037871"", ""stat"": ""pra"", ""line"": 30}]",0.304,3.29,
+2026-11-17,multi,401910004,Kevin Huerter 20+ points + rebounds + assists + Daniss Jenkins 25+ points + rebounds + assists + Ausar Thompson 25+ points + rebounds + assists,"[{""text"": ""Kevin Huerter 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4066372"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Daniss Jenkins 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5107199"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Ausar Thompson 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4684742"", ""stat"": ""pra"", ""line"": 25}]",0.303,3.3,
+2026-11-17,multi,401910004,Kevin Huerter 20+ points + rebounds + assists + Dylan Harper 30+ points + rebounds + assists + Ausar Thompson 25+ points + rebounds + assists,"[{""text"": ""Kevin Huerter 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4066372"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Dylan Harper 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5037871"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Ausar Thompson 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4684742"", ""stat"": ""pra"", ""line"": 25}]",0.303,3.3,
+2026-11-17,multi,401910004,Daniss Jenkins 25+ points + rebounds + assists + Dylan Harper 30+ points + rebounds + assists + Ausar Thompson 25+ points + rebounds + assists,"[{""text"": ""Daniss Jenkins 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5107199"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Dylan Harper 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5037871"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""Ausar Thompson 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4684742"", ""stat"": ""pra"", ""line"": 25}]",0.303,3.3,
+2026-11-17,multi,401910005,Sandro Mamukelashvili 20+ points + rebounds + assists + Moussa Diabate 10+ rebounds + Naz Reid 30+ points + rebounds + assists,"[{""text"": ""Sandro Mamukelashvili 20+ points + rebounds + assists"", ""p"": 0.63, ""kind"": ""player"", ""player_id"": ""4278580"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Moussa Diabate 10+ rebounds"", ""p"": 0.788, ""kind"": ""player"", ""player_id"": ""4433249"", ""stat"": ""reb"", ""line"": 10}, {""text"": ""Naz Reid 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4396971"", ""stat"": ""pra"", ""line"": 30}]",0.336,2.97,
+2026-11-17,multi,401910005,Sandro Mamukelashvili 20+ points + rebounds + assists + Moussa Diabate 10+ rebounds + LAL to win,"[{""text"": ""Sandro Mamukelashvili 20+ points + rebounds + assists"", ""p"": 0.63, ""kind"": ""player"", ""player_id"": ""4278580"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Moussa Diabate 10+ rebounds"", ""p"": 0.788, ""kind"": ""player"", ""player_id"": ""4433249"", ""stat"": ""reb"", ""line"": 10}, {""text"": ""LAL to win"", ""p"": 0.803, ""kind"": ""win"", ""team_id"": ""13""}]",0.406,2.46,
+2026-11-17,multi,401910005,Sandro Mamukelashvili 20+ points + rebounds + assists + Naz Reid 30+ points + rebounds + assists + LAL to win,"[{""text"": ""Sandro Mamukelashvili 20+ points + rebounds + assists"", ""p"": 0.63, ""kind"": ""player"", ""player_id"": ""4278580"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Naz Reid 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4396971"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""LAL to win"", ""p"": 0.803, ""kind"": ""win"", ""team_id"": ""13""}]",0.343,2.92,
+2026-11-17,multi,401910006,Mo Bamba 20+ points + rebounds + assists + Brook Lopez 25+ points + rebounds + assists + Max Strus 20+ points + rebounds + assists,"[{""text"": ""Mo Bamba 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4277919"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Brook Lopez 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3448"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Max Strus 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4065778"", ""stat"": ""pra"", ""line"": 20}]",0.304,3.29,
+2026-11-17,multi,401910006,Mo Bamba 20+ points + rebounds + assists + Brook Lopez 25+ points + rebounds + assists + Darius Garland 35+ points + rebounds + assists,"[{""text"": ""Mo Bamba 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4277919"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Brook Lopez 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3448"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Darius Garland 35+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4396907"", ""stat"": ""pra"", ""line"": 35}]",0.304,3.29,
+2026-11-17,multi,401910006,Mo Bamba 20+ points + rebounds + assists + Brook Lopez 25+ points + rebounds + assists + Derrick Jones Jr. 20+ points + rebounds + assists,"[{""text"": ""Mo Bamba 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4277919"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Brook Lopez 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3448"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Derrick Jones Jr. 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3936099"", ""stat"": ""pra"", ""line"": 20}]",0.304,3.29,
+2026-11-17,multi,401910006,Mo Bamba 20+ points + rebounds + assists + Max Strus 20+ points + rebounds + assists + Darius Garland 35+ points + rebounds + assists,"[{""text"": ""Mo Bamba 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4277919"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Max Strus 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4065778"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Darius Garland 35+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4396907"", ""stat"": ""pra"", ""line"": 35}]",0.304,3.29,
+2026-11-17,multi,401910006,Mo Bamba 20+ points + rebounds + assists + Brook Lopez 25+ points + rebounds + assists + Darryn Peterson 30+ points + rebounds + assists,"[{""text"": ""Mo Bamba 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4277919"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Brook Lopez 25+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3448"", ""stat"": ""pra"", ""line"": 25}, {""text"": ""Darryn Peterson 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5041955"", ""stat"": ""pra"", ""line"": 30}]",0.303,3.3,
+2026-11-17,multi,401910006,Mo Bamba 20+ points + rebounds + assists + Max Strus 20+ points + rebounds + assists + Derrick Jones Jr. 20+ points + rebounds + assists,"[{""text"": ""Mo Bamba 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4277919"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Max Strus 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4065778"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Derrick Jones Jr. 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""3936099"", ""stat"": ""pra"", ""line"": 20}]",0.304,3.29,
+2026-11-17,multi,401910004,Kevin Huerter 20+ points + rebounds + assists + Dylan Harper 30+ points + rebounds + assists + SA to win,"[{""text"": ""Kevin Huerter 20+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4066372"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Dylan Harper 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""5037871"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""SA to win"", ""p"": 0.749, ""kind"": ""win"", ""team_id"": ""24""}]",0.337,2.97,
+2026-11-17,multi,401910005,Sandro Mamukelashvili 20+ points + rebounds + assists + Naz Reid 30+ points + rebounds + assists,"[{""text"": ""Sandro Mamukelashvili 20+ points + rebounds + assists"", ""p"": 0.63, ""kind"": ""player"", ""player_id"": ""4278580"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Naz Reid 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4396971"", ""stat"": ""pra"", ""line"": 30}]",0.425,2.35,
+2026-11-17,multi,401910002,Karl-Anthony Towns 14+ rebounds + Scottie Barnes 2+ steals + Mikal Bridges 4+ rebounds,"[{""text"": ""Karl-Anthony Towns 14+ rebounds"", ""p"": 0.74, ""kind"": ""player"", ""player_id"": ""3136195"", ""stat"": ""reb"", ""line"": 14}, {""text"": ""Scottie Barnes 2+ steals"", ""p"": 0.706, ""kind"": ""player"", ""player_id"": ""4433134"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""Mikal Bridges 4+ rebounds"", ""p"": 0.62, ""kind"": ""player"", ""player_id"": ""3147657"", ""stat"": ""reb"", ""line"": 4}]",0.325,3.08,
+2026-11-17,multi,401910002,Karl-Anthony Towns 14+ rebounds + Scottie Barnes 2+ steals + NY to win,"[{""text"": ""Karl-Anthony Towns 14+ rebounds"", ""p"": 0.74, ""kind"": ""player"", ""player_id"": ""3136195"", ""stat"": ""reb"", ""line"": 14}, {""text"": ""Scottie Barnes 2+ steals"", ""p"": 0.706, ""kind"": ""player"", ""player_id"": ""4433134"", ""stat"": ""stl"", ""line"": 2}, {""text"": ""NY to win"", ""p"": 0.631, ""kind"": ""win"", ""team_id"": ""18""}]",0.331,3.03,
+2026-11-17,multi,401910005,Sandro Mamukelashvili 20+ points + rebounds + assists + Moussa Diabate 10+ rebounds + Luka Doncic 2+ steals,"[{""text"": ""Sandro Mamukelashvili 20+ points + rebounds + assists"", ""p"": 0.63, ""kind"": ""player"", ""player_id"": ""4278580"", ""stat"": ""pra"", ""line"": 20}, {""text"": ""Moussa Diabate 10+ rebounds"", ""p"": 0.788, ""kind"": ""player"", ""player_id"": ""4433249"", ""stat"": ""reb"", ""line"": 10}, {""text"": ""Luka Doncic 2+ steals"", ""p"": 0.529, ""kind"": ""player"", ""player_id"": ""3945274"", ""stat"": ""stl"", ""line"": 2}]",0.264,3.79,
+2026-11-17,multi,401910005,Moussa Diabate 10+ rebounds + Naz Reid 30+ points + rebounds + assists + LAL to win,"[{""text"": ""Moussa Diabate 10+ rebounds"", ""p"": 0.788, ""kind"": ""player"", ""player_id"": ""4433249"", ""stat"": ""reb"", ""line"": 10}, {""text"": ""Naz Reid 30+ points + rebounds + assists"", ""p"": 0.667, ""kind"": ""player"", ""player_id"": ""4396971"", ""stat"": ""pra"", ""line"": 30}, {""text"": ""LAL to win"", ""p"": 0.803, ""kind"": ""win"", ""team_id"": ""13""}]",0.413,2.42,
