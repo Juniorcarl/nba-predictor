@@ -1,19 +1,17 @@
-22:28:22 INFO box scores to fetch: 4
-22:28:24 INFO graded 0 picks, 257 bold calls
-22:28:24 INFO post-mortem written for 2026-11-17
-22:28:24 INFO injury report: 106 entries
-22:28:31 INFO current rosters for 31 teams, bio for 541 players
-22:29:56 INFO pts  MAE 4.52 (baseline 4.78), trees 204
-22:30:40 INFO reb  MAE 1.85 (baseline 1.92), trees 1161
-22:31:08 INFO ast  MAE 1.33 (baseline 1.39), trees 714
-22:31:31 INFO fg3m MAE 0.88 (baseline 0.89), trees 611
-22:31:52 INFO stl  MAE 0.71 (baseline 0.72), trees 547
-22:32:15 INFO blk  MAE 0.52 (baseline 0.51), trees 540
-22:32:36 INFO min  MAE 4.73 (baseline 5.61), trees 591
-22:33:24 INFO game margin MAE 11.92 sd 15.15
-22:33:24 INFO game total  MAE 14.67 sd 18.77
-22:33:25 INFO news: 50 new articles, 1186 stored
-22:33:26 INFO learning: 393 player corrections, 8 news tags measured, 30 team corrections, 15 players in the news
-22:33:26 INFO No ODDS_API_KEY set - skipping sportsbook lines
-22:33:34 INFO bold: 200 calls, 6 upsets, 40 multis
-22:33:34 INFO slate 2026-11-18: 12 games, 300 player projections, 0 flagged picks
+02:45:02 INFO box scores to fetch: 3
+02:45:03 INFO graded 0 picks, 59 bold calls
+02:45:03 INFO injury report: 99 entries
+02:45:10 INFO current rosters for 31 teams, bio for 541 players
+02:46:33 INFO pts  MAE 4.52 (baseline 4.78), trees 204
+02:47:16 INFO reb  MAE 1.85 (baseline 1.92), trees 1161
+02:47:43 INFO ast  MAE 1.33 (baseline 1.39), trees 714
+02:48:08 INFO fg3m MAE 0.88 (baseline 0.89), trees 611
+02:48:29 INFO stl  MAE 0.71 (baseline 0.72), trees 547
+02:48:50 INFO blk  MAE 0.52 (baseline 0.51), trees 540
+02:49:13 INFO min  MAE 4.72 (baseline 5.61), trees 591
+02:50:02 INFO game margin MAE 11.93 sd 15.14
+02:50:02 INFO game total  MAE 14.72 sd 18.77
+02:50:03 INFO news: 50 new articles, 1189 stored
+02:50:04 INFO learning: 395 player corrections, 8 news tags measured, 30 team corrections, 17 players in the news
+02:50:08 INFO bold: 173 calls, 2 upsets, 18 multis
+02:50:08 INFO slate 2026-11-18: 3 games, 77 player projections, 0 flagged picks
