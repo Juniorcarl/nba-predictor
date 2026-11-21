@@ -6020,3 +6020,27 @@ game_id,team_id,player_id,player,pos,starter,dnp,min,pts,reb,ast,fg3m,fg3a,fgm,f
 401910022,24,3134916,Jordan McLaughlin,G,False,False,11.0,0,1,5,0,0,0,1,0,0,1,0,3,0
 401910022,24,4713010,David Jones Garcia,F,False,True,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0
 401910022,24,5105809,Tarris Reed Jr.,C,False,True,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0
+401909305,30,4433249,Moussa Diabate,F,True,False,30.0,21,15,2,0,0,9,12,3,5,8,4,1,0
+401909305,30,4433287,Brandon Miller,F,True,False,33.0,19,8,3,5,13,7,18,0,0,1,3,1,0
+401909305,30,4396971,Naz Reid,C,True,False,39.0,12,10,3,2,10,4,19,2,4,2,3,0,1
+401909305,30,4395651,Coby White,G,True,False,26.0,11,4,9,0,5,5,17,1,1,2,3,1,1
+401909305,30,4602025,Sion James,G,True,False,32.0,9,1,2,1,4,4,8,0,2,0,2,1,0
+401909305,30,2583632,Royce O'Neale,F,False,False,21.0,9,1,0,3,6,3,6,0,0,0,0,0,0
+401909305,30,5211176,Tidjane Salaun,F,False,False,13.0,4,2,1,0,3,2,5,0,0,1,0,0,0
+401909305,30,4576060,Ryan Kalkbrenner,C,False,False,17.0,6,6,0,0,0,2,2,2,2,5,1,0,0
+401909305,30,5060701,Christian Anderson,G,False,False,21.0,4,1,2,0,2,1,3,2,2,1,1,0,0
+401909305,30,5239590,Liam McNeeley,G,False,False,7.0,2,1,0,0,2,1,4,0,0,0,0,0,0
+401909305,30,5281370,Hannes Steinbach,F,False,True,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0
+401909305,30,3032979,Dennis Schroder,G,False,True,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0
+401909305,1,4431680,Onyeka Okongwu,F,True,False,34.0,16,7,1,2,6,6,10,2,2,1,2,1,0
+401909305,1,4701230,Jalen Johnson,F,True,False,36.0,26,6,6,3,4,10,15,3,4,0,4,4,1
+401909305,1,4278039,Nickeil Alexander-Walker,G,True,False,32.0,17,4,3,2,8,7,20,1,1,1,1,0,0
+401909305,1,4397183,Aaron Wiggins,G,True,False,34.0,19,2,3,4,6,7,12,1,2,1,0,1,0
+401909305,1,4869342,Dyson Daniels,G,True,False,35.0,11,8,10,1,3,5,10,0,0,1,2,4,0
+401909305,1,2578185,Dorian Finney-Smith,F,False,False,3.0,0,0,1,0,1,0,1,0,0,0,0,0,0
+401909305,1,4280151,Corey Kispert,F,False,False,16.0,7,3,0,1,3,3,6,0,0,1,0,0,0
+401909305,1,5106262,Zuby Ejiofor,F,False,False,14.0,5,2,2,0,0,2,2,1,2,0,0,0,1
+401909305,1,4397020,Luguentz Dort,G,False,False,23.0,2,1,0,0,2,1,5,0,0,1,0,0,1
+401909305,1,4431941,RayJ Dennis,G,False,False,13.0,8,4,2,0,0,2,3,4,4,0,2,2,0
+401909305,1,4431714,Jalen Wilson,F,False,True,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0
+401909305,1,5149077,Kingston Flemings,G,False,True,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0
