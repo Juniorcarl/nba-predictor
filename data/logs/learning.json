@@ -4699,18 +4699,161 @@
      "detail": "Minutes and shooting close to expected"
     }
    ]
+  },
+  {
+   "date": "2026-11-21",
+   "n": 99,
+   "dnp": 16,
+   "mae": {
+    "min": 4.59,
+    "pts": 4.64,
+    "reb": 2.18,
+    "ast": 1.25
+   },
+   "share_minutes": 0.389,
+   "reasons": {
+    "Normal variation": 8,
+    "Did not play": 5,
+    "Cold shooting": 5,
+    "Hot shooting": 4,
+    "Bigger role": 3,
+    "Left early or benched": 2,
+    "Fewer minutes": 1
+   },
+   "biggest": [
+    {
+     "player": "Zion Williamson",
+     "played": false,
+     "p_pts": 21.3,
+     "a_pts": 0.0,
+     "p_min": 32.9,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Victor Wembanyama",
+     "played": true,
+     "p_pts": 30.0,
+     "a_pts": 50.0,
+     "p_min": 30.1,
+     "a_min": 32.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 20/29: well above normal"
+    },
+    {
+     "player": "Karl-Anthony Towns",
+     "played": false,
+     "p_pts": 19.1,
+     "a_pts": 0.0,
+     "p_min": 32.9,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Mike Conley",
+     "played": true,
+     "p_pts": 3.3,
+     "a_pts": 19.0,
+     "p_min": 11.2,
+     "a_min": 18.0,
+     "reason": "Bigger role",
+     "detail": "18 min vs 11 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Saddiq Bey",
+     "played": true,
+     "p_pts": 17.5,
+     "a_pts": 2.0,
+     "p_min": 35.5,
+     "a_min": 32.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 1/12: well below normal"
+    },
+    {
+     "player": "OG Anunoby",
+     "played": false,
+     "p_pts": 15.1,
+     "a_pts": 0.0,
+     "p_min": 34.1,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Jordan Poole",
+     "played": true,
+     "p_pts": 11.4,
+     "a_pts": 25.0,
+     "p_min": 25.6,
+     "a_min": 31.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Donovan Clingan",
+     "played": true,
+     "p_pts": 9.8,
+     "a_pts": 22.0,
+     "p_min": 27.9,
+     "a_min": 31.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 9/11: well above normal"
+    },
+    {
+     "player": "Jeremiah Fears",
+     "played": true,
+     "p_pts": 17.2,
+     "a_pts": 29.0,
+     "p_min": 33.1,
+     "a_min": 34.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "P.J. Washington",
+     "played": false,
+     "p_pts": 11.1,
+     "a_pts": 0.0,
+     "p_min": 26.0,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Max Christie",
+     "played": true,
+     "p_pts": 2.3,
+     "a_pts": 13.0,
+     "p_min": 5.9,
+     "a_min": 24.0,
+     "reason": "Bigger role",
+     "detail": "24 min vs 6 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Landry Shamet",
+     "played": true,
+     "p_pts": 10.6,
+     "a_pts": 20.0,
+     "p_min": 26.2,
+     "a_min": 36.0,
+     "reason": "Bigger role",
+     "detail": "36 min vs 26 expected: rotation change or teammate missing"
+    }
+   ]
   }
  ],
  "patterns": {
-  "updated": "2026-11-22T01:34+00:00",
+  "updated": "2026-11-22T08:48+00:00",
   "items": [
    {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": 1.12,
-    "n": 452,
+    "bias": 1.13,
+    "n": 455,
     "t": 4.0,
-    "text": "First 3 games back from injury: the model under-predicts minutes by 1.1 on average (452 cases).",
+    "text": "First 3 games back from injury: the model under-predicts minutes by 1.1 on average (455 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "this season"
@@ -4718,34 +4861,67 @@
    {
     "segment": "Hot shooters (last 3 games)",
     "stat": "min",
-    "bias": 1.33,
-    "n": 343,
-    "t": 3.8,
-    "text": "Hot shooters (last 3 games): the model under-predicts minutes by 1.3 on average (343 cases).",
+    "bias": 1.38,
+    "n": 349,
+    "t": 3.9,
+    "text": "Hot shooters (last 3 games): the model under-predicts minutes by 1.4 on average (349 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "this season"
    },
    {
+    "segment": "Back-to-back games",
+    "stat": "min",
+    "bias": 0.73,
+    "n": 815,
+    "t": 3.0,
+    "text": "Back-to-back games: the model under-predicts minutes by 0.7 on average (815 cases).",
+    "group": "fatigue_travel",
+    "fix": "The 'fatigue travel' factor is already on; the gap may shrink as it learns.",
+    "source": "this season"
+   },
+   {
     "segment": "First 3 games back from injury",
     "stat": "pts",
-    "bias": -0.74,
-    "n": 1801,
-    "t": -6.6,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,801 cases).",
+    "bias": -0.72,
+    "n": 1809,
+    "t": -6.4,
+    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,809 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
+    "segment": "Road games",
+    "stat": "pts",
+    "bias": -0.41,
+    "n": 8146,
+    "t": -6.4,
+    "text": "Road games: the model over-predicts points by 0.4 on average (8,146 cases).",
+    "group": null,
+    "fix": null,
+    "source": "test games"
+   },
+   {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": -0.75,
-    "n": 1801,
+    "bias": -0.74,
+    "n": 1809,
     "t": -5.3,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 0.8 on average (1,801 cases).",
+    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,809 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
+    "segment": "Playoffs",
+    "stat": "pts",
+    "bias": -0.63,
+    "n": 1897,
+    "t": -5.0,
+    "text": "Playoffs: the model over-predicts points by 0.6 on average (1,897 cases).",
+    "group": "motivation",
+    "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
@@ -4760,45 +4936,45 @@
     "source": "test games"
    },
    {
-    "segment": "Playoffs",
-    "stat": "pts",
-    "bias": -0.6,
-    "n": 1897,
-    "t": -4.7,
-    "text": "Playoffs: the model over-predicts points by 0.6 on average (1,897 cases).",
-    "group": "motivation",
-    "fix": "The 'motivation' factor targets this; experiments test whether adding it helps.",
-    "source": "test games"
-   },
-   {
     "segment": "Opponent has an elite shot-blocker",
     "stat": "pts",
-    "bias": -0.69,
-    "n": 1099,
-    "t": -3.9,
-    "text": "Opponent has an elite shot-blocker: the model over-predicts points by 0.7 on average (1,099 cases).",
+    "bias": -0.71,
+    "n": 1108,
+    "t": -4.0,
+    "text": "Opponent has an elite shot-blocker: the model over-predicts points by 0.7 on average (1,108 cases).",
     "group": "opposing_defenders",
     "fix": "The 'opposing defenders' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
+    "segment": "Centers",
+    "stat": "pts",
+    "bias": -0.41,
+    "n": 2460,
+    "t": -3.8,
+    "text": "Centers: the model over-predicts points by 0.4 on average (2,460 cases).",
+    "group": "position_defense",
+    "fix": "The 'position defense' factor targets this; experiments test whether adding it helps.",
+    "source": "test games"
+   },
+   {
     "segment": "Cold shooters (last 3 games)",
-    "stat": "reb",
-    "bias": -0.22,
-    "n": 1275,
-    "t": -3.4,
-    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,275 cases).",
+    "stat": "pts",
+    "bias": -0.43,
+    "n": 1281,
+    "t": -3.3,
+    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,281 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
     "segment": "Cold shooters (last 3 games)",
-    "stat": "pts",
-    "bias": -0.42,
-    "n": 1275,
-    "t": -3.2,
-    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,275 cases).",
+    "stat": "reb",
+    "bias": -0.22,
+    "n": 1281,
+    "t": -3.3,
+    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,281 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -12324,6 +12500,11 @@
    "at": "2026-11-21T20:45+00:00",
    "kind": "postmortem",
    "text": "Reviewed 177 player projections from 2026-11-20: average miss 5.01 pts, 1.8 reb, 1.42 ast."
+  },
+  {
+   "at": "2026-11-22T08:45+00:00",
+   "kind": "postmortem",
+   "text": "Reviewed 99 player projections from 2026-11-21: average miss 4.64 pts, 2.18 reb, 1.25 ast."
   }
  ]
 }
