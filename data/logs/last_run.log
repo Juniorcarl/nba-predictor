@@ -1,18 +1,19 @@
-20:55:07 INFO box scores to fetch: 0
-20:55:07 INFO graded 0 picks, 0 bold calls
-20:55:07 INFO injury report: 109 entries
-20:55:15 INFO current rosters for 31 teams, bio for 541 players
-20:56:09 INFO pts  MAE 4.52 (baseline 4.78), trees 269
-20:56:33 INFO reb  MAE 1.85 (baseline 1.92), trees 872
-20:56:55 INFO ast  MAE 1.33 (baseline 1.38), trees 758
-20:57:15 INFO fg3m MAE 0.88 (baseline 0.89), trees 684
-20:57:32 INFO stl  MAE 0.71 (baseline 0.72), trees 582
-20:57:48 INFO blk  MAE 0.52 (baseline 0.51), trees 534
-20:58:03 INFO min  MAE 4.71 (baseline 5.60), trees 524
-20:58:38 INFO game margin MAE 11.93 sd 15.15
-20:58:38 INFO game total  MAE 14.85 sd 18.90
-20:58:39 INFO news: 50 new articles, 1301 stored
-20:58:40 INFO learning: 399 player corrections, 8 news tags measured, 30 team corrections, 19 players in the news
-20:58:40 INFO No ODDS_API_KEY set - skipping sportsbook lines
-20:58:44 INFO bold: 200 calls, 5 upsets, 36 multis
-20:58:44 INFO slate 2026-11-22: 6 games, 155 player projections, 0 flagged picks
+01:55:35 INFO box scores to fetch: 2
+01:55:36 INFO graded 0 picks, 104 bold calls
+01:55:36 INFO injury report: 103 entries
+01:55:47 INFO current rosters for 31 teams, bio for 541 players
+/home/runner/work/nba-predictor/nba-predictor/nbapred/features.py:270: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df["miss_fga_share"] = df["miss_fga"] * df["fga_pm"]
+01:56:35 INFO pts  MAE 4.52 (baseline 4.79), trees 278
+01:56:57 INFO reb  MAE 1.85 (baseline 1.93), trees 857
+01:57:18 INFO ast  MAE 1.33 (baseline 1.38), trees 752
+01:57:40 INFO fg3m MAE 0.88 (baseline 0.89), trees 853
+01:57:55 INFO stl  MAE 0.71 (baseline 0.72), trees 530
+01:58:09 INFO blk  MAE 0.52 (baseline 0.51), trees 496
+01:58:23 INFO min  MAE 4.70 (baseline 5.60), trees 570
+01:58:52 INFO game margin MAE 11.86 sd 15.06
+01:58:53 INFO game total  MAE 14.92 sd 18.98
+01:58:53 INFO news: 50 new articles, 1307 stored
+01:58:53 INFO learning: 400 player corrections, 8 news tags measured, 30 team corrections, 18 players in the news
+01:58:55 INFO bold: 0 calls, 0 upsets, 0 multis
+01:58:55 INFO slate 2026-11-22: 0 games, 0 player projections, 0 flagged picks

@@ -307,13 +307,13 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401910026,2026-11-21,2026-11-22T01:00Z,2027,2,True,post,False,16,MIN,Minnesota Timberwolves,104.0,29,MEM,Memphis Grizzlies,95.0
 401910027,2026-11-21,2026-11-22T01:00Z,2027,2,True,post,False,24,SA,San Antonio Spurs,114.0,3,NO,New Orleans Pelicans,91.0
 401910028,2026-11-21,2026-11-22T03:00Z,2027,2,True,post,False,23,SAC,Sacramento Kings,97.0,2,BOS,Boston Celtics,96.0
-401910029,2026-11-22,2026-11-22T20:30Z,2027,2,False,in,False,1,ATL,Atlanta Hawks,,8,DET,Detroit Pistons,
-401910030,2026-11-22,2026-11-22T23:00Z,2027,2,False,pre,False,14,MIA,Miami Heat,,25,OKC,Oklahoma City Thunder,
-401910031,2026-11-22,2026-11-23T00:00Z,2027,2,False,pre,False,27,WSH,Washington Wizards,,19,ORL,Orlando Magic,
-401910032,2026-11-22,2026-11-23T00:00Z,2027,2,False,pre,False,4,CHI,Chicago Bulls,,7,DEN,Denver Nuggets,
-401910033,2026-11-22,2026-11-23T00:00Z,2027,2,False,pre,False,26,UTAH,Utah Jazz,,6,DAL,Dallas Mavericks,
-401910034,2026-11-22,2026-11-23T01:00Z,2027,2,False,pre,False,18,NY,New York Knicks,,11,IND,Indiana Pacers,
-401910035,2026-11-22,2026-11-23T01:30Z,2027,2,False,pre,False,9,GS,Golden State Warriors,,2,BOS,Boston Celtics,
+401910029,2026-11-22,2026-11-22T20:30Z,2027,2,True,post,False,1,ATL,Atlanta Hawks,107.0,8,DET,Detroit Pistons,97.0
+401910030,2026-11-22,2026-11-22T23:00Z,2027,2,True,post,False,14,MIA,Miami Heat,123.0,25,OKC,Oklahoma City Thunder,113.0
+401910031,2026-11-22,2026-11-23T00:00Z,2027,2,False,in,False,27,WSH,Washington Wizards,,19,ORL,Orlando Magic,
+401910032,2026-11-22,2026-11-23T00:00Z,2027,2,False,in,False,4,CHI,Chicago Bulls,,7,DEN,Denver Nuggets,
+401910033,2026-11-22,2026-11-23T00:00Z,2027,2,False,in,False,26,UTAH,Utah Jazz,,6,DAL,Dallas Mavericks,
+401910034,2026-11-22,2026-11-23T01:00Z,2027,2,False,in,False,18,NY,New York Knicks,,11,IND,Indiana Pacers,
+401910035,2026-11-22,2026-11-23T01:30Z,2027,2,False,in,False,9,GS,Golden State Warriors,,2,BOS,Boston Celtics,
 401910036,2026-11-23,2026-11-24T00:00Z,2027,2,False,pre,False,30,CHA,Charlotte Hornets,,29,MEM,Memphis Grizzlies,
 401910037,2026-11-23,2026-11-24T00:00Z,2027,2,False,pre,False,20,PHI,Philadelphia 76ers,,22,POR,Portland Trail Blazers,
 401910038,2026-11-23,2026-11-24T00:30Z,2027,2,False,pre,False,11,IND,Indiana Pacers,,25,OKC,Oklahoma City Thunder,
