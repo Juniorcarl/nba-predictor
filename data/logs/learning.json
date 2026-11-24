@@ -4842,18 +4842,161 @@
      "detail": "36 min vs 26 expected: rotation change or teammate missing"
     }
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "n": 143,
+   "dnp": 32,
+   "mae": {
+    "min": 4.76,
+    "pts": 5.07,
+    "reb": 1.83,
+    "ast": 1.53
+   },
+   "share_minutes": 0.396,
+   "reasons": {
+    "Normal variation": 21,
+    "Bigger role": 9,
+    "Did not play": 7,
+    "Hot shooting": 5,
+    "Cold shooting": 4,
+    "Fewer minutes": 3,
+    "Left early or benched": 1
+   },
+   "biggest": [
+    {
+     "player": "Shai Gilgeous-Alexander",
+     "played": false,
+     "p_pts": 34.4,
+     "a_pts": 0.0,
+     "p_min": 33.5,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Svi Mykhailiuk",
+     "played": true,
+     "p_pts": 8.0,
+     "a_pts": 39.0,
+     "p_min": 26.0,
+     "a_min": 32.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "played": false,
+     "p_pts": 27.9,
+     "a_pts": 0.0,
+     "p_min": 31.9,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Cade Cunningham",
+     "played": true,
+     "p_pts": 27.9,
+     "a_pts": 5.0,
+     "p_min": 36.8,
+     "a_min": 33.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 2/9: well below normal"
+    },
+    {
+     "player": "Buddy Hield",
+     "played": true,
+     "p_pts": 11.4,
+     "a_pts": 33.0,
+     "p_min": 23.0,
+     "a_min": 40.0,
+     "reason": "Bigger role",
+     "detail": "40 min vs 23 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Jamal Murray",
+     "played": true,
+     "p_pts": 25.5,
+     "a_pts": 45.0,
+     "p_min": 35.3,
+     "a_min": 45.0,
+     "reason": "Bigger role",
+     "detail": "45 min vs 35 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Paul George",
+     "played": false,
+     "p_pts": 19.1,
+     "a_pts": 0.0,
+     "p_min": 29.5,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Aday Mara",
+     "played": false,
+     "p_pts": 14.4,
+     "a_pts": 0.0,
+     "p_min": 28.7,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Franz Wagner",
+     "played": true,
+     "p_pts": 30.0,
+     "a_pts": 16.0,
+     "p_min": 36.3,
+     "a_min": 32.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Darryn Peterson",
+     "played": true,
+     "p_pts": 19.8,
+     "a_pts": 6.0,
+     "p_min": 30.9,
+     "a_min": 25.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Jalen Smith",
+     "played": true,
+     "p_pts": 13.0,
+     "a_pts": 26.0,
+     "p_min": 28.4,
+     "a_min": 34.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 10/14: well above normal"
+    },
+    {
+     "player": "Kevin Huerter",
+     "played": true,
+     "p_pts": 14.8,
+     "a_pts": 2.0,
+     "p_min": 36.2,
+     "a_min": 30.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 1/8: well below normal"
+    }
+   ]
   }
  ],
  "patterns": {
-  "updated": "2026-11-23T01:58+00:00",
+  "updated": "2026-11-24T02:04+00:00",
   "items": [
    {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": 1.2,
-    "n": 459,
-    "t": 4.3,
-    "text": "First 3 games back from injury: the model under-predicts minutes by 1.2 on average (459 cases).",
+    "bias": 1.17,
+    "n": 464,
+    "t": 4.2,
+    "text": "First 3 games back from injury: the model under-predicts minutes by 1.2 on average (464 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "this season"
@@ -4861,10 +5004,10 @@
    {
     "segment": "Hot shooters (last 3 games)",
     "stat": "min",
-    "bias": 1.34,
-    "n": 352,
+    "bias": 1.35,
+    "n": 358,
     "t": 3.9,
-    "text": "Hot shooters (last 3 games): the model under-predicts minutes by 1.3 on average (352 cases).",
+    "text": "Hot shooters (last 3 games): the model under-predicts minutes by 1.3 on average (358 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "this season"
@@ -4872,10 +5015,10 @@
    {
     "segment": "Back-to-back games",
     "stat": "min",
-    "bias": 0.73,
-    "n": 815,
-    "t": 3.0,
-    "text": "Back-to-back games: the model under-predicts minutes by 0.7 on average (815 cases).",
+    "bias": 0.77,
+    "n": 845,
+    "t": 3.3,
+    "text": "Back-to-back games: the model under-predicts minutes by 0.8 on average (845 cases).",
     "group": "fatigue_travel",
     "fix": "The 'fatigue travel' factor is already on; the gap may shrink as it learns.",
     "source": "this season"
@@ -4884,9 +5027,9 @@
     "segment": "Road games",
     "stat": "pts",
     "bias": -0.4,
-    "n": 8019,
+    "n": 8075,
     "t": -6.2,
-    "text": "Road games: the model over-predicts points by 0.4 on average (8,019 cases).",
+    "text": "Road games: the model over-predicts points by 0.4 on average (8,075 cases).",
     "group": null,
     "fix": null,
     "source": "test games"
@@ -4895,9 +5038,9 @@
     "segment": "First 3 games back from injury",
     "stat": "pts",
     "bias": -0.67,
-    "n": 1782,
+    "n": 1788,
     "t": -5.9,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,782 cases).",
+    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,788 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -4906,9 +5049,9 @@
     "segment": "First 3 games back from injury",
     "stat": "min",
     "bias": -0.73,
-    "n": 1782,
+    "n": 1788,
     "t": -5.1,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,782 cases).",
+    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,788 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -4950,9 +5093,9 @@
     "segment": "Cold shooters (last 3 games)",
     "stat": "reb",
     "bias": -0.21,
-    "n": 1265,
+    "n": 1269,
     "t": -3.3,
-    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,265 cases).",
+    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,269 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -4961,9 +5104,9 @@
     "segment": "Cold shooters (last 3 games)",
     "stat": "pts",
     "bias": -0.42,
-    "n": 1265,
+    "n": 1269,
     "t": -3.2,
-    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,265 cases).",
+    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,269 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -12505,6 +12648,11 @@
    "at": "2026-11-22T08:45+00:00",
    "kind": "postmortem",
    "text": "Reviewed 99 player projections from 2026-11-21: average miss 4.64 pts, 2.18 reb, 1.25 ast."
+  },
+  {
+   "at": "2026-11-24T01:59+00:00",
+   "kind": "postmortem",
+   "text": "Reviewed 143 player projections from 2026-11-22: average miss 5.07 pts, 1.83 reb, 1.53 ast."
   }
  ]
 }
