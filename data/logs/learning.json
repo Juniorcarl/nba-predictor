@@ -4988,15 +4988,15 @@
   }
  ],
  "patterns": {
-  "updated": "2026-11-24T02:04+00:00",
+  "updated": "2026-11-24T05:31+00:00",
   "items": [
    {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": 1.17,
-    "n": 464,
-    "t": 4.2,
-    "text": "First 3 games back from injury: the model under-predicts minutes by 1.2 on average (464 cases).",
+    "bias": 1.15,
+    "n": 465,
+    "t": 4.1,
+    "text": "First 3 games back from injury: the model under-predicts minutes by 1.1 on average (465 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "this season"
@@ -5024,23 +5024,12 @@
     "source": "this season"
    },
    {
-    "segment": "Road games",
-    "stat": "pts",
-    "bias": -0.4,
-    "n": 8075,
-    "t": -6.2,
-    "text": "Road games: the model over-predicts points by 0.4 on average (8,075 cases).",
-    "group": null,
-    "fix": null,
-    "source": "test games"
-   },
-   {
     "segment": "First 3 games back from injury",
     "stat": "pts",
     "bias": -0.67,
-    "n": 1788,
+    "n": 1810,
     "t": -5.9,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,788 cases).",
+    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,810 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -5048,10 +5037,10 @@
    {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": -0.73,
-    "n": 1788,
-    "t": -5.1,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,788 cases).",
+    "bias": -0.74,
+    "n": 1810,
+    "t": -5.2,
+    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,810 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -5091,22 +5080,22 @@
    },
    {
     "segment": "Cold shooters (last 3 games)",
-    "stat": "reb",
-    "bias": -0.21,
-    "n": 1269,
+    "stat": "pts",
+    "bias": -0.43,
+    "n": 1274,
     "t": -3.3,
-    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,269 cases).",
+    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,274 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
    },
    {
     "segment": "Cold shooters (last 3 games)",
-    "stat": "pts",
-    "bias": -0.42,
-    "n": 1269,
+    "stat": "reb",
+    "bias": -0.21,
+    "n": 1274,
     "t": -3.2,
-    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,269 cases).",
+    "text": "Cold shooters (last 3 games): the model over-predicts rebounds by 0.2 on average (1,274 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
