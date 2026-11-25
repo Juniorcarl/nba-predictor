@@ -5126,18 +5126,160 @@
      "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
     }
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "n": 65,
+   "dnp": 9,
+   "mae": {
+    "min": 3.62,
+    "pts": 4.35,
+    "reb": 1.68,
+    "ast": 1.28
+   },
+   "share_minutes": 0.331,
+   "reasons": {
+    "Normal variation": 10,
+    "Cold shooting": 4,
+    "Did not play": 1,
+    "Bigger role": 1,
+    "Hot shooting": 1,
+    "Fewer minutes": 1
+   },
+   "biggest": [
+    {
+     "player": "Jayson Tatum",
+     "played": true,
+     "p_pts": 27.1,
+     "a_pts": 41.0,
+     "p_min": 33.8,
+     "a_min": 37.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Aaron Gordon",
+     "played": true,
+     "p_pts": 13.0,
+     "a_pts": 1.0,
+     "p_min": 28.4,
+     "a_min": 24.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Anthony Black",
+     "played": true,
+     "p_pts": 16.4,
+     "a_pts": 5.0,
+     "p_min": 36.1,
+     "a_min": 28.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 2/8: well below normal"
+    },
+    {
+     "player": "Neemias Queta",
+     "played": true,
+     "p_pts": 10.9,
+     "a_pts": 21.0,
+     "p_min": 25.7,
+     "a_min": 25.0,
+     "reason": "Hot shooting",
+     "detail": "Shot 9/11: well above normal"
+    },
+    {
+     "player": "Kyrie Irving",
+     "played": true,
+     "p_pts": 20.8,
+     "a_pts": 11.0,
+     "p_min": 30.8,
+     "a_min": 34.0,
+     "reason": "Cold shooting",
+     "detail": "Shot 5/19: well below normal"
+    },
+    {
+     "player": "Anthony Davis",
+     "played": true,
+     "p_pts": 24.2,
+     "a_pts": 33.0,
+     "p_min": 34.3,
+     "a_min": 37.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Isaiah Joe",
+     "played": true,
+     "p_pts": 12.4,
+     "a_pts": 21.0,
+     "p_min": 22.6,
+     "a_min": 30.0,
+     "reason": "Bigger role",
+     "detail": "30 min vs 23 expected: rotation change or teammate missing"
+    },
+    {
+     "player": "Paul George",
+     "played": true,
+     "p_pts": 19.9,
+     "a_pts": 28.0,
+     "p_min": 28.8,
+     "a_min": 33.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Nikola Jokic",
+     "played": true,
+     "p_pts": 26.1,
+     "a_pts": 18.0,
+     "p_min": 35.4,
+     "a_min": 33.0,
+     "reason": "Normal variation",
+     "detail": "Minutes and shooting close to expected"
+    },
+    {
+     "player": "Mike Conley",
+     "played": false,
+     "p_pts": 6.4,
+     "a_pts": 0.0,
+     "p_min": 14.0,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Nikola Vucevic",
+     "played": false,
+     "p_pts": 4.7,
+     "a_pts": 0.0,
+     "p_min": 15.0,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    },
+    {
+     "player": "Julian Strawther",
+     "played": false,
+     "p_pts": 4.5,
+     "a_pts": 0.0,
+     "p_min": 5.2,
+     "a_min": 0.0,
+     "reason": "Did not play",
+     "detail": "Projected to play but sat out: late scratch, rest or coach's decision"
+    }
+   ]
   }
  ],
  "patterns": {
-  "updated": "2026-11-25T04:34+00:00",
+  "updated": "2026-11-25T23:30+00:00",
   "items": [
    {
     "segment": "First 3 games back from injury",
     "stat": "min",
-    "bias": 1.09,
-    "n": 468,
+    "bias": 1.08,
+    "n": 470,
     "t": 3.9,
-    "text": "First 3 games back from injury: the model under-predicts minutes by 1.1 on average (468 cases).",
+    "text": "First 3 games back from injury: the model under-predicts minutes by 1.1 on average (470 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "this season"
@@ -5168,9 +5310,9 @@
     "segment": "First 3 games back from injury",
     "stat": "pts",
     "bias": -0.66,
-    "n": 1806,
+    "n": 1809,
     "t": -5.9,
-    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,806 cases).",
+    "text": "First 3 games back from injury: the model over-predicts points by 0.7 on average (1,809 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -5179,9 +5321,9 @@
     "segment": "First 3 games back from injury",
     "stat": "min",
     "bias": -0.67,
-    "n": 1806,
+    "n": 1809,
     "t": -4.8,
-    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,806 cases).",
+    "text": "First 3 games back from injury: the model over-predicts minutes by 0.7 on average (1,809 cases).",
     "group": "injury_return",
     "fix": "The 'injury return' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -5223,9 +5365,9 @@
     "segment": "Cold shooters (last 3 games)",
     "stat": "pts",
     "bias": -0.41,
-    "n": 1275,
+    "n": 1277,
     "t": -3.1,
-    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,275 cases).",
+    "text": "Cold shooters (last 3 games): the model over-predicts points by 0.4 on average (1,277 cases).",
     "group": "shooting_luck",
     "fix": "The 'shooting luck' factor targets this; experiments test whether adding it helps.",
     "source": "test games"
@@ -12766,6 +12908,11 @@
    "at": "2026-11-24T23:44+00:00",
    "kind": "postmortem",
    "text": "Reviewed 40 player projections from 2026-11-23: average miss 4.97 pts, 1.88 reb, 1.64 ast."
+  },
+  {
+   "at": "2026-11-25T23:27+00:00",
+   "kind": "postmortem",
+   "text": "Reviewed 65 player projections from 2026-11-24: average miss 4.35 pts, 1.68 reb, 1.28 ast."
   }
  ]
 }

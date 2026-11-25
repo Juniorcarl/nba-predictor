@@ -1,19 +1,19 @@
-04:30:47 INFO box scores to fetch: 2
-04:30:48 INFO graded 0 picks, 147 bold calls
-04:30:48 INFO injury report: 93 entries
-04:30:56 INFO current rosters for 31 teams, bio for 542 players
-/home/runner/work/nba-predictor/nba-predictor/nbapred/features.py:270: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
-  df["miss_fga_share"] = df["miss_fga"] * df["fga_pm"]
-04:31:53 INFO pts  MAE 4.52 (baseline 4.79), trees 248
-04:32:19 INFO reb  MAE 1.84 (baseline 1.92), trees 918
-04:32:42 INFO ast  MAE 1.33 (baseline 1.38), trees 772
-04:33:00 INFO fg3m MAE 0.88 (baseline 0.90), trees 639
-04:33:15 INFO stl  MAE 0.71 (baseline 0.72), trees 498
-04:33:30 INFO blk  MAE 0.52 (baseline 0.51), trees 463
-04:33:46 INFO min  MAE 4.70 (baseline 5.59), trees 585
-04:34:22 INFO game margin MAE 11.82 sd 15.06
-04:34:22 INFO game total  MAE 15.02 sd 19.20
-04:34:22 INFO news: 50 new articles, 1360 stored
-04:34:23 INFO learning: 402 player corrections, 8 news tags measured, 30 team corrections, 15 players in the news
-04:34:24 INFO bold: 0 calls, 0 upsets, 0 multis
-04:34:24 INFO slate 2026-11-24: 0 games, 0 player projections, 0 flagged picks
+23:27:46 INFO box scores to fetch: 1
+23:27:46 INFO graded 0 picks, 71 bold calls
+23:27:46 INFO post-mortem written for 2026-11-24
+23:27:46 INFO injury report: 91 entries
+23:27:54 INFO current rosters for 31 teams, bio for 542 players
+23:28:40 INFO pts  MAE 4.52 (baseline 4.79), trees 248
+23:29:05 INFO reb  MAE 1.84 (baseline 1.92), trees 918
+23:29:26 INFO ast  MAE 1.33 (baseline 1.38), trees 772
+23:29:43 INFO fg3m MAE 0.88 (baseline 0.90), trees 639
+23:29:58 INFO stl  MAE 0.71 (baseline 0.72), trees 498
+23:30:11 INFO blk  MAE 0.52 (baseline 0.51), trees 463
+23:30:27 INFO min  MAE 4.69 (baseline 5.59), trees 585
+23:30:56 INFO game margin MAE 11.84 sd 15.07
+23:30:56 INFO game total  MAE 15.02 sd 19.19
+23:30:57 INFO news: 50 new articles, 1373 stored
+23:30:58 INFO learning: 404 player corrections, 8 news tags measured, 30 team corrections, 17 players in the news
+23:30:58 INFO No ODDS_API_KEY set - skipping sportsbook lines
+23:31:02 INFO bold: 200 calls, 6 upsets, 40 multis
+23:31:02 INFO slate 2026-11-25: 8 games, 200 player projections, 0 flagged picks
