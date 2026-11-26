@@ -327,15 +327,15 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401909314,2026-11-24,2026-11-25T00:00Z,2027,2,True,post,False,19,ORL,Orlando Magic,86.0,8,DET,Detroit Pistons,104.0
 401909315,2026-11-24,2026-11-25T01:00Z,2027,2,True,post,False,27,WSH,Washington Wizards,116.0,2,BOS,Boston Celtics,131.0
 401909316,2026-11-24,2026-11-25T03:00Z,2027,2,True,post,False,7,DEN,Denver Nuggets,101.0,6,DAL,Dallas Mavericks,120.0
-401909317,2026-11-25,2026-11-25T22:00Z,2027,2,False,in,False,20,PHI,Philadelphia 76ers,,14,MIA,Miami Heat,
-401909318,2026-11-25,2026-11-26T00:00Z,2027,2,False,pre,False,30,CHA,Charlotte Hornets,,4,CHI,Chicago Bulls,
-401909319,2026-11-25,2026-11-26T00:30Z,2027,2,False,pre,False,18,NY,New York Knicks,,5,CLE,Cleveland Cavaliers,
-401909320,2026-11-25,2026-11-26T00:30Z,2027,2,False,pre,False,25,OKC,Oklahoma City Thunder,,16,MIN,Minnesota Timberwolves,
-401909321,2026-11-25,2026-11-26T01:00Z,2027,2,False,pre,False,29,MEM,Memphis Grizzlies,,12,LAC,LA Clippers,
-401909322,2026-11-25,2026-11-26T01:00Z,2027,2,False,pre,False,15,MIL,Milwaukee Bucks,,17,BKN,Brooklyn Nets,
-401909323,2026-11-25,2026-11-26T01:30Z,2027,2,False,pre,False,10,HOU,Houston Rockets,,21,PHX,Phoenix Suns,
-401909324,2026-11-25,2026-11-26T03:00Z,2027,2,False,pre,False,9,GS,Golden State Warriors,,23,SAC,Sacramento Kings,
-401909325,2026-11-25,2026-11-26T03:00Z,2027,2,False,pre,False,22,POR,Portland Trail Blazers,,24,SA,San Antonio Spurs,
+401909317,2026-11-25,2026-11-25T22:00Z,2027,2,True,post,False,20,PHI,Philadelphia 76ers,111.0,14,MIA,Miami Heat,104.0
+401909318,2026-11-25,2026-11-26T00:00Z,2027,2,True,post,False,30,CHA,Charlotte Hornets,105.0,4,CHI,Chicago Bulls,107.0
+401909319,2026-11-25,2026-11-26T00:30Z,2027,2,True,post,False,18,NY,New York Knicks,121.0,5,CLE,Cleveland Cavaliers,102.0
+401909320,2026-11-25,2026-11-26T00:30Z,2027,2,True,post,False,25,OKC,Oklahoma City Thunder,106.0,16,MIN,Minnesota Timberwolves,113.0
+401909321,2026-11-25,2026-11-26T01:00Z,2027,2,True,post,False,29,MEM,Memphis Grizzlies,115.0,12,LAC,LA Clippers,97.0
+401909322,2026-11-25,2026-11-26T01:00Z,2027,2,True,post,False,15,MIL,Milwaukee Bucks,97.0,17,BKN,Brooklyn Nets,104.0
+401909323,2026-11-25,2026-11-26T01:30Z,2027,2,False,in,False,10,HOU,Houston Rockets,,21,PHX,Phoenix Suns,
+401909324,2026-11-25,2026-11-26T03:00Z,2027,2,False,in,False,9,GS,Golden State Warriors,,23,SAC,Sacramento Kings,
+401909325,2026-11-25,2026-11-26T03:00Z,2027,2,False,in,False,22,POR,Portland Trail Blazers,,24,SA,San Antonio Spurs,
 401909326,2026-11-27,2026-11-28T00:00Z,2027,2,False,pre,False,18,NY,New York Knicks,,14,MIA,Miami Heat,
 401909327,2026-11-27,2026-11-28T00:30Z,2027,2,False,pre,False,8,DET,Detroit Pistons,,15,MIL,Milwaukee Bucks,
 401909328,2026-11-27,2026-11-28T00:30Z,2027,2,False,pre,False,11,IND,Indiana Pacers,,20,PHI,Philadelphia 76ers,
