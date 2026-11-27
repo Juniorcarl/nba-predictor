@@ -391,3 +391,5 @@ game_id,date,start_utc,season,season_type,completed,state,neutral,home_id,home_a
 401910087,2026-12-03,2026-12-04T01:00Z,2027,2,False,pre,False,4,CHI,Chicago Bulls,,5,CLE,Cleveland Cavaliers,
 401910088,2026-12-03,2026-12-04T01:00Z,2027,2,False,pre,False,24,SA,San Antonio Spurs,,28,TOR,Toronto Raptors,
 401910089,2026-12-03,2026-12-04T03:00Z,2027,2,False,pre,False,22,POR,Portland Trail Blazers,,26,UTAH,Utah Jazz,
+401909450,2026-12-04,2026-12-04T05:00Z,2027,2,False,pre,False,-1,TBD,TBD,,-2,TBD,TBD,
+401909451,2026-12-04,2026-12-04T05:00Z,2027,2,False,pre,False,-1,TBD,TBD,,-2,TBD,TBD,
